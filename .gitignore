@@ -1,0 +1,6 @@
+# Claude Code internal files
+.claude/
+
+# Loose image files dropped at repo root (images go in images/ folder)
+/djcj.JPG
+/yamu_jay-ai-generated-9214176_1920 (1).jpg
