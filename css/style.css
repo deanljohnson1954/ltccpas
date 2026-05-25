@@ -93,10 +93,8 @@ nav .dropdown li:last-child a { border-bottom: none; }
 
 /* ── HERO BANNER ─────────────────────────────────────────── */
 .hero {
-  background:
-    linear-gradient(135deg, rgba(26,58,92,0.72) 0%, rgba(37,99,168,0.62) 100%),
-    url('../images/djcj.jpg') center top / cover no-repeat;
-  color: #fff; text-align: center; padding: 90px 20px 80px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+  color: #fff; text-align: center; padding: 70px 20px 60px;
 }
 .hero h2 { font-size: 34px; margin-bottom: 12px; }
 .hero p  { font-size: 18px; opacity: .9; margin-bottom: 28px; }
@@ -159,11 +157,13 @@ nav .dropdown li:last-child a { border-bottom: none; }
 .home-about {
   background: var(--gray); padding: 60px 20px;
 }
-.home-about .inner { max-width: 1180px; margin: 0 auto; display: flex; gap: 50px; align-items: center; }
+.home-about .inner { max-width: 1180px; margin: 0 auto; display: flex; gap: 40px; align-items: center; }
 .home-about .text { flex: 1; }
 .home-about .text h2 { font-size: 26px; color: var(--navy); margin-bottom: 14px; }
 .home-about .text p  { margin-bottom: 14px; }
-.home-about .cta-box { background: var(--navy); color: #fff; border-radius: 8px; padding: 32px 28px; width: 300px; text-align: center; flex-shrink: 0; }
+.home-about .photo { width: 260px; flex-shrink: 0; }
+.home-about .photo img { width: 100%; height: 340px; object-fit: cover; object-position: center 15%; border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,.15); }
+.home-about .cta-box { background: var(--navy); color: #fff; border-radius: 8px; padding: 32px 28px; width: 280px; text-align: center; flex-shrink: 0; }
 .home-about .cta-box h3 { font-size: 20px; margin-bottom: 10px; }
 .home-about .cta-box p  { font-size: 14px; opacity: .85; margin-bottom: 20px; }
 .home-about .cta-box .btn-gold { background: var(--gold); color: #fff; padding: 11px 26px; border-radius: 4px; display: inline-block; font-weight: 700; }
@@ -255,6 +255,8 @@ footer ul li { margin-bottom: 7px; }
   .sidebar { width: 100%; }
   header .inner { flex-direction: column; gap: 14px; text-align: center; }
   .home-about .inner { flex-direction: column; }
+  .home-about .photo { width: 100%; }
+  .home-about .photo img { height: 260px; }
   .home-about .cta-box { width: 100%; }
   .contact-section .inner { flex-direction: column; }
   nav > ul { flex-direction: column; }
