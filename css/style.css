@@ -776,8 +776,9 @@ nav > ul > li > a.active {
   margin-bottom: 32px;
 }
 .bio-avatar {
-  width: 80px;
-  height: 80px;
+  width: 160px;
+  height: 160px;
+  min-width: 160px;
   border-radius: 50%;
   background: var(--navy);
   color: var(--gold-light);
@@ -787,6 +788,7 @@ nav > ul > li > a.active {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   flex-shrink: 0;
   box-shadow: 0 4px 16px rgba(0,0,0,.2);
 }
