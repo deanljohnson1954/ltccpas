@@ -779,7 +779,7 @@ nav > ul > li > a.active {
   width: 200px;
   height: 200px;
   min-width: 200px;
-  border-radius: 6px;
+  border-radius: 50%;
   background: var(--navy);
   color: var(--gold-light);
   font-family: 'Playfair Display', serif;
