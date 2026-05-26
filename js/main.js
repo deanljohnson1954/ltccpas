@@ -6,38 +6,33 @@
 /* ── 1. Sticky Header ──────────────────────────────────────── */
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
-  if (header) {
-    header.classList.toggle('sticky', window.scrollY > 60);
-  }
+  if (header) header.classList.toggle('sticky', window.scrollY > 60);
 });
 
-/* ── 2. Mobile Nav Toggle ──────────────────────────────────── */
-const navToggle = document.getElementById('nav-toggle');
-if (navToggle) {
-  navToggle.addEventListener('click', () => {
-    document.querySelector('nav').classList.toggle('open');
+/* ── 2. Dropdown + Mobile Nav ──────────────────────────────── */
+function initNav() {
+  // Mobile toggle
+  const navToggle = document.getElementById('nav-toggle');
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('open');
+    });
+  }
+
+  // Mobile dropdown toggles
+  document.querySelectorAll('.has-dropdown > a').forEach(link => {
+    link.addEventListener('click', e => {
+      const nav = document.querySelector('nav');
+      if (nav && nav.classList.contains('open')) {
+        e.preventDefault();
+        link.closest('.has-dropdown').classList.toggle('open');
+      }
+    });
   });
 }
+initNav();
 
-/* ── 3. Dropdown support on mobile ────────────────────────── */
-document.querySelectorAll('.has-dropdown > a').forEach(link => {
-  link.addEventListener('click', e => {
-    const nav = document.querySelector('nav');
-    // Only intercept on mobile (when nav is in toggle mode)
-    if (nav && nav.classList.contains('open')) {
-      e.preventDefault();
-      const parent = link.closest('.has-dropdown');
-      parent.classList.toggle('open');
-    }
-  });
-});
-
-/* ── 4. SPA Router ─────────────────────────────────────────── */
-const BASE = (() => {
-  const base = document.querySelector('base');
-  return base ? base.href : window.location.origin + '/ltccpas/';
-})();
-
+/* ── 3. SPA Router ─────────────────────────────────────────── */
 async function navigate(url, pushState = true) {
   const content = document.getElementById('page-content');
   if (!content) return;
@@ -55,45 +50,25 @@ async function navigate(url, pushState = true) {
     const doc = parser.parseFromString(html, 'text/html');
 
     const newContent = doc.getElementById('page-content');
-    if (!newContent) {
-      window.location.href = url;
-      return;
+    if (!newContent) { window.location.href = url; return; }
+
+    // Fix relative paths in new page-content
+    fixPaths(newContent, url);
+
+    // ── Swap nav from the fetched page so relative links are correct ──
+    const newNav = doc.querySelector('nav');
+    const currentNav = document.querySelector('nav');
+    if (newNav && currentNav) {
+      fixPaths(newNav, url);
+      currentNav.replaceWith(newNav);
+      initNav(); // re-attach listeners to new nav
     }
 
-    // Fix relative asset paths in new content
-    newContent.querySelectorAll('[src],[href]').forEach(el => {
-      ['src', 'href'].forEach(attr => {
-        const val = el.getAttribute(attr);
-        if (val &&
-            !val.startsWith('http') &&
-            !val.startsWith('#') &&
-            !val.startsWith('mailto') &&
-            !val.startsWith('tel') &&
-            !val.startsWith('data:')) {
-          try {
-            el.setAttribute(attr, new URL(val, url).href);
-          } catch (_) {}
-        }
-      });
-    });
-
+    // Swap page content
     document.title = doc.title;
     content.innerHTML = newContent.innerHTML;
 
-    if (pushState) {
-      history.pushState({ url }, '', url);
-    }
-
-    // Update active nav link
-    document.querySelectorAll('nav a').forEach(a => {
-      const aHref = a.href.replace(/\/$/, '');
-      const curUrl = url.replace(/\/$/, '');
-      a.classList.toggle('active',
-        aHref === curUrl ||
-        (curUrl.endsWith('/index.html') && aHref.endsWith('/index.html')) ||
-        (curUrl === BASE.replace(/\/$/, '') && aHref.endsWith('/index.html'))
-      );
-    });
+    if (pushState) history.pushState({ url }, '', url);
 
     // Close mobile nav
     const nav = document.querySelector('nav');
@@ -116,7 +91,23 @@ async function navigate(url, pushState = true) {
   });
 }
 
-/* Intercept internal link clicks */
+function fixPaths(el, baseUrl) {
+  el.querySelectorAll('[src],[href]').forEach(node => {
+    ['src', 'href'].forEach(attr => {
+      const val = node.getAttribute(attr);
+      if (val &&
+          !val.startsWith('http') &&
+          !val.startsWith('#') &&
+          !val.startsWith('mailto') &&
+          !val.startsWith('tel') &&
+          !val.startsWith('data:')) {
+        try { node.setAttribute(attr, new URL(val, baseUrl).href); } catch (_) {}
+      }
+    });
+  });
+}
+
+/* ── Intercept internal link clicks ────────────────────────── */
 document.addEventListener('click', e => {
   const link = e.target.closest('a[href]');
   if (!link) return;
@@ -129,19 +120,16 @@ document.addEventListener('click', e => {
 
   e.preventDefault();
   try {
-    const resolved = new URL(href, window.location.href).href;
-    navigate(resolved);
+    navigate(new URL(href, window.location.href).href);
   } catch (_) {
     window.location.href = href;
   }
 });
 
-/* Handle browser back/forward */
+/* ── Browser back/forward ──────────────────────────────────── */
 window.addEventListener('popstate', e => {
-  if (e.state && e.state.url) {
-    navigate(e.state.url, false);
-  }
+  if (e.state && e.state.url) navigate(e.state.url, false);
 });
 
-/* Set initial history state */
+/* ── Set initial history state ─────────────────────────────── */
 history.replaceState({ url: window.location.href }, '', window.location.href);
