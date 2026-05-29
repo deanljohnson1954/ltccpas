@@ -1334,3 +1334,160 @@ footer {
   footer .footer-inner { grid-template-columns: 1fr; }
   .page-hero h1 { font-size: 26px; }
 }
+
+/* ── Career Timeline (about-us) ────────────────────────────── */
+.timeline { display:flex; flex-direction:column; gap:0; margin:1.5rem 0 2rem; }
+.timeline-item {
+  display:flex;
+  gap:1.25rem;
+  padding-bottom:2rem;
+  position:relative;
+}
+.timeline-item:last-child { padding-bottom:0; }
+.timeline-item::before {
+  content:'';
+  position:absolute;
+  left:19px;
+  top:40px;
+  bottom:0;
+  width:2px;
+  background:var(--border);
+}
+.timeline-item:last-child::before { display:none; }
+.timeline-dot {
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:var(--navy);
+  border:2px solid var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-size:0.7rem;
+  font-weight:700;
+  color:var(--gold);
+  font-family:'Playfair Display',serif;
+  position:relative;
+  z-index:1;
+}
+.timeline-body { padding-top:0.4rem; flex:1; }
+.timeline-org {
+  font-weight:700;
+  color:var(--navy);
+  font-size:0.95rem;
+  margin-bottom:0.1rem;
+  line-height:1.3;
+}
+.timeline-dates {
+  font-size:0.72rem;
+  color:var(--muted);
+  font-weight:500;
+  letter-spacing:0.06em;
+  margin-bottom:0.2rem;
+}
+.timeline-role {
+  font-size:0.76rem;
+  color:var(--gold);
+  font-weight:600;
+  letter-spacing:0.07em;
+  text-transform:uppercase;
+  margin-bottom:0.5rem;
+}
+.timeline-desc {
+  font-size:0.875rem;
+  color:#4a5568;
+  line-height:1.65;
+  margin:0;
+}
+
+/* ── Carrier Comparison Table ──────────────────────────────── */
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:6px; border:1px solid #dde3ec; }
+.carrier-table {
+  table-layout:fixed;
+  width:100%;
+  min-width:820px;
+  border-collapse:collapse;
+  font-size:0.74rem;
+  font-family:'DM Sans',sans-serif;
+}
+.carrier-table th:first-child,
+.carrier-table td:first-child { width:20%; white-space:normal; }
+.carrier-table thead tr { border-bottom:2px solid #c8982a; }
+.carrier-table th {
+  padding:0.6rem 0.45rem;
+  font-size:0.62rem;
+  font-weight:600;
+  vertical-align:top;
+  text-align:center;
+  background:#1a2f4e;
+  color:#fff;
+  border-right:1px solid rgba(255,255,255,.12);
+  white-space:normal;
+  line-height:1.3;
+}
+.carrier-table th:first-child { text-align:left; padding-left:0.75rem; background:#162840; }
+.carrier-table th.col-rec { background:#1a3a60 !important; border-top:3px solid #c8982a; }
+.carrier-table td {
+  padding:0.65rem 0.45rem;
+  font-size:0.74rem;
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #dde3ec;
+  border-right:1px solid #e8ecf2;
+  line-height:1.35;
+}
+.carrier-table td:first-child {
+  font-size:0.76rem;
+  font-weight:600;
+  color:#1a2f4e;
+  text-align:left;
+  padding-left:0.75rem;
+  background:#f9fbff;
+  border-right:2px solid #dde3ec;
+}
+.carrier-table tbody tr:nth-child(even) td:not(:first-child) { background:#fafbfd; }
+.carrier-table tbody tr:nth-child(odd)  td:not(:first-child) { background:#ffffff; }
+.col-rec { background:#fffdf5 !important; }
+.carrier-table tr.section-row td {
+  background:#1a2f4e;
+  color:#e8b84b;
+  font-weight:700;
+  font-size:0.65rem;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  text-align:left;
+  padding:7px 12px;
+  border-right:none;
+}
+.badge-rec {
+  display:inline-block;
+  background:#c8982a;
+  color:#fff;
+  font-size:0.55rem;
+  font-weight:700;
+  padding:2px 6px;
+  border-radius:10px;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+  margin-bottom:4px;
+}
+.carrier-name { font-size:0.82rem; font-weight:700; margin:2px 0; color:#fff; }
+.carrier-type { font-size:0.6rem; opacity:.75; line-height:1.3; color:#fff; }
+.rating-pill {
+  display:inline-block;
+  background:rgba(200,152,42,.12);
+  border:1px solid rgba(200,152,42,.35);
+  color:var(--gold);
+  font-size:0.7rem;
+  font-weight:700;
+  padding:2px 7px;
+  border-radius:3px;
+}
+.chk { color:#1a7a3a; font-size:0.85rem; font-weight:700; }
+.no  { color:#c0392b; font-size:0.85rem; font-weight:700; }
+.lim { color:#c8982a; font-size:0.82rem; font-weight:600; }
+.assessment-excellent { color:#1a7a3a; font-weight:700; font-size:0.78rem; }
+.assessment-moderate  { color:#c8982a; font-weight:700; font-size:0.78rem; }
+.assessment-weak      { color:#c0392b; font-weight:700; font-size:0.78rem; }
+.update-text { font-size:0.68rem; color:#555; line-height:1.45; text-align:left; }
