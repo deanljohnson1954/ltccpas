@@ -1220,7 +1220,7 @@ footer {
 .article-card {
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 28px;
+  overflow: hidden;
   background: #fff;
   transition: box-shadow .2s, transform .2s;
   text-decoration: none;
@@ -1228,16 +1228,21 @@ footer {
   color: inherit;
 }
 .article-card:hover {
-  box-shadow: 0 8px 32px rgba(26,47,78,.1);
+  box-shadow: 0 8px 32px rgba(26,47,78,.15);
   transform: translateY(-2px);
 }
-.article-card-tag {
+.article-card-header {
+  background: var(--navy);
+  color: var(--gold-light);
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--gold);
-  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+  padding: 12px 24px;
+  border-bottom: 3px solid var(--gold);
+}
+.article-card-body {
+  padding: 24px 28px;
 }
 .article-card h3 { color: var(--navy); margin-bottom: 10px; font-size: 20px; }
 .article-card p { color: #4a5568; font-size: 14px; line-height: 1.7; margin: 0; }
