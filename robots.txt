@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /privacy-policy.html
+Disallow: /legal-terms-and-conditions.html
+
+Sitemap: https://www.ltccpas.com/sitemap.xml
