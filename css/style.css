@@ -105,11 +105,11 @@ header .inner {
   gap: 2px;
 }
 .brand-name {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
   font-weight: 700;
-  color: var(--muted);
-  letter-spacing: .3px;
+  color: var(--navy);
+  letter-spacing: .4px;
   line-height: 1;
 }
 .brand-tagline {
