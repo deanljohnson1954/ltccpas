@@ -1151,6 +1151,14 @@ footer {
   color: var(--gold);
   margin-bottom: 8px;
 }
+.article-section h2 {
+  background: var(--navy);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1.35rem;
+  margin-bottom: 0;
+}
 .article-divider {
   width: 48px;
   height: 3px;
