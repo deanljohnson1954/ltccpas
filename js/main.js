@@ -64,6 +64,15 @@ async function navigate(url, pushState = true) {
       initNav(); // re-attach listeners to new nav
     }
 
+    // Inject page-specific <style> blocks from the fetched page's <head>
+    document.querySelectorAll('style[data-spa]').forEach(s => s.remove());
+    doc.querySelectorAll('head style').forEach(style => {
+      const clone = document.createElement('style');
+      clone.setAttribute('data-spa', '1');
+      clone.textContent = style.textContent;
+      document.head.appendChild(clone);
+    });
+
     // Swap page content
     document.title = doc.title;
     content.innerHTML = newContent.innerHTML;
