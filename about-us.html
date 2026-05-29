@@ -6,6 +6,72 @@
 <title>About Us – Meet Withbert W. Payne, CPA – LTCCPAs.com</title>
 <meta name="description" content="Meet Withbert W. Payne, CPA and licensed insurance agent with over 25 years of experience in LTC insurance policy optimization.">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .timeline { display:flex; flex-direction:column; gap:0; margin:1.5rem 0 2rem; }
+  .timeline-item {
+    display:flex;
+    gap:1.25rem;
+    padding-bottom:2rem;
+    position:relative;
+  }
+  .timeline-item:last-child { padding-bottom:0; }
+  .timeline-item::before {
+    content:'';
+    position:absolute;
+    left:19px;
+    top:40px;
+    bottom:0;
+    width:2px;
+    background:var(--border);
+  }
+  .timeline-item:last-child::before { display:none; }
+  .timeline-dot {
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:var(--navy);
+    border:2px solid var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    font-size:0.7rem;
+    font-weight:700;
+    color:var(--gold);
+    font-family:'Playfair Display',serif;
+    position:relative;
+    z-index:1;
+  }
+  .timeline-body { padding-top:0.4rem; flex:1; }
+  .timeline-org {
+    font-weight:700;
+    color:var(--navy);
+    font-size:0.95rem;
+    margin-bottom:0.1rem;
+    line-height:1.3;
+  }
+  .timeline-dates {
+    font-size:0.72rem;
+    color:var(--muted);
+    font-weight:500;
+    letter-spacing:0.06em;
+    margin-bottom:0.2rem;
+  }
+  .timeline-role {
+    font-size:0.76rem;
+    color:var(--gold);
+    font-weight:600;
+    letter-spacing:0.07em;
+    text-transform:uppercase;
+    margin-bottom:0.5rem;
+  }
+  .timeline-desc {
+    font-size:0.875rem;
+    color:#4a5568;
+    line-height:1.65;
+    margin:0;
+  }
+</style>
 </head>
 <body>
 
@@ -135,42 +201,90 @@
 
         <h2>Career Timeline</h2>
         <p>Bert's career spans six decades across accounting, healthcare finance, and insurance — giving him a depth of perspective unmatched in the LTC industry.</p>
-        <table style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:24px;">
-          <tbody>
-            <tr style="background:#f4f6f9;">
-              <td style="padding:10px 14px;font-weight:700;color:var(--navy);white-space:nowrap;">1963–1968</td>
-              <td style="padding:10px 14px;">Hagley Knight &amp; Co. — London, UK</td>
-            </tr>
-            <tr>
-              <td style="padding:10px 14px;font-weight:700;color:var(--navy);white-space:nowrap;">1968–1971</td>
-              <td style="padding:10px 14px;">Price Waterhouse — London, UK</td>
-            </tr>
-            <tr style="background:#f4f6f9;">
-              <td style="padding:10px 14px;font-weight:700;color:var(--navy);white-space:nowrap;">1971–1976</td>
-              <td style="padding:10px 14px;">Blue Cross / Blue Shield — Chicago, IL</td>
-            </tr>
-            <tr>
-              <td style="padding:10px 14px;font-weight:700;color:var(--navy);white-space:nowrap;">1976–1978</td>
-              <td style="padding:10px 14px;">CNA Life Insurance Co. — Chicago, IL</td>
-            </tr>
-            <tr style="background:#f4f6f9;">
-              <td style="padding:10px 14px;font-weight:700;color:var(--navy);white-space:nowrap;">1978–1980</td>
-              <td style="padding:10px 14px;">Blue Cross — Oakland, CA</td>
-            </tr>
-            <tr>
-              <td style="padding:10px 14px;font-weight:700;color:var(--navy);white-space:nowrap;">1980–2009</td>
-              <td style="padding:10px 14px;">Starcare International — Walnut Creek, CA</td>
-            </tr>
-            <tr style="background:#f4f6f9;">
-              <td style="padding:10px 14px;font-weight:700;color:var(--navy);white-space:nowrap;">2009–2012</td>
-              <td style="padding:10px 14px;">New York Life — Brentwood, CA</td>
-            </tr>
-            <tr>
-              <td style="padding:10px 14px;font-weight:700;color:var(--navy);white-space:nowrap;">2012–Present</td>
-              <td style="padding:10px 14px;">Insurance Review Services — San Ramon, CA</td>
-            </tr>
-          </tbody>
-        </table>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot">1</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Insurance Review Services — San Ramon, California</div>
+              <div class="timeline-dates">2012 – Present</div>
+              <div class="timeline-role">Founder &amp; President</div>
+              <p class="timeline-desc">Independent CPA-level reviews of life, disability, long-term care, and business insurance portfolios for professionals, executives, trustees, and families. Consistently achieves 30–40% improvement in policy efficiency. Coordinates reviews with clients' CPAs, attorneys, and wealth advisors for fully integrated planning outcomes.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">2</div>
+            <div class="timeline-body">
+              <div class="timeline-org">New York Life Insurance Company — Brentwood, California</div>
+              <div class="timeline-dates">2009 – 2012</div>
+              <div class="timeline-role">Insurance Professional</div>
+              <p class="timeline-desc">Served accounting and legal professionals with tailored life and long-term care solutions, deepening carrier-side expertise in the insurance needs of high-income clients.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">3</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Starcare International Inc. — Walnut Creek, California</div>
+              <div class="timeline-dates">1980 – 2009</div>
+              <div class="timeline-role">President &amp; Founder</div>
+              <p class="timeline-desc">Founded and led a hospital financial consulting firm specializing in Medicare reimbursement strategy and financial performance improvement for healthcare institutions. Grew the practice over nearly three decades, representing more than 75 hospitals, before completing a successful sale in 2001 and continuing operations through 2009.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">4</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Blue Cross of Northern California — Oakland, CA</div>
+              <div class="timeline-dates">1978 – 1980</div>
+              <div class="timeline-role">Manager, Hospital Audits — Medicare Program</div>
+              <p class="timeline-desc">Managed hospital audits across Northern California for the Medicare program, overseeing compliance and financial accuracy across a large portfolio of hospital accounts.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">5</div>
+            <div class="timeline-body">
+              <div class="timeline-org">CNA Life Insurance Company — Chicago, IL</div>
+              <div class="timeline-dates">1976 – 1978</div>
+              <div class="timeline-role">Internal Audit Manager</div>
+              <p class="timeline-desc">Managed internal audits across Life and Health divisions — acquiring direct operational knowledge of how insurance companies assess risk, structure coverage, and manage financial performance. Experience that directly informs policy analysis for clients today.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">6</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Blue Cross Blue Shield — Chicago, IL</div>
+              <div class="timeline-dates">1971 – 1976</div>
+              <div class="timeline-role">Manager, Hospital Audits — Medicare Program</div>
+              <p class="timeline-desc">Managed hospital audits and Medicare program compliance across a large portfolio of Chicago-area hospital accounts. Developed deep expertise in healthcare reimbursement and insurance operations from within a major national insurer.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">7</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Price Waterhouse — London, United Kingdom</div>
+              <div class="timeline-dates">1968 – 1971</div>
+              <div class="timeline-role">Senior Auditor</div>
+              <p class="timeline-desc">Audited public companies in London under one of the world's premier professional services firms. Developed the rigorous independent analytical standards that remain central to his practice today.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">8</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Hagley Knight &amp; Co., Chartered Accountants — London, England</div>
+              <div class="timeline-dates">1963 – 1968</div>
+              <div class="timeline-role">Articled Clerk (Trainee Chartered Accountant)</div>
+              <p class="timeline-desc">Completed formal articleship training — the foundation of a career built on meticulous financial analysis — auditing small and medium-sized businesses under the demanding standards of English professional accountancy.</p>
+            </div>
+          </div>
+
+        </div>
 
         <h2>Credentials &amp; Education</h2>
         <p>Withbert W. Payne holds a credential set that is exceptionally rare in the LTC insurance industry — decades of experience as a CPA and Chartered Accountant, combined with 25 years as a licensed independent insurance broker.</p>
