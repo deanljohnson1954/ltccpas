@@ -1222,14 +1222,9 @@ footer {
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
-  transition: box-shadow .2s, transform .2s;
   text-decoration: none;
   display: block;
   color: inherit;
-}
-.article-card:hover {
-  box-shadow: 0 8px 32px rgba(26,47,78,.15);
-  transform: translateY(-2px);
 }
 .article-card-header {
   background: var(--navy);
