@@ -11,15 +11,18 @@ window.addEventListener('scroll', () => {
 
 /* ── 2. Dropdown + Mobile Nav ──────────────────────────────── */
 function initNav() {
-  // Mobile toggle
+  // Mobile toggle — guard against duplicate listeners when initNav() is called
+  // again after each SPA navigation (the button lives in <header>, not <nav>,
+  // so it is never replaced, but initNav() would keep stacking listeners).
   const navToggle = document.getElementById('nav-toggle');
-  if (navToggle) {
+  if (navToggle && !navToggle.dataset.bound) {
+    navToggle.dataset.bound = '1';
     navToggle.addEventListener('click', () => {
       document.querySelector('nav').classList.toggle('open');
     });
   }
 
-  // Mobile dropdown toggles
+  // Mobile dropdown toggles — must re-attach after each SPA nav replacement
   document.querySelectorAll('.has-dropdown > a').forEach(link => {
     link.addEventListener('click', e => {
       const nav = document.querySelector('nav');
