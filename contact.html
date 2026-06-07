@@ -199,7 +199,7 @@
             <h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:18px;margin-bottom:8px;">Consultation Request Form</h3>
             <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;">Download, type directly into the fields, and email to Bert. Fast alternative to the form on the left.</p>
             <a href="LTC-Consultation-Request.pdf" download class="btn-gold" style="display:block;text-align:center;margin-bottom:10px;">⬇ Download Application (PDF)</a>
-            <p style="font-size:12px;color:var(--muted);">Email completed form to<br><a href="mailto:bert.ltccpas@gmail.com" style="color:var(--gold);font-weight:600;">bert.ltccpas@gmail.com</a></p>
+            <p style="font-size:12px;color:var(--muted);">Email completed form to<br><span class="email-bert-gold"></span></p>
           </div>
 
           <div class="complimentary-callout">
@@ -255,5 +255,12 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+(function(){
+  var u='bert',d='ltccpas.com',addr=u+'\x40'+d;
+  var goldLink='<a href="mailto:'+addr+'" style="color:var(--gold);font-weight:600;">'+addr+'</a>';
+  document.querySelectorAll('.email-bert-gold').forEach(function(el){el.innerHTML=goldLink;});
+})();
+</script>
 </body>
 </html>

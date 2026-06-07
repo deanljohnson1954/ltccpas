@@ -104,13 +104,14 @@
 
       <!-- How to Apply box -->
       <div style="background:#fff;border:2px solid var(--gold);border-radius:8px;padding:2rem 2.5rem;margin-bottom:2rem;box-shadow:0 2px 12px rgba(0,0,0,0.07);">
-        <h2 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:26px;margin-bottom:6px;">How to Request a Consultation</h2>
+        <h2 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:26px;margin-bottom:6px;">How to Apply</h2>
         <div style="width:60px;height:3px;background:var(--gold);margin-bottom:1.25rem;"></div>
         <ol style="margin:0 0 0 1.25rem;line-height:2.6;font-size:1rem;">
-          <li><strong>Call first if you prefer</strong> — <a href="tel:+19257086501">(925) 708-6501</a> or <a href="mailto:bert.ltccpas@gmail.com">bert.ltccpas@gmail.com</a></li>
+          <li><strong>Contact Bert first</strong> — call <a href="tel:+19257086501">(925) 708-6501</a> or email <span class="email-bert-inline"></span> to let him know your application is on the way.</li>
           <li><strong>Download</strong> the consultation request form below.</li>
           <li><strong>Open the PDF</strong> in Adobe Acrobat Reader or any PDF viewer and type directly into the fields.</li>
-          <li><strong>Save the completed form</strong> and email it to <a href="mailto:bert.ltccpas@gmail.com"><strong>bert.ltccpas@gmail.com</strong></a>.</li>
+          <li><strong>Sign electronically</strong> — type your full legal name in the gold-bordered signature field at the bottom of page 2.</li>
+          <li><strong>Save the completed form</strong> and email it to <strong><span class="email-bert-inline"></span></strong>.</li>
           <li>Bert will respond personally within <strong>one business day</strong>.</li>
         </ol>
       </div>
@@ -125,7 +126,7 @@
           ⬇ Download Application (PDF)
         </a>
         <p style="margin-top:1.25rem;font-size:0.88rem;color:var(--muted);">
-          After completing, email to <a href="mailto:bert.ltccpas@gmail.com" style="color:var(--gold);font-weight:600;">bert.ltccpas@gmail.com</a>
+          After completing, email to <span class="email-bert-gold"></span>
         </p>
       </div>
 
@@ -204,5 +205,14 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+(function(){
+  var u='bert',d='ltccpas.com',addr=u+'\x40'+d;
+  var link='<a href="mailto:'+addr+'">'+addr+'</a>';
+  var goldLink='<a href="mailto:'+addr+'" style="color:var(--gold);font-weight:600;">'+addr+'</a>';
+  document.querySelectorAll('.email-bert-inline').forEach(function(el){el.innerHTML=link;});
+  document.querySelectorAll('.email-bert-gold').forEach(function(el){el.innerHTML=goldLink;});
+})();
+</script>
 </body>
 </html>
