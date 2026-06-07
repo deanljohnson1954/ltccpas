@@ -79,6 +79,7 @@ async function navigate(url, pushState = true) {
     // Swap page content
     document.title = doc.title;
     content.innerHTML = newContent.innerHTML;
+    decodeEmails();
 
     if (pushState) history.pushState({ url }, '', url);
 
@@ -145,3 +146,21 @@ window.addEventListener('popstate', e => {
 
 /* ── Set initial history state ─────────────────────────────── */
 history.replaceState({ url: window.location.href }, '', window.location.href);
+
+/* ── 4. Cloudflare email-obfuscation decoder ────────────────── */
+// Cloudflare replaces mailto links with /cdn-cgi/l/email-protection URLs.
+// This reverses that XOR encoding so the real address appears on the page.
+function decodeEmails() {
+  document.querySelectorAll('.__cf_email__').forEach(function (el) {
+    var enc = el.getAttribute('data-cfemail');
+    if (!enc) return;
+    var key = parseInt(enc.slice(0, 2), 16), addr = '';
+    for (var i = 2; i < enc.length; i += 2) {
+      addr += String.fromCharCode(parseInt(enc.slice(i, i + 2), 16) ^ key);
+    }
+    var parent = el.closest('a');
+    if (parent) parent.setAttribute('href', 'mailto:' + addr);
+    el.textContent = addr;
+  });
+}
+decodeEmails();
