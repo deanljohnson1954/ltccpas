@@ -104,22 +104,41 @@
 
         <!-- Left: Form -->
         <div class="contact-form-wrap">
-          <h2 style="font-family:'Playfair Display',serif;color:var(--navy);font-size:26px;margin-bottom:24px;">Send Us a Message</h2>
-          <form action="mailto:bert.ltccpas@gmail.com" method="post" enctype="text/plain">
+          <h2 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:26px;margin-bottom:24px;">Send Us a Message</h2>
+
+          <!-- Thank-you message (hidden until form is submitted) -->
+          <div id="form-success" style="display:none;background:#f0faf0;border:1.5px solid #2d8a4e;border-radius:8px;padding:28px 24px;text-align:center;margin-bottom:24px;">
+            <p style="font-size:20px;font-weight:700;color:#2d8a4e;margin-bottom:8px;">Message Sent!</p>
+            <p style="color:var(--text);font-size:15px;margin:0;">Thank you — Withbert will be in touch within one business day.</p>
+          </div>
+
+          <form
+            id="contact-form"
+            action="https://formsubmit.co/bert.ltccpas@gmail.com"
+            method="POST"
+          >
+            <!-- FormSubmit.co configuration -->
+            <input type="hidden" name="_subject" value="New LTC Inquiry — LTCCPAs.com">
+            <input type="hidden" name="_next" value="https://www.ltccpas.com/contact.html?sent=1">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <!-- Honeypot spam trap — must stay hidden -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="first_name" placeholder="Your first name" required>
+                <input type="text" id="fname" name="First Name" placeholder="Your first name" required>
               </div>
               <div class="form-group">
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="last_name" placeholder="Your last name" required>
+                <input type="text" id="lname" name="Last Name" placeholder="Your last name" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+                <input type="tel" id="phone" name="Phone" placeholder="(555) 000-0000">
               </div>
               <div class="form-group">
                 <label for="email">Email Address</label>
@@ -128,23 +147,31 @@
             </div>
             <div class="form-group">
               <label for="best-time">Best Time to Call</label>
-              <select id="best-time" name="best_time">
+              <select id="best-time" name="Best Time to Call">
                 <option value="">Select a preferred time...</option>
-                <option value="morning">Morning (8am – 12pm)</option>
-                <option value="afternoon">Afternoon (12pm – 5pm)</option>
-                <option value="evening">Evening (5pm – 7pm)</option>
-                <option value="anytime">Anytime</option>
+                <option value="Morning (8am–12pm)">Morning (8am – 12pm)</option>
+                <option value="Afternoon (12pm–5pm)">Afternoon (12pm – 5pm)</option>
+                <option value="Evening (5pm–7pm)">Evening (5pm – 7pm)</option>
+                <option value="Anytime">Anytime</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell us a bit about your situation or what questions you have about LTC insurance..."></textarea>
+              <textarea id="message" name="Message" placeholder="Tell us a bit about your situation or what questions you have about LTC insurance..."></textarea>
             </div>
             <div class="form-submit">
               <button type="submit" class="btn-gold">Send Message &amp; Request Free Review</button>
             </div>
             <p style="font-size:13px;color:var(--muted);margin-top:12px;">By submitting this form, you agree to be contacted regarding your LTC insurance inquiry. This is a solicitation for insurance.</p>
           </form>
+
+          <script>
+            // Show inline thank-you if redirected back after submission
+            if (window.location.search.includes('sent=1')) {
+              document.getElementById('form-success').style.display = 'block';
+              document.getElementById('contact-form').style.display = 'none';
+            }
+          </script>
         </div>
 
         <!-- Right: Info Sidebar -->
@@ -152,7 +179,6 @@
           <div class="sidebar-box">
             <h3>Contact Information</h3>
             <p style="font-size:20px;font-weight:700;color:var(--navy);">(925) 708-6501</p>
-            <p><a href="mailto:bert.ltccpas@gmail.com">bert.ltccpas@gmail.com</a></p>
             <p><a href="https://www.linkedin.com/in/withbertpayne/" target="_blank">🔗 LinkedIn – Withbert Payne</a></p>
           </div>
 
@@ -197,22 +223,17 @@
     <div class="footer-col">
       <h4>Resources</h4>
       <ul>
-        <li><a href="newsletters/june-2025.html">June 15, 2025 Newsletter</a></li>
-        <li><a href="ltc-examples/professional-couple.html">Professional Couple</a></li>
-        <li><a href="ltc-examples/rich-widow.html">Rich Widow</a></li>
-        <li class="has-dropdown"><a href="#">Resources ▾</a><ul class="dropdown">
-    <li><a href="ltc-statistics.html">LTC Statistics</a></li>
-    <li><a href="paying-for-long-term-care.html">Paying for LTC</a></li>
-    <li><a href="oneamerica-claim-analysis/oneamerica-claims-analysis.html">OneAmerica Analysis</a></li>
-    <li><a href="carrier-comparison.html">Carrier Comparison</a></li>
-  </ul></li>
-    <li><a href="articles.html">Articles</a></li>
+        <li><a href="ltc-statistics.html">LTC Statistics</a></li>
+        <li><a href="paying-for-long-term-care.html">Paying for LTC</a></li>
+        <li><a href="oneamerica-claim-analysis/oneamerica-claims-analysis.html">OneAmerica Analysis</a></li>
+        <li><a href="carrier-comparison.html">Carrier Comparison</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="newsletters/june-2025.html">June 2025 Newsletter</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
       <p><strong>(925) 708-6501</strong></p>
-      <p><a href="mailto:bert.ltccpas@gmail.com">bert.ltccpas@gmail.com</a></p>
       <a href="contact.html" class="btn-gold footer-btn">Get a Free Review</a>
       <p class="footer-disclaimer">This is a solicitation for insurance.</p>
     </div>
