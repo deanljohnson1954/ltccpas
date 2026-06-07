@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Key Long-Term Care Statistics – LTCCPAs.com</title>
+<meta name="description" content="The numbers your clients need to understand — average claim duration, age of first claim, care costs, claim triggers, and utilization patterns across all care settings.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LTCCPAs.com">
+<meta property="og:title" content="Key Long-Term Care Statistics – LTCCPAs.com">
+<meta property="og:description" content="The numbers your clients need to understand — average claim duration, age of first claim, care costs, claim triggers, and utilization patterns across all care settings.">
+<meta property="og:url" content="https://www.ltccpas.com/ltc-statistics.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Key Long-Term Care Statistics – LTCCPAs.com">
+<meta name="twitter:description" content="The numbers your clients need to understand — average claim duration, age of first claim, care costs, claim triggers, and utilization patterns across all care settings.">
+<meta name="canonical" content="https://www.ltccpas.com/ltc-statistics.html">
+<link rel="stylesheet" href="css/style.css?v=2">
+<style>
+.stat-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 28px 0;
+}
+.stat-hero-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 20px;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  text-align: center;
+}
+.stat-hero-card .big-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+.stat-hero-card .big-num.navy { color: var(--navy); }
+.stat-hero-card strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.stat-hero-card em {
+  font-style: italic;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+  display: block;
+}
+.duration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+}
+.duration-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 22px;
+  background: var(--white);
+}
+.duration-card .dur-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+  display: block;
+}
+.duration-card .dur-num.navy { color: var(--navy); }
+.duration-card strong { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.duration-card em { font-style: italic; font-size: 12px; color: var(--muted); line-height: 1.4; }
+.data-section { margin: 40px 0; }
+.data-section h3 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.stats-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 0; }
+.stats-table th {
+  background: var(--navy);
+  color: #fff;
+  padding: 10px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+.stats-table th:last-child { text-align: right; }
+.stats-table td { padding: 10px 16px; border-bottom: 1px solid var(--border); color: var(--text); }
+.stats-table td:last-child { text-align: right; font-weight: 700; color: var(--gold); }
+.stats-table tr:last-child td { border-bottom: none; }
+.stats-table tr:nth-child(even) td { background: var(--off-white); }
+.stats-table td.bold-row { font-weight: 700; color: var(--navy); }
+.stats-table td.indent { padding-left: 32px; font-size: 13px; color: var(--muted); }
+.stats-table td.indent + td { color: var(--muted); font-weight: 400; }
+.two-stat-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0;
+}
+.callout-stat {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 24px;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+.callout-stat .cs-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+.callout-stat strong { display: block; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.callout-stat p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5; font-style: italic; }
+.sources-line {
+  font-size: 11px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 48px;
+  line-height: 1.6;
+}
+@media (max-width: 860px) {
+  .stat-hero-grid { grid-template-columns: repeat(2, 1fr); }
+  .duration-grid { grid-template-columns: 1fr; }
+  .two-stat-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .stat-hero-grid { grid-template-columns: 1fr; }
+  .stat-hero-card .big-num { font-size: 40px; }
+}
+</style>
+</head>
+<body>
+<div class="top-bar"><div class="inner"><div><a href="about-us.html">Meet Withbert W. Payne, CPA</a> &nbsp;|&nbsp; <a href="contact.html">Get A Quote</a></div><div>Questions? Call us now. <span class="phone">(925) 708-6501</span></div></div></div>
+<header><div class="inner"><div class="brand"><a href="index.html" class="brand-link"><span class="brand-name">Long Term Care (LTC) Insurance CPAs</span><span class="brand-tagline">ltccpas.com</span>
+        <span class="brand-sub">LTC Policy Optimization &middot; CPAs &amp; Licensed Insurance Agents</span></a></div><div class="header-actions"><a class="btn btn-outline" href="about-us.html">Meet Withbert Payne, CPA</a><a class="btn btn-gold" href="contact.html">Get A Quote</a><button id="nav-toggle" aria-label="Menu">&#9776;</button></div></div></header>
+<nav><ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about-us.html">About Us</a></li>
+  <li class="has-dropdown"><a href="#">LTC Insurance ▾</a><ul class="dropdown">
+    <li><a href="long-term-care-ltc-insurance/what-is-long-term-care-insurance.html">What is LTC Insurance?</a></li>
+    <li><a href="long-term-care-ltc-insurance/state-mandated-ltc.html">State Mandated LTC</a></li>
+    <li><a href="long-term-care-ltc-insurance/how-much-long-term-care-insurance-is-enough.html">How Much is Enough?</a></li>
+    <li><a href="long-term-care-ltc-insurance/now-is-the-time-for-long-term-planning.html">Now is the Time</a></li>
+    <li><a href="long-term-care-ltc-insurance/fact-vs-fiction-about-long-term-care-insurance.html">Fact vs Fiction</a></li>
+    <li><a href="long-term-care-ltc-insurance/long-term-care-insurance-with-a-guaranteed-death-benefit.html">Guaranteed Death Benefit</a></li>
+    <li><a href="long-term-care-ltc-insurance/costbenefits-of-a-single-premium-policy-for-an-affluent-client.html">Single Premium Policy</a></li>
+    <li><a href="long-term-care-ltc-insurance/solution-for-a-high-net-worth-client.html">High Net Worth Solution</a></li>
+    <li><a href="long-term-care-ltc-insurance/ltc-insurance-can-be-a-winner.html">LTC Can Be a Winner</a></li>
+    <li><a href="long-term-care-ltc-insurance/frequently-asked-questions.html">FAQ</a></li>
+  </ul></li>
+  <li class="has-dropdown"><a href="#">Newsletters ▾</a><ul class="dropdown">
+    <li><a href="newsletters/june-2025.html">June 15, 2025</a></li>
+    <li><a href="newsletters/january-7-2024.html">January 7, 2024</a></li>
+    <li><a href="newsletters/january-11-2023.html">January 11, 2023</a></li>
+    <li><a href="newsletters/january-1-2023.html">January 1, 2023</a></li>
+  </ul></li>
+  <li class="has-dropdown"><a href="#">LTC Examples ▾</a><ul class="dropdown">
+    <li><a href="ltc-examples/rich-widow.html">Rich Widow</a></li>
+    <li><a href="ltc-examples/professional-couple.html">Professional Couple</a></li>
+  </ul></li>
+  <li class="has-dropdown"><a href="#" class="active">Resources ▾</a><ul class="dropdown">
+    <li><a href="ltc-statistics.html" class="active">LTC Statistics</a></li>
+    <li><a href="paying-for-long-term-care.html">Paying for LTC</a></li>
+    <li><a href="oneamerica-claim-analysis/oneamerica-claims-analysis.html">OneAmerica Analysis</a></li>
+    <li><a href="carrier-comparison.html">Carrier Comparison</a></li>
+  </ul></li>
+  <li><a href="articles.html">Articles</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul></nav>
+
+<div id="page-content">
+
+<div class="page-hero"><div class="inner">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>LTC Statistics</span></div>
+  <h1>Key Long-Term Care Statistics</h1>
+  <p>The numbers your clients need to understand — from average claim duration and age of first claim to care costs, claim triggers, and utilization patterns across all care settings.</p>
+</div></div>
+
+<div class="page-wrap"><div class="two-col">
+<div class="content-area">
+
+<!-- Key Stats Grid -->
+<div class="stat-hero-grid">
+  <div class="stat-hero-card">
+    <span class="big-num">70%</span>
+    <strong>Adults 65+ Who Will Need LTC</strong>
+    <em>Most families are unprepared for this risk.</em>
+  </div>
+  <div class="stat-hero-card">
+    <span class="big-num navy">3.2 yrs</span>
+    <strong>Average Length of LTC Stay</strong>
+    <em>Across all long-term care settings combined.</em>
+  </div>
+  <div class="stat-hero-card">
+    <span class="big-num">20%</span>
+    <strong>Will Need Care 5+ Years</strong>
+    <em>1 in 5 individuals face extended care needs.</em>
+  </div>
+  <div class="stat-hero-card">
+    <span class="big-num navy">$315K+</span>
+    <strong>Avg. 3-Year Nursing Home Cost</strong>
+    <em>At today's California rates.</em>
+  </div>
+  <div class="stat-hero-card">
+    <span class="big-num">47%</span>
+    <strong>Denial Rate After Age 70</strong>
+    <em>LTC underwriting tightens sharply with age.</em>
+  </div>
+  <div class="stat-hero-card">
+    <span class="big-num navy">11%</span>
+    <strong>Americans With LTC Coverage</strong>
+    <em>The coverage gap is enormous.</em>
+  </div>
+</div>
+
+<!-- Average Length of Stay -->
+<h2>Average Length of Stay</h2>
+<p>How long do people actually need care?</p>
+
+<div class="duration-grid">
+  <div class="duration-card">
+    <span class="dur-num">3.2 yrs</span>
+    <strong>Overall Average</strong>
+    <em>Across all settings — home, assisted living, and skilled nursing combined.</em>
+  </div>
+  <div class="duration-card">
+    <span class="dur-num">3.7 yrs</span>
+    <strong>Women — Average Stay</strong>
+    <em>Women outlive men and require care for nearly twice as long on average.</em>
+  </div>
+  <div class="duration-card">
+    <span class="dur-num navy">2.2 yrs</span>
+    <strong>Men — Average Stay</strong>
+    <em>Male claimants average a shorter duration, though intensity of care may be higher.</em>
+  </div>
+  <div class="duration-card">
+    <span class="dur-num navy">835 days</span>
+    <strong>Nursing Home Average</strong>
+    <em>~2.3 years in skilled nursing. Short-term rehab discharges average just 270 days.</em>
+  </div>
+</div>
+
+<div class="insight-callout" style="margin:24px 0 32px;">
+  <p><em>"While the average stay is just over 3 years, 1 in 5 people will need care for 5 years or more — and women face nearly twice the risk as men. That's the scenario a well-designed LTC policy is built to protect against."</em></p>
+</div>
+
+<!-- OneAmerica Claims Analysis -->
+<h2>OneAmerica Claims Analysis</h2>
+<p>35+ years of claims experience — data from 1989 through 12/31/2022</p>
+
+<div class="data-section">
+  <h3>Claimant Gender Split</h3>
+  <table class="stats-table">
+    <thead><tr><th>Gender</th><th>Share of Claims</th></tr></thead>
+    <tbody>
+      <tr><td>Female</td><td>73%</td></tr>
+      <tr><td>Male</td><td>27%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="data-section">
+  <h3>Claimant Ages</h3>
+  <table class="stats-table">
+    <thead><tr><th>Youngest</th><th>Average Age</th><th style="text-align:right;">Oldest</th></tr></thead>
+    <tbody>
+      <tr><td>39</td><td>84</td><td style="text-align:right;font-weight:700;color:var(--gold);">103</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="data-section">
+  <h3>Age at Initial Claim</h3>
+  <table class="stats-table">
+    <thead><tr><th>Age Band</th><th>% of Claims</th></tr></thead>
+    <tbody>
+      <tr><td>&lt; 69</td><td>3.41%</td></tr>
+      <tr><td>70–74</td><td>6.00%</td></tr>
+      <tr><td>75–79</td><td>13.17%</td></tr>
+      <tr><td>80–84</td><td>26.50%</td></tr>
+      <tr><td>85–89</td><td>30.34%</td></tr>
+      <tr><td>90–94</td><td>17.13%</td></tr>
+      <tr><td>95+</td><td>3.46%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="data-section">
+  <h3>How Claims End</h3>
+  <table class="stats-table">
+    <thead><tr><th>Reason Claim Ends</th><th>Share</th></tr></thead>
+    <tbody>
+      <tr><td>Death</td><td>75%</td></tr>
+      <tr><td>Exhaust Benefits</td><td>11%</td></tr>
+      <tr><td>Other Reasons</td><td>14%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:var(--muted);margin:12px 0 0;">75% of claims end at death — meaning most policyholders receive benefits until the end of life. Only 11% exhaust their policy limits.</p>
+</div>
+
+<div class="data-section">
+  <h3>Reason for Initial Claim</h3>
+  <table class="stats-table">
+    <thead><tr><th>Category / Cause</th><th>Share</th></tr></thead>
+    <tbody>
+      <tr><td class="bold-row">Cognitive Issues (total)</td><td style="font-weight:700;color:var(--gold);">55%</td></tr>
+      <tr><td class="indent">&bull; Nervous System (Alzheimer's, etc.)</td><td class="indent">29%</td></tr>
+      <tr><td class="indent">&bull; Mental/Behavioral (Dementia)</td><td class="indent">26%</td></tr>
+      <tr><td class="bold-row">Physical Issues (total)</td><td style="font-weight:700;color:var(--gold);">28%</td></tr>
+      <tr><td class="indent">&bull; Musculoskeletal</td><td class="indent">10%</td></tr>
+      <tr><td class="indent">&bull; Cerebrovascular (Stroke)</td><td class="indent">9%</td></tr>
+      <tr><td class="indent">&bull; Accident / Injury</td><td class="indent">9%</td></tr>
+      <tr><td class="bold-row">Illness-Related (total)</td><td style="font-weight:700;color:var(--gold);">12%</td></tr>
+      <tr><td class="indent">&bull; Heart Disease</td><td class="indent">7%</td></tr>
+      <tr><td class="indent">&bull; Cancer</td><td class="indent">5%</td></tr>
+      <tr><td class="bold-row">Other</td><td style="font-weight:700;color:var(--gold);">5%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="data-section">
+  <h3>Care Site — Initial vs. Final Setting</h3>
+  <table class="stats-table">
+    <thead><tr><th>Care Setting</th><th>Initial</th><th style="text-align:right;">Final</th></tr></thead>
+    <tbody>
+      <tr><td>Home Health Care</td><td>32%</td><td style="text-align:right;font-weight:700;color:var(--gold);">26%</td></tr>
+      <tr><td>Assisted Living</td><td>47%</td><td style="text-align:right;font-weight:700;color:var(--gold);">52%</td></tr>
+      <tr><td>Skilled Nursing</td><td>21%</td><td style="text-align:right;font-weight:700;color:var(--gold);">23%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:var(--muted);margin:12px 0 0;">Most claimants migrate from home care toward assisted living as needs intensify over time.</p>
+</div>
+
+<div class="data-section">
+  <h3>Longest Claims on Record</h3>
+  <table class="stats-table">
+    <thead><tr><th>Months</th><th>Duration</th></tr></thead>
+    <tbody>
+      <tr><td>244</td><td>20 years, 4 months</td></tr>
+      <tr><td>192</td><td>16 years</td></tr>
+      <tr><td>177</td><td>14 years, 9 months</td></tr>
+      <tr><td>171</td><td>14 years, 3 months</td></tr>
+      <tr><td>158</td><td>13 years, 1 month</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Service Utilization -->
+<h2>Service Utilization by Claim Type</h2>
+<p>Connecticut Partnership for LTC — 6,878 policyholders receiving benefit payments</p>
+
+<div class="data-section">
+  <h3>What Policyholders Claim For</h3>
+  <table class="stats-table">
+    <thead><tr><th>Service Type</th><th>% of Claims</th></tr></thead>
+    <tbody>
+      <tr><td>Home Health Aide</td><td>53%</td></tr>
+      <tr><td>Assisted Living Facility</td><td>29%</td></tr>
+      <tr><td>Nursing Home</td><td>27%</td></tr>
+      <tr><td>Personal Emergency</td><td>20%</td></tr>
+      <tr><td>Personal Care</td><td>9%</td></tr>
+      <tr><td>Durable Medical Device</td><td>7%</td></tr>
+      <tr><td>Hospice Care</td><td>1%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="two-stat-cards">
+  <div class="callout-stat">
+    <span class="cs-num">60%</span>
+    <strong>Home-Based Care Claims</strong>
+    <p>60% of all claimants filed for home health aide or a skilled nursing home visit.</p>
+  </div>
+  <div class="callout-stat">
+    <span class="cs-num" style="font-size:38px;">$443,758</span>
+    <strong>Average Policy Benefit at Claim</strong>
+    <p>Avg. available benefit at time of claim. Avg. actual claim paid: $156,775. Highest single claim: $2.64 million.</p>
+  </div>
+</div>
+
+<div style="background:#eef3f8;border-top:4px solid var(--gold);border-radius:0 0 8px 8px;padding:20px 24px;margin:24px 0;">
+  <strong style="display:block;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Mean Age at Claim (Women)</strong>
+  <p style="font-size:13px;color:var(--muted);margin:0;font-style:italic;">59% of the 6,878 claimants were women, with a mean age of 81 at the time the claim was filed.</p>
+</div>
+
+<div class="insight-callout" style="margin:24px 0 32px;">
+  <p><em>"This is really nursing-home avoidance protection — and the numbers validate that."</em><br>
+  <span style="font-size:12px;color:var(--muted);">— Jesse Slome, Director, American Association for Long-Term Care Insurance (AALTCI). Connecticut is the only state that publishes current LTC insurance claims data.</span></p>
+</div>
+
+<!-- 2026 Cost of Care California -->
+<h2>2026 Cost of Care — California</h2>
+<p>What long-term care actually costs today &nbsp;<span style="font-size:13px;color:var(--muted);">(Source: Genworth Cost of Care Survey 2025)</span></p>
+
+<div style="overflow-x:auto;margin:20px 0;">
+<table class="stats-table">
+  <thead>
+    <tr>
+      <th>Care Setting</th>
+      <th>Monthly</th>
+      <th>Annual</th>
+      <th style="text-align:left;">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Home Health Aide (44 hrs/wk)</td>
+      <td>$6,200</td>
+      <td>$74,400</td>
+      <td style="text-align:left;font-weight:400;color:var(--muted);">Fastest Growing</td>
+    </tr>
+    <tr>
+      <td>Adult Day Care</td>
+      <td>$1,900</td>
+      <td>$22,800</td>
+      <td style="text-align:left;font-weight:400;color:var(--muted);">Social + medical supervision</td>
+    </tr>
+    <tr>
+      <td>Assisted Living Facility</td>
+      <td>$5,100</td>
+      <td>$61,200</td>
+      <td style="text-align:left;font-weight:400;color:var(--muted);">Room, board &amp; basic care</td>
+    </tr>
+    <tr>
+      <td>Memory Care</td>
+      <td>$6,200</td>
+      <td>$74,400</td>
+      <td style="text-align:left;font-weight:400;color:var(--muted);">Dementia care</td>
+    </tr>
+    <tr>
+      <td><strong>Nursing Home — Semi-Private</strong></td>
+      <td>$9,000</td>
+      <td>$108,000</td>
+      <td style="text-align:left;font-weight:400;color:var(--muted);">24-hour skilled care</td>
+    </tr>
+    <tr>
+      <td><strong>Nursing Home — Private Room</strong></td>
+      <td>$10,500</td>
+      <td>$126,000</td>
+      <td style="text-align:left;font-weight:700;color:var(--navy);">Highest Cost</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sources-line">
+  <strong>Sources:</strong> OneAmerica Claims Data (1989–2022) &middot; Connecticut Partnership for LTC (2024) &middot; Genworth Cost of Care Survey 2025 &middot; AALTCI Research
+</div>
+
+</div>
+<div class="sidebar">
+  <div class="sidebar-box">
+    <h3>Request a Free Review</h3>
+    <p>Let us analyze your current LTC coverage — or help you find the right policy if you don't have one yet.</p>
+    <p style="font-size:18px;font-weight:700;color:var(--navy);">(925) 708-6501</p>
+    <a class="btn-gold" href="contact.html">Request Free Review</a>
+  </div>
+  <div class="sidebar-box">
+    <h3>Key Numbers at a Glance</h3>
+    <p style="font-size:13px;line-height:2.2;">
+      Need LTC after 65: <strong>70%</strong><br>
+      Avg. stay: <strong>3.2 years</strong><br>
+      Women avg. stay: <strong>3.7 years</strong><br>
+      Need care 5+ yrs: <strong>20%</strong><br>
+      Avg. 3-yr nursing home: <strong>$315K+</strong><br>
+      Denial rate after 70: <strong>47%</strong><br>
+      Americans with coverage: <strong>11%</strong>
+    </p>
+  </div>
+  <div class="sidebar-box"><h3>Related Topics</h3><ul>
+    <li><a href="oneamerica-claim-analysis/oneamerica-claims-analysis.html">OneAmerica Claims Analysis</a></li>
+    <li><a href="paying-for-long-term-care.html">Paying for Long-Term Care</a></li>
+    <li><a href="long-term-care-ltc-insurance/what-is-long-term-care-insurance.html">What is LTC Insurance?</a></li>
+    <li><a href="long-term-care-ltc-insurance/how-much-long-term-care-insurance-is-enough.html">How Much is Enough?</a></li>
+    <li><a href="long-term-care-ltc-insurance/ltc-insurance-can-be-a-winner.html">LTC Can Be a Winner</a></li>
+    <li><a href="carrier-comparison.html">Carrier Comparison</a></li>
+  </ul></div>
+</div>
+</div></div>
+
+<div class="contact-teaser">
+  <h2>The Numbers Demand a Plan</h2>
+  <p>70% of Americans 65+ will need long-term care. The average nursing home now costs $108,000 per year in California. A well-structured policy changes everything.</p>
+  <span class="phone-big">(925) 708-6501</span>
+  <a href="contact.html" class="btn-gold" style="font-size:16px;padding:14px 36px;">Request a Free Policy Review</a>
+</div>
+</div>
+
+<footer><div class="footer-inner">
+  <div class="footer-col"><h4>LTCCPAS.COM</h4><p>LTC policy optimization by CPAs and Licensed Insurance Agents. Serving clients nationwide.</p><a href="https://www.linkedin.com/in/withbertpayne/" target="_blank" class="linkedin-link">🔗 LinkedIn – Withbert Payne</a></div>
+  <div class="footer-col"><h4>LTC Insurance</h4><ul>
+    <li><a href="long-term-care-ltc-insurance/what-is-long-term-care-insurance.html">What is LTC Insurance?</a></li>
+    <li><a href="long-term-care-ltc-insurance/how-much-long-term-care-insurance-is-enough.html">How Much is Enough?</a></li>
+    <li><a href="long-term-care-ltc-insurance/fact-vs-fiction-about-long-term-care-insurance.html">Fact vs Fiction</a></li>
+    <li><a href="long-term-care-ltc-insurance/frequently-asked-questions.html">FAQ</a></li>
+    <li><a href="long-term-care-ltc-insurance/state-mandated-ltc.html">State Mandated LTC</a></li>
+  </ul></div>
+  <div class="footer-col"><h4>Resources</h4><ul>
+    <li><a href="ltc-statistics.html">LTC Statistics</a></li>
+    <li><a href="paying-for-long-term-care.html">Paying for LTC</a></li>
+    <li><a href="oneamerica-claim-analysis/oneamerica-claims-analysis.html">OneAmerica Analysis</a></li>
+    <li><a href="carrier-comparison.html">Carrier Comparison</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="newsletters/june-2025.html">June 2025 Newsletter</a></li>
+  </ul></div>
+  <div class="footer-col"><h4>Contact</h4><p><strong>(925) 708-6501</strong></p><p><a href="mailto:bert.ltccpas@gmail.com">bert.ltccpas@gmail.com</a></p><a href="contact.html" class="btn-gold footer-btn">Get a Free Review</a><p class="footer-disclaimer">This is a solicitation for insurance.</p></div>
+</div>
+<div class="footer-bottom">
+  <span>© 2026 LTCCPAs.com. All rights reserved.</span>
+  <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="legal-terms-and-conditions.html">Legal Terms</a></span>
+</div></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
