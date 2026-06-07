@@ -1,6 +1,11 @@
 # Claude Code internal files
 .claude/
 
+# PDF generator tooling (run locally only)
+node_modules/
+package-lock.json
+generate-pdf.js
+
 # Loose image files dropped at repo root (images go in images/ folder)
 /djcj.JPG
 /yamu_jay-ai-generated-9214176_1920 (1).jpg
