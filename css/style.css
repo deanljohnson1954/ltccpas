@@ -1117,8 +1117,8 @@ footer {
   gap: 10px;
   max-width: 100%;
 }
-.footer-bottom span { font-size: 12px; color: rgba(255,255,255,.5); }
-.footer-bottom a { color: rgba(255,255,255,.5); text-decoration: none; }
+.footer-bottom span { font-size: 13px; color: rgba(255,255,255,.75); }
+.footer-bottom a { color: rgba(255,255,255,.75); text-decoration: underline; }
 .footer-bottom a:hover { color: var(--gold-light); }
 
 /* ── Page Content Fade-in ──────────────────────────────────── */
