@@ -149,10 +149,139 @@
   color: var(--text);
   line-height: 1.6;
 }
+/* Section 5 */
+.pay-opt {
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin: 20px 0;
+  background: var(--white);
+}
+.pay-opt.solution {
+  border-color: var(--gold);
+  background: #fffdf5;
+}
+.pay-opt-num {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 6px;
+}
+.pay-opt h3 {
+  font-size: 18px;
+  color: var(--navy);
+  margin: 0 0 12px;
+}
+.pay-opt > p {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+.pay-opt ul {
+  padding-left: 20px;
+  margin: 0 0 14px;
+}
+.pay-opt ul li {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+.solution-label {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 16px 0 0;
+}
+.feature-card {
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: var(--white);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.feature-card .fc-check {
+  color: var(--gold);
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.feature-card .fc-body h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 4px;
+}
+.feature-card .fc-body p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+.comp-table-wrap {
+  overflow-x: auto;
+  margin: 20px 0 32px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+}
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.comp-table th {
+  background: var(--navy);
+  color: var(--white);
+  padding: 11px 12px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.comp-table th:first-child { text-align: left; }
+.comp-table th.col-best { background: var(--gold); }
+.comp-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  color: var(--text);
+  text-align: center;
+}
+.comp-table tr:last-child td { border-bottom: none; }
+.comp-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: var(--navy);
+  background: #f8f9fb;
+}
+.comp-table td:nth-child(5) {
+  font-weight: 600;
+  color: #a07800;
+  background: #fffef7;
+}
 @media (max-width: 860px) {
   .asset-grid { grid-template-columns: repeat(2, 1fr); }
   .elim-grid { grid-template-columns: 1fr; }
   .option-cards { grid-template-columns: 1fr; }
+  .feature-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -188,7 +317,7 @@
   </ul></li>
   <li class="has-dropdown"><a href="#" class="active">Resources ▾</a><ul class="dropdown">
     <li><a href="ltc-statistics.html">LTC Statistics</a></li>
-    <li><a href="paying-for-long-term-care.html" class="active">Paying for LTC</a></li>
+    <li><a href="paying-for-long-term-care.html" class="active">Paying for Long-Term Care</a></li>
     <li><a href="ltc-examples/50-year-old-couple.html">50-Year-Old Couple</a></li>
     <li><a href="ltc-examples/concierge-long-term-care.html">Concierge Long-Term Care</a></li>
       </ul></li>
@@ -259,12 +388,12 @@
   <div class="option-card featured">
     <span class="opt-label">Option A</span>
     <h3>Single Premium</h3>
-    <p>Pay once at the time of policy issue — fully fund the COB Rider with a single lump sum and never pay again. Ideal for asset repositioning or single-premium strategies.</p>
+    <p>Pay once at the time of policy issue — fully fund the long-term care rider with a single lump sum and never pay again. Ideal for asset repositioning or single-premium strategies.</p>
   </div>
   <div class="option-card">
     <span class="opt-label">Option B</span>
     <h3>Recurring Premium</h3>
-    <p>Spread the cost of the COB Rider over time with a structured payment schedule. Choose the period that fits your cash flow:</p>
+    <p>Spread the cost of the long-term care rider over time with a structured payment schedule. Choose the period that fits your cash flow:</p>
     <div class="pay-chips">
       <span class="pay-chip">5-Pay</span>
       <span class="pay-chip">10-Pay</span>
@@ -285,17 +414,130 @@
   </div>
 </div>
 
+<!-- Common Ways to Pay for Long-Term Care -->
+<h2 style="margin-top:36px;">Common Ways to Pay for Long-Term Care</h2>
+<p>Once you understand the actual cost of long-term care, the next question is how to pay for it. Most people default to one of three options &mdash; government programs, traditional insurance, or self-funding &mdash; without fully understanding the limitations of each. A fourth option has emerged that addresses the shortcomings of all three.</p>
+
+<div class="pay-opt">
+  <span class="pay-opt-num">Option 1 &middot; 01 &middot; Government Programs</span>
+  <h3>Government Programs</h3>
+  <p>Programs like Medicare and Medicaid are often the first options people consider &mdash; but they come with significant restrictions that catch most families off guard.</p>
+  <p><strong>Medicare</strong> has specific age and diagnosis requirements. It will not pay for most long-term care or personal care services &mdash; only short-term skilled nursing following a qualifying hospital stay.</p>
+  <p><strong>Medicaid</strong> can cover some long-term care services, but eligibility is based on income and asset thresholds that require most people to spend down their assets before qualifying.</p>
+  <div class="insight-callout">
+    <p>Government programs are designed as safety nets of last resort &mdash; not as retirement planning tools. Relying on them means potentially losing assets you spent a lifetime building before any coverage begins.</p>
+  </div>
+</div>
+
+<div class="pay-opt">
+  <span class="pay-opt-num">Option 2 &middot; 02 &middot; Traditional LTC Insurance</span>
+  <h3>Traditional LTC Insurance</h3>
+  <p>Traditional, health-based long-term care insurance was once the primary solution for LTC planning &mdash; but it has developed a problematic history, driving many insurers out of the market entirely.</p>
+  <ul>
+    <li>It can be very expensive to purchase, especially for older applicants or those with health conditions.</li>
+    <li>Widely viewed as a &ldquo;use it or lose it&rdquo; policy &mdash; if you never need care, every premium dollar paid is gone with no residual value.</li>
+    <li>Consumers have experienced significant and unexpected premium increases &mdash; sometimes 30&ndash;80% &mdash; with little warning.</li>
+    <li>Some carriers have reduced benefits, and several major insurers have left the LTC market altogether.</li>
+  </ul>
+  <div class="insight-callout">
+    <p><strong>The hard-to-qualify problem:</strong> Traditional LTC underwriting has become increasingly strict. Many applicants in their 60s and 70s find themselves uninsurable under traditional policies &mdash; leaving them without options at exactly the time they need coverage most.</p>
+  </div>
+</div>
+
+<div class="pay-opt">
+  <span class="pay-opt-num">Option 3 &middot; 03 &middot; Self-Funding</span>
+  <h3>Self-Funding</h3>
+  <p>Some people believe they can cover any LTC expenses out of pocket. Very few people can afford to pay for every LTC expense &mdash; and attempting to do so can rapidly destroy wealth built over an entire lifetime.</p>
+  <ul>
+    <li>A single extended care event &mdash; especially Alzheimer&rsquo;s, averaging 8+ years &mdash; can cost well over $1 million in today&rsquo;s dollars.</li>
+    <li>Self-funding transfers 100% of the financial risk to the individual, with no leverage and no protection for the healthy spouse.</li>
+    <li>Care costs inflate at 3&ndash;5% per year &mdash; meaning future care will cost significantly more than today&rsquo;s rates suggest.</li>
+  </ul>
+  <div class="insight-callout">
+    <p><strong>The income problem:</strong> A married couple with $2 million in assets may feel financially secure &mdash; but a $1.5 million LTC event drops their household income by 75%. The assets may technically cover the cost, but the retirement income they counted on vanishes far sooner than planned.</p>
+  </div>
+</div>
+
+<div class="pay-opt solution">
+  <span class="solution-label">The Solution</span>
+  <span class="pay-opt-num" style="margin-top:8px;">Option 4 &middot; 04 &middot; Asset-Based Long-Term Care</span>
+  <h3>Asset-Based Long-Term Care</h3>
+  <p>To eliminate the pitfalls of the first three options, a strategy known as <strong>asset-based long-term care</strong> has emerged &mdash; also referred to as hybrid or linked-benefit products. It is a whole life insurance policy or annuity contract that allows access to 100% of the death benefit and/or annuity cash value for qualifying LTC expenses, paid monthly.</p>
+  <p>Asset-based LTC provides benefits if care is needed. If care is never needed, the asset passes to the next generation &mdash; making it part of your legacy rather than a sunk cost.</p>
+  <div class="feature-grid">
+    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Never &ldquo;use it or lose it&rdquo;</h4><p>Unused benefits become a death benefit for heirs.</p></div></div>
+    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Guaranteed premiums</h4><p>No unexpected rate increases, ever.</p></div></div>
+    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Fund with existing assets</h4><p>CDs, IRAs, annuities, savings, or a 1035 exchange.</p></div></div>
+    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Immediate LTC coverage</h4><p>Protection begins from day one of the policy.</p></div></div>
+    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Tax advantages</h4><p>LTC premiums may be deductible; 100% deductible for C Corporations.</p></div></div>
+    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Legacy protection</h4><p>Assets pass to heirs if care is never required.</p></div></div>
+  </div>
+</div>
+
+<!-- Comparison Table -->
+<h2>Side-by-Side Comparison</h2>
+<p>Four ways to pay &mdash; see how they stack up across the metrics that matter most.</p>
+<div class="comp-table-wrap">
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Government Programs</th>
+        <th>Traditional LTCI</th>
+        <th>Self-Funding</th>
+        <th class="col-best">Asset-Based LTC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Guaranteed not to be canceled</td>
+        <td>No</td><td>No</td><td>N/A</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Premiums guaranteed not to increase</td>
+        <td>N/A</td><td>No</td><td>N/A</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Value if care is never needed</td>
+        <td>None</td><td>None</td><td>Depleted</td>
+        <td>Death benefit to heirs</td>
+      </tr>
+      <tr>
+        <td>Asset spend-down required</td>
+        <td>Yes (Medicaid)</td><td>No</td><td>Yes</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>Fund with existing assets</td>
+        <td>No</td><td>No</td><td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Lifetime coverage available</td>
+        <td>Limited</td><td>Rare / costly</td><td>Risk of depletion</td>
+        <td>Yes &mdash; with LTC rider</td>
+      </tr>
+      <tr>
+        <td>Tax advantages</td>
+        <td>None</td><td>Limited</td><td>None</td>
+        <td>Yes &mdash; including C-Corp</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <!-- CTA -->
-<div class="callout">
-  <h3 style="margin:0 0 10px;">Questions About Your Funding Options?</h3>
-  <p style="margin:0 0 16px;">Withbert W. Payne, CPA will walk you through how an asset-based LTC strategy compares to what you currently have — or don't have — in place. Completely free, no obligation.</p>
-  <a href="contact.html" class="btn-gold" style="display:inline-block;">Request a Free Review →</a>
+<div class="callout" style="text-align:center;">
+  <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin:0 0 12px;">Ready to Explore the Smarter Option?</p>
+  <p style="margin:0 0 14px;">Withbert W. Payne, CPA, will walk you through how an asset-based LTC strategy compares to what you currently have &mdash; or don&rsquo;t have &mdash; in place.</p>
+  <p style="font-size:17px;font-weight:700;color:var(--navy);margin:0 0 16px;">(925) 708-6501 &middot; LTCCPAS.com</p>
+  <a href="contact.html" class="btn-gold" style="display:inline-block;">Request a Free Review &rarr;</a>
 </div>
 
 <!-- Legal Disclaimer -->
-<div style="margin-top:32px;padding:18px;background:#f4f6f9;border-radius:4px;border:1px solid #dde3ec;">
-  <p style="font-size:11px;color:#6b7a90;margin:0;line-height:1.7;"><strong>Disclaimer:</strong> This page describes general features of asset-based long-term care policies. Specific terms, elimination periods, payment schedules, and international coverage provisions vary by carrier and policy. The 1035 Exchange option is subject to IRS rules and individual policy terms — consult a qualified tax advisor before executing any exchange. Coverage availability and benefit amounts are subject to underwriting and state approval. This page is for informational purposes only and does not constitute an offer or solicitation to sell insurance. This is a solicitation for insurance.</p>
-</div>
+<p style="font-style:italic;font-size:11px;margin-top:24px;color:#6b7a90;line-height:1.7;">Benefit details, elimination periods, payment schedules, and international provisions vary by carrier and policy; the 1035 Exchange is subject to IRS rules &mdash; consult a qualified tax advisor before executing any exchange. For educational purposes only. Not financial, legal, or insurance advice. Withbert W. Payne, CPA, CGMA &middot; CA License No. 0E90257 &middot; This is a solicitation for insurance.</p>
 
 </div>
 <div class="sidebar">
