@@ -162,13 +162,20 @@
   background: #fffdf5;
 }
 .pay-opt-num {
-  font-size: 10px;
+  display: block;
+  text-align: center;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--gold);
-  display: block;
-  margin-bottom: 6px;
+  letter-spacing: 1.5px;
+  color: var(--white);
+  background: var(--navy);
+  padding: 12px 20px;
+  margin: -24px -28px 20px;
+  border-radius: 8px 8px 0 0;
+}
+.pay-opt.solution .pay-opt-num {
+  background: var(--gold);
 }
 .pay-opt h3 {
   font-size: 18px;
@@ -385,7 +392,7 @@
 <p>Premiums can be funded in two ways — a single one-time payment, or a structured recurring premium schedule that spreads the cost over time.</p>
 
 <div class="option-cards">
-  <div class="option-card featured">
+  <div class="option-card">
     <span class="opt-label">Option A</span>
     <h3>Single Premium</h3>
     <p>Pay once at the time of policy issue — fully fund the long-term care rider with a single lump sum and never pay again. Ideal for asset repositioning or single-premium strategies.</p>
@@ -459,8 +466,7 @@
 </div>
 
 <div class="pay-opt solution">
-  <span class="solution-label">The Solution</span>
-  <span class="pay-opt-num" style="margin-top:8px;">Option 4 &middot; 04 &middot; Asset-Based Long-Term Care</span>
+  <span class="pay-opt-num">The Solution &nbsp;&middot;&nbsp; Option 4 &middot; 04 &middot; Asset-Based Long-Term Care</span>
   <h3>Asset-Based Long-Term Care</h3>
   <p>To eliminate the pitfalls of the first three options, a strategy known as <strong>asset-based long-term care</strong> has emerged &mdash; also referred to as hybrid or linked-benefit products. It is a whole life insurance policy or annuity contract that allows access to 100% of the death benefit and/or annuity cash value for qualifying LTC expenses, paid monthly.</p>
   <p>Asset-based LTC provides benefits if care is needed. If care is never needed, the asset passes to the next generation &mdash; making it part of your legacy rather than a sunk cost.</p>
