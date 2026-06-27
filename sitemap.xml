@@ -21,8 +21,9 @@
   <url><loc>https://www.ltccpas.com/long-term-care-ltc-insurance/frequently-asked-questions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Articles -->
+  <url><loc>https://www.ltccpas.com/articles/article-self-insurance.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.ltccpas.com/articles/article-ltc-importance.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.ltccpas.com/articles/article-california-ltc-tax.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ltccpas.com/articles/article-california-ltc-tax.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Case Studies -->
   <url><loc>https://www.ltccpas.com/ltc-examples/professional-couple.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
