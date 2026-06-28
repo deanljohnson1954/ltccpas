@@ -4,8 +4,9 @@
   <!-- Core Pages -->
   <url><loc>https://www.ltccpas.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.ltccpas.com/about-us.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.ltccpas.com/carrier-comparison.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.ltccpas.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ltccpas.com/complimentary-review.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ltccpas.com/apply.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.ltccpas.com/articles.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- LTC Insurance Pages -->
@@ -18,6 +19,8 @@
   <url><loc>https://www.ltccpas.com/long-term-care-ltc-insurance/costbenefits-of-a-single-premium-policy-for-an-affluent-client.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.ltccpas.com/long-term-care-ltc-insurance/solution-for-a-high-net-worth-client.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.ltccpas.com/long-term-care-ltc-insurance/ltc-insurance-can-be-a-winner.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ltccpas.com/long-term-care-ltc-insurance/long-term-care-insurance-benefits.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ltccpas.com/long-term-care-ltc-insurance/what-initiates-a-long-term-care-claim.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.ltccpas.com/long-term-care-ltc-insurance/frequently-asked-questions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.ltccpas.com/long-term-care-ltc-insurance/self-insuring-ltc.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.ltccpas.com/long-term-care-ltc-insurance/ltc-planning-by-a-cpa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -29,18 +32,29 @@
   <url><loc>https://www.ltccpas.com/articles/article-california-ltc-tax.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Resources -->
+  <url><loc>https://www.ltccpas.com/carrier-comparison.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ltccpas.com/tax-advantages-ltc-insurance.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ltccpas.com/ltc-statistics.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ltccpas.com/paying-for-long-term-care.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ltccpas.com/underwriting-what-to-know.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.ltccpas.com/ltc-risk-report.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.ltccpas.com/concierge-two-designs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ltccpas.com/concierge-two-designs.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.ltccpas.com/what-you-need-to-know-ltc-insurance.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Case Studies -->
   <url><loc>https://www.ltccpas.com/ltc-examples/professional-couple.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.ltccpas.com/ltc-examples/rich-widow.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.ltccpas.com/ltc-examples/50-year-old-couple.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.ltccpas.com/ltc-examples/concierge-long-term-care.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Newsletters -->
   <url><loc>https://www.ltccpas.com/newsletters/june-2025.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.ltccpas.com/newsletters/january-7-2024.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.ltccpas.com/newsletters/january-11-2023.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.ltccpas.com/newsletters/january-1-2023.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+
+  <!-- Utility Pages -->
+  <url><loc>https://www.ltccpas.com/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.ltccpas.com/legal-terms-and-conditions.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
 </urlset>
