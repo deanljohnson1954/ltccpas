@@ -15,7 +15,6 @@
   <li><a href="index.html">Home</a></li>
   <li><a href="about-us.html">About</a></li>
   <li class="has-dropdown"><a href="#">Case Studies &#9662;</a><ul class="dropdown">
-    <li><a href="ltc-examples/rich-widow.html">Rich Widow</a></li>
     <li><a href="ltc-examples/professional-couple.html">Professional Couple</a></li>
     <li><a href="ltc-examples/50-year-old-couple.html">50-Year-Old Couple</a></li>
     <li><a href="ltc-examples/concierge-long-term-care.html">Concierge Care</a></li>
@@ -153,11 +152,10 @@
 <!-- CASE STUDIES -->
 <div style="font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.15em;color:var(--navy);margin:40px 0 16px;border-top:2px solid var(--gold);padding-top:24px;">CASE STUDIES</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:36px;">
-  <a href="ltc-examples/rich-widow.html" style="display:block;background:#f0f4f8;border-radius:8px;padding:20px;text-decoration:none;border-left:3px solid var(--gold);">
-    <div style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px;">Case Study: Rich Widow</div>
-    <div style="font-size:13px;color:var(--muted);line-height:1.5;">How a single-premium policy repositioned existing assets into lifetime LTC and death benefit protection.</div>
-  </a>
-  <a href="ltc-examples/professional-couple.html" style="display:block;background:#f0f4f8;border-radius:8px;padding:20px;text-decoration:none;border-left:3px solid var(--gold);">
+ param($m)
+        # only remove if it's short (a card/block, not just a nav item already handled)
+        if ($m.Value.Length -gt 100) { '' } else { $m.Value }
+      <a href="ltc-examples/professional-couple.html" style="display:block;background:#f0f4f8;border-radius:8px;padding:20px;text-decoration:none;border-left:3px solid var(--gold);">
     <div style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px;">Case Study: Professional Couple</div>
     <div style="font-size:13px;color:var(--muted);line-height:1.5;">A dual-income household ages 55 and 58 &mdash; coverage design, benefit selection, and carrier comparison.</div>
   </a>
