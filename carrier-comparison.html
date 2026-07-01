@@ -115,6 +115,8 @@
 .rating-excellent { background: #e8f5e9; color: #2e7d32; }
 .rating-moderate  { background: #fff8e1; color: #b87a1f; }
 .rating-weak      { background: #fce4ec; color: #b71c1c; }
+.why-list { list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 2; }
+.why-list li::before { content: "✓ "; color: #2e7d32; font-weight: 700; }
 @media (max-width: 700px) {
   .findings-grid { grid-template-columns: 1fr; }
 }
@@ -403,24 +405,22 @@
   </div>
   <div class="sidebar-box">
     <h3>Why Carrier A?</h3>
-    <p style="font-size:13px;line-height:1.8;">
-      <strong>Only unlimited benefits</strong><br>
-      IRA/401(k) funding eligible<br>
-      75% cash benefit option<br>
-      Highest joint monthly benefit<br>
-      100% C-Corp deductible<br>
-      Policy loan access<br>
-      Death benefit included
-    </p>
+    <ul class="why-list">
+      <li>Only unlimited benefits</li>
+      <li>IRA/401(k) funding eligible</li>
+      <li>75% cash benefit option</li>
+      <li>Highest joint monthly benefit</li>
+      <li>100% C-Corp deductible</li>
+      <li>Policy loan access</li>
+      <li>Death benefit included</li>
+    </ul>
   </div>
-  <div class="sidebar-box"><h3>Related Resources</h3><ul>
-  </ul></div>
 </div>
 </div></div>
 
 <div class="contact-teaser">
   <h2>Ready to See Your Numbers?</h2>
-  <p>We can quote all seven carriers for your specific profile &mdash; age, health, and state. Carrier A's pricing may surprise you.</p>
+  <p>We can quote all seven carriers for your specific profile &mdash; age, health, and state. Carrier A&rsquo;s pricing may surprise you.</p>
   <span class="phone-big">(925) 708-6501</span>
   <a href="contact.html" class="btn-gold" style="font-size:16px;padding:14px 36px;">Get a Free Review</a>
 </div>
@@ -440,7 +440,6 @@
     <li><a href="long-term-care-ltc-insurance/state-mandated-ltc.html">State Mandated LTC</a></li>
   </ul></div>
   <div class="footer-col"><h4>Resources</h4><ul>
-    
     <li><a href="tax-advantages-ltc-insurance.html">Tax Advantages</a></li>
     <li><a href="ltc-statistics.html">LTC Statistics</a></li>
     <li><a href="paying-for-long-term-care.html">Paying for Long-Term Care</a></li>
