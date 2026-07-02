@@ -1,7 +1,24 @@
 User-agent: *
 Allow: /
+Disallow: /node_modules/
 
-Disallow: /privacy-policy.html
-Disallow: /legal-terms-and-conditions.html
+# Allow all major AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
 
 Sitemap: https://www.ltccpas.com/sitemap.xml
