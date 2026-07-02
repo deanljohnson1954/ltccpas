@@ -317,8 +317,12 @@
 .cite{text-align:center;color:var(--muted);margin:0}
 #page-content .hp-phone{text-align:center;font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:1.35rem;font-weight:700;margin:0 0 14px}
 .page-intro{padding:60px 0 40px}
-.hp-headshot{float:right;width:180px;border-radius:50%;margin:4px 0 16px 28px;display:block;shape-outside:circle()}
-@media(max-width:560px){#page-content h1{font-size:1.9rem}#page-content h2{font-size:1.4rem}.hp-headshot{float:none;display:block;margin:0 auto 20px;width:140px}}
+.intro-split{display:flex;gap:40px;align-items:center}
+.intro-photo{flex-shrink:0;width:260px}
+.intro-photo img{width:100%;display:block;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.intro-text{flex:1;min-width:0}
+@media(max-width:640px){.intro-split{flex-direction:column}.intro-photo{width:180px;margin:0 auto}}
+@media(max-width:560px){#page-content h1{font-size:1.9rem}#page-content h2{font-size:1.4rem}}
 </style>
 </head>
 <body>
@@ -393,13 +397,20 @@
 
   <!-- HERO -->
   <section class="page-intro">
-    <p class="eyebrow">CPA &amp; Licensed Insurance Broker &nbsp;&middot;&nbsp; Independent &nbsp;&middot;&nbsp; No Carrier Obligations</p>
-    <h1>Long-Term Care Planning<br>by a Certified Public Accountant</h1>
-    <p class="lead">Independent long-term care planning for professionals, business owners, executives, and affluent families &mdash; analytical, objective, and free of carrier obligations.</p>
-    <p class="sub">Withbert W. Payne, CPA, CGMA, FCA, brings more than 25 years of experience in long-term care insurance and a career spanning Price Waterhouse (London), Blue Cross Blue Shield, CNA Life Insurance Co., and New York Life &mdash; with no obligation to any carrier.</p>
-    <p class="tag">Sound planning protects both your assets and the people who depend on you.</p>
-    <div class="cta-wrap"><a class="cta" href="contact.html">Request a Complimentary Review</a></div>
-    <p class="hp-fineprint">No fee. No obligation. I respond within one business day.</p>
+    <div class="intro-split">
+      <div class="intro-photo">
+        <img src="images/wwp-headshot-clean.jpg" alt="Withbert W. Payne, CPA, CGMA, FCA">
+      </div>
+      <div class="intro-text">
+        <p class="eyebrow">CPA &amp; Licensed Insurance Broker &nbsp;&middot;&nbsp; Independent &nbsp;&middot;&nbsp; No Carrier Obligations</p>
+        <h1>Long-Term Care Planning<br>by a Certified Public Accountant</h1>
+        <p class="lead">Independent long-term care planning for professionals, business owners, executives, and affluent families &mdash; analytical, objective, and free of carrier obligations.</p>
+        <p class="sub">Withbert W. Payne, CPA, CGMA, FCA, brings more than 25 years of experience in long-term care insurance and a career spanning Price Waterhouse (London), Blue Cross Blue Shield, CNA Life Insurance Co., and New York Life &mdash; with no obligation to any carrier.</p>
+        <p class="tag">Sound planning protects both your assets and the people who depend on you.</p>
+        <div class="cta-wrap"><a class="cta" href="contact.html">Request a Complimentary Review</a></div>
+        <p class="hp-fineprint">No fee. No obligation. I respond within one business day.</p>
+      </div>
+    </div>
   </section>
 
   <!-- COST OF CARE -->
@@ -418,7 +429,6 @@
   <!-- OBJECTIVE ANALYSIS -->
   <section>
     <h2>Objective Analysis. No Carrier Obligations.</h2>
-    <img src="images/wwp-headshot-clean.jpg" alt="Withbert W. Payne, CPA" class="hp-headshot">
     <p>I am not captive to any carrier and receive no incentive from any company to favor its products over another&rsquo;s. My compensation, when a policy is placed, comes from the issuing carrier as standard commission &mdash; never from you. Every consultation, illustration, and review is provided at no charge. The work is structured as a CPA advisory practice, not a brokerage.</p>
     <p><span class="lbl">Personal Engagement.</span> I review every engagement myself &mdash; no handoffs, no automated recommendation. You receive my full attention and 25 years of long-term care experience applied to your circumstances.</p>
     <p><span class="lbl">No Carrier Affiliations.</span> I am not employed by or contracted to any single carrier. I evaluate the full market and recommend the structure that best fits your objectives, rather than a particular product line.</p>
