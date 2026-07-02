@@ -321,6 +321,14 @@
 .intro-photo img{width:100%;display:block;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.18)}
 @media(max-width:640px){.intro-photo{width:180px}}
 @media(max-width:560px){#page-content h1{font-size:1.9rem}#page-content h2{font-size:1.4rem}}
+.stat-row{display:flex;gap:16px;margin:20px 0 22px;flex-wrap:wrap}
+.stat-card{flex:1 1 180px;background:#f0f4f9;border-top:3px solid #1E3A5F;border-radius:3px;padding:20px 16px;text-align:center}
+.stat-card--alert{background:#fff8ed;border-top-color:#C8922A}
+.stat-num{font-family:Georgia,"Times New Roman",serif;font-size:2rem;font-weight:700;color:#1E3A5F;line-height:1.1}
+.stat-card--alert .stat-num{color:#C8922A}
+.stat-unit{font-size:1.1rem;font-weight:400}
+.stat-desc{font-size:.88rem;color:#444;margin-top:8px;line-height:1.45}
+.stat-src{color:#888;font-size:.8rem}
 </style>
 </head>
 <body>
@@ -412,11 +420,20 @@
     <h2>The Cost of Care in the Bay Area</h2>
     <p>Long-term care in the Bay Area is among the most expensive in the nation. A semi-private nursing-home room now averages about $15,208 a month &mdash; $182,000 a year &mdash; and a private room runs closer to $20,000 (CareScout, 2025). A dementia diagnosis is what makes the arithmetic serious: care can extend eight to ten years, sometimes longer, which at Bay Area rates represents an exposure of $1.5 million to well over $2 million. Medicare pays nothing toward custodial long-term care.</p>
     <p>Planning is most valuable while your options remain open &mdash; before a change in health narrows them.</p>
-    <ul>
-      <li><strong>$20,000 per month</strong> &mdash; Bay Area private room (CareScout, 2025)</li>
-      <li><strong>8&ndash;10 years</strong> &mdash; typical duration of dementia care, or longer</li>
-      <li><strong>$0</strong> &mdash; Medicare&rsquo;s contribution toward custodial care</li>
-    </ul>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-num">$20,000<span class="stat-unit">/mo</span></div>
+        <div class="stat-desc">Bay Area private room<br><span class="stat-src">CareScout, 2025</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">8&ndash;10<span class="stat-unit"> yrs</span></div>
+        <div class="stat-desc">Typical duration of dementia care,<br>or longer</div>
+      </div>
+      <div class="stat-card stat-card--alert">
+        <div class="stat-num">$0</div>
+        <div class="stat-desc">Medicare&rsquo;s contribution toward<br>custodial long-term care</div>
+      </div>
+    </div>
     <a class="hp-arrow" href="ltc-statistics.html">See full LTC cost statistics &rarr;</a>
   </section>
 
