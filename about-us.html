@@ -151,28 +151,28 @@
   margin: 4px 0 0;
 }
 
-/* Lists — override any site CSS */
-.wwp-about ul.wwp-list,
-.wwp-about ol.wwp-list {
+/* Lists — high-specificity selectors to beat #page-content ul {list-style:none} from home page SPA style */
+#page-content .wwp-about ul.wwp-list,
+#page-content .wwp-about ol.wwp-list {
   font-size: 16px;
   margin: 0 0 8px;
-  padding-left: 26px;
-  list-style: disc;
+  padding-left: 26px !important;
+  list-style: disc !important;
 }
-.wwp-about ol.wwp-list { list-style: decimal; }
-.wwp-about ul.wwp-list li,
-.wwp-about ol.wwp-list li {
+#page-content .wwp-about ol.wwp-list { list-style: decimal !important; }
+#page-content .wwp-about ul.wwp-list li,
+#page-content .wwp-about ol.wwp-list li {
   margin: 0 0 8px;
-  padding: 0;
+  padding: 0 !important;
   position: static;
   color: #222222;
   text-align: left;
-  list-style: inherit;
+  list-style: inherit !important;
 }
-.wwp-about ul.wwp-list li::before,
-.wwp-about ol.wwp-list li::before { display: none; content: none; }
-.wwp-about ul.wwp-list li::marker { color: #1E3A5F; }
-.wwp-about ol.wwp-list li::marker { color: #1E3A5F; font-weight: 700; }
+#page-content .wwp-about ul.wwp-list li::before,
+#page-content .wwp-about ol.wwp-list li::before { display: none; content: none; }
+#page-content .wwp-about ul.wwp-list li::marker { color: #1E3A5F; }
+#page-content .wwp-about ol.wwp-list li::marker { color: #1E3A5F; font-weight: 700; }
 .wwp-about .wwp-lead { font-weight: 700; color: #1E3A5F; }
 
 /* Stat cards */
