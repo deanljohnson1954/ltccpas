@@ -70,7 +70,7 @@
   .wwp-about .wwp-hero {
     background: var(--wwp-navy);
     text-align: center;
-    padding: 56px 24px 60px;
+    padding: 36px 24px 40px;
   }
   .wwp-about .wwp-hero__eyebrow {
     font-family: var(--wwp-font-body);
@@ -109,8 +109,8 @@
   .wwp-about .wwp-callout {
     border-top: 2px solid var(--wwp-gold);
     border-bottom: 2px solid var(--wwp-gold);
-    padding: 26px 8px;
-    margin: 40px 0 24px;
+    padding: 18px 8px;
+    margin: 24px 0 16px;
     text-align: center;
   }
   .wwp-about .wwp-callout p {
@@ -128,7 +128,7 @@
     color: var(--wwp-navy);
     font-size: 27px;
     text-align: center;
-    margin: 44px 0 0;
+    margin: 28px 0 0;
   }
   .wwp-about .wwp-h2::after {
     content: "";
@@ -136,7 +136,7 @@
     width: 64px;
     height: 3px;
     background: var(--wwp-gold);
-    margin: 12px auto 22px;
+    margin: 8px auto 14px;
   }
 
   /* Body copy */
@@ -159,17 +159,27 @@
     margin: 4px 0 0;
   }
 
-  /* Lists */
-  .wwp-about ul.wwp-list,
-  .wwp-about ol.wwp-list {
+  /* Lists — scoped under #page-content to beat site CSS specificity */
+  #page-content .wwp-about ul.wwp-list,
+  #page-content .wwp-about ol.wwp-list {
     font-size: 16px;
     margin: 0 0 8px;
     padding-left: 26px;
+    list-style: disc;
   }
-  .wwp-about ul.wwp-list li,
-  .wwp-about ol.wwp-list li { margin: 0 0 8px; }
-  .wwp-about ul.wwp-list li::marker { color: var(--wwp-navy); }
-  .wwp-about ol.wwp-list li::marker { color: var(--wwp-navy); font-weight: 700; }
+  #page-content .wwp-about ol.wwp-list { list-style: decimal; }
+  #page-content .wwp-about ul.wwp-list li,
+  #page-content .wwp-about ol.wwp-list li {
+    margin: 0 0 8px;
+    padding: 0;
+    text-align: left;
+    position: static;
+    color: var(--wwp-ink);
+  }
+  #page-content .wwp-about ul.wwp-list li::before,
+  #page-content .wwp-about ol.wwp-list li::before { display: none; }
+  #page-content .wwp-about ul.wwp-list li::marker { color: var(--wwp-navy); }
+  #page-content .wwp-about ol.wwp-list li::marker { color: var(--wwp-navy); font-weight: 700; }
   .wwp-about .wwp-lead { font-weight: 700; color: var(--wwp-navy); }
 
   /* Stat cards */
@@ -412,8 +422,15 @@
 
     <section>
       <h2 class="wwp-h2">Why a CPA-Level Review</h2>
-      <p class="wwp-body">Your insurance should be evaluated the same way your CPA evaluates your financial statements &mdash; with independent analysis, objective recommendations, and no pressure to keep an outdated policy.</p>
-      <p class="wwp-body">Every recommendation is weighed through tax treatment, cash-flow impact, estate and spousal-protection implications, hybrid-versus-standalone design, and &mdash; for business owners &mdash; premium deductibility. A well-structured policy can return more than it costs even if the benefit is never used.</p>
+      <ul class="wwp-list">
+        <li>Independent analysis with no pressure to keep an outdated policy</li>
+        <li>Objective recommendations &mdash; the same discipline a CPA applies to financial statements</li>
+        <li>Every recommendation weighed for tax treatment and cash-flow impact</li>
+        <li>Estate and spousal-protection implications evaluated</li>
+        <li>Hybrid-versus-standalone design comparison included</li>
+        <li>Premium deductibility analysis for business owners</li>
+        <li>A well-structured policy can return more than it costs even if the benefit is never used</li>
+      </ul>
     </section>
 
     <section>
@@ -471,7 +488,14 @@
 
     <section>
       <h2 class="wwp-h2">Who I Serve</h2>
-      <p class="wwp-body">I collaborate with professionals, business owners, retirees, and families across the San Francisco Bay Area and beyond &mdash; CPAs, attorneys, physicians, real-estate investors, trustees, and high-income executives who want an objective second opinion before one of the most consequential financial decisions of their retirement years. California families face some of the highest long-term care costs in the nation, and planning early &mdash; before health changes make coverage harder to obtain &mdash; is what protects against costly surprises later.</p>
+      <ul class="wwp-list">
+        <li>CPAs and attorneys seeking an independent second opinion for clients</li>
+        <li>Physicians, executives, and high-income professionals</li>
+        <li>Real-estate investors and business owners</li>
+        <li>Trustees managing estate or trust assets</li>
+        <li>Retirees and pre-retirees across the San Francisco Bay Area and nationwide</li>
+        <li>Families planning early &mdash; before health changes make coverage harder to obtain</li>
+      </ul>
       <p class="wwp-memberships">Active in ProVisors (Pleasanton 1), the British American Business Council, the Australian American Chamber of Commerce, the German American Business Association, Irish Network Bay Area, SF Kiwis, and St. Andrew&rsquo;s Society of San Francisco.</p>
     </section>
 
