@@ -1,0 +1,61 @@
+# Redirects from the old AgentMethods-hosted site (extension-less URLs)
+# to the current static .html pages. 301s preserve whatever ranking/links
+# the old URLs accumulated. Confirmed old URLs via Google index; general
+# pattern (no .html extension) covers the rest of the migrated site.
+
+# Old CMS "home" section pages
+/home/about-us          /about-us.html   301
+/home/contact-us         /contact.html    301
+/home/newsletters        /articles.html   301
+/home/*                  /                301
+
+# Top-level pages
+/about-us                /about-us.html   301
+/contact                 /contact.html    301
+/contact-us               /contact.html    301
+/apply                    /apply.html      301
+/articles                 /articles.html   301
+/carrier-comparison        /carrier-comparison.html   301
+/complimentary-review      /complimentary-review.html 301
+/concierge-two-designs     /concierge-two-designs.html 301
+/learn                     /learn.html      301
+/legal-terms-and-conditions /legal-terms-and-conditions.html 301
+/ltc-risk-report            /ltc-risk-report.html 301
+/ltc-statistics              /ltc-statistics.html 301
+/paying-for-long-term-care   /paying-for-long-term-care.html 301
+/privacy-policy               /privacy-policy.html 301
+/tax-advantages-ltc-insurance /tax-advantages-ltc-insurance.html 301
+/underwriting-what-to-know    /underwriting-what-to-know.html 301
+/what-you-need-to-know-ltc-insurance /what-you-need-to-know-ltc-insurance.html 301
+
+# Articles
+/articles/article-california-ltc-tax  /articles/article-california-ltc-tax.html 301
+/articles/article-ltc-importance      /articles/article-ltc-importance.html 301
+/articles/article-self-insurance      /articles/article-self-insurance.html 301
+
+# LTC examples / case studies
+/ltc-examples/50-year-old-couple         /ltc-examples/50-year-old-couple.html 301
+/ltc-examples/concierge-long-term-care   /ltc-examples/concierge-long-term-care.html 301
+
+# Newsletters
+/newsletters/january-1-2023   /newsletters/january-1-2023.html 301
+/newsletters/january-11-2023  /newsletters/january-11-2023.html 301
+/newsletters/january-7-2024   /newsletters/january-7-2024.html 301
+/newsletters/june-2025        /newsletters/june-2025.html 301
+
+# Understanding LTC insurance section (confirmed indexed by Google without .html)
+/long-term-care-ltc-insurance/costbenefits-of-a-single-premium-policy-for-an-affluent-client /long-term-care-ltc-insurance/costbenefits-of-a-single-premium-policy-for-an-affluent-client.html 301
+/long-term-care-ltc-insurance/fact-vs-fiction-about-long-term-care-insurance /long-term-care-ltc-insurance/fact-vs-fiction-about-long-term-care-insurance.html 301
+/long-term-care-ltc-insurance/frequently-asked-questions /long-term-care-ltc-insurance/frequently-asked-questions.html 301
+/long-term-care-ltc-insurance/how-much-long-term-care-insurance-is-enough /long-term-care-ltc-insurance/how-much-long-term-care-insurance-is-enough.html 301
+/long-term-care-ltc-insurance/long-term-care-insurance-benefits /long-term-care-ltc-insurance/long-term-care-insurance-benefits.html 301
+/long-term-care-ltc-insurance/long-term-care-insurance-with-a-guaranteed-death-benefit /long-term-care-ltc-insurance/long-term-care-insurance-with-a-guaranteed-death-benefit.html 301
+/long-term-care-ltc-insurance/ltc-insurance-can-be-a-winner /long-term-care-ltc-insurance/ltc-insurance-can-be-a-winner.html 301
+/long-term-care-ltc-insurance/ltc-planning-by-a-cpa /long-term-care-ltc-insurance/ltc-planning-by-a-cpa.html 301
+/long-term-care-ltc-insurance/now-is-the-time-for-long-term-planning /long-term-care-ltc-insurance/now-is-the-time-for-long-term-planning.html 301
+/long-term-care-ltc-insurance/self-insuring-ltc /long-term-care-ltc-insurance/self-insuring-ltc.html 301
+/long-term-care-ltc-insurance/solution-for-a-high-net-worth-client /long-term-care-ltc-insurance/solution-for-a-high-net-worth-client.html 301
+/long-term-care-ltc-insurance/state-mandated-ltc /long-term-care-ltc-insurance/state-mandated-ltc.html 301
+/long-term-care-ltc-insurance/we-can-afford-it-not-a-plan /long-term-care-ltc-insurance/we-can-afford-it-not-a-plan.html 301
+/long-term-care-ltc-insurance/what-initiates-a-long-term-care-claim /long-term-care-ltc-insurance/what-initiates-a-long-term-care-claim.html 301
+/long-term-care-ltc-insurance/what-is-long-term-care-insurance /long-term-care-ltc-insurance/what-is-long-term-care-insurance.html 301
