@@ -252,19 +252,6 @@ nav > ul > li > a.active {
   color: var(--gold-light);
 }
 
-/* Contact Us nav CTA */
-nav > ul > li.nav-cta { margin-left: auto; }
-nav > ul > li.nav-cta > a {
-  background: var(--gold);
-  color: #fff !important;
-  border-radius: 2px;
-  padding: 8px 18px;
-  margin: 6px 0;
-  font-weight: 700;
-  letter-spacing: .02em;
-}
-nav > ul > li.nav-cta > a:hover { background: var(--gold-light); color: #fff !important; }
-nav > ul > li.nav-cta > a::after { display: none !important; }
 
 /* Dropdown */
 .dropdown {
