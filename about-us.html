@@ -35,72 +35,261 @@
 }
 </script>
 <style>
-/* All styles hardcoded — no CSS variables — so they render before style.css loads */
-.wwp-about { font-family: Arial, Helvetica, sans-serif; color: #222; line-height: 1.6; background: #fff; }
+/* All hex values hardcoded — no CSS variables — renders before style.css loads */
 .wwp-about * { box-sizing: border-box; }
+.wwp-about {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  line-height: 1.6;
+  background: #ffffff;
+}
 
 /* Hero */
-.wwp-hero { background: #1e3a5f; text-align: center; padding: 36px 24px 40px; }
-.wwp-hero__eyebrow { font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: 0.34em; text-transform: uppercase; font-size: 13px; color: #c8922a; margin: 0 0 12px; display: block; }
-.wwp-hero__title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; color: #fff; font-size: 38px; line-height: 1.15; margin: 0 0 14px; }
-.wwp-hero__subtitle { font-family: Georgia, "Times New Roman", serif; font-style: italic; color: #dce3ec; font-size: 17px; max-width: 620px; margin: 0 auto; }
+.wwp-about .wwp-hero {
+  background: #1E3A5F;
+  text-align: center;
+  padding: 56px 24px 60px;
+}
+.wwp-about .wwp-hero__eyebrow {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #C8922A;
+  margin: 0 0 14px;
+}
+.wwp-about .wwp-hero__title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+.wwp-about .wwp-hero__subtitle {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  color: #DCE3EC;
+  font-size: 18px;
+  max-width: 640px;
+  margin: 0 auto;
+}
 
-/* Wrap */
-.wwp-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px 8px; }
+/* Content wrapper */
+.wwp-about .wwp-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px 8px;
+}
 
 /* Callout */
-.wwp-callout { border-top: 2px solid #c8922a; border-bottom: 2px solid #c8922a; padding: 16px 8px; margin: 22px 0 14px; text-align: center; }
-.wwp-callout p { font-family: Georgia, "Times New Roman", serif; color: #1e3a5f; font-size: 20px; line-height: 1.5; margin: 0; }
-
-/* Body */
-.wwp-body { font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #222; margin: 0 0 14px; text-align: justify; display: block; }
-.wwp-note { font-style: italic; color: #555; font-size: 14px; margin: 0 0 8px; display: block; }
-.wwp-creds { text-align: center; color: #555; font-size: 13px; margin: 4px 0 0; display: block; }
+.wwp-about .wwp-callout {
+  border-top: 2px solid #C8922A;
+  border-bottom: 2px solid #C8922A;
+  padding: 26px 8px;
+  margin: 40px 0 24px;
+  text-align: center;
+}
+.wwp-about .wwp-callout p {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1E3A5F;
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0;
+}
 
 /* Section headings */
-.wwp-h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; color: #1e3a5f; font-size: 24px; text-align: center; margin: 26px 0 0; padding: 0; border: none; background: none; max-width: none; position: static; }
-.wwp-h2::after { content: ""; display: block; width: 56px; height: 3px; background: #c8922a; margin: 7px auto 12px; }
+.wwp-about .wwp-h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: #1E3A5F;
+  font-size: 27px;
+  text-align: center;
+  margin: 44px 0 0;
+  padding: 0;
+  border: none;
+  background: none;
+  max-width: none;
+  position: static;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.wwp-about .wwp-h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: #C8922A;
+  margin: 12px auto 22px;
+}
+.wwp-about .wwp-h2::before { display: none; content: none; }
 
-/* Lists */
-.wwp-list { font-size: 15px; margin: 0 0 10px; padding-left: 22px; list-style: disc; }
-.wwp-list li { margin: 0 0 7px; padding: 0; text-align: left; position: static; color: #222; list-style: disc; }
-.wwp-list li::before { display: none; content: none; }
-ol.wwp-list { list-style: decimal; }
-ol.wwp-list li { list-style: decimal; }
-.wwp-lead { font-weight: 700; color: #1e3a5f; }
+/* Body copy */
+.wwp-about p.wwp-body {
+  text-align: justify;
+  font-size: 16px;
+  color: #222222;
+  margin: 0 0 16px;
+}
+.wwp-about .wwp-note {
+  font-style: italic;
+  color: #555555;
+  text-align: justify;
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+.wwp-about .wwp-creds {
+  text-align: center;
+  color: #555555;
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+/* Lists — override any site CSS */
+.wwp-about ul.wwp-list,
+.wwp-about ol.wwp-list {
+  font-size: 16px;
+  margin: 0 0 8px;
+  padding-left: 26px;
+  list-style: disc;
+}
+.wwp-about ol.wwp-list { list-style: decimal; }
+.wwp-about ul.wwp-list li,
+.wwp-about ol.wwp-list li {
+  margin: 0 0 8px;
+  padding: 0;
+  position: static;
+  color: #222222;
+  text-align: left;
+  list-style: inherit;
+}
+.wwp-about ul.wwp-list li::before,
+.wwp-about ol.wwp-list li::before { display: none; content: none; }
+.wwp-about ul.wwp-list li::marker { color: #1E3A5F; }
+.wwp-about ol.wwp-list li::marker { color: #1E3A5F; font-weight: 700; }
+.wwp-about .wwp-lead { font-weight: 700; color: #1E3A5F; }
 
 /* Stat cards */
-.wwp-stats { display: flex; flex-wrap: wrap; gap: 18px; margin: 4px 0 22px; }
-.wwp-stat { flex: 1 1 220px; background: #f4f1ea; border-top: 3px solid #c8922a; padding: 22px 18px; text-align: center; }
-.wwp-stat__figure { font-family: Georgia, "Times New Roman", serif; font-weight: 700; color: #1e3a5f; font-size: 38px; margin: 0 0 6px; display: block; }
-.wwp-stat__caption { color: #555; font-size: 14px; margin: 0; display: block; }
+.wwp-about .wwp-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 4px 0 26px;
+}
+.wwp-about .wwp-stat {
+  flex: 1 1 240px;
+  background: #F4F1EA;
+  border-top: 3px solid #C8922A;
+  padding: 26px 20px;
+  text-align: center;
+}
+.wwp-about .wwp-stat__figure {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: #1E3A5F;
+  font-size: 42px;
+  margin: 0 0 8px;
+}
+.wwp-about .wwp-stat__caption {
+  color: #555555;
+  font-size: 15px;
+  margin: 0;
+}
 
 /* Assurance cards */
-.wwp-assure { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 8px; }
-.wwp-assure__card { flex: 1 1 160px; background: #1e3a5f; padding: 22px 16px; text-align: center; }
-.wwp-assure__title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; color: #c8922a; font-size: 18px; margin: 0 0 7px; display: block; }
-.wwp-assure__body { color: #e7ecf3; font-size: 14px; margin: 0; display: block; }
+.wwp-about .wwp-assure {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 0 8px;
+}
+.wwp-about .wwp-assure__card {
+  flex: 1 1 180px;
+  background: #1E3A5F;
+  padding: 24px 18px;
+  text-align: center;
+}
+.wwp-about .wwp-assure__title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: #C8922A;
+  font-size: 19px;
+  margin: 0 0 8px;
+}
+.wwp-about .wwp-assure__body {
+  color: #E7ECF3;
+  font-size: 14px;
+  margin: 0;
+}
 
 /* Testimonials */
-.wwp-quote { border-left: 4px solid #c8922a; padding: 4px 0 4px 18px; margin: 0 0 20px; }
-.wwp-quote p { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 16px; color: #222; margin: 0 0 6px; }
-.wwp-quote cite { font-family: Arial, Helvetica, sans-serif; font-style: normal; font-weight: 700; color: #1e3a5f; font-size: 14px; display: block; }
+.wwp-about .wwp-quote {
+  border-left: 4px solid #C8922A;
+  padding: 4px 0 4px 20px;
+  margin: 0 0 24px;
+}
+.wwp-about .wwp-quote p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #222222;
+  margin: 0 0 8px;
+  text-align: left;
+}
+.wwp-about .wwp-quote cite {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #1E3A5F;
+  font-size: 15px;
+  display: block;
+}
 
 /* Memberships */
-.wwp-memberships { text-align: center; font-style: italic; color: #555; font-size: 14px; max-width: 700px; margin: 6px auto 0; display: block; }
+.wwp-about .wwp-memberships {
+  text-align: center;
+  font-style: italic;
+  color: #555555;
+  font-size: 15px;
+  max-width: 720px;
+  margin: 4px auto 0;
+}
 
 /* CTA */
-.wwp-cta { background: #1e3a5f; text-align: center; padding: 30px 24px; margin-top: 32px; }
-.wwp-cta__title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; color: #fff; font-size: 22px; margin: 0 0 8px; display: block; }
-.wwp-cta__sub { font-weight: 700; color: #c8922a; font-size: 16px; margin: 0 0 12px; display: block; }
-.wwp-cta__line { color: #e7ecf3; font-size: 14px; margin: 4px 0 0; display: block; }
-.wwp-cta__line a { color: #e7ecf3; text-decoration: none; }
+.wwp-about .wwp-cta {
+  background: #1E3A5F;
+  text-align: center;
+  padding: 34px 24px;
+  margin-top: 40px;
+}
+.wwp-about .wwp-cta__title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+.wwp-about .wwp-cta__sub {
+  font-weight: 700;
+  color: #C8922A;
+  font-size: 17px;
+  margin: 0 0 14px;
+}
+.wwp-about .wwp-cta__line {
+  color: #E7ECF3;
+  font-size: 15px;
+  margin: 4px 0 0;
+}
+.wwp-about .wwp-cta__line a { color: #E7ECF3; text-decoration: none; }
+.wwp-about .wwp-cta__line a:hover { text-decoration: underline; }
 
 @media (max-width: 640px) {
-  .wwp-hero__title { font-size: 28px; }
-  .wwp-callout p { font-size: 17px; }
-  .wwp-h2 { font-size: 21px; }
-  .wwp-stats, .wwp-assure { flex-direction: column; }
+  .wwp-about .wwp-hero__title { font-size: 30px; }
+  .wwp-about .wwp-callout p { font-size: 19px; }
+  .wwp-about .wwp-h2 { font-size: 23px; }
+  .wwp-about .wwp-stats,
+  .wwp-about .wwp-assure { flex-direction: column; }
 }
 </style>
 </head>
@@ -171,11 +360,11 @@ ol.wwp-list li { list-style: decimal; }
   </ul></li>
 </ul></nav>
 
-<!-- wwp-about is OUTSIDE #page-content so site CSS ID rules cannot override it -->
-<div class="wwp-about">
+<!-- wwp-about is outside #page-content so site CSS ID rules cannot override it -->
+<section class="wwp-about">
 
   <header class="wwp-hero">
-    <span class="wwp-hero__eyebrow">About</span>
+    <p class="wwp-hero__eyebrow">About</p>
     <h1 class="wwp-hero__title">Withbert W. Payne, CPA</h1>
     <p class="wwp-hero__subtitle">Independent, CPA-level reviews of life, long-term care, disability, and business insurance.</p>
   </header>
@@ -186,115 +375,117 @@ ol.wwp-list li { list-style: decimal; }
       <p>I am a CPA who applies audit-level financial analysis to life, long-term care, disability, and business insurance. Rather than selling policies, I independently audit them &mdash; to help you improve protection, reduce inefficiency, and make better financial decisions.</p>
     </div>
 
-    <span class="wwp-body">Insurance policies often drift out of alignment with changing financial goals. My role is to audit them objectively, identify inefficiencies, and recommend improvements before they become costly problems &mdash; the same discipline a CPA brings to a set of financial statements.</span>
+    <p class="wwp-body">Insurance policies often drift out of alignment with changing financial goals. My role is to audit them objectively, identify inefficiencies, and recommend improvements before they become costly problems &mdash; the same discipline a CPA brings to a set of financial statements.</p>
 
-    <h2 class="wwp-h2">Why Independent Matters</h2>
-    <span class="wwp-body">To avoid a conflict of interest, your coverage should be evaluated by someone other than the agent who sold it. The selling agent has an inherent interest in defending the existing policy. An independent review has no such constraint.</span>
-    <ul class="wwp-list">
-      <li>No carrier quotas</li>
-      <li>No production requirements</li>
-      <li>No obligation to defend an existing policy</li>
-      <li>Recommendations based solely on your commercial interests</li>
-      <li>Analysis first. Recommendations second.</li>
-    </ul>
+    <section>
+      <h2 class="wwp-h2">Why Independent Matters</h2>
+      <p class="wwp-body">To avoid a conflict of interest, your coverage should be evaluated by someone other than the agent who sold it. The selling agent has an inherent interest in defending the existing policy. An independent review has no such constraint.</p>
+      <ul class="wwp-list">
+        <li>No carrier quotas</li>
+        <li>No production requirements</li>
+        <li>No obligation to defend an existing policy</li>
+        <li>Recommendations based solely on your commercial interests</li>
+        <li>Analysis first. Recommendations second.</li>
+      </ul>
+    </section>
 
-    <h2 class="wwp-h2">My Review Process</h2>
-    <ol class="wwp-list">
-      <li>Understand your goals.</li>
-      <li>Audit your existing coverage.</li>
-      <li>Compare appropriate market alternatives.</li>
-      <li>Measure tax, cash-flow, and estate-planning impact.</li>
-      <li>Deliver a written, no-obligation recommendation.</li>
-    </ol>
+    <section>
+      <h2 class="wwp-h2">My Review Process</h2>
+      <ol class="wwp-list">
+        <li>Understand your goals.</li>
+        <li>Audit your existing coverage.</li>
+        <li>Compare appropriate market alternatives.</li>
+        <li>Measure tax, cash-flow, and estate-planning impact.</li>
+        <li>Deliver a written, no-obligation recommendation.</li>
+      </ol>
+    </section>
 
-    <h2 class="wwp-h2">What I Review</h2>
-    <ul class="wwp-list">
-      <li><span class="wwp-lead">Life insurance</span> &mdash; including chronic, critical, and long-term care riders, and ILIT / TOLI oversight</li>
-      <li><span class="wwp-lead">Long-term care insurance</span> &mdash; joint-life and hybrid designs with lifetime benefits</li>
-      <li><span class="wwp-lead">Disability insurance</span> &mdash; group versus individual coverage, and portability gaps</li>
-      <li><span class="wwp-lead">Business coverage</span> &mdash; buy-sell and key-person agreements</li>
-      <li><span class="wwp-lead">Policy performance</span> &mdash; restructuring, lapse prevention, and optimization</li>
-    </ul>
+    <section>
+      <h2 class="wwp-h2">What I Review</h2>
+      <ul class="wwp-list">
+        <li><span class="wwp-lead">Life insurance</span> &mdash; including chronic, critical, and long-term care riders, and ILIT / TOLI oversight</li>
+        <li><span class="wwp-lead">Long-term care insurance</span> &mdash; joint-life and hybrid designs with lifetime benefits</li>
+        <li><span class="wwp-lead">Disability insurance</span> &mdash; group versus individual coverage, and portability gaps</li>
+        <li><span class="wwp-lead">Business coverage</span> &mdash; buy-sell and key-person agreements</li>
+        <li><span class="wwp-lead">Policy performance</span> &mdash; restructuring, lapse prevention, and optimization</li>
+      </ul>
+    </section>
 
-    <h2 class="wwp-h2">Why a CPA-Level Review</h2>
-    <ul class="wwp-list">
-      <li>Independent analysis with no pressure to keep an outdated policy</li>
-      <li>Objective recommendations &mdash; the same discipline a CPA applies to financial statements</li>
-      <li>Every recommendation weighed for tax treatment and cash-flow impact</li>
-      <li>Estate and spousal-protection implications evaluated</li>
-      <li>Hybrid-versus-standalone design comparison included</li>
-      <li>Premium deductibility analysis for business owners</li>
-      <li>A well-structured policy can return more than it costs even if the benefit is never used</li>
-    </ul>
+    <section>
+      <h2 class="wwp-h2">Why a CPA-Level Review</h2>
+      <p class="wwp-body">Your insurance should be evaluated the same way your CPA evaluates your financial statements &mdash; with independent analysis, objective recommendations, and no pressure to keep an outdated policy.</p>
+      <p class="wwp-body">Every recommendation is weighed through tax treatment, cash-flow impact, estate and spousal-protection implications, hybrid-versus-standalone design, and &mdash; for business owners &mdash; premium deductibility. A well-structured policy can return more than it costs even if the benefit is never used.</p>
+    </section>
 
-    <h2 class="wwp-h2">Professional Background</h2>
-    <ul class="wwp-list">
-      <li>CPA and Fellow Chartered Accountant (England &amp; Wales)</li>
-      <li>Former Internal Audit Manager, CNA Life Insurance Company</li>
-      <li>Former Medicare program audit manager, Blue Cross</li>
-      <li>Former Price Waterhouse auditor, London</li>
-      <li>More than 25 years specializing in life and long-term care insurance reviews</li>
-    </ul>
-    <span class="wwp-note">This background allows clients to receive analysis grounded in audit discipline rather than product sales.</span>
-    <span class="wwp-creds">CPA (California) &nbsp;&middot;&nbsp; FCA, ICAEW (England &amp; Wales) &nbsp;&middot;&nbsp; CGMA &nbsp;&middot;&nbsp; Licensed independent insurance broker, CA License No. 0E90257</span>
+    <section>
+      <h2 class="wwp-h2">Professional Background</h2>
+      <ul class="wwp-list">
+        <li>CPA and Fellow Chartered Accountant (England &amp; Wales)</li>
+        <li>Former Internal Audit Manager, CNA Life Insurance Company</li>
+        <li>Former Medicare program audit manager, Blue Cross</li>
+        <li>Former Price Waterhouse auditor, London</li>
+        <li>More than 25 years specializing in life and long-term care insurance reviews</li>
+      </ul>
+      <p class="wwp-note">This background allows clients to receive analysis grounded in audit discipline rather than product sales.</p>
+      <p class="wwp-creds">CPA (California) &nbsp;&middot;&nbsp; FCA, ICAEW (England &amp; Wales) &nbsp;&middot;&nbsp; CGMA &nbsp;&middot;&nbsp; Licensed independent insurance broker, CA License No. 0E90257</p>
+    </section>
 
-    <h2 class="wwp-h2">Results</h2>
-    <div class="wwp-stats">
-      <div class="wwp-stat">
-        <span class="wwp-stat__figure">30&ndash;40%</span>
-        <span class="wwp-stat__caption">Average improvement in policy efficiency, across independent reviews.</span>
+    <section>
+      <h2 class="wwp-h2">Results</h2>
+      <div class="wwp-stats">
+        <div class="wwp-stat">
+          <p class="wwp-stat__figure">30&ndash;40%</p>
+          <p class="wwp-stat__caption">Average improvement in policy efficiency, across independent reviews.</p>
+        </div>
+        <div class="wwp-stat">
+          <p class="wwp-stat__figure">$3.8M</p>
+          <p class="wwp-stat__caption">Increase in the guaranteed death benefit for one client, with no material increase in premium.</p>
+        </div>
       </div>
-      <div class="wwp-stat">
-        <span class="wwp-stat__figure">$3.8M</span>
-        <span class="wwp-stat__caption">Increase in the guaranteed death benefit for one client, with no material increase in premium.</span>
+      <div class="wwp-assure">
+        <div class="wwp-assure__card">
+          <p class="wwp-assure__title">No Fee</p>
+          <p class="wwp-assure__body">Reviews are complimentary. The carrier you choose compensates Insurance Review Services directly.</p>
+        </div>
+        <div class="wwp-assure__card">
+          <p class="wwp-assure__title">No Obligation</p>
+          <p class="wwp-assure__body">A review is designed to inform your decision &mdash; never to pressure it.</p>
+        </div>
+        <div class="wwp-assure__card">
+          <p class="wwp-assure__title">Personal</p>
+          <p class="wwp-assure__body">Mr. Payne conducts every engagement himself. Reviews are never delegated.</p>
+        </div>
       </div>
-    </div>
-    <div class="wwp-assure">
-      <div class="wwp-assure__card">
-        <span class="wwp-assure__title">No Fee</span>
-        <span class="wwp-assure__body">Reviews are complimentary. The carrier you choose compensates Insurance Review Services directly.</span>
-      </div>
-      <div class="wwp-assure__card">
-        <span class="wwp-assure__title">No Obligation</span>
-        <span class="wwp-assure__body">A review is designed to inform your decision &mdash; never to pressure it.</span>
-      </div>
-      <div class="wwp-assure__card">
-        <span class="wwp-assure__title">Personal</span>
-        <span class="wwp-assure__body">Mr. Payne conducts every engagement himself. Reviews are never delegated.</span>
-      </div>
-    </div>
+    </section>
 
-    <h2 class="wwp-h2">What Clients &amp; Colleagues Say</h2>
-    <div class="wwp-quote">
-      <p>&ldquo;Bert brought a level of financial rigor to our review I simply hadn&rsquo;t seen before. As a CPA myself, I appreciated that he spoke my language &mdash; tax impact, cash flow, estate implications. He didn&rsquo;t just hand me a brochure.&rdquo;</p>
-      <cite>&mdash; CPA, San Francisco Bay Area</cite>
-    </div>
-    <div class="wwp-quote">
-      <p>&ldquo;I had an existing policy I hadn&rsquo;t looked at in years. Bert reviewed it, identified a coverage gap I wasn&rsquo;t aware of, and compared three alternatives &mdash; all at no charge. That kind of objective analysis is genuinely rare.&rdquo;</p>
-      <cite>&mdash; Retired Executive, Contra Costa County</cite>
-    </div>
+    <section>
+      <h2 class="wwp-h2">What Clients &amp; Colleagues Say</h2>
+      <blockquote class="wwp-quote">
+        <p>&ldquo;Bert brought a level of financial rigor to our review I simply hadn&rsquo;t seen before. As a CPA myself, I appreciated that he spoke my language &mdash; tax impact, cash flow, estate implications. He didn&rsquo;t just hand me a brochure.&rdquo;</p>
+        <cite>&mdash; CPA, San Francisco Bay Area</cite>
+      </blockquote>
+      <blockquote class="wwp-quote">
+        <p>&ldquo;I had an existing policy I hadn&rsquo;t looked at in years. Bert reviewed it, identified a coverage gap I wasn&rsquo;t aware of, and compared three alternatives &mdash; all at no charge. That kind of objective analysis is genuinely rare.&rdquo;</p>
+        <cite>&mdash; Retired Executive, Contra Costa County</cite>
+      </blockquote>
+    </section>
 
-    <h2 class="wwp-h2">Who I Serve</h2>
-    <ul class="wwp-list">
-      <li>CPAs and attorneys seeking an independent second opinion for clients</li>
-      <li>Physicians, executives, and high-income professionals</li>
-      <li>Real-estate investors and business owners</li>
-      <li>Trustees managing estate or trust assets</li>
-      <li>Retirees and pre-retirees across the San Francisco Bay Area and nationwide</li>
-      <li>Families planning early &mdash; before health changes make coverage harder to obtain</li>
-    </ul>
-    <span class="wwp-memberships">Active in ProVisors (Pleasanton 1), the British American Business Council, the Australian American Chamber of Commerce, the German American Business Association, Irish Network Bay Area, SF Kiwis, and St. Andrew&rsquo;s Society of San Francisco.</span>
+    <section>
+      <h2 class="wwp-h2">Who I Serve</h2>
+      <p class="wwp-body">I collaborate with professionals, business owners, retirees, and families across the San Francisco Bay Area and beyond &mdash; CPAs, attorneys, physicians, real-estate investors, trustees, and high-income executives who want an objective second opinion before one of the most consequential financial decisions of their retirement years. California families face some of the highest long-term care costs in the nation, and planning early &mdash; before health changes make coverage harder to obtain &mdash; is what protects against costly surprises later.</p>
+      <p class="wwp-memberships">Active in ProVisors (Pleasanton 1), the British American Business Council, the Australian American Chamber of Commerce, the German American Business Association, Irish Network Bay Area, SF Kiwis, and St. Andrew&rsquo;s Society of San Francisco.</p>
+    </section>
 
   </div><!-- /.wwp-wrap -->
 
   <div class="wwp-cta">
-    <span class="wwp-cta__title">Speak With a CPA Who Specializes in Long-Term Care</span>
-    <span class="wwp-cta__sub">Every review is complimentary &mdash; no fee, no obligation.</span>
-    <span class="wwp-cta__line"><a href="tel:+19257086501">(925) 708-6501</a> &nbsp;&middot;&nbsp; <a href="mailto:withbert.payne@insurance-review-services.com">withbert.payne@insurance-review-services.com</a></span>
-    <span class="wwp-cta__line">LTCCPAS.com &nbsp;&middot;&nbsp; Insurance Review Services, San Ramon, California</span>
+    <p class="wwp-cta__title">Speak With a CPA Who Specializes in Long-Term Care</p>
+    <p class="wwp-cta__sub">Every review is complimentary &mdash; no fee, no obligation.</p>
+    <p class="wwp-cta__line"><a href="tel:+19257086501">(925) 708-6501</a> &nbsp;&middot;&nbsp; <a href="mailto:withbert.payne@insurance-review-services.com">withbert.payne@insurance-review-services.com</a></p>
+    <p class="wwp-cta__line">LTCCPAS.com &nbsp;&middot;&nbsp; Insurance Review Services, San Ramon, California</p>
   </div>
 
-</div><!-- /.wwp-about -->
+</section>
 
 <footer>
   <div class="footer-inner">
