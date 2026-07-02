@@ -75,6 +75,14 @@
 .assessment-moderate  { color: #b87a1f; font-weight: 600; }
 .assessment-weak      { color: #b71c1c; font-weight: 600; }
 .update-text { font-size: 11px; color: var(--muted); font-style: italic; line-height: 1.5; display: block; margin-top: 4px; }
+.carrier-key {
+  max-width: 1400px;
+  margin: 18px auto 0;
+  padding: 0 24px;
+  font-size: 14px;
+  color: var(--text);
+}
+.carrier-key b { color: var(--navy); }
 .findings-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -104,17 +112,6 @@
   margin-top: 40px;
   line-height: 1.7;
 }
-.rating-pill {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 10px;
-  letter-spacing: .3px;
-}
-.rating-excellent { background: #e8f5e9; color: #2e7d32; }
-.rating-moderate  { background: #fff8e1; color: #b87a1f; }
-.rating-weak      { background: #fce4ec; color: #b71c1c; }
 .why-list { list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 2; }
 .why-list li::before { content: "✓ "; color: #2e7d32; font-weight: 700; }
 @media (max-width: 700px) {
@@ -130,7 +127,6 @@
   <li><a href="index.html">Home</a></li>
   <li><a href="about-us.html">About</a></li>
   <li class="has-dropdown"><a href="#">Case Studies &#9662;</a><ul class="dropdown">
-
     <li><a href="ltc-examples/50-year-old-couple.html">50-Year-Old Couple</a></li>
     <li><a href="ltc-examples/concierge-long-term-care.html">Concierge Care</a></li>
   </ul></li>
@@ -156,7 +152,7 @@
     <li><a href="long-term-care-ltc-insurance/how-much-long-term-care-insurance-is-enough.html">How Much is Enough?</a></li>
     <li><a href="carrier-comparison.html">Carrier Comparison</a></li>
   </ul></li>
-<li class="has-dropdown"><a href="#">Resources &#9662;</a><ul class="dropdown">
+  <li class="has-dropdown"><a href="#">Resources &#9662;</a><ul class="dropdown">
     <li><a href="tax-advantages-ltc-insurance.html">Tax Advantages</a></li>
     <li><a href="ltc-statistics.html">LTC Statistics</a></li>
     <li><a href="ltc-risk-report.html">LTC Risk Report</a></li>
@@ -171,14 +167,17 @@
 
 <div id="page-content">
 
-<div class="page-hero"><div class="inner">
+<div class="page-hero" style="background:linear-gradient(135deg,#0f2744 0%,#1e3a5f 100%);color:#fff;"><div class="inner">
   <div class="breadcrumb"><a href="index.html">Home</a> &mdash; <span>Carrier Comparison</span></div>
   <h1>LTC Insurance &mdash; Carrier Comparison &mdash; 2026</h1>
-  <p>Independent analysis &middot; Seven carriers, anonymized &middot; Carrier A is the recommended option</p>
+  <p>Seven carriers compared side by side, anonymised A&ndash;G. An objective, feature-by-feature evaluation of how leading long-term care structures actually differ &mdash; no sales register, no endorsements.</p>
   <p style="font-size:13px;margin-top:6px;opacity:.85;"><em>Updated 2026 &middot; Quotes vary by age, health, and state</em></p>
 </div></div>
 
 <div class="table-full-section"><div class="table-full-inner">
+
+<p class="carrier-key"><b>Carrier key:</b> A = Hybrid Life/Annuity &mdash; Recommended &nbsp;|&nbsp; B, C = Hybrid Life &nbsp;|&nbsp; D, E = Whole Life + LTC Rider &nbsp;|&nbsp; F, G = Traditional LTC. No carrier names appear in this comparison.</p>
+
 <div class="carrier-table-wrap">
 <table class="carrier-table">
   <thead>
@@ -194,7 +193,6 @@
     </tr>
   </thead>
   <tbody>
-    <!-- STRUCTURE -->
     <tr class="section-row"><td colspan="8">Structure</td></tr>
     <tr>
       <td>AM Best Rating</td>
@@ -203,11 +201,10 @@
       <td>A+</td>
       <td>A++</td>
       <td>A++</td>
-      <td>A</td>
+      <td>A++</td>
       <td>A</td>
     </tr>
 
-    <!-- KEY FEATURES -->
     <tr class="section-row"><td colspan="8">Key Features</td></tr>
     <tr>
       <td>Lifetime LTC benefits</td>
@@ -226,8 +223,8 @@
       <td><span class="lim">&#126;</span> ~$29,000</td>
       <td><span class="lim">&#126;</span> ~$28,000</td>
       <td><span class="lim">&#126;</span> ~$25,000</td>
-      <td><span class="lim">&#126;</span> Limited</td>
-      <td><span class="lim">&#126;</span> Limited</td>
+      <td><span class="lim">&#126;</span> Varies</td>
+      <td><span class="lim">&#126;</span> Varies</td>
     </tr>
     <tr>
       <td>Benefit model</td>
@@ -247,7 +244,7 @@
       <td><span class="chk">&#10003;</span> Yes</td>
       <td><span class="chk">&#10003;</span> Yes</td>
       <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="lim">&#126;</span> Varies</td>
+      <td><span class="chk">&#10003;</span> Yes</td>
     </tr>
     <tr>
       <td>Death benefit</td>
@@ -296,8 +293,8 @@
       <td><span class="chk">&#10003;</span> Yes</td>
       <td><span class="chk">&#10003;</span> Separate</td>
       <td><span class="chk">&#10003;</span> Separate</td>
-      <td><span class="chk">&#10003;</span> Shared</td>
-      <td><span class="lim">&#126;</span> Varies</td>
+      <td><span class="chk">&#10003;</span> Yes</td>
+      <td><span class="chk">&#10003;</span> Yes</td>
     </tr>
     <tr>
       <td>IRA / 401(k) funding</td>
@@ -330,7 +327,6 @@
       <td><span class="lim">&#126;</span> Partial</td>
     </tr>
 
-    <!-- 2026 ASSESSMENT -->
     <tr class="section-row"><td colspan="8">2026 Assessment</td></tr>
     <tr>
       <td>Catastrophic risk fit</td>
@@ -345,12 +341,12 @@
     <tr>
       <td>2025&ndash;26 notes</td>
       <td class="rec-col"><span class="update-text">75% cash option; IRA/401(k) funding; only lifetime (unlimited) structure; most price-competitive couples product; highest LTC leverage per premium dollar</span></td>
-      <td><span class="update-text">Stronger monthly benefits; repriced competitively</span></td>
-      <td><span class="update-text">Strong brand; A++ rated; benefit pool capped at face amount</span></td>
-      <td><span class="update-text">Captive distribution; dividend-based; rate-increase history a consideration</span></td>
-      <td><span class="update-text">Dividend-based; rate-increase history a consideration</span></td>
-      <td><span class="update-text">Traditional standalone; accepts older applicants; shared-care available; no death benefit</span></td>
-      <td><span class="update-text">Traditional standalone; monthly benefit leverage; rate-increase history; no death benefit</span></td>
+      <td><span class="update-text">Stronger monthly benefits; repriced competitively; benefit pool capped</span></td>
+      <td><span class="update-text">Cash-indemnity flexibility; competitively priced; benefit pool capped</span></td>
+      <td><span class="update-text">Reimbursement model; dividend-based; rate-increase history a consideration</span></td>
+      <td><span class="update-text">Reimbursement model; dividend-based; rate-increase history a consideration</span></td>
+      <td><span class="update-text">Top traditional LTC; accepts to age 79; couples discounts; no death benefit; rates not guaranteed</span></td>
+      <td><span class="update-text">A-rated; limited states in 2026; no death benefit; rates not guaranteed</span></td>
     </tr>
   </tbody>
 </table>
@@ -398,7 +394,7 @@
 </div>
 <div class="sidebar">
   <div class="sidebar-box">
-    <h3>Get a Personalized Quote</h3>
+    <h3>Get a Personalised Quote</h3>
     <p>We can run quotes from all seven of these carriers for your specific age, health, and situation.</p>
     <p style="font-size:18px;font-weight:700;color:var(--navy);">(925) 708-6501</p>
     <a class="btn-gold" href="contact.html">Get a Free Review</a>
@@ -419,8 +415,8 @@
 </div></div>
 
 <div class="contact-teaser">
-  <h2>Ready to See Your Numbers?</h2>
-  <p>We can quote all seven carriers for your specific profile &mdash; age, health, and state. Carrier A&rsquo;s pricing may surprise you.</p>
+  <h2>Get a Personalised Comparison</h2>
+  <p>We can run quotes across all seven carriers for your specific profile &mdash; age, health, and state. Carrier A is typically our starting recommendation, but the right structure depends on your plan.</p>
   <span class="phone-big">(925) 708-6501</span>
   <a href="contact.html" class="btn-gold" style="font-size:16px;padding:14px 36px;">Get a Free Review</a>
 </div>
