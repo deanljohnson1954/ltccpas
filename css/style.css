@@ -104,7 +104,7 @@ header .inner {
   align-items: center;
   gap: 18px;
 }
-..brand-logo {
+.brand-logo {
   width: 140px;
   max-height: 88px;
   object-fit: contain;
@@ -146,16 +146,6 @@ header .inner {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.hero-logo {
-  max-width: 280px;
-  margin: 0 0 14px;
-}
-.hero-logo img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* Buttons */
