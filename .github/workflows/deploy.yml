@@ -24,16 +24,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version: '22'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build site (no build step)
-        run: echo "Static site ready"
+      - name: Prepare Pages artifact
+        run: |
+          rm -rf node_modules .github .git
+          rm -f package.json package-lock.json README.md
+          find . -name '*.rtf' -delete
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -42,15 +37,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./
-          exclude: |
-            node_modules/**
-            .github/**
-            .git/**
-            package.json
-            package-lock.json
-            README.md
-            **/*.yml
-            **/*.rtf
 
       - name: Deploy to GitHub Pages
         id: deployment
