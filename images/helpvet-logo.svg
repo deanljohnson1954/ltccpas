@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 200" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">HelpVet Net logo</title>
+  <desc id="logoDesc">American flag icon with text HelpVet Net and tagline Never Forget, Never Forgotten.</desc>
+  <rect width="680" height="200" fill="none"/>
+  <g transform="translate(0 20)">
+    <rect x="0" y="0" width="160" height="120" rx="18" fill="#ffffff" stroke="#0f1e32" stroke-width="1.5"/>
+    <rect x="0" y="0" width="94" height="56" rx="12" fill="#0f1e32"/>
+    <g fill="#ffffff" opacity="0.95" transform="translate(10 8)">
+      <circle cx="6" cy="6" r="3"/>
+      <circle cx="30" cy="6" r="3"/>
+      <circle cx="54" cy="6" r="3"/>
+      <circle cx="18" cy="22" r="3"/>
+      <circle cx="42" cy="22" r="3"/>
+      <circle cx="6" cy="38" r="3"/>
+      <circle cx="30" cy="38" r="3"/>
+      <circle cx="54" cy="38" r="3"/>
+    </g>
+    <rect x="0" y="56" width="160" height="16" fill="#b31b34"/>
+    <rect x="0" y="72" width="160" height="16" fill="#ffffff"/>
+    <rect x="0" y="88" width="160" height="16" fill="#b31b34"/>
+    <rect x="0" y="104" width="160" height="16" fill="#ffffff"/>
+    <rect x="0" y="120" width="160" height="16" fill="#b31b34"/>
+  </g>
+  <text x="190" y="76" font-family="EB Garamond, Georgia, serif" font-size="44" font-weight="700" fill="#0f1e32">HelpVet Net</text>
+  <text x="190" y="108" font-family="Source Sans 3, Arial, sans-serif" font-size="18" fill="#c8982a" letter-spacing="0.08em">Never Forget, Never Forgotten</text>
+</svg>
