@@ -3,7 +3,10 @@
    Fonts: Playfair Display + DM Sans
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap');
+/* Fonts are loaded via <link> tags in <head> (see all HTML pages), not
+   @import here — @import blocks on style.css downloading first, which
+   delays font discovery and causes the headings to visibly swap fonts
+   after the page has already rendered. */
 
 /* ── CSS Variables ─────────────────────────────────────────── */
 :root {
