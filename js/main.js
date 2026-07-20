@@ -67,8 +67,14 @@ async function navigate(url, pushState = true) {
       initNav(); // re-attach listeners to new nav
     }
 
-    // Inject page-specific <style> blocks from the fetched page's <head>
-    document.querySelectorAll('style[data-spa]').forEach(s => s.remove());
+    // Inject page-specific <style> blocks from the fetched page's <head>.
+    // Remove ALL inline <style> tags (not just ones we previously marked
+    // data-spa) — the very first page loaded (a direct hit, not via SPA
+    // nav) has its own un-marked page-specific <style> block that would
+    // otherwise linger forever and fight later pages' styles by selector
+    // specificity (e.g. index.html's "#page-content h1" outranking a
+    // scoped ".page-class h1" on the page navigated to).
+    document.querySelectorAll('head style').forEach(s => s.remove());
     doc.querySelectorAll('head style').forEach(style => {
       const clone = document.createElement('style');
       clone.setAttribute('data-spa', '1');
