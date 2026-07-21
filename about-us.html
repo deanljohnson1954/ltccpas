@@ -292,6 +292,78 @@
 #page-content .wwp-about .wwp-cta__line a { color: #E7ECF3; text-decoration: none; }
 #page-content .wwp-about .wwp-cta__line a:hover { text-decoration: underline; }
 
+/* Hero portrait & credentials */
+.wwp-about .wwp-hero__portrait {
+  width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
+  margin: 8px auto 18px; border: 4px solid rgba(255,255,255,.15);
+}
+.wwp-about .wwp-hero__creds {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px;
+  max-width: 60ch; margin: 0 auto 16px; color: #C7D0DB; font-size: 14px; font-weight: 700;
+}
+.wwp-about .wwp-hero__creds .dot { color: #C8922A; }
+.wwp-about .wwp-badge {
+  display: inline-block; background: rgba(200,146,42,.16); border: 1px solid #C8922A;
+  color: #F0D8A8; font-weight: 700; font-size: 13px; letter-spacing: .02em;
+  padding: 8px 16px; border-radius: 2px; margin-top: 4px;
+}
+
+/* Two-column panels */
+.wwp-about .wwp-two { display: flex; flex-wrap: wrap; gap: 20px; margin: 0 0 8px; }
+.wwp-about .wwp-panel {
+  flex: 1 1 300px; background: #F4F1EA; border-top: 3px solid #1E3A5F; padding: 24px 26px;
+}
+#page-content .wwp-about .wwp-panel h3 {
+  font-family: 'EB Garamond', Georgia, serif; font-weight: 700; color: #1E3A5F;
+  font-size: 19px; margin: 0 0 12px; text-align: center;
+}
+.wwp-about .wwp-panel .wwp-list { margin-bottom: 0; }
+
+/* Uncovers cards */
+.wwp-about .wwp-cards { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 20px; }
+.wwp-about .wwp-card {
+  flex: 1 1 220px; background: #fff; border: 1px solid #E4E1D8; border-left: 3px solid #C8922A;
+  padding: 16px 18px;
+}
+#page-content .wwp-about .wwp-card p {
+  color: #1E3A5F; font-weight: 700; font-size: 15px; margin: 0; text-align: left;
+}
+
+/* HelpVet advisor band */
+.wwp-about .wwp-helpvet {
+  background: #16283F; text-align: center; padding: 30px 24px; margin: 0 0 8px;
+}
+#page-content .wwp-about .wwp-helpvet__kicker {
+  color: #C8922A; font-weight: 700; font-size: 13px; letter-spacing: .1em;
+  text-transform: uppercase; margin: 0 0 10px;
+}
+#page-content .wwp-about .wwp-helpvet__body {
+  color: #CBD6E4; font-size: 15px; max-width: 68ch; margin: 0 auto 14px; text-align: center;
+}
+.wwp-about .wwp-helpvet__term {
+  display: inline-block; border: 1px solid #C8922A; color: #E8B84B;
+  font-weight: 700; font-size: 13px; letter-spacing: .03em; padding: 7px 14px; border-radius: 2px;
+}
+
+/* Promise cards */
+.wwp-about .wwp-promise { display: flex; flex-wrap: wrap; gap: 12px; margin: 4px 0 18px; }
+.wwp-about .wwp-pcard {
+  flex: 1 1 140px; background: #1E3A5F; color: #fff; text-align: center;
+  padding: 18px 10px; border-bottom: 3px solid #C8922A;
+}
+.wwp-about .wwp-pcard .ck { color: #E8B84B; font-size: 18px; margin-bottom: 6px; }
+.wwp-about .wwp-pcard span { font-weight: 700; font-size: 13px; line-height: 1.3; display: block; }
+
+/* Speak With Bert */
+.wwp-about .wwp-speak { text-align: center; padding: 8px 0 4px; }
+#page-content .wwp-about .wwp-speak__phone {
+  font-family: 'EB Garamond', Georgia, serif; font-weight: 700; color: #1E3A5F;
+  font-size: 34px; display: inline-block; margin: 6px 0 12px;
+}
+.wwp-about .wwp-speak__apply { color: #555555; font-size: 15px; margin: 0; }
+.wwp-about .wwp-speak__apply a { color: #1E3A5F; font-weight: 700; border-bottom: 1px solid #C8922A; }
+.wwp-about .wwp-speak__apply a:hover { text-decoration: none; color: #C8922A; }
+
 @media (max-width: 640px) {
   .wwp-about .wwp-hero__title { font-size: 27px; }
   .wwp-about .wwp-callout p { font-size: 19px; }
@@ -305,8 +377,8 @@
 
 <div class="top-bar">
   <div class="inner">
-    <div><a href="about-us.html">Meet Withbert W. Payne, CPA</a> &nbsp;|&nbsp; <a href="contact.html">Request a Complimentary Review</a></div>
-    <div><span class="phone" style="font-weight:400;font-size:11px;">Call &nbsp;(925) 708-6501</span><br><span style="font-size:11px;color:var(--gold-light);font-weight:400;">For a Complimentary Review</span></div>
+    <div><a href="about-us.html">Meet Withbert W. Payne, CPA</a></div>
+    <div><span class="phone" style="font-weight:400;font-size:11px;">Call &nbsp;(925) 708-6501</span></div>
   </div>
 </div>
 
@@ -378,18 +450,27 @@
 <div class="wwp-about">
 
   <div class="wwp-hero">
-    <p class="wwp-hero__eyebrow">CPA, CGMA, FCA &middot; Independent LTC Insurance Analyst</p>
-    <h1 class="wwp-hero__title">Withbert W. Payne, CPA</h1>
-    <p class="wwp-hero__subtitle">Independent, CPA-level reviews of life, long-term care, disability, and business insurance.</p>
+    <p class="wwp-hero__eyebrow">About</p>
+    <h1 class="wwp-hero__title">Meet Withbert (Bert) W. Payne, CPA, CGMA, FCA</h1>
+    <p class="wwp-hero__subtitle">Independent insurance reviews for partners at the Big 4, executives, business owners, and affluent families.</p>
+    <img class="wwp-hero__portrait" src="images/wwp-headshot-clean.jpg" alt="Withbert W. Payne, CPA, CGMA, FCA">
+    <div class="wwp-hero__creds">
+      <span>Former Price Waterhouse, London</span><span class="dot">&middot;</span>
+      <span>CPA (California)</span><span class="dot">&middot;</span>
+      <span>CGMA</span><span class="dot">&middot;</span>
+      <span>FCA (England &amp; Wales)</span><span class="dot">&middot;</span>
+      <span>Independent Insurance Strategist</span>
+    </div>
+    <div class="wwp-badge">Appointed HelpVet Advisor (2026&ndash;2028)</div>
   </div>
 
   <div class="wwp-wrap">
 
     <div class="wwp-callout">
-      <p>I am a CPA who applies audit-level financial analysis to life, long-term care, disability, and business insurance. Rather than selling policies, I independently audit them &mdash; to help you improve protection, reduce inefficiency, and make better financial decisions.</p>
+      <p>Most financial assets are reviewed regularly. Insurance portfolios often are not. As a California CPA, a Fellow of the Institute of Chartered Accountants in England &amp; Wales (FCA), and a former Price Waterhouse auditor in London, I apply the same independent analytical discipline to life and long-term care insurance that auditors apply to financial statements.</p>
     </div>
 
-    <p class="wwp-body">Insurance policies often drift out of alignment with changing financial goals. My role is to audit them objectively, identify inefficiencies, and recommend improvements before they become costly problems &mdash; the same discipline a CPA brings to a set of financial statements.</p>
+    <p class="wwp-body">Rather than starting with a new insurance proposal, I review what you already own. That independent approach frequently identifies opportunities to improve protection, reduce long-term costs, strengthen guarantees, enhance living benefits, and preserve family wealth. Sometimes my recommendation is to make no changes at all &mdash; independence, not product sales, drives every review.</p>
 
     <section>
       <h2 class="wwp-h2">Why Independent Matters</h2>
@@ -439,16 +520,48 @@
     </section>
 
     <section>
+      <h2 class="wwp-h2">What an Independent Review Uncovers</h2>
+      <p class="wwp-body" style="text-align:center;">Independent reviews frequently reveal opportunities to strengthen protection and use capital more efficiently:</p>
+      <div class="wwp-cards">
+        <div class="wwp-card"><p>Reduce unnecessary premiums</p></div>
+        <div class="wwp-card"><p>Strengthen guarantees</p></div>
+        <div class="wwp-card"><p>Increase death benefit protection</p></div>
+        <div class="wwp-card"><p>Add living benefit protection</p></div>
+        <div class="wwp-card"><p>Improve long-term care benefits</p></div>
+        <div class="wwp-card"><p>Modernize outdated structures</p></div>
+      </div>
+    </section>
+
+    <section>
       <h2 class="wwp-h2">Professional Background</h2>
       <ul class="wwp-list">
         <li>CPA and Fellow Chartered Accountant (England &amp; Wales)</li>
         <li>Former Internal Audit Manager, CNA Life Insurance Company</li>
         <li>Former Medicare program audit manager, Blue Cross</li>
         <li>Former Price Waterhouse auditor, London</li>
+        <li>Founder, Insurance Review Services</li>
         <li>More than 25 years specializing in life and long-term care insurance reviews</li>
       </ul>
       <p class="wwp-note">This background allows clients to receive analysis grounded in audit discipline rather than product sales.</p>
       <p class="wwp-creds">CPA (California) &nbsp;&middot;&nbsp; FCA, ICAEW (England &amp; Wales) &nbsp;&middot;&nbsp; CGMA &nbsp;&middot;&nbsp; Licensed independent insurance broker, CA License No. 0E90257</p>
+    </section>
+
+    <div class="wwp-helpvet">
+      <p class="wwp-helpvet__kicker">Service to Those Who Have Served</p>
+      <p class="wwp-helpvet__body"><strong style="color:#fff;">Appointed HelpVet Advisor.</strong> I am honored to serve as an appointed HelpVet Advisor, providing complimentary, objective life and long-term care policy reviews for veterans and their families. This appointment reflects my commitment to independent analysis, education, and service to those who have served our country.</p>
+      <span class="wwp-helpvet__term">Appointment Term: 2026&ndash;2028</span>
+    </div>
+
+    <section>
+      <h2 class="wwp-h2">My Promise</h2>
+      <p class="wwp-body" style="text-align:center;">Every review is:</p>
+      <div class="wwp-promise">
+        <div class="wwp-pcard"><div class="ck">&#10003;</div><span>Independent</span></div>
+        <div class="wwp-pcard"><div class="ck">&#10003;</div><span>Objective</span></div>
+        <div class="wwp-pcard"><div class="ck">&#10003;</div><span>Complimentary</span></div>
+        <div class="wwp-pcard"><div class="ck">&#10003;</div><span>No obligation</span></div>
+        <div class="wwp-pcard"><div class="ck">&#10003;</div><span>Personally conducted by me</span></div>
+      </div>
     </section>
 
     <section>
@@ -494,24 +607,25 @@
     <section>
       <h2 class="wwp-h2">Who I Serve</h2>
       <ul class="wwp-list">
+        <li>Partners at the Big 4 and other accounting firms</li>
         <li>CPAs and attorneys seeking an independent second opinion for clients</li>
         <li>Physicians, executives, and high-income professionals</li>
         <li>Real-estate investors and business owners</li>
-        <li>Trustees managing estate or trust assets</li>
+        <li>Trustees responsible for trust-owned insurance (ILITs / TOLI)</li>
         <li>Retirees and pre-retirees across the San Francisco Bay Area and nationwide</li>
         <li>Families planning early &mdash; before health changes make coverage harder to obtain</li>
       </ul>
       <p class="wwp-memberships">Active in ProVisors (Pleasanton 1), the British American Business Council, the Australian American Chamber of Commerce, the German American Business Association, Irish Network Bay Area, SF Kiwis, and St. Andrew&rsquo;s Society of San Francisco.</p>
     </section>
 
-  </div><!-- /.wwp-wrap -->
+    <section class="wwp-speak">
+      <h2 class="wwp-h2">Speak With Bert</h2>
+      <p class="wwp-body" style="text-align:center;">Have a question about an existing life insurance or long-term care policy? Contact me directly for a confidential, complimentary conversation. I manage every inquiry personally.</p>
+      <a class="wwp-speak__phone" href="tel:+19257086501">(925) 708-6501</a>
+      <p class="wwp-speak__apply">Prefer to start on your own time? <a href="LTC-Insurance-Application.pdf?v=12" download="LTC-Insurance-Application.pdf">Begin your application online.</a></p>
+    </section>
 
-  <div class="wwp-cta">
-    <p class="wwp-cta__title">Speak With a CPA Who Specializes in Long-Term Care</p>
-    <p class="wwp-cta__sub">Every review is complimentary &mdash; no fee, no obligation.</p>
-    <p class="wwp-cta__line"><a href="tel:+19257086501">(925) 708-6501</a> &nbsp;&middot;&nbsp; <a href="mailto:withbert.payne@insurance-review-services.com">withbert.payne@insurance-review-services.com</a></p>
-    <p class="wwp-cta__line">LTCCPAS.com &nbsp;&middot;&nbsp; Insurance Review Services, San Ramon, California</p>
-  </div>
+  </div><!-- /.wwp-wrap -->
 
 </div><!-- /.wwp-about -->
 </div><!-- /#page-content -->
@@ -545,14 +659,12 @@
         <li><a href="paying-for-long-term-care.html">Paying for Long-Term Care</a></li>
         <li><a href="articles/article-california-ltc-tax.html">California LTC Tax &amp; Planning</a></li>
         <li><a href="articles/article-ltc-importance.html">The Insurance Most Families Miss</a></li>
-        <li><a href="contact.html">Request a Complimentary Review</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
       <p><strong>(925) 708-6501</strong></p>
       <p><a href="mailto:bertltccpas@gmail.com">bertltccpas@gmail.com</a></p>
-      <a href="contact.html" class="btn-gold footer-btn">Request a Complimentary Review</a>
       <p class="footer-disclaimer">This is a solicitation for insurance.</p>
     </div>
   </div>
