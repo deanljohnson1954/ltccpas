@@ -332,6 +332,23 @@
 .stat-unit{font-size:1.1rem;font-weight:400}
 .stat-desc{font-size:.88rem;color:#444;margin-top:8px;line-height:1.45}
 .stat-src{color:#888;font-size:.8rem}
+
+/* Narrow Planning Window (navy full-bleed band) */
+#page-content section.hp-navyband{background:#1E3A5F;color:#EAF0F7;width:100vw;position:relative;left:50%;transform:translateX(-50%);padding:56px 24px 52px;border-bottom:0}
+.hp-navyband .hp-inner{max-width:820px;margin:0 auto}
+#page-content .hp-navyband h2{color:#fff}
+.hp-navyband h2::after{background:#C8922A}
+#page-content .hp-navyband p{color:#CBD6E4;text-align:center;max-width:70ch;margin:0 auto 18px}
+.hp-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
+.hp-card{background:rgba(255,255,255,.06);border-left:3px solid #C8922A;padding:18px 20px;border-radius:2px}
+.hp-card h3{font-family:Georgia,"Times New Roman",serif;color:#fff;font-size:16px;font-weight:700;margin:0 0 6px}
+#page-content .hp-card p{color:#C3D0E0;text-align:left;margin:0;font-size:15px;line-height:1.5}
+@media(max-width:640px){.hp-cards{grid-template-columns:1fr}}
+
+/* Price Waterhouse pull-quote band */
+#page-content section.hp-quoteband{background:#182F4C;color:#EAF0F7;width:100vw;position:relative;left:50%;transform:translateX(-50%);padding:44px 24px;text-align:center;border-bottom:0}
+#page-content .hp-quoteband blockquote{color:#EAF0F7;margin:0 auto;max-width:60ch}
+.hp-quoteband cite{color:#D8A94A;display:block;margin-top:16px;font-style:normal;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -417,10 +434,52 @@
     <div class="intro-photo">
       <img src="images/wwp-headshot-clean.jpg" alt="Withbert W. Payne, CPA, CGMA, FCA">
     </div>
-    <p class="lead">Independent long-term care planning for professionals, business owners, executives, and affluent families &mdash; analytical, objective, and free of carrier obligations.</p>
-    <p class="sub">Withbert W. Payne, CPA, CGMA, FCA, brings more than 25 years of experience in long-term care insurance and a career spanning Price Waterhouse (London), Blue Cross Blue Shield, CNA Life Insurance Co., and New York Life &mdash; with no obligation to any carrier.</p>
+    <p class="lead">Independent long-term care and life insurance planning for partners at the Big 4, professionals, business owners, executives, and affluent families &mdash; analytical, objective, and with no carrier obligations.</p>
+    <p class="sub">Withbert W. Payne, CPA, CGMA, FCA, brings more than 25 years in long-term care and life insurance and a career grounded in public accounting at Price Waterhouse (London), Blue Cross Blue Shield, CNA Life Insurance Co., and New York Life &mdash; with no obligation to any carrier.</p>
     <p class="tag">Sound planning protects both your assets and the people who depend on you.</p>
     <p class="hp-fineprint">No fee. No obligation. I respond within one business day.</p>
+  </section>
+
+  <!-- NARROW PLANNING WINDOW -->
+  <section class="hp-navyband">
+    <div class="hp-inner">
+      <p class="eyebrow">For Partners at the Big 4</p>
+      <h2>A Narrow Planning Window &mdash; Used Well</h2>
+      <p>Drawing on my years with Price Waterhouse (London) and decades in insurance analysis, I understand the planning realities that partners at the Big 4 face as retirement approaches. Mandatory retirement compresses the planning window into the years when a partner is still earning and at the best health and price.</p>
+      <p>A high income sustains a high standard of living; private-pay care in California can exceed $20,000 a month per person; and long-term care falls outside Medicare. Even a partner who could self-insure is often committing capital inefficiently to do so.</p>
+      <div class="hp-cards">
+        <div class="hp-card">
+          <h3>Ahead of mandatory retirement</h3>
+          <p>Long-term care funding structured while you are still earning and insurable.</p>
+        </div>
+        <div class="hp-card">
+          <h3>Asset protection</h3>
+          <p>Shielding significant assets from extended care costs.</p>
+        </div>
+        <div class="hp-card">
+          <h3>Business-owner strategies</h3>
+          <p>C-corporation and business-owner premium structures.</p>
+        </div>
+        <div class="hp-card">
+          <h3>Executive coordination</h3>
+          <p>Aligning coverage with existing executive benefits.</p>
+        </div>
+        <div class="hp-card">
+          <h3>Estate-efficient structuring</h3>
+          <p>Trust-owned and estate-conscious ownership design.</p>
+        </div>
+        <div class="hp-card">
+          <h3>Independent review</h3>
+          <p>Carrier-neutral analysis of coverage already in force.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE WATERHOUSE QUOTE -->
+  <section class="hp-quoteband">
+    <blockquote>I began my career in public accounting at Price Waterhouse in London. I bring that same analytical discipline to a partner&rsquo;s insurance decisions.</blockquote>
+    <cite>Withbert (Bert) W. Payne, CPA, CGMA, FCA</cite>
   </section>
 
   <!-- COST OF CARE -->
