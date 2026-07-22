@@ -3,135 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LTC Carrier Comparison 2026 &mdash; LTCCPAs.com</title>
-<meta name="description" content="Independent 2026 analysis of seven LTC carriers. Top pick: hybrid life/annuity with lifetime benefits, IRA/401(k) funding, and no use-it-or-lose-it risk.">
+<title>Long-Term Care Insurance Carrier Comparison (2026) &ndash; LTCCPAs.com</title>
+<meta name="description" content="Compare seven leading long-term care insurance solutions side by side &mdash; anonymized for objectivity. Independent analysis by Withbert W. Payne, CPA.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LTCCPAs.com">
-<meta property="og:title" content="LTC Carrier Comparison 2026 &mdash; LTCCPAs.com">
-<meta property="og:description" content="Independent analysis of seven LTC insurance carriers for 2026. Seven carriers, anonymized. Carrier A is the recommended option.">
+<meta property="og:title" content="Long-Term Care Insurance Carrier Comparison (2026) &ndash; LTCCPAs.com">
+<meta property="og:description" content="Compare seven leading long-term care insurance solutions side by side &mdash; anonymized for objectivity.">
 <meta property="og:url" content="https://www.ltccpas.com/carrier-comparison.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LTC Carrier Comparison 2026 &mdash; LTCCPAs.com">
-<meta name="twitter:description" content="Independent analysis of seven LTC insurance carriers for 2026. Seven carriers, anonymized. Carrier A is the recommended option.">
+<meta name="twitter:title" content="Long-Term Care Insurance Carrier Comparison (2026) &ndash; LTCCPAs.com">
+<meta name="twitter:description" content="Compare seven leading long-term care insurance solutions side by side &mdash; anonymized for objectivity.">
 <meta name="canonical" content="https://www.ltccpas.com/carrier-comparison.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/style.css?v=6">
 <style>
-/* Hero styles hardcoded here so they render immediately without waiting for style.css */
-.page-hero {
-  background: #1e3a5f;
-  color: #fff;
-  text-align: center;
-  padding: 44px 24px 56px;
-}
-.page-hero .breadcrumb { color: rgba(255,255,255,.6); font-size: 13px; margin-bottom: 12px; }
-.page-hero .breadcrumb a { color: rgba(255,255,255,.6); text-decoration: none; }
-.page-hero .eyebrow { color: #c8922a; font-weight: bold; letter-spacing: 2px; font-size: 14px; text-transform: uppercase; margin-bottom: 14px; display: block; }
-.page-hero h1 { color: #fff; font-size: 36px; line-height: 1.2; margin: 0 0 14px; }
-.page-hero p { color: #c7d0db; font-style: italic; font-size: 17px; max-width: 820px; margin: 16px auto 0; }
+/* Carrier Comparison page — matches the RTF exactly: colors, order, wording */
+.cc-hero { background:#1E3A5F; text-align:center; padding:44px 24px 40px; }
+.cc-hero .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:13px; color:#C8922A; margin:0 0 16px; }
+.cc-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff; font-size:32px; line-height:1.25; margin:0 0 16px; }
+.cc-hero p.sub { font-style:italic; color:#DCE4EE; max-width:820px; margin:0 auto; font-size:16px; line-height:1.6; }
 
-/* Comparison table */
-.carrier-table-wrap { margin: 0; }
-.carrier-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-.table-full-section { background: #fff; padding: 28px 24px 40px; border-bottom: 1px solid #dde3ec; }
-.table-full-inner { max-width: 1400px; margin: 0 auto; }
-.carrier-table th {
-  background: #1e3a5f;
-  color: #fff;
-  padding: 10px 10px;
-  font-size: 12px;
-  font-weight: 700;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 1.3;
-  border: 1px solid #1a3a5c;
-}
-.carrier-table th:first-child { text-align: left; width: 200px; min-width: 160px; }
-.carrier-table th.col-rec { background: #c9a227; color: #fff; }
-.carrier-table td {
-  padding: 9px 10px;
-  border: 1px solid #dde3ec;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 13px;
-  line-height: 1.4;
-}
-.carrier-table td:first-child { text-align: left; font-weight: 600; font-size: 12px; color: #1e3a5f; background: #f8fafc; }
-.carrier-table tr:nth-child(even) td:not(:first-child) { background: #fafbfc; }
-.carrier-table tr:hover td { background: #f0f4f8; }
-.carrier-table tr:hover td:first-child { background: #e8eef5; }
-.section-row td {
-  background: #1e3a5f !important;
-  color: #fff !important;
-  font-weight: 700 !important;
-  font-size: 11px !important;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  padding: 8px 10px !important;
-}
-.chk { color: #2e7d32; font-weight: 700; }
-.no  { color: #b71c1c; font-weight: 600; }
-.lim { color: #b87a1f; font-weight: 600; }
-.rec-col { background: #fffbf0 !important; }
-.badge-rec {
-  display: inline-block;
-  background: #c8922a;
-  color: #fff;
-  font-size: 9px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .8px;
-  padding: 2px 7px;
-  border-radius: 10px;
-  margin-top: 4px;
-}
-.assessment-excellent { color: #2e7d32; font-weight: 700; }
-.assessment-moderate  { color: #b87a1f; font-weight: 600; }
-.assessment-weak      { color: #b71c1c; font-weight: 600; }
-.update-text { font-size: 11px; color: #6b7a8d; font-style: italic; line-height: 1.5; display: block; margin-top: 4px; }
-.carrier-key {
-  max-width: 1400px;
-  margin: 18px auto 0;
-  padding: 0 24px;
-  font-size: 14px;
-}
-.carrier-key b { color: #1e3a5f; }
-.findings-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin: 28px 0;
-}
-.finding-card {
-  border: 1px solid #dde3ec;
-  border-radius: 10px;
-  padding: 22px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,.05);
-}
-.finding-card strong {
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-  color: #1e3a5f;
-  margin-bottom: 6px;
-}
-.finding-card p { font-size: 13px; color: #6b7a8d; margin: 0; line-height: 1.6; }
-.disclaimer-box {
-  font-size: 12px;
-  color: #6b7a8d;
-  border-top: 1px solid #dde3ec;
-  padding-top: 16px;
-  margin-top: 40px;
-  line-height: 1.7;
-}
-.why-list { list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 2; }
-.why-list li::before { content: "✓ "; color: #2e7d32; font-weight: 700; }
-@media (max-width: 700px) {
-  .findings-grid { grid-template-columns: 1fr; }
-}
+.cc-key-wrap { background:#F6ECD6; border-top:3px solid #1E3A5F; padding:20px 24px; }
+.cc-key-inner { max-width:1400px; margin:0 auto; }
+.cc-key-inner h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; text-align:center; margin:0 0 8px; }
+.cc-key-inner p.legend { font-weight:700; color:#1E3A5F; font-size:14px; text-align:center; margin:0 0 8px; }
+.cc-key-inner p.note { color:#1A1A1A; font-size:13px; text-align:center; margin:0; }
+
+.cc-table-section { background:#fff; padding:28px 24px 40px; }
+.cc-table-inner { max-width:1400px; margin:0 auto; overflow-x:auto; }
+.cc-table { width:100%; border-collapse:collapse; font-size:13px; min-width:900px; }
+.cc-table thead th { background:#182F4C; color:#fff; padding:12px 10px; font-size:13px; font-weight:700; text-align:center; vertical-align:middle; line-height:1.4; border:1px solid #2A3644; }
+.cc-table thead th:first-child { text-align:left; width:180px; min-width:150px; }
+.cc-table thead th.col-a { background:#1E3A5F; }
+.cc-table thead th .name { font-family:'EB Garamond',Georgia,serif; }
+.cc-table thead th.col-a .name { color:#C8922A; }
+.cc-table thead th .sub { display:block; font-weight:400; font-size:11px; color:#C7D2DE; margin-top:4px; }
+.cc-table thead th.col-a .start { display:block; font-weight:700; font-size:10px; letter-spacing:.1em; color:#C8922A; margin-top:6px; text-transform:uppercase; }
+.cc-table tbody td { padding:9px 10px; border:1px solid #D6DEE7; vertical-align:middle; text-align:center; line-height:1.4; background:#fff; color:#333; }
+.cc-table tbody td:first-child { text-align:left; font-weight:700; color:#fff; background:#182F4C; font-size:12px; }
+.cc-table tbody td.col-a { background:#F6ECD6; color:#3B2E10; font-weight:700; }
+.cc-table tbody tr.section-row td { background:#1E3A5F !important; color:#fff !important; font-weight:700 !important; font-size:11px !important; text-transform:uppercase; letter-spacing:1.2px; padding:8px 10px !important; text-align:center; }
+.cc-table .chk { color:#C8922A; font-weight:700; }
+.cc-table .no { color:#6B7683; font-weight:600; }
+.cc-table .note-text { display:block; font-size:11px; font-style:italic; color:#6B7683; line-height:1.5; }
+.cc-table tbody td.col-a .note-text { color:#5A4A20; }
+.cc-footnote { max-width:1400px; margin:14px auto 0; padding:0 24px; font-style:italic; color:#6B7683; font-size:12px; }
+
+.cc-wrap { max-width:900px; margin:0 auto; padding:44px 24px 60px; }
+.cc-wrap h2 { text-align:center; font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:26px; margin:44px 0 18px; }
+.cc-wrap h2:first-child { margin-top:0; }
+
+.cc-findings { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:0 0 28px; }
+.cc-findings .card { background:#F2F5F8; border-radius:6px; padding:20px 22px; }
+.cc-findings .card h4 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-weight:700; font-size:16px; margin:0 0 8px; }
+.cc-findings .card p { color:#2A3644; font-size:14px; line-height:1.6; margin:0; }
+@media(max-width:640px){ .cc-findings { grid-template-columns:1fr; } }
+
+.cc-why-a { background:#F2F5F8; border-top:3px solid #C8922A; border-radius:0 0 6px 6px; padding:22px 26px; margin:0 0 28px; }
+.cc-why-a p.intro { font-style:italic; color:#1E3A5F; font-size:15px; line-height:1.6; margin:0 0 14px; }
+.cc-why-a ul { list-style:none; margin:0; padding:0; }
+.cc-why-a li { color:#1A1A1A; font-size:15px; line-height:2; padding-left:24px; position:relative; }
+.cc-why-a li::before { content:'\2713'; color:#C8922A; font-weight:700; position:absolute; left:0; }
+
+.cc-navybox { background:#182F4C; border-radius:6px; padding:24px 28px; margin:0 0 28px; }
+.cc-navybox p { color:#fff; font-size:15px; line-height:1.7; margin:0; }
+
+.cc-cta { background:#F6ECD6; border-radius:6px; padding:28px 30px; margin:0 0 28px; text-align:center; }
+.cc-cta p.msg { color:#1A1A1A; font-size:15px; line-height:1.6; max-width:640px; margin:0 auto 16px; }
+.cc-cta p.name { color:#1E3A5F; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:18px; margin:0 0 6px; }
+.cc-cta p.contact { color:#1E3A5F; font-size:14px; margin:0 0 6px; }
+.cc-cta p.addr { color:#6B7683; font-size:13px; margin:0; }
+
+.cc-disclaimer { border-top:2px solid #C8922A; padding-top:20px; margin:0 0 8px; }
+.cc-disclaimer p { color:#3A4450; font-size:13px; line-height:1.7; margin:0 0 12px; }
+.cc-disclaimer p strong { color:#1E3A5F; }
 </style>
 </head>
 <body>
@@ -188,260 +135,158 @@
 
 <div id="page-content">
 
-<div class="page-hero">
-  <div class="inner">
-    <div class="breadcrumb"><a href="index.html">Home</a> &mdash; <span>Carrier Comparison</span></div>
-    <span class="eyebrow">Carrier Comparison</span>
-    <h1>LTC Insurance &mdash; Carrier Comparison 2026</h1>
-    <p>Seven carriers compared side by side, anonymised A&ndash;G. An objective, feature-by-feature evaluation of how leading long-term care structures actually differ &mdash; no sales register, no endorsements.</p>
-  </div>
-</div>
+<div class="cc-hero"><div class="inner">
+  <div class="eyebrow">Carrier Comparison</div>
+  <h1>Long-Term Care Insurance Carrier Comparison (2026)</h1>
+  <p class="sub">Compare seven leading long-term care insurance solutions side by side. To preserve objectivity, carrier names have been anonymized (A&ndash;G). This educational comparison highlights key differences in benefits, funding options, guarantees, and flexibility &mdash; helping you understand what matters before requesting a personalized illustration.</p>
+</div></div>
 
-<div class="table-full-section"><div class="table-full-inner">
+<div class="cc-key-wrap"><div class="cc-key-inner">
+  <h3>Carrier Key</h3>
+  <p class="legend">A = Hybrid Life / Annuity &nbsp;&middot;&nbsp; B, C = Hybrid Life &nbsp;&middot;&nbsp; D, E = Whole Life + LTC Rider &nbsp;&middot;&nbsp; F, G = Traditional LTC</p>
+  <p class="note">Carrier names have intentionally been omitted to maintain an unbiased educational comparison. Recommendations are based solely on policy features and client objectives &mdash; not on brand recognition.</p>
+</div></div>
 
-<p class="carrier-key"><b>Carrier key:</b> A = Hybrid Life/Annuity &mdash; Recommended &nbsp;|&nbsp; B, C = Hybrid Life &nbsp;|&nbsp; D, E = Whole Life + LTC Rider &nbsp;|&nbsp; F, G = Traditional LTC. No carrier names appear in this comparison.</p>
-
-<div class="carrier-table-wrap">
-<table class="carrier-table">
+<div class="cc-table-section"><div class="cc-table-inner">
+<table class="cc-table">
   <thead>
     <tr>
       <th>Feature</th>
-      <th class="col-rec">&#9733; Carrier A<br><span class="badge-rec">Recommended</span><br><span style="font-size:10px;font-weight:400;">Hybrid Life / Annuity</span></th>
-      <th>Carrier B<br><span style="font-size:10px;font-weight:400;">Hybrid Life</span></th>
-      <th>Carrier C<br><span style="font-size:10px;font-weight:400;">Hybrid Life</span></th>
-      <th>Carrier D<br><span style="font-size:10px;font-weight:400;">WL + Rider</span></th>
-      <th>Carrier E<br><span style="font-size:10px;font-weight:400;">WL + Rider</span></th>
-      <th>Carrier F<br><span style="font-size:10px;font-weight:400;">Traditional LTC</span></th>
-      <th>Carrier G<br><span style="font-size:10px;font-weight:400;">Traditional LTC</span></th>
+      <th class="col-a"><span class="name">&#9733; Carrier A</span><span class="sub">Hybrid Life / Annuity</span><span class="start">Start Here</span></th>
+      <th><span class="name">Carrier B</span><span class="sub">Hybrid Life</span></th>
+      <th><span class="name">Carrier C</span><span class="sub">Hybrid Life</span></th>
+      <th><span class="name">Carrier D</span><span class="sub">Whole Life + LTC Rider</span></th>
+      <th><span class="name">Carrier E</span><span class="sub">Whole Life + LTC Rider</span></th>
+      <th><span class="name">Carrier F</span><span class="sub">Traditional LTC</span></th>
+      <th><span class="name">Carrier G</span><span class="sub">Traditional LTC</span></th>
     </tr>
   </thead>
   <tbody>
     <tr class="section-row"><td colspan="8">Structure</td></tr>
     <tr>
       <td>AM Best Rating</td>
-      <td class="rec-col">A+</td>
-      <td>A+</td>
-      <td>A+</td>
-      <td>A++</td>
-      <td>A++</td>
-      <td>A++</td>
-      <td>A</td>
+      <td class="col-a">A+</td><td>A+</td><td>A+</td><td>A++</td><td>A++</td><td>A++</td><td>A</td>
+    </tr>
+    <tr>
+      <td>Lifetime LTC benefits</td>
+      <td class="col-a">Unlimited</td><td>Capped pool</td><td>Capped pool</td><td>Capped pool</td><td>Capped pool</td><td>Capped pool</td><td>Capped pool</td>
+    </tr>
+    <tr>
+      <td>Maximum joint monthly benefit</td>
+      <td class="col-a">Up to $40,000</td><td>~$33,000</td><td>~$29,000</td><td>~$28,000</td><td>~$25,000</td><td>Varies</td><td>Varies</td>
+    </tr>
+    <tr>
+      <td>Benefit model</td>
+      <td class="col-a">Cash (75%) + Reimbursement</td><td>Cash indemnity (full)</td><td>Cash indemnity (full)</td><td>Reimbursement</td><td>Reimbursement</td><td>Reimbursement</td><td>Reimbursement</td>
+    </tr>
+    <tr>
+      <td>Premium waiver on claim</td>
+      <td class="col-a"><span class="chk">&#10003;</span> Yes</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td>
     </tr>
 
     <tr class="section-row"><td colspan="8">Key Features</td></tr>
     <tr>
-      <td>Lifetime LTC benefits</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> Unlimited</td>
-      <td><span class="lim">&#126;</span> Capped pool</td>
-      <td><span class="lim">&#126;</span> Capped pool</td>
-      <td><span class="lim">&#126;</span> Capped pool</td>
-      <td><span class="lim">&#126;</span> Capped pool</td>
-      <td><span class="lim">&#126;</span> Capped pool</td>
-      <td><span class="lim">&#126;</span> Capped pool</td>
-    </tr>
-    <tr>
-      <td>Maximum joint monthly benefit</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> Up to $40,000</td>
-      <td><span class="lim">&#126;</span> ~$33,000</td>
-      <td><span class="lim">&#126;</span> ~$29,000</td>
-      <td><span class="lim">&#126;</span> ~$28,000</td>
-      <td><span class="lim">&#126;</span> ~$25,000</td>
-      <td><span class="lim">&#126;</span> Varies</td>
-      <td><span class="lim">&#126;</span> Varies</td>
-    </tr>
-    <tr>
-      <td>Benefit model</td>
-      <td class="rec-col">Cash (75%) + Reimbursement</td>
-      <td>Cash indemnity (full)</td>
-      <td>Cash indemnity (full)</td>
-      <td>Reimbursement</td>
-      <td>Reimbursement</td>
-      <td>Reimbursement</td>
-      <td>Reimbursement</td>
-    </tr>
-    <tr>
-      <td>Premium waiver on claim</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-    </tr>
-    <tr>
       <td>Death benefit</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> Yes ($360K base)</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
+      <td class="col-a">Yes ($360K base)</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td>
     </tr>
     <tr>
       <td>No receipts / pre-approval</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
+      <td class="col-a"><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td>
     </tr>
     <tr>
       <td>Guaranteed / non-cancellable premiums</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
+      <td class="col-a"><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td>
     </tr>
     <tr>
-      <td>$12,500&ndash;$15,000/mo benefit feasible</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="lim">&#126;</span> Limited</td>
-      <td><span class="lim">&#126;</span> Limited</td>
-      <td><span class="lim">&#126;</span> Limited</td>
-      <td><span class="lim">&#126;</span> Limited</td>
+      <td>$12,500&ndash;$15,000 / month benefit feasible</td>
+      <td class="col-a"><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td><td><span class="chk">&#10003;</span> Yes</td><td>Limited</td><td>Limited</td><td>Limited</td><td>Limited</td>
     </tr>
     <tr>
       <td>Joint / couples policy</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> Shared</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Separate</td>
-      <td><span class="chk">&#10003;</span> Separate</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="chk">&#10003;</span> Yes</td>
+      <td class="col-a">Shared</td><td>Yes</td><td>Yes</td><td>Separate</td><td>Separate</td><td>Yes</td><td>Yes</td>
     </tr>
     <tr>
       <td>IRA / 401(k) funding</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> Yes (only carrier)</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
+      <td class="col-a">Yes (only carrier)</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td>
     </tr>
     <tr>
-      <td>Policy loans vs. cash value</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> Yes</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
-      <td><span class="no">&#10007;</span> No</td>
+      <td>Policy loans against cash value</td>
+      <td class="col-a"><span class="chk">&#10003;</span> Yes</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td><td><span class="no">&#10007;</span> No</td>
     </tr>
     <tr>
-      <td>C-Corp LTC deductibility</td>
-      <td class="rec-col"><span class="chk">&#10003;</span> 100%</td>
-      <td><span class="lim">&#126;</span> Partial</td>
-      <td><span class="lim">&#126;</span> Partial</td>
-      <td><span class="lim">&#126;</span> Partial</td>
-      <td><span class="lim">&#126;</span> Partial</td>
-      <td><span class="lim">&#126;</span> Partial</td>
-      <td><span class="lim">&#126;</span> Partial</td>
+      <td>C-Corporation LTC deductibility</td>
+      <td class="col-a">100%</td><td>Partial</td><td>Partial</td><td>Partial</td><td>Partial</td><td>Partial</td><td>Partial</td>
     </tr>
 
     <tr class="section-row"><td colspan="8">2026 Assessment</td></tr>
     <tr>
-      <td>Catastrophic risk fit</td>
-      <td class="rec-col"><span class="assessment-excellent">Excellent</span></td>
-      <td><span class="assessment-moderate">Moderate</span></td>
-      <td><span class="assessment-moderate">Moderate</span></td>
-      <td><span class="assessment-weak">Weak</span></td>
-      <td><span class="assessment-weak">Weak</span></td>
-      <td><span class="assessment-weak">Weak</span></td>
-      <td><span class="assessment-weak">Weak</span></td>
+      <td>Best suited for significant long-term care risk</td>
+      <td class="col-a">Excellent</td><td>Moderate</td><td>Moderate</td><td>Less Comprehensive</td><td>Less Comprehensive</td><td>Less Comprehensive</td><td>Less Comprehensive</td>
     </tr>
     <tr>
       <td>2025&ndash;26 notes</td>
-      <td class="rec-col"><span class="update-text">75% cash option; IRA/401(k) funding; only lifetime (unlimited) structure; most price-competitive couples product; highest LTC leverage per premium dollar</span></td>
-      <td><span class="update-text">Stronger monthly benefits; repriced competitively; benefit pool capped</span></td>
-      <td><span class="update-text">Cash-indemnity flexibility; competitively priced; benefit pool capped</span></td>
-      <td><span class="update-text">Reimbursement model; dividend-based; rate-increase history a consideration</span></td>
-      <td><span class="update-text">Reimbursement model; dividend-based; rate-increase history a consideration</span></td>
-      <td><span class="update-text">Top traditional LTC; accepts to age 79; couples discounts; no death benefit; rates not guaranteed</span></td>
-      <td><span class="update-text">A-rated; limited states in 2026; no death benefit; rates not guaranteed</span></td>
+      <td class="col-a"><span class="note-text">75% cash benefit option; IRA / 401(k) funding; the only unlimited (lifetime) structure in the set; most price-competitive couples product; highest LTC leverage per premium dollar</span></td>
+      <td><span class="note-text">Stronger monthly benefits; repriced competitively; benefit pool capped</span></td>
+      <td><span class="note-text">Cash-indemnity flexibility; competitively priced; benefit pool capped</span></td>
+      <td><span class="note-text">Reimbursement model; dividend-based; rate-increase history is a consideration</span></td>
+      <td><span class="note-text">Reimbursement model; dividend-based; rate-increase history is a consideration</span></td>
+      <td><span class="note-text">Top traditional LTC; accepts to age 79; couples discounts; no death benefit; premiums not guaranteed</span></td>
+      <td><span class="note-text">A-rated; limited states in 2026; no death benefit; premiums not guaranteed</span></td>
     </tr>
   </tbody>
 </table>
-</div>
 </div></div>
 
-<div class="page-wrap"><div class="two-col">
-<div class="content-area">
+<p class="cc-footnote">&#9733; Carrier A is shown first as the usual starting point for analysis, not as an endorsement. Sources: LTC News, LTC Tree, Insurance &amp; Estates, Money.com (2026).</p>
+
+<div class="cc-wrap">
 
 <h2>Key Findings</h2>
 
-<div class="findings-grid">
-  <div class="finding-card">
-    <strong>Lifetime benefits are rare</strong>
-    <p>Only one of the seven carriers offers genuine lifetime (unlimited) LTC benefits. The remainder impose caps tied to the policy face amount or a defined benefit pool.</p>
-  </div>
-  <div class="finding-card">
-    <strong>Hybrid structures lead to flexibility</strong>
-    <p>Hybrid life/LTC products consistently offer guaranteed premiums and a death benefit, unlike traditional standalone LTC. The trade-off is typically a higher initial premium.</p>
-  </div>
-  <div class="finding-card">
-    <strong>Cash indemnity provides flexibility</strong>
-    <p>Carriers that pay benefits without receipts or pre-approval give flexibility for clients who self-direct or arrange informal care.</p>
-  </div>
-  <div class="finding-card">
-    <strong>Premium stability matters over time</strong>
-    <p>Traditional LTC carriers without guaranteed premiums have historically passed rate increases to policyholders. Rate-increase history is an essential part of any rigorous evaluation.</p>
-  </div>
-  <div class="finding-card">
-    <strong>IRA funding is a significant development</strong>
-    <p>The ability to fund a hybrid LTC structure using IRA or 401(k) assets meaningfully expands planning options for clients with qualified-plan accumulations.</p>
-  </div>
-  <div class="finding-card">
-    <strong>Traditional LTC still has a place</strong>
-    <p>Traditional carriers can offer high monthly benefit leverage and accept applicants to higher ages. For some profiles, these structures remain relevant.</p>
-  </div>
+<div class="cc-findings">
+  <div class="card"><h4>Lifetime Benefits Are Uncommon</h4><p>Only one of the seven carriers offers genuine lifetime (unlimited) long-term care benefits. The remainder impose caps tied to the policy face amount or to a defined benefit pool.</p></div>
+  <div class="card"><h4>Hybrid Policies Offer Greater Flexibility</h4><p>Hybrid life and long-term care products consistently provide guaranteed premiums and a death benefit, unlike traditional stand-alone long-term care insurance. The trade-off is typically a higher initial premium.</p></div>
+  <div class="card"><h4>Cash Benefits Can Increase Care Flexibility</h4><p>Carriers that pay benefits without receipts or pre-approval give flexibility to clients who self-direct their care or arrange informal caregiving.</p></div>
+  <div class="card"><h4>Stable Premiums Can Improve Long-Term Planning</h4><p>Traditional carriers without guaranteed premiums have historically passed rate increases to policyholders. Rate-increase history is an essential part of any rigorous evaluation.</p></div>
+  <div class="card"><h4>IRA &amp; 401(k) Funding Can Expand Planning Options</h4><p>The ability to fund a hybrid long-term care structure using IRA or 401(k) assets meaningfully expands planning options for clients with qualified-plan accumulations.</p></div>
+  <div class="card"><h4>Traditional LTC Insurance May Still Be Appropriate</h4><p>Traditional carriers can offer high monthly benefit leverage and accept applicants at higher ages. For some profiles, these structures remain relevant.</p></div>
 </div>
 
-<div class="disclaimer-box">
-  <strong>Educational use only</strong> &mdash; no carrier is endorsed or disparaged. Individual quotes vary by age, health, and state. Consult a licensed insurance advisor before making coverage decisions.<br>
-  Sources: LTC News, LTC Tree, Insurance &amp; Estates, Money.com (2026).<br>
-  Insurance Review Services &middot; San Ramon, CA &middot; CA License #0E90257 &middot; LTCCPAS.com
+<h2>Why Carrier A Is Frequently Recommended</h2>
+
+<div class="cc-why-a">
+  <p class="intro">Carrier A is often the starting point in an analysis for one reason: it combines features that rarely appear together in a single contract.</p>
+  <ul>
+    <li>Unlimited Lifetime Benefits</li>
+    <li>IRA &amp; 401(k) Funding Available</li>
+    <li>Flexible Cash Benefit Option</li>
+    <li>Among the Highest Joint Monthly Benefits Available</li>
+    <li>Potential C-Corporation Tax Advantages</li>
+    <li>Access to Policy Cash Value</li>
+    <li>Income Tax-Free Death Benefit if Care Is Never Needed</li>
+  </ul>
 </div>
 
-</div>
-<div class="sidebar">
-  <div class="sidebar-box">
-    <h3>Get a Personalised Quote</h3>
-    <p>We can run quotes from all seven of these carriers for your specific age, health, and situation.</p>
-    <p style="font-size:18px;font-weight:700;color:var(--navy);">(925) 708-6501</p>
-    <a class="btn-gold" href="contact.html">Request a Complimentary Review</a>
-  </div>
-  <div class="sidebar-box">
-    <h3>Why Carrier A?</h3>
-    <ul class="why-list">
-      <li>Only unlimited benefits</li>
-      <li>IRA/401(k) funding eligible</li>
-      <li>75% cash benefit option</li>
-      <li>Highest joint monthly benefit</li>
-      <li>100% C-Corp deductible</li>
-      <li>Policy loan access</li>
-      <li>Death benefit included</li>
-    </ul>
-  </div>
-</div>
-</div></div>
+<h2>Why Work With a CPA?</h2>
 
-<div class="contact-teaser">
-  <h2>Get a Personalised Comparison</h2>
-  <p>We can run quotes across all seven carriers for your specific profile &mdash; age, health, and state. Carrier A is typically our starting recommendation, but the right structure depends on your plan.</p>
-  <span class="phone-big">(925) 708-6501</span>
-  <a href="contact.html" class="btn-gold" style="font-size:16px;padding:14px 36px;">Request a Complimentary Review</a>
+<div class="cc-navybox">
+  <p>Unlike advisors who represent a single carrier, I independently compare multiple leading long-term care insurance solutions. My role is to help you understand the financial trade-offs, tax considerations, policy design, and long-term implications &mdash; so you can make an informed decision with confidence.</p>
+</div>
+
+<h2>Request Your Personalized Illustration</h2>
+
+<div class="cc-cta">
+  <p class="msg">Every recommendation begins with an independent review of your objectives, health, age, and budget. We then compare multiple leading insurers to identify the most appropriate solution for your situation.</p>
+  <p class="name">Withbert (Bert) W. Payne, CPA, CGMA, FCA</p>
+  <p class="contact">(925) 708-6501 &middot; withbert.payne@insurance-review-services.com</p>
+  <p class="addr">LTCCPAs.com &middot; San Ramon, California &middot; CA License No. 0E90257</p>
+</div>
+
+<div class="cc-disclaimer">
+  <p><strong>Educational Disclaimer.</strong> This comparison is provided solely for educational purposes and does not constitute a recommendation to purchase any specific insurance product. Policy features vary by state, age, health, underwriting approval, and carrier updates. Individual illustrations are required before making any insurance decision. No carrier is endorsed or disparaged.</p>
+  <p><strong>This is a solicitation for insurance.</strong></p>
+</div>
+
 </div>
 </div>
 
