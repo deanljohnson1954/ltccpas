@@ -74,12 +74,25 @@
   line-height: 1.2;
   margin: 0 0 14px;
 }
-.wwp-about .wwp-hero__subtitle {
+.wwp-about .wwp-hero__tagline {
+  font-family: 'EB Garamond', Georgia, serif;
   font-style: italic;
-  color: #C7D0DB;
-  font-size: 17px;
+  color: #F6ECD6;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+.wwp-about .wwp-hero__subtitle {
+  color: #ffffff;
+  font-size: 16px;
   max-width: 640px;
-  margin: 0 auto;
+  margin: 0 auto 14px;
+}
+.wwp-about .wwp-hero__badge {
+  display: inline-block;
+  color: #C8922A;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 4px 0 0;
 }
 
 /* Content wrapper */
@@ -91,9 +104,8 @@
 
 /* Callout */
 .wwp-about .wwp-callout {
-  border-top: 2px solid #C8922A;
   border-bottom: 2px solid #C8922A;
-  padding: 16px 8px;
+  padding: 16px 8px 24px;
   margin: 20px 0 14px;
   text-align: center;
 }
@@ -104,6 +116,25 @@
   line-height: 1.5;
   margin: 0;
 }
+
+/* Quote cards (cream, bordered — "second opinion" / "recent review") */
+.wwp-about .wwp-quote-card {
+  background: #F6ECD6;
+  border: 1px solid #C8922A;
+  border-radius: 6px;
+  padding: 22px 26px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+#page-content .wwp-about .wwp-quote-card p {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  color: #1E3A5F;
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+}
+#page-content .wwp-about .wwp-quote-card p.wwp-quote-card__strong { font-weight: 700; }
 
 /* Section headings */
 .wwp-about .wwp-h2 {
@@ -310,14 +341,23 @@
 }
 .wwp-about .wwp-panel .wwp-list { margin-bottom: 0; }
 
-/* Uncovers cards */
-.wwp-about .wwp-cards { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 20px; }
+/* Uncovers cards — navy with gold diamond bullet, per RTF */
+.wwp-about .wwp-cards { display: flex; flex-wrap: wrap; gap: 2px; margin: 0 0 2px; }
 .wwp-about .wwp-card {
-  flex: 1 1 220px; background: #fff; border: 1px solid #E4E1D8; border-left: 3px solid #C8922A;
+  flex: 1 1 300px; background: #1E3A5F;
   padding: 16px 18px;
 }
 #page-content .wwp-about .wwp-card p {
-  color: #1E3A5F; font-weight: 700; font-size: 15px; margin: 0; text-align: left;
+  color: #fff; font-size: 15px; margin: 0; text-align: left;
+}
+.wwp-about .wwp-card p::before { content: "\25C6"; color: #C8922A; margin-right: 10px; }
+
+/* Uncovers highlight bar — gold background, dark navy bold text */
+.wwp-about .wwp-highlight-bar {
+  background: #C8922A; text-align: center; padding: 16px 20px; margin: 0 0 20px;
+}
+#page-content .wwp-about .wwp-highlight-bar p {
+  color: #182F4C; font-weight: 700; font-size: 15px; margin: 0; text-align: center;
 }
 
 /* HelpVet advisor band */
@@ -354,15 +394,6 @@
 .wwp-about .wwp-speak__apply { color: #555555; font-size: 15px; margin: 0; }
 .wwp-about .wwp-speak__apply a { color: #1E3A5F; font-weight: 700; border-bottom: 1px solid #C8922A; }
 .wwp-about .wwp-speak__apply a:hover { text-decoration: none; color: #C8922A; }
-#page-content .wwp-about h3.wwp-h3 {
-  font-family: 'EB Garamond', Georgia, serif; font-weight: 700; color: #1E3A5F;
-  font-size: 19px; text-align: center; margin: 22px 0 10px;
-}
-.wwp-about .wwp-uncovers-note {
-  text-align: center; max-width: 68ch; margin: 4px auto 0; font-size: 15px;
-}
-.wwp-about .wwp-uncovers-note em { color: #555555; font-style: italic; }
-
 @media (max-width: 640px) {
   .wwp-about .wwp-hero__title { font-size: 27px; }
   .wwp-about .wwp-callout p { font-size: 19px; }
@@ -448,84 +479,90 @@
   <div class="wwp-hero">
     <p class="wwp-hero__eyebrow">About</p>
     <h1 class="wwp-hero__title">Meet Withbert (Bert) W. Payne, CPA, CGMA, FCA</h1>
-    <p class="wwp-hero__subtitle">Independent insurance reviews for partners at the Big 4, executives, business owners, and affluent families.</p>
+    <p class="wwp-hero__tagline">Independent Life &amp; Long-Term Care Insurance Analyst</p>
+    <p class="wwp-hero__subtitle">Independent life and long-term care insurance reviews for partners at the Big 4, executives, business owners, and affluent families.</p>
     <div class="wwp-hero__creds">
-      <span>Former Price Waterhouse, London</span><span class="dot">&middot;</span>
+      <span>Former Price Waterhouse (London)</span><span class="dot">&middot;</span>
       <span>CPA (California)</span><span class="dot">&middot;</span>
       <span>CGMA</span><span class="dot">&middot;</span>
-      <span>FCA (England &amp; Wales)</span><span class="dot">&middot;</span>
-      <span>Independent Insurance Strategist</span>
+      <span>FCA (England &amp; Wales)</span>
     </div>
+    <p class="wwp-hero__badge">&#9733; Appointed HelpVet Advisor (2026&ndash;2028)</p>
   </div>
 
   <div class="wwp-wrap">
 
     <div class="wwp-callout">
-      <p>Most financial assets are reviewed regularly. Insurance portfolios often are not. As a California CPA, a Fellow of the Institute of Chartered Accountants in England &amp; Wales (FCA), and a former Price Waterhouse auditor in London, I apply the same independent analytical discipline to life and long-term care insurance that auditors apply to financial statements.</p>
+      <p>Most financial assets are reviewed regularly. Insurance portfolios are often left untouched for years. As a California CPA, a Fellow of the Institute of Chartered Accountants in England &amp; Wales (FCA), and a former Price Waterhouse auditor in London, I apply the same independent analytical discipline to life and long-term care insurance that auditors apply to financial statements.</p>
     </div>
 
     <p class="wwp-body">Rather than starting with a new insurance proposal, I review what you already own. That independent approach frequently identifies opportunities to improve protection, reduce long-term costs, strengthen guarantees, enhance living benefits, and preserve family wealth.</p>
-    <p class="wwp-body">Sometimes my recommendation is to make no changes at all. Independence &mdash; not product sales &mdash; drives every review.</p>
+    <p class="wwp-body">Over the years I have reviewed hundreds of life insurance and long-term care policies. Sometimes the recommendation is to make no changes at all. Other times a review uncovers significant opportunities to improve protection while using capital more efficiently.</p>
+    <p class="wwp-body" style="text-align:center;font-weight:700;color:#1E3A5F;">Independence &mdash; not product sales &mdash; drives every review.</p>
+
+    <div class="wwp-quote-card">
+      <p>&ldquo;Every significant insurance policy deserves a second opinion.&rdquo;</p>
+    </div>
+    <p class="wwp-note">Many insurance policies remain in force for decades without ever being independently reviewed.</p>
 
     <section>
-      <h2 class="wwp-h2">Why Clients Seek My Advice</h2>
-      <h3 class="wwp-h3">Who I Work With</h3>
+      <h2 class="wwp-h2">Who I Work With</h2>
       <ul class="wwp-list">
-        <li>Partners at the Big 4 and other accounting firms</li>
-        <li>CPAs and accounting professionals</li>
-        <li>Attorneys and estate planning professionals</li>
-        <li>Business owners and entrepreneurs</li>
+        <li>Partners at the Big 4</li>
         <li>Corporate executives</li>
-        <li>Physicians and other highly compensated professionals</li>
-        <li>Trustees responsible for trust-owned insurance (ILITs / TOLI)</li>
-        <li>Families seeking to preserve retirement assets from the potentially devastating cost of long-term care</li>
+        <li>CPAs and attorneys</li>
+        <li>Business owners</li>
+        <li>Affluent families and their advisors</li>
       </ul>
-      <h3 class="wwp-h3">What I Review</h3>
+    </section>
+
+    <section>
+      <h2 class="wwp-h2">What I Review</h2>
       <ul class="wwp-list">
-        <li>Existing life insurance portfolios</li>
-        <li>Long-term care insurance</li>
-        <li>Cash value life insurance</li>
-        <li>Living benefit riders</li>
-        <li>Trust-owned insurance</li>
-        <li>Buy-sell agreements</li>
-        <li>Key person insurance</li>
-        <li>Executive benefit programs</li>
-        <li>Disability insurance</li>
-        <li>Business succession planning</li>
+        <li>Life Insurance</li>
+        <li>Long-Term Care Insurance</li>
+        <li>Disability Income Insurance</li>
+        <li>Living Benefit &amp; Chronic Illness Riders</li>
+        <li>Trust-Owned Policies</li>
+        <li>Executive &amp; Business-Owned Coverage</li>
       </ul>
     </section>
 
     <section>
       <h2 class="wwp-h2">What an Independent Review Uncovers</h2>
-      <p class="wwp-body" style="text-align:center;">Independent reviews frequently reveal opportunities to strengthen protection and use capital more efficiently:</p>
       <div class="wwp-cards">
-        <div class="wwp-card"><p>Reduce unnecessary premiums</p></div>
-        <div class="wwp-card"><p>Strengthen guarantees</p></div>
-        <div class="wwp-card"><p>Increase death benefit protection</p></div>
-        <div class="wwp-card"><p>Add living benefit protection</p></div>
-        <div class="wwp-card"><p>Improve long-term care benefits</p></div>
-        <div class="wwp-card"><p>Modernize outdated insurance structures</p></div>
+        <div class="wwp-card"><p>Opportunities to strengthen guarantees</p></div>
+        <div class="wwp-card"><p>Ways to reduce unnecessary long-term costs</p></div>
+        <div class="wwp-card"><p>Coverage gaps and overlaps</p></div>
+        <div class="wwp-card"><p>Underperforming or at-risk policies</p></div>
+        <div class="wwp-card"><p>Overlooked living benefits</p></div>
+        <div class="wwp-card"><p>More efficient use of capital</p></div>
       </div>
-      <p class="wwp-uncovers-note">In one recent review, restructuring an existing policy substantially increased the client&rsquo;s guaranteed death benefit &mdash; with no material change in premium. <em>Results vary by situation; the goal of every review is a better-informed decision, not a sale.</em></p>
+      <div class="wwp-highlight-bar">
+        <p>Options to increase protection without materially higher premiums</p>
+      </div>
+      <div class="wwp-quote-card">
+        <p class="wwp-quote-card__strong">A Recent Review</p>
+        <p>One recent review substantially increased a client&rsquo;s guaranteed death benefit without a material increase in premium. Every situation is different, but objective reviews often uncover opportunities that policy owners never knew existed.</p>
+      </div>
     </section>
 
     <section>
       <h2 class="wwp-h2">Professional Background</h2>
-      <p class="wwp-body">For more than a decade I have specialized in helping successful individuals, families, and business owners evaluate and optimize their life and long-term care insurance strategies through objective, independent analysis &mdash; drawing on a broader career in audit and financial services that began at Price Waterhouse.</p>
+      <p class="wwp-body">My career combines public accounting, insurance company management, Medicare reimbursement auditing, and more than a decade specializing in life insurance and long-term care planning.</p>
       <ul class="wwp-list">
-        <li>Former Price Waterhouse, London</li>
-        <li>CPA (California)</li>
-        <li>Fellow, Institute of Chartered Accountants in England &amp; Wales (FCA)</li>
-        <li>Chartered Global Management Accountant (CGMA)</li>
-        <li>Former Internal Audit Manager, CNA Life Insurance Company</li>
-        <li>Former Medicare Audit Manager</li>
-        <li>Founder, Insurance Review Services</li>
+        <li><strong style="color:#1E3A5F;">Price Waterhouse, London</strong> &mdash; Auditor</li>
+        <li><strong style="color:#1E3A5F;">CNA Life Insurance Company</strong> &mdash; Internal Audit Manager</li>
+        <li><strong style="color:#1E3A5F;">Blue Cross of Northern California</strong> &mdash; Audit Manager</li>
+        <li><strong style="color:#1E3A5F;">Starcare International</strong> &mdash; Founder &amp; President</li>
+        <li><strong style="color:#1E3A5F;">New York Life</strong> &mdash; Agent</li>
+        <li><strong style="color:#1E3A5F;">Insurance Review Services</strong> &mdash; Founder &amp; Principal (2012&ndash;present)</li>
       </ul>
     </section>
 
     <div class="wwp-helpvet">
-      <p class="wwp-helpvet__kicker">Service to Those Who Have Served</p>
-      <p class="wwp-helpvet__body"><strong style="color:#fff;">Appointed HelpVet Advisor.</strong> I am honored to serve as an appointed HelpVet Advisor, providing complimentary, objective life and long-term care policy reviews for veterans and their families. This appointment reflects my commitment to independent analysis, education, and service to those who have served our country.</p>
+      <p class="wwp-helpvet__kicker">HelpVet</p>
+      <p class="wwp-helpvet__body">I am honored to help veterans and their families receive complimentary, objective insurance reviews through my appointment as an Appointed HelpVet Advisor (2026&ndash;2028).</p>
     </div>
 
     <section>
@@ -535,18 +572,18 @@
         <div class="wwp-pcard"><div class="ck">&#10003;</div><span>Independent</span></div>
         <div class="wwp-pcard"><div class="ck">&#10003;</div><span>Objective</span></div>
         <div class="wwp-pcard"><div class="ck">&#10003;</div><span>Complimentary</span></div>
-        <div class="wwp-pcard"><div class="ck">&#10003;</div><span>No obligation</span></div>
-        <div class="wwp-pcard"><div class="ck">&#10003;</div><span>Personally conducted by me</span></div>
+        <div class="wwp-pcard"><div class="ck">&#10003;</div><span>No Obligation</span></div>
+        <div class="wwp-pcard"><div class="ck">&#10003;</div><span>Personally Conducted by Bert Payne</span></div>
       </div>
-      <p class="wwp-body" style="text-align:center;font-style:italic;color:#555555;">My role is not simply to recommend insurance. It is to help clients make informed financial decisions through disciplined, CPA-level analysis.</p>
+      <p class="wwp-body" style="text-align:center;font-style:italic;color:#1E3A5F;font-family:'EB Garamond',Georgia,serif;">My role is not simply to recommend insurance. It is to help clients make informed financial decisions through disciplined, CPA-level analysis.</p>
     </section>
 
     <section class="wwp-speak">
       <h2 class="wwp-h2">Speak With Bert</h2>
-      <p class="wwp-body" style="text-align:center;">Have a question about an existing life insurance or long-term care policy? Contact me directly for a confidential, complimentary conversation. I manage every inquiry personally.</p>
+      <p class="wwp-body" style="text-align:center;">Schedule a confidential, no-obligation conversation to discuss your existing life insurance or long-term care coverage. I manage every inquiry personally.</p>
       <a class="wwp-speak__phone" href="tel:+19257086501">(925) 708-6501</a>
       <p class="wwp-speak__apply"><a href="mailto:withbert.payne@insurance-review-services.com">withbert.payne@insurance-review-services.com</a></p>
-      <p class="wwp-speak__apply">Prefer to begin online? <a href="LTC-Insurance-Application.pdf?v=12" download="LTC-Insurance-Application.pdf">Access the application.</a></p>
+      <p class="wwp-speak__apply">Prefer to begin online? <a href="apply.html">Access the application.</a></p>
     </section>
 
     <p style="text-align:justify;font-style:normal;font-size:11px;color:#6b7a90;line-height:1.7;max-width:800px;margin:24px auto 0;">This website is for informational purposes only and does not constitute personalized insurance, legal, or financial advice. Insurance products and availability vary by state. Withbert W. Payne is a licensed insurance broker (CA License No. 0E90257). Policy illustrations and hypothetical results shown are for illustrative purposes only and are not guarantees of future performance. Results will vary based on individual health, age, carrier underwriting, and policy design. Insurance decisions should be coordinated with your tax, legal, and financial advisers when appropriate. All consultations are complimentary.</p>
