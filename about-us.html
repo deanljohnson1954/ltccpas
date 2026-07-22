@@ -323,12 +323,16 @@
 #page-content .wwp-about .wwp-cta__line a { color: #E7ECF3; text-decoration: none; }
 #page-content .wwp-about .wwp-cta__line a:hover { text-decoration: underline; }
 
-/* Hero credentials */
+/* Hero credentials — one line on desktop, wraps only on narrow screens */
 .wwp-about .wwp-hero__creds {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px;
-  max-width: 60ch; margin: 0 auto 16px; color: #C7D0DB; font-size: 14px; font-weight: 700;
+  display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; gap: 6px 10px;
+  max-width: 100%; margin: 0 auto 16px; color: #C7D0DB; font-size: 14px; font-weight: 700;
+  white-space: nowrap;
 }
 .wwp-about .wwp-hero__creds .dot { color: #C8922A; }
+@media (max-width: 560px) {
+  .wwp-about .wwp-hero__creds { flex-wrap: wrap; white-space: normal; font-size: 12px; }
+}
 
 /* Two-column panels */
 .wwp-about .wwp-two { display: flex; flex-wrap: wrap; gap: 20px; margin: 0 0 8px; }
