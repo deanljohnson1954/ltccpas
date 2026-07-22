@@ -19,24 +19,34 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="../css/style.css?v=6">
 <style>
+/* Fact vs. Fiction page — matches the RTF exactly: colors, order, wording */
+.fv-wrap { max-width: 1160px; margin: 0 auto; padding: 60px 24px; }
+
+.fv-hero { background:#1E3A5F; text-align:center; padding:48px 24px 40px; }
+.fv-hero .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:14px; color:#C8922A; margin:0 0 14px; }
+.fv-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff; font-size:36px; line-height:1.2; margin:0 0 16px; }
+.fv-hero p.sub { color:#E8EEF5; max-width:760px; margin:0 auto 14px; font-size:18px; line-height:1.6; }
+.fv-hero p.note { font-style:italic; color:#C9D6E4; max-width:700px; margin:0 auto; font-size:15px; }
+
 .myth-label {
   display: block;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--white);
-  background: var(--navy);
+  letter-spacing: 2px;
+  color: #fff;
+  background: #182F4C;
   padding: 10px 16px;
   border-radius: 6px;
-  margin: 36px 0 18px;
+  margin: 40px 0 18px;
 }
 .myth-title {
   text-align: center;
   font-size: 22px;
   font-weight: 700;
-  color: var(--navy);
+  font-family: 'EB Garamond',Georgia,serif;
+  color: #1E3A5F;
   margin: 0 0 20px;
   line-height: 1.3;
 }
@@ -51,96 +61,121 @@
   padding: 16px 18px;
 }
 .fv-col.fiction {
-  border-top: 3px solid #c0392b;
-  background: #fdf6f6;
+  border-top: 3px solid #9B2C2C;
+  background: #FBEFEF;
 }
 .fv-col.fact {
-  border-top: 3px solid var(--gold);
-  background: #f6f9f4;
+  border-top: 3px solid #C8922A;
+  background: #F6ECD6;
 }
 .fv-badge {
   display: inline-block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 8px;
 }
-.fv-badge.fiction { color: #c0392b; }
-.fv-badge.fact { color: #2e7d4f; }
+.fv-badge.fiction { color: #9B2C2C; }
+.fv-badge.fact { color: #C8922A; }
 .fv-italic {
-  font-size: 13px;
+  font-size: 14px;
   font-style: italic;
-  color: var(--navy);
+  color: #1A1A1A;
   margin: 0 0 8px;
   line-height: 1.5;
 }
 .fv-context {
-  font-size: 12px;
-  color: var(--muted);
+  font-size: 13px;
+  color: #4A4A4A;
   margin: 0;
   line-height: 1.5;
 }
 .fv-headline {
   font-size: 15px;
   font-weight: 700;
-  color: var(--navy);
+  color: #1A1A1A;
   margin: 0 0 8px;
   line-height: 1.4;
 }
 .fv-body {
   font-size: 13px;
-  color: var(--text);
+  color: #4A4A4A;
   line-height: 1.7;
   margin: 0;
 }
+
+.fv-numbers-h2 { text-align:center; font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:1.7rem; margin:44px 0 20px; }
 .stat-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin: 28px 0 24px;
+  gap: 2px;
+  margin: 0 0 28px;
+  background: #1E3A5F;
 }
 .stat-box {
   text-align: center;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  background: #1E3A5F;
   padding: 20px 16px;
 }
 .stat-number {
+  font-family: 'EB Garamond',Georgia,serif;
   font-size: 40px;
   font-weight: 700;
-  color: var(--gold);
+  color: #C8922A;
   line-height: 1;
-  margin: 0 0 6px;
+  margin: 0 0 8px;
 }
 .stat-label {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
-  color: var(--navy);
+  color: #fff;
   margin: 0 0 6px;
   line-height: 1.3;
 }
 .stat-source {
-  font-size: 11px;
+  font-size: 12px;
   font-style: italic;
-  color: var(--muted);
+  color: #C9D6E4;
   margin: 0;
   line-height: 1.4;
 }
+
 .pullquote {
-  border-left: 4px solid var(--gold);
-  background: #f6f9fc;
-  padding: 18px 22px;
+  border-top: 2px solid #C8922A;
+  border-bottom: 2px solid #C8922A;
+  background: #F6ECD6;
+  text-align: center;
+  padding: 22px 26px;
   margin: 28px 0;
-  border-radius: 0 6px 6px 0;
 }
 .pullquote p {
-  font-size: 15px;
+  font-size: 17px;
+  font-family: 'EB Garamond',Georgia,serif;
   font-style: italic;
-  color: var(--navy);
+  color: #1E3A5F;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 0 12px;
 }
+.pullquote cite { font-weight: 700; font-style: normal; color: #1E3A5F; font-size: 14px; }
+
+.fv-questions { background:#F4F7FA; border-top:3px solid #C8922A; border-bottom:3px solid #C8922A; text-align:center; padding:28px 26px; margin:28px 0; }
+.fv-questions h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:1.4rem; margin:0 0 14px; }
+.fv-questions ul { list-style:none; padding:0; margin:0 0 16px; display:inline-block; text-align:left; }
+.fv-questions ul li { position:relative; padding:4px 0 4px 22px; color:#1A1A1A; font-weight:700; font-size:1.05rem; }
+.fv-questions ul li::before { content:"\2022"; position:absolute; left:2px; color:#1A1A1A; }
+.fv-questions p.closing { font-style:italic; color:#1E3A5F; font-size:1.05rem; margin:0; }
+
+.fv-cta { background:#1E3A5F; color:#fff; text-align:center; padding:36px 28px; margin:24px 0 8px; }
+.fv-cta h2 { color:#fff; font-family:'EB Garamond',Georgia,serif; margin:0 0 12px; }
+.fv-cta .no-cost { font-weight:700; font-size:1.15rem; color:#F0D9A8; margin:0 0 10px; }
+.fv-cta p.body { color:#E8EEF5; max-width:640px; margin:0 auto 16px; }
+.fv-cta .contact-line { font-weight:700; color:#fff; margin:0 0 6px; }
+.fv-cta .email-line { color:#E8EEF5; font-size:15px; margin:0 0 6px; }
+.fv-cta .address-line { color:#C9D6E4; font-size:14px; margin:0; }
+
+.fv-disclaimer { text-align:center; font-style:italic; font-size:13px; color:#4A4A4A; margin:20px 0 0; }
+
 @media (max-width: 680px) {
   .fv-pair { grid-template-columns: 1fr; }
   .stat-grid { grid-template-columns: 1fr 1fr; }
@@ -201,14 +236,14 @@
 </ul></nav>
 
 <div id="page-content">
-<div class="page-hero"><div class="inner">
-  <div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="what-is-long-term-care-insurance.html">LTC Insurance</a> &rsaquo; <span>Fact vs. Fiction</span></div>
+<div class="fv-hero">
+  <p class="eyebrow">Understanding Long-Term Care</p>
   <h1>Fact vs. Fiction About Long-Term Care</h1>
-  <p style="text-align:center;">The most common misconceptions about long-term care insurance &mdash; and what the data shows. Each pair presents the myth as it is typically heard, and the evidence-based response.</p>
-</div></div>
+  <p class="sub">The eight misconceptions that most often derail long-term care planning &mdash; and what the evidence actually shows.</p>
+  <p class="note">Each pair presents the myth as it is typically heard, followed by the evidence-based response.</p>
+</div>
 
-<div class="page-wrap"><div class="two-col">
-<div class="content-area">
+<div class="fv-wrap">
 
   <span class="myth-label">Myth 1 of 8</span>
   <h2 class="myth-title">Medicare Will Cover My Long-Term Care Costs</h2>
@@ -220,8 +255,8 @@
     </div>
     <div class="fv-col fact">
       <span class="fv-badge fact">&#10003;&nbsp; Fact</span>
-      <p class="fv-headline">Medicare covers acute care only. Custodial care is entirely excluded.</p>
-      <p class="fv-body">Medicare covers hospitalizations, surgery, physician visits, and short-term skilled nursing after a qualifying hospital stay &mdash; up to 100 days, with significant co-pays after day 20. It does not cover ongoing home health aides for custodial care, assisted living, memory care, or adult day programs. These are the services that most long-term care events require.</p>
+      <p class="fv-headline">Medicare covers acute care. Custodial long-term care is excluded.</p>
+      <p class="fv-body">Medicare pays for hospitalization, surgery, physician visits, and short-term skilled nursing following a qualifying hospital stay &mdash; up to 100 days, with significant co-pays after day 20. It generally does not cover ongoing home health aides for custodial care, assisted living, memory care, or adult day programs. Those are the services most extended care events actually require.</p>
     </div>
   </div>
 
@@ -230,13 +265,13 @@
   <div class="fv-pair">
     <div class="fv-col fiction">
       <span class="fv-badge fiction">&#10007;&nbsp; Fiction</span>
-      <p class="fv-italic">My children or spouse will provide care at home. I don&rsquo;t need a policy.</p>
-      <p class="fv-context">Most people believe this until the care event begins.</p>
+      <p class="fv-italic">My spouse or children will provide care at home. I don&rsquo;t need a policy.</p>
+      <p class="fv-context">Most families believe this until the care event begins.</p>
     </div>
     <div class="fv-col fact">
       <span class="fv-badge fact">&#10003;&nbsp; Fact</span>
       <p class="fv-headline">Family caregiving has financial, physical, and emotional limits.</p>
-      <p class="fv-body">Professional memory care for advanced dementia commonly runs $12,000&ndash;$15,000 per month in the Bay Area. The physical and emotional toll on family caregivers is well-documented, and most cannot maintain full-time employment while providing meaningful care. LTC insurance does not prevent family involvement &mdash; it funds professional care, so family members remain family members, not paid caregivers.</p>
+      <p class="fv-body">Professional memory care in the Bay Area commonly runs $150,000 or more per year. Few family caregivers can sustain full-time employment while providing meaningful daily care, and the physical and emotional toll is well documented. Long-term care coverage does not remove the family from the picture &mdash; it funds professional care so that family members remain family members rather than unpaid caregivers.</p>
     </div>
   </div>
 
@@ -245,13 +280,13 @@
   <div class="fv-pair">
     <div class="fv-col fiction">
       <span class="fv-badge fiction">&#10007;&nbsp; Fiction</span>
-      <p class="fv-italic">I have significant savings. I&rsquo;ll just pay for care out of pocket if I need it.</p>
-      <p class="fv-context">Self-insurance is rational for low-probability events with defined costs. LTC is neither.</p>
+      <p class="fv-italic">I have significant savings. I&rsquo;ll simply pay for care out of pocket if I need it.</p>
+      <p class="fv-context">Self-insurance is rational for low-probability events with defined costs. Extended care is neither.</p>
     </div>
     <div class="fv-col fact">
       <span class="fv-badge fact">&#10003;&nbsp; Fact</span>
-      <p class="fv-headline">Self-insuring a 70% probability, multi-year, six-figure event is a high-risk strategy.</p>
-      <p class="fv-body">A three-year nursing home stay in California costs over $315,000 at today&rsquo;s rates. A ten-year dementia event &mdash; not unusual for advanced Alzheimer&rsquo;s &mdash; can exceed $1.5 million. For most families, self-insuring this risk means systematically liquidating retirement assets during the years a surviving spouse may need them most. Hybrid LTC policies also allow a full return of premiums if care is never needed &mdash; eliminating the &ldquo;wasted premium&rdquo; concern.</p>
+      <p class="fv-headline">Self-insuring a 70% probability, multi-year, seven-figure exposure is a high-risk strategy.</p>
+      <p class="fv-body">At Bay Area rates of roughly $15,000 a month for one person, three years of care is about $540,000 and a ten-year dementia event &mdash; not unusual with advanced Alzheimer&rsquo;s &mdash; approaches $1.8 million. If both spouses need care, the ten-year figure approaches $3.6 million. For most families, self-insuring means liquidating retirement assets in exactly the years a surviving spouse depends on them. Many hybrid designs also include a return-of-premium feature if care is never needed, subject to policy terms and vesting schedules.</p>
     </div>
   </div>
 
@@ -265,23 +300,23 @@
     </div>
     <div class="fv-col fact">
       <span class="fv-badge fact">&#10003;&nbsp; Fact</span>
-      <p class="fv-headline">The optimal underwriting window closes well before most people expect.</p>
-      <p class="fv-body">The ideal window for LTC coverage &mdash; broadest carrier selection, lowest premiums, widest benefit options &mdash; is typically the late fifties and early sixties. By the mid-seventies, 47% of applicants were declined. Health conditions that disqualify applicants often develop in the sixties, well before care is needed. The underwriting window, once closed, does not reopen.</p>
+      <p class="fv-headline">The underwriting window closes well before most people expect.</p>
+      <p class="fv-body">The best window for coverage &mdash; broadest carrier selection, lowest premiums, widest benefit options &mdash; is typically the late fifties and early sixties. Roughly half of applicants over age 70 are declined. The health conditions that disqualify applicants usually develop in the sixties, well before care is needed. For partners at the Big 4, the planning window is often narrowest in the final years before mandatory retirement &mdash; while income is high, health is favorable, and underwriting options remain open. Once the window closes, it does not reopen.</p>
     </div>
   </div>
 
   <span class="myth-label">Myth 5 of 8</span>
-  <h2 class="myth-title">LTC Insurance Is Too Expensive</h2>
+  <h2 class="myth-title">Long-Term Care Insurance Is Too Expensive</h2>
   <div class="fv-pair">
     <div class="fv-col fiction">
       <span class="fv-badge fiction">&#10007;&nbsp; Fiction</span>
-      <p class="fv-italic">LTC premiums are prohibitively expensive and may increase unpredictably.</p>
-      <p class="fv-context">Traditional standalone LTC policies have experienced premium increases. Hybrid policies are structurally different.</p>
+      <p class="fv-italic">Premiums are prohibitively expensive and may increase unpredictably.</p>
+      <p class="fv-context">Traditional standalone policies have seen premium increases. Hybrid designs are structurally different.</p>
     </div>
     <div class="fv-col fact">
       <span class="fv-badge fact">&#10003;&nbsp; Fact</span>
-      <p class="fv-headline">Modern hybrid policies have fixed, single premiums &mdash; and return value even if care is never needed.</p>
-      <p class="fv-body">Hybrid LTC policies linked to a life insurance chassis have guaranteed, level premiums &mdash; often a single lump-sum deposit. If care is never needed, a meaningful death benefit passes to beneficiaries. For a California C-Corp owner, the true net cost of comprehensive lifetime coverage for a couple can be as low as ~$68,000 after tax savings &mdash; with a $300,000+ retained death benefit.</p>
+      <p class="fv-headline">Modern hybrid policies carry premiums that are guaranteed not to increase &mdash; and retain value if care is never needed.</p>
+      <p class="fv-body">Hybrid long-term care policies built on a life insurance chassis carry level premiums, often a single lump-sum deposit, that are guaranteed not to increase. If care is never needed, a meaningful death benefit passes to beneficiaries. For a California C-corporation owner, the estimated net capital exposure &mdash; premium less cash value, less the corporate tax benefit on the qualified long-term care portion &mdash; can be roughly $70,000 in one age-50 couple illustration, with a death benefit of $300,000 or more retained. Tax treatment depends on individual circumstances; see the Tax Advantages page and consult your CPA.</p>
     </div>
   </div>
 
@@ -290,13 +325,13 @@
   <div class="fv-pair">
     <div class="fv-col fiction">
       <span class="fv-badge fiction">&#10007;&nbsp; Fiction</span>
-      <p class="fv-italic">If I need long-term care, I&rsquo;ll end up in a nursing home. I&rsquo;d rather not plan for that.</p>
-      <p class="fv-context">The nursing home assumption causes many people to dismiss the planning conversation.</p>
+      <p class="fv-italic">If I need long-term care I&rsquo;ll end up in a nursing home, and I&rsquo;d rather not plan for that.</p>
+      <p class="fv-context">The nursing home assumption causes many people to dismiss the conversation entirely.</p>
     </div>
     <div class="fv-col fact">
       <span class="fv-badge fact">&#10003;&nbsp; Fact</span>
-      <p class="fv-headline">60% of LTC claims are for home-based care. Most people receive care where they prefer &mdash; at home.</p>
-      <p class="fv-body">Connecticut Partnership data on 6,878 claimants shows 53% of claims are for home health aides and 60% involve home-based or skilled nursing home visits. Assisted living accounts for 29% of claims. Nursing home claims represent 27%. A well-designed LTC policy funds care in whatever setting the individual prefers, including home care with a professional aide.</p>
+      <p class="fv-headline">Most claims involve care delivered outside a nursing home.</p>
+      <p class="fv-body">Connecticut Partnership claims data covering 6,878 claimants shows home health aide services in 53% of claims and assisted living in 29%; nursing home care accounts for 27%. Because a claimant may receive care in more than one setting over the life of a claim, these percentages total more than 100%. The planning point is unchanged: a well-designed policy funds care in whatever setting the individual prefers, and for most claimants that setting is home.</p>
     </div>
   </div>
 
@@ -310,8 +345,8 @@
     </div>
     <div class="fv-col fact">
       <span class="fv-badge fact">&#10003;&nbsp; Fact</span>
-      <p class="fv-headline">Medi-Cal covers LTC only after all assets have been spent down to eligibility levels.</p>
-      <p class="fv-body">Medi-Cal does cover long-term care &mdash; but only after personal assets have been depleted to program eligibility thresholds. For professionals with retirement savings, a home, or a surviving spouse who depends on those assets, Medi-Cal spend-down represents the destruction of everything retirement planning was designed to protect. California&rsquo;s Partnership Program allows LTC policyholders to protect assets dollar-for-dollar against Medi-Cal eligibility requirements.</p>
+      <p class="fv-headline">Medi-Cal covers long-term care only after assets have been spent down to eligibility levels.</p>
+      <p class="fv-body">Medi-Cal does pay for long-term care, but only once personal assets have been depleted to program thresholds. For a professional with retirement savings, a home, and a spouse who depends on those assets, Medi-Cal spend-down means dismantling everything the retirement plan was built to protect. California&rsquo;s Long-Term Care Partnership Program historically allowed policyholders to shelter assets dollar for dollar against Medi-Cal eligibility; according to the California Department of Health Care Services, no Partnership-approved insurers are currently issuing new Partnership policies, so it is best treated as historical context rather than a current planning option.</p>
     </div>
   </div>
 
@@ -320,71 +355,67 @@
   <div class="fv-pair">
     <div class="fv-col fiction">
       <span class="fv-badge fiction">&#10007;&nbsp; Fiction</span>
-      <p class="fv-italic">LTC premiums are wasted if I never make a claim.</p>
-      <p class="fv-context">The &ldquo;use it or lose it&rdquo; concern is legitimate for traditional standalone policies. It does not apply to hybrid structures.</p>
+      <p class="fv-italic">Premiums are wasted if I never make a claim.</p>
+      <p class="fv-context">A legitimate concern for traditional standalone policies. It does not apply the same way to hybrid structures.</p>
     </div>
     <div class="fv-col fact">
       <span class="fv-badge fact">&#10003;&nbsp; Fact</span>
-      <p class="fv-headline">Hybrid LTC policies are specifically designed so that premiums are never lost.</p>
-      <p class="fv-body">Modern hybrid LTC policies link long-term care coverage to a life insurance or annuity chassis. If care is never needed, the policyholder&rsquo;s beneficiaries receive a meaningful death benefit. In some designs, the premium deposit remains accessible during the policyholder&rsquo;s lifetime. The policy serves both as LTC protection and as a legacy planning tool.</p>
+      <p class="fv-headline">Hybrid policies are designed so that premiums are not simply lost.</p>
+      <p class="fv-body">A hybrid policy links long-term care coverage to a life insurance or annuity chassis. If care is never needed, beneficiaries receive a meaningful death benefit. In some designs a surrender value remains accessible during the policyholder&rsquo;s lifetime, subject to policy terms; surrender values may be less than premiums paid in the early years. The result is a policy that functions both as extended care protection and as a legacy asset.</p>
     </div>
   </div>
 
-  <h2 style="text-align:center;margin-top:40px;margin-bottom:4px;">The Numbers Behind the Facts</h2>
+  <h2 class="fv-numbers-h2">Long-Term Care by the Numbers</h2>
   <div class="stat-grid">
     <div class="stat-box">
       <p class="stat-number">70%</p>
-      <p class="stat-label">Will Need LTC After Age 65</p>
+      <p class="stat-label">Will Need Extended Care After Age 65</p>
       <p class="stat-source">U.S. Department of Health and Human Services. Not a marginal risk &mdash; the actuarial expectation for the majority.</p>
     </div>
     <div class="stat-box">
-      <p class="stat-number">60%</p>
-      <p class="stat-label">Claims Are for Home-Based Care</p>
-      <p class="stat-source">Connecticut Partnership data. LTC insurance funds care at home, not just in nursing homes.</p>
+      <p class="stat-number">53%</p>
+      <p class="stat-label">Of Claims Involve Home Health Aide Care</p>
+      <p class="stat-source">Connecticut Partnership claims data. Coverage funds care at home, not only in facilities.</p>
     </div>
     <div class="stat-box">
-      <p class="stat-number">47%</p>
-      <p class="stat-label">Denied Coverage After Age 70</p>
-      <p class="stat-source">The underwriting window narrows sharply. Waiting is the highest-risk strategy of all.</p>
+      <p class="stat-number">~50%</p>
+      <p class="stat-label">Of Applicants Over 70 Are Declined</p>
+      <p class="stat-source">The underwriting window narrows sharply with age. Waiting is the highest-risk strategy of all.</p>
     </div>
     <div class="stat-box">
-      <p class="stat-number">$315K+</p>
-      <p class="stat-label">3-Year Nursing Home Cost in CA</p>
-      <p class="stat-source">In 2026, California rates. A 10-year dementia event can exceed $1.5 million.</p>
+      <p class="stat-number">$540K</p>
+      <p class="stat-label">Three Years of Care at Bay Area Rates</p>
+      <p class="stat-source">Roughly $15,000 a month for one person. A ten-year dementia event approaches $1.8 million.</p>
     </div>
   </div>
 
   <div class="pullquote">
-    <p>&ldquo;The case for long-term care coverage is not sentimental. It is arithmetical. The numbers that define this risk belong in every serious retirement analysis &mdash; not as a footnote, but as a primary planning variable.&rdquo;</p>
+    <p>&ldquo;Long-term care planning isn&rsquo;t about predicting the future. It&rsquo;s about protecting your independence, preserving your assets, and giving your family choices when they matter most.&rdquo;</p>
+    <cite>&mdash; Withbert (Bert) W. Payne, CPA, CGMA, FCA</cite>
   </div>
 
-  <div class="callout" style="text-align:center;">
-    <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin:0 0 8px;">No Cost. No Obligation.</p>
-    <p style="font-size:20px;font-weight:700;color:var(--navy);margin:0 0 8px;">Request a Complimentary Independent Review</p>
-    <p style="margin:0 0 16px;">Withbert W. Payne, CPA &nbsp;&middot;&nbsp; (925) 708-6501 &nbsp;&middot;&nbsp; <a href="mailto:bertltccpas@gmail.com">bertltccpas@gmail.com</a></p>
-    <a href="../contact.html" class="btn-gold" style="display:inline-block;padding:12px 28px;background:var(--gold);color:var(--white);font-weight:700;border-radius:4px;text-decoration:none;">Request a Complimentary Review</a>
+  <div class="fv-questions">
+    <h2>Every long-term care plan should answer three questions.</h2>
+    <ul>
+      <li>Who will provide the care?</li>
+      <li>Where will the care be delivered?</li>
+      <li>Who will pay for it?</li>
+    </ul>
+    <p class="closing">The earlier those questions are answered, the more options &mdash; and the more peace of mind &mdash; you are likely to have.</p>
   </div>
 
-  <p style="font-style:italic;font-size:11px;color:var(--muted);margin-top:28px;text-align:center;">For educational purposes only. Not financial, legal, or insurance advice. Withbert W. Payne, CPA, CGMA &middot; CA License No. 0E90257 &middot; This is a solicitation for insurance.</p>
+  <div class="fv-cta">
+    <h2>Request Your Personalized Illustration</h2>
+    <p class="no-cost">No cost. No obligation.</p>
+    <p class="body">An independent, carrier-neutral analysis of your long-term care options, prepared and reviewed personally by Bert Payne, CPA.</p>
+    <p class="contact-line">Withbert (Bert) W. Payne, CPA, CGMA, FCA &middot; (925) 708-6501</p>
+    <p class="email-line">withbert.payne@insurance-review-services.com &middot; LTCCPAs.com</p>
+    <p class="address-line">3150 Crow Canyon Place, Suite 100, San Ramon, CA 94583</p>
+  </div>
+
+  <p class="fv-disclaimer">For educational purposes only. Not financial, legal, tax, or insurance advice. Coverage is subject to medical underwriting and policy availability. Benefit and premium figures are drawn from sample illustrations and will vary by age, health, carrier, and benefit design. Tax treatment depends on individual circumstances; consult your CPA.</p>
 
 </div>
-<div class="sidebar">
-  <div class="sidebar-box"><h3>Request a Complimentary Review</h3><p style="font-size:14px;">No cost. No obligation. Get an independent analysis of your LTC options.</p><p style="font-size:18px;font-weight:700;color:var(--navy);">(925) 708-6501</p><a class="btn-gold" href="../contact.html">Request a Complimentary Review</a></div>
-  <div class="sidebar-box"><h3>LTC Insurance</h3><ul>
-    <li><a href="what-is-long-term-care-insurance.html">What is LTC Insurance?</a></li>
-    <li><a href="what-initiates-a-long-term-care-claim.html">Claim Triggers</a></li>
-    <li><a href="frequently-asked-questions.html">FAQ</a></li>
-    <li><a href="state-mandated-ltc.html">State Mandated LTC</a></li>
-  </ul></div>
-  <div class="sidebar-box"><h3>Resources</h3><ul>
-    
-    <li><a href="../tax-advantages-ltc-insurance.html">Tax Advantages</a></li>
-    <li><a href="../ltc-statistics.html">LTC Statistics</a></li>
-    <li><a href="../paying-for-long-term-care.html">Paying for Long-Term Care</a></li>
-    <li><a href="../contact.html">Request a Complimentary Review</a></li>
-  </ul></div>
-</div>
-</div></div>
 </div>
 
 <footer><div class="footer-inner">
