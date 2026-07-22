@@ -19,37 +19,71 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="../css/style.css?v=6">
 <style>
+/* FAQ page — matches the RTF exactly: colors, order, wording */
+.faq-wrap { max-width: 1160px; margin: 0 auto; padding: 60px 24px; }
+
+.faq-hero { background:#1E3A5F; text-align:center; padding:48px 24px 40px; }
+.faq-hero .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:14px; color:#C9B27A; margin:0 0 14px; }
+.faq-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff; font-size:36px; line-height:1.2; margin:0 0 16px; }
+.faq-hero p.sub { color:#E6EAF0; max-width:760px; margin:0 auto; font-size:16px; line-height:1.6; }
+
+.faq-cta-bar { background:#C8922A; text-align:center; padding:22px 24px; }
+.faq-cta-bar h2 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#3A2A05; font-size:1.5rem; margin:0 0 8px; }
+.faq-cta-bar p { color:#3A2A05; font-size:15px; margin:0; }
+
 .faq-group-header {
   display: block;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--white);
-  background: var(--navy);
+  letter-spacing: 2px;
+  color: #fff;
+  background: #1E3A5F;
   padding: 10px 16px;
   border-radius: 6px;
-  margin: 32px 0 18px;
+  margin: 36px 0 18px;
 }
 .faq-item {
-  border-left: 3px solid var(--gold);
-  padding: 12px 0 12px 18px;
-  margin: 0 0 20px;
+  padding: 0 0 14px;
+  margin: 0 0 16px;
+  border-bottom: 1px solid #DCC79A;
 }
 .faq-q {
-  font-size: 15px;
+  font-family: 'EB Garamond',Georgia,serif;
+  font-size: 17px;
   font-weight: 700;
-  color: var(--navy);
   margin: 0 0 8px;
   line-height: 1.4;
 }
+.faq-q .q-label { color: #C8922A; }
+.faq-q .q-text { color: #1E3A5F; }
 .faq-a {
   font-size: 14px;
-  color: var(--text);
+  color: #222222;
   line-height: 1.7;
-  margin: 0;
+  margin: 0 0 10px;
+  text-align: justify;
 }
+.faq-a:last-child { margin-bottom: 0; }
+.faq-a strong { color: #222222; }
+
+.faq-cost-box { background:#F6ECD6; border-radius:6px; padding:22px 26px; margin:14px 0; }
+.faq-cost-box h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:1.1rem; text-align:center; margin:0 0 12px; }
+.faq-cost-box ul { list-style:none; padding:0; margin:0; }
+.faq-cost-box ul li { position:relative; padding:4px 0 4px 22px; color:#222222; font-size:15px; }
+.faq-cost-box ul li::before { content:"\2022"; position:absolute; left:4px; color:#C8922A; font-weight:700; }
+.faq-cost-box ul li.emphasis { font-weight:700; color:#1E3A5F; }
+
+.faq-speak { background:#182F4C; color:#fff; text-align:center; padding:36px 28px; margin:32px 0 8px; }
+.faq-speak h2 { color:#fff; font-family:'EB Garamond',Georgia,serif; margin:0 0 12px; }
+.faq-speak p.body { color:#E6EAF0; max-width:640px; margin:0 auto 16px; }
+.faq-speak .phone { font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:28px; color:#E3B341; margin:0 0 10px; }
+.faq-speak .name { font-weight:700; color:#fff; margin:0 0 6px; }
+.faq-speak .email-line { color:#D9E0EA; font-size:15px; margin:0 0 6px; }
+.faq-speak .license { color:#B9C4D2; font-size:14px; margin:0; }
+
+.faq-disclaimer { text-align:center; font-style:italic; font-size:13px; color:#444; margin:20px 0 0; }
 </style>
 </head>
 <body>
@@ -107,163 +141,180 @@
 
 <div id="page-content">
 
-<div class="page-hero"><div class="inner">
-  <div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="#">LTC Insurance</a> &rsaquo; <span>FAQ</span></div>
-  <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.7);margin:0 0 10px;">Client Resource</p>
+<div class="faq-hero">
+  <p class="eyebrow">Client Resource</p>
   <h1>Frequently Asked Questions</h1>
-  <p>Concise answers to the questions clients and their CPAs ask most often about long-term care insurance, underwriting, benefits, and planning structures.</p>
-</div></div>
+  <p class="sub">Clear, objective answers to the questions clients, CPAs, attorneys, and financial advisors ask most often about long-term care planning, insurance, underwriting, taxes, and claims.</p>
+</div>
 
-<div class="page-wrap"><div class="two-col">
-<div class="content-area">
+<div class="faq-cta-bar">
+  <h2>Request Your Personalized Illustration</h2>
+  <p>(925) 708-6501 &middot; No fee. No obligation. I respond within one business day.</p>
+</div>
+
+<div class="faq-wrap">
 
 <span class="faq-group-header">The Basics</span>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What exactly is long-term care insurance?</p>
-  <p class="faq-a">Long-term care insurance pays for the professional assistance people need when they can no longer perform basic activities of daily living (ADLs) &mdash; such as bathing, dressing, eating, toileting, or transferring &mdash; or when they require supervision due to cognitive impairment. It covers care in the home, assisted living facilities, memory care units, adult day programs, and nursing homes.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What exactly is long-term care insurance?</span></p>
+  <p class="faq-a">Long-term care insurance pays for the professional care and assistance people need when they can no longer perform basic activities of daily living (ADLs) &mdash; such as bathing, dressing, eating, toileting, or transferring &mdash; or when they require supervision due to cognitive impairment. It covers care in the home, assisted living facilities, memory care units, adult day programs, and nursing homes.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;How likely am I to actually need long-term care?</p>
-  <p class="faq-a">Very likely. According to U.S. Department of Health and Human Services data, approximately 70% of Americans who reach age 65 will need some form of long-term care before the end of their lives. One in five will need care for five years or longer. This is not a marginal risk &mdash; it is the actuarial expectation for the majority of the population.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">How likely am I to actually need long-term care?</span></p>
+  <p class="faq-a">Very likely. According to U.S. Department of Health and Human Services data, approximately 70% of Americans who reach age 65 will need some form of long-term care before the end of their lives. One in five will need care for five years or longer. This is not a remote possibility &mdash; it is the actuarial expectation for most Americans.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;Won&rsquo;t Medicare cover my long-term care costs?</p>
-  <p class="faq-a">No. Medicare is an acute care program. It covers hospitalizations, physician services, and short-term skilled nursing care after a qualifying hospital stay &mdash; limited to 100 days, with significant co-pays after day 20. It does not cover ongoing custodial care, assisted living, memory care, adult day programs, or home health aide services for non-medical needs. This is one of the most common and costly misconceptions in retirement planning.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">Won&rsquo;t Medicare cover my long-term care costs?</span></p>
+  <p class="faq-a">No. Medicare is an acute care program. It covers hospitalizations, physician services, and short-term skilled nursing care after a qualifying hospital stay &mdash; limited to 100 days, with significant co-pays after day 20.</p>
+  <p class="faq-a"><strong>Medicare does not pay for ongoing custodial long-term care.</strong> It does not cover assisted living, memory care, adult day programs, or home health aide services for non-medical needs. This is one of the most common and costly misconceptions in retirement planning.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What does long-term care actually cost in California?</p>
-  <p class="faq-a">At 2026 California rates: a home health aide (44 hrs/week) runs approximately $6,200/month; assisted living $5,100/month; memory care $6,200/month; nursing home semi-private $9,000/month; nursing home private room $10,500/month. A three-year nursing home stay exceeds $315,000. A ten-year dementia event can approach $1.5 million.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What does long-term care actually cost in California?</span></p>
+  <p class="faq-a">California is among the most expensive states in the nation for extended care, and the Bay Area is more expensive still.</p>
+  <div class="faq-cost-box">
+    <h3>Approximate California Monthly Costs (2026)</h3>
+    <ul>
+      <li>Home care (44 hours per week): $6,200 or more</li>
+      <li>Assisted living: $5,100 or more</li>
+      <li>Memory care: $12,500 or more &mdash; $150,000 or more per year</li>
+      <li>Nursing home, semi-private room: $15,200 or more</li>
+      <li>Nursing home, private room: $20,000 or more</li>
+      <li class="emphasis">Concierge home care can exceed $40,000 per month.</li>
+    </ul>
+  </div>
+  <p class="faq-a">For planning purposes I generally use $15,000 per person per month at Bay Area rates. On that basis, a three-year event approaches $540,000, and a ten-year dementia event can approach $1.8 million &mdash; for one spouse. These are the figures that make long-term care a balance-sheet issue rather than a household budgeting issue.</p>
 </div>
 
-<span class="faq-group-header">Coverage &amp; Benefits</span>
+<span class="faq-group-header">Cost and Affordability</span>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What does a long-term care policy actually pay for?</p>
-  <p class="faq-a">A qualified LTC policy pays for care in whatever setting is needed: professional home health aide services, assisted living facilities, memory care units, adult day programs, nursing homes, and hospice care. Claims data shows 53% of claims are for home health aides and 60% of all claims involve home-based or skilled nursing home visits &mdash; confirming that most people receive care where they prefer to be.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">Isn&rsquo;t long-term care insurance expensive?</span></p>
+  <p class="faq-a">Compared with the potential cost of years of care, many clients are surprised by how affordable well-designed coverage can be. The right solution depends on age, health, desired benefits, and payment structure. Policies may be funded with annual premiums, limited-pay options, or a single premium. An individualized illustration provides the most meaningful comparison.</p>
+</div>
+
+<span class="faq-group-header">Coverage and Benefits</span>
+
+<div class="faq-item">
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What does a long-term care policy actually pay for?</span></p>
+  <p class="faq-a">A qualified LTC policy pays for care in whatever setting is needed: professional home health aide services, assisted living facilities, memory care units, adult day programs, nursing homes, and hospice care. Claims data shows that approximately 53% of claims involve home health aide services &mdash; confirming that most people receive care where they prefer to be. A claimant may receive care in more than one setting over the life of a claim.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What triggers a long-term care claim?</p>
-  <p class="faq-a">A qualified LTC policy is triggered when an insured cannot perform two or more of the six Activities of Daily Living (ADLs) &mdash; bathing, dressing, eating, toileting, transferring, and continence &mdash; or when they require substantial supervision due to severe cognitive impairment such as Alzheimer&rsquo;s disease or dementia. A licensed healthcare practitioner must certify that the condition is expected to last at least 90 days.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What triggers a long-term care claim?</span></p>
+  <p class="faq-a">A qualified LTC policy is triggered when an insured cannot perform <strong>two of six Activities of Daily Living</strong> (ADLs) &mdash; bathing, dressing, eating, toileting, transferring, and continence &mdash; or when they require substantial supervision due to severe cognitive impairment such as Alzheimer&rsquo;s disease or dementia. A licensed health care practitioner must certify that the condition is expected to last at least 90 days.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What is an elimination period?</p>
-  <p class="faq-a">The elimination period is a waiting period &mdash; typically 30, 60, or 90 days &mdash; that must pass after a qualifying care event begins before the policy pays benefits. It functions like a deductible measured in time rather than dollars. A 90-day elimination period is the most common and generally produces the most cost-effective premium structure.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What is an elimination period?</span></p>
+  <p class="faq-a">The elimination period is a waiting period &mdash; typically 30, 60, or 90 days &mdash; that must pass after a qualifying care event begins before the policy pays benefits. Think of it as a deductible measured in time rather than dollars. A 90-day elimination period is the most common and generally produces the most cost-effective premium structure.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;How long do benefits last?</p>
-  <p class="faq-a">Policy benefit periods typically range from two years to lifetime, or are expressed as a pool of money (e.g., $300,000 total benefit pool). Shorter benefit periods reduce premiums but increase the risk of outliving coverage. Given that 20% of claimants needed care for five or more years, and dementia cases frequently extend beyond ten years, benefit period selection is one of the most consequential design decisions.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">How long do benefits last?</span></p>
+  <p class="faq-a">Policy benefit periods typically range from two years to lifetime, or are expressed as a pool of money &mdash; for example, a $300,000 total benefit pool. Shorter benefit periods reduce premiums but increase the risk of outliving coverage. Given that 20% of claimants need care for five or more years, and dementia cases frequently extend beyond ten years, the benefit period is one of the most important decisions when designing a policy.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What is inflation protection and do I need it?</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What is inflation protection and do I need it?</span></p>
   <p class="faq-a">Inflation protection causes your benefit to increase over time &mdash; typically 3% or 5% compounded annually. Care costs have historically outpaced general inflation. A policy purchased at age 55 may not pay a claim for 25 years. Without inflation protection, the real value of the benefit erodes from the day the policy is issued. For most clients still in their fifties and sixties, some form of inflation protection is essential.</p>
 </div>
 
-<span class="faq-group-header">Underwriting &amp; Eligibility</span>
+<span class="faq-group-header">Underwriting and Eligibility</span>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What does underwriting involve?</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What does underwriting involve?</span></p>
   <p class="faq-a">LTC underwriting assesses your health history, current medical conditions, medications, cognitive function, and actuarial risk. Carriers review medical records, conduct telephone or in-person interviews, and in some cases require cognitive assessments or physical examinations. The process typically takes two to six weeks from application to decision.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What health conditions can affect my ability to get coverage?</p>
-  <p class="faq-a">Common reasons for decline or rated offers include: Alzheimer&rsquo;s disease or other dementias (automatic decline), Parkinson&rsquo;s disease, multiple sclerosis, stroke with residual deficits, insulin-dependent diabetes with complications, heart failure, chronic obstructive pulmonary disease (COPD), recent cancer treatment, morbid obesity, and current use of certain medications. Conditions that do not typically disqualify applicants include well-controlled hypertension, controlled Type 2 diabetes without complications, and past cancers considered fully resolved.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What health conditions can affect my ability to get coverage?</span></p>
+  <p class="faq-a">Examples of conditions that may affect eligibility include Alzheimer&rsquo;s disease and other dementias, Parkinson&rsquo;s disease, multiple sclerosis, stroke with residual deficits, insulin-dependent diabetes with complications, heart failure, chronic obstructive pulmonary disease (COPD), recent cancer treatment, morbid obesity, and the current use of certain medications.</p>
+  <p class="faq-a">Conditions that do not typically disqualify applicants include well-controlled hypertension, controlled Type 2 diabetes without complications, and past cancers considered fully resolved. Underwriting standards vary meaningfully from carrier to carrier, which is why the same applicant can receive different outcomes from different companies.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What is the best age to apply?</p>
-  <p class="faq-a">The ideal window is typically the late fifties to early sixties. At this age, the broadest range of carriers is available, premiums are most favorable, and benefit options are widest. By the mid-seventies, many carriers will not issue new policies, and the overall denial rate after age 70 is approximately 47%. Health conditions that disqualify applicants often develop in the sixties &mdash; well before care is needed &mdash; which is why early application matters.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What is the best age to apply?</span></p>
+  <p class="faq-a">The ideal window is typically the late fifties to early sixties. At this age, the broadest range of carriers is available, premiums are most favorable, and benefit options are widest. By the mid-seventies, many carriers will not issue new policies, and approximately half of applicants over age 70 are declined. Health conditions that disqualify applicants often develop in the sixties &mdash; well before care is needed. <strong>The healthiest time to apply is before you think you need coverage.</strong></p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;Can I still get coverage if I have some health issues?</p>
-  <p class="faq-a">Possibly. Many conditions are ratable rather than disqualifying &mdash; meaning the policy is issued at a higher premium reflecting the elevated risk. The key is working with an advisor who has access to multiple carriers and knows each carrier&rsquo;s underwriting guidelines, since standards vary significantly. Mr. Payne has direct experience with the underwriting standards of multiple carriers and can assess eligibility before an application is submitted.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">Can I still get coverage if I have some health issues?</span></p>
+  <p class="faq-a">Possibly. Many conditions are ratable rather than disqualifying &mdash; meaning the policy is issued at a higher premium reflecting the elevated risk. The key is working with an advisor who has access to multiple carriers and knows each carrier&rsquo;s underwriting guidelines, since standards vary significantly. I can often assess likely eligibility before an application is submitted.</p>
 </div>
 
-<span class="faq-group-header">Policy Types &amp; Structures</span>
+<span class="faq-group-header">Policy Types and Structures</span>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What is a hybrid LTC policy and how does it differ from traditional LTC insurance?</p>
-  <p class="faq-a">A hybrid LTC policy links long-term care coverage to a life insurance or annuity chassis. If care is needed, the policy pays LTC benefits. If care is never needed, a death benefit passes to the policyholder&rsquo;s beneficiaries. Traditional standalone LTC policies pay benefits only if care is needed; premiums may be lost if care never materializes. Hybrid policies eliminate this &ldquo;use it or lose it&rdquo; concern and typically have guaranteed, level premiums rather than premiums subject to carrier-initiated increases.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What is a hybrid LTC policy, and how does it differ from traditional LTC insurance?</span></p>
+  <p class="faq-a">A hybrid LTC policy links long-term care coverage to a life insurance or annuity chassis. If care is needed, the policy pays long-term care benefits. If care is never needed, a death benefit passes to the policyholder&rsquo;s beneficiaries.</p>
+  <p class="faq-a">Traditional policies generally provide value only if care is needed, whereas hybrid policies preserve a death benefit if care is never required. Hybrid designs also typically carry premiums that are guaranteed not to increase, rather than premiums subject to carrier-initiated rate increases.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What is the California Partnership Program?</p>
-  <p class="faq-a">California participates in the Long-Term Care Partnership Program, which allows holders of qualifying Partnership-certified LTC policies to protect assets equal to the benefits paid out &mdash; dollar for dollar &mdash; when applying for Medi-Cal. If your policy pays $250,000 in benefits, you can protect $250,000 in assets and still qualify for Medi-Cal without spending those assets down. Inflation protection is required for applicants under age 76.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What is the California Partnership Program?</span></p>
+  <p class="faq-a">The California Partnership for Long-Term Care allows holders of qualifying Partnership-certified policies to protect assets equal to the benefits the policy pays &mdash; dollar for dollar &mdash; when applying for Medi-Cal. Important current context: according to the California Department of Health Care Services, no insurers are issuing new Partnership-certified policies in California at this time. Existing Partnership policies remain in force and retain their asset protection, so the program matters most when reviewing coverage a client already owns. For new coverage, asset-protection objectives are addressed through policy design rather than Partnership certification.</p>
 </div>
 
 <span class="faq-group-header">Tax Considerations</span>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;Are LTC insurance premiums tax-deductible?</p>
-  <p class="faq-a">For individuals who itemize deductions, premiums on a federally qualified policy may be deductible as a medical expense subject to age-based annual limits (up to $6,020 for age 71+ in 2026) and the 7.5% AGI floor. Self-employed individuals may deduct eligible premiums as an above-the-line deduction &mdash; not subject to the AGI floor &mdash; up to the same age-based limits. C-Corporations can deduct 100% of the LTC care portion of a qualifying hybrid premium paid for employee-owners and their spouses, with no age-based limits.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">Are LTC insurance premiums tax-deductible?</span></p>
+  <p class="faq-a">For individuals who itemize, premiums on a federally qualified policy may be deductible as a medical expense, subject to age-based annual limits and the 7.5% AGI floor. Self-employed individuals may deduct eligible premiums as an above-the-line deduction &mdash; not subject to the AGI floor &mdash; up to the same age-based limits. A C corporation may deduct 100% of the qualified long-term care portion of a premium paid for employee-owners and their spouses, with no age-based limits.</p>
+  <p class="faq-a">Because tax rules vary by entity type and individual circumstances, clients should consult with their CPA regarding deductibility.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;Are LTC benefits taxable when received?</p>
-  <p class="faq-a">Generally no. Benefits paid under a federally qualified LTC policy are received income-tax-free, regardless of the actual care costs incurred. This makes LTC insurance one of the most tax-efficient financial products available.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">Are LTC benefits taxable when received?</span></p>
+  <p class="faq-a">Generally, no. Benefits paid under a federally qualified long-term care policy are generally received income-tax-free. That treatment is what makes long-term care insurance one of the more tax-efficient planning structures available. Individual circumstances vary, and your CPA should confirm the treatment in your situation.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;How does the C-Corp deduction work in practice?</p>
-  <p class="faq-a">A C-Corporation may deduct 100% of the LTC care portion of a qualifying hybrid policy premium paid on behalf of employee-owners and their spouses &mdash; with no age-based limits. In a real example using a joint hybrid policy for an age-50 couple with a $169,917 single premium, the C-Corp tax savings (Federal 21% + CA 8.84% on $101,397 LTC portion) amount to approximately $30,253, reducing the true net cost to approximately $68,036 &mdash; while the policy retains a death benefit exceeding $300,000.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">How does the C corporation deduction work in practice?</span></p>
+  <p class="faq-a">A C corporation may deduct 100% of the qualified long-term care portion of a hybrid policy premium paid on behalf of employee-owners and their spouses, with no age-based limits. In a representative example &mdash; an age-50 couple funding a joint hybrid policy with a single premium &mdash; combined federal and California corporate tax savings reduced the estimated net capital exposure to roughly $70,000, while the policy retained a substantial guaranteed death benefit. Results depend entirely on entity structure, compensation, and state of residence, so the treatment should be reviewed with your CPA before the premium is paid.</p>
+</div>
+
+<div class="faq-item">
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">Can I use money from an IRA or other retirement assets to help fund long-term care insurance?</span></p>
+  <p class="faq-a">Often, yes &mdash; and for many clients it is the most efficient source of premium. Required minimum distributions that are not needed for living expenses are frequently redirected to fund coverage, converting a taxable distribution into a benefit that is generally received income-tax-free. Distributions from a traditional IRA remain taxable as ordinary income in the year taken, so the size and timing of withdrawals matter; some designs deliberately spread funding across several years to manage the bracket effect. Because the analysis depends on your tax bracket, entity structure, and overall retirement plan, this is a decision to make together with your CPA.</p>
 </div>
 
 <span class="faq-group-header">Working with Insurance Review Services</span>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What does an independent policy review involve?</p>
-  <p class="faq-a">Mr. Payne conducts a thorough analysis of your existing coverage (if any), financial profile, and protection objectives. He evaluates benefit adequacy, premium efficiency, carrier financial strength, inflation protection, and whether alternative structures would better serve your situation. The review is coordinated with your CPA, attorney, or wealth advisor where appropriate. The process typically takes one to two weeks and results in a written analysis with specific recommendations.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What does an independent policy review involve?</span></p>
+  <p class="faq-a">I conduct a thorough analysis of your existing coverage (if any), your overall financial plan, and your protection objectives. I evaluate benefit adequacy, premium efficiency, carrier financial strength, inflation protection, and whether an alternative structure would better serve your situation. The review is coordinated with your CPA, attorney, or wealth advisor where appropriate. The process typically takes one to two weeks and results in a written analysis with specific recommendations.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;Is there a fee for a review?</p>
-  <p class="faq-a">No. All policy reviews are provided at no charge to the client. Insurance Review Services is compensated directly by the insurance carriers if a new policy is placed. If no change is recommended, there is no cost and no obligation.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">Is there a fee for a review?</span></p>
+  <p class="faq-a">No. Every policy review is complimentary. Insurance Review Services is compensated directly by the issuing carrier if a new policy is placed. If no change is recommended, there is no cost and no obligation.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;Who conducts the review &mdash; Mr. Payne personally?</p>
-  <p class="faq-a">Yes. Mr. Payne personally conducts every client engagement. Reviews are not delegated to junior staff or automated systems. His background includes more than five decades in audit, insurance, and CPA practice &mdash; the same analytical discipline applied to every policy review.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">Do you conduct the review personally?</span></p>
+  <p class="faq-a">Yes. Every client works directly with me. I do not delegate reviews to junior staff or automated systems. My background includes more than five decades in audit, insurance, and CPA practice, and the same analytical discipline is applied to every policy review.</p>
 </div>
 
 <div class="faq-item">
-  <p class="faq-q">Q: &nbsp;What if my existing coverage is already adequate?</p>
-  <p class="faq-a">That is a possible and welcome outcome. An independent review is designed to inform your decision, not to generate a sale. If your existing policy is well-structured, competitively priced, and appropriately positioned within your overall financial plan, Mr. Payne will say so.</p>
+  <p class="faq-q"><span class="q-label">Q:</span> <span class="q-text">What if my existing coverage is already adequate?</span></p>
+  <p class="faq-a">That is a possible and welcome outcome. An independent review is designed to inform your decision, not to generate a sale. If your existing policy is well-structured, competitively priced, and appropriately positioned within your overall financial plan, I will say so.</p>
 </div>
 
-<div class="callout" style="text-align:center;margin-top:36px;">
-  <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin:0 0 10px;">No Cost. No Obligation.</p>
-  <p style="font-size:20px;font-weight:700;color:var(--navy);margin:0 0 10px;">Request a Complimentary Review</p>
-  <p style="margin:0 0 16px;">Withbert W. Payne, CPA &nbsp;&middot;&nbsp; (925) 708-6501 &nbsp;&middot;&nbsp; LTCCPAS.com</p>
-  <a href="../contact.html" class="btn-gold" style="display:inline-block;">Request a Complimentary Review</a>
+<div class="faq-speak">
+  <h2>Speak With Bert</h2>
+  <p class="body">Every question on this page has a general answer. Yours has a specific one. Call or write directly &mdash; no sales pressure, ever.</p>
+  <p class="phone">(925) 708-6501</p>
+  <p class="name">Withbert W. Payne, CPA, CGMA, FCA</p>
+  <p class="email-line">withbert.payne@insurance-review-services.com &middot; LTCCPAs.com</p>
+  <p class="license">CA License No. 0E90257</p>
 </div>
 
-<p style="font-style:italic;font-size:11px;margin-top:24px;color:#6b7a90;line-height:1.7;">For educational purposes only. Not financial, legal, or insurance advice. Withbert W. Payne, CPA, CGMA &middot; CA License No. 0E90257 &middot; This is a solicitation for insurance.</p>
+<p class="faq-disclaimer">For educational purposes only. This page is not financial, legal, tax, or insurance advice. Insurance products and availability vary by state. Coverage is subject to medical underwriting and policy availability. Withbert W. Payne is a licensed insurance broker (CA License No. 0E90257).</p>
 
-</div>
-<div class="sidebar">
-  <div class="sidebar-box"><h3>Request a Complimentary Review</h3><p>Get answers specific to your situation from a CPA who specializes in LTC insurance.</p><p style="font-size:18px;font-weight:700;color:var(--navy);">(925) 708-6501</p><a class="btn-gold" href="../contact.html">Request a Complimentary Review</a></div>
-  <div class="sidebar-box"><h3>Related Topics</h3><ul>
-    <li><a href="what-is-long-term-care-insurance.html">What is LTC Insurance?</a></li>
-    <li><a href="now-is-the-time-for-long-term-planning.html">Now is the Time</a></li>
-    <li><a href="what-initiates-a-long-term-care-claim.html">Claim Triggers</a></li>
-  </ul></div>
-</div>
-</div></div>
-
-<div class="contact-teaser">
-  <h2>Still Have Questions?</h2>
-  <p>We&rsquo;re happy to answer any question about LTC insurance &mdash; no sales pressure, ever.</p>
-  <span class="phone-big">(925) 708-6501</span>
-  <a href="../contact.html" class="btn-gold" style="font-size:16px;padding:14px 36px;">Contact Us</a>
 </div>
 </div>
 
