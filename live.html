@@ -304,9 +304,9 @@
 #page-content h2::after{content:"";display:block;width:64px;height:2px;background:var(--gold);margin:10px auto 0}
 #page-content p{margin:0 0 16px;text-align:justify;color:var(--ink)}
 #page-content p.center{text-align:center}
-#page-content .lead{font-size:1.18rem;font-weight:700;text-align:center;max-width:880px;margin:0 auto 18px}
-#page-content .sub{text-align:center;max-width:880px;margin:0 auto 16px}
-#page-content .tag{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--navy);text-align:center;font-size:1.15rem;margin:8px auto 22px;max-width:820px}
+#page-content .lead{font-size:1.18rem;font-weight:700;text-align:center;max-width:none;margin:0 auto 18px}
+#page-content .sub{text-align:center;max-width:none;margin:0 auto 16px}
+#page-content .tag{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--navy);text-align:center;font-size:1.15rem;margin:8px auto 22px;max-width:none}
 .lbl{color:var(--navy);font-weight:700}
 #page-content ul{list-style:none;padding:0;margin:0 0 18px}
 #page-content ul li{text-align:left;padding:6px 0 6px 20px;position:relative;color:var(--ink)}
@@ -316,13 +316,16 @@
 #page-content .hp-fineprint{text-align:center;color:var(--muted);font-size:.92rem;margin:0}
 .hp-fineprint a{color:var(--gold)}
 .hp-arrow{display:block;text-align:center;color:var(--gold);font-weight:700;text-decoration:none;margin:6px 0 0}
-#page-content blockquote{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--navy);text-align:center;font-size:1.25rem;max-width:780px;margin:24px auto 6px;border:0;padding:0;background:none}
+#page-content blockquote{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--navy);text-align:center;font-size:1.25rem;max-width:none;margin:24px auto 6px;border:0;padding:0;background:none}
 .cite{text-align:center;color:var(--muted);margin:0}
 #page-content .hp-phone{text-align:center;font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:1.35rem;font-weight:700;margin:0 0 14px}
 #page-content section.page-intro{background:#1E3A5F;color:#fff;width:100vw;position:relative;left:50%;transform:translateX(-50%);padding:48px 24px 40px;text-align:center;border-bottom:0}
 #page-content .page-intro h1{color:#fff}
-#page-content .page-intro .lead{color:#fff;margin-bottom:0}
-#page-content .hp-intro-detail{padding-top:32px}
+#page-content .page-intro .sub{color:#D7E1EC}
+#page-content .page-intro .lead{color:#C9D3DF}
+#page-content .page-intro .tag{color:#E8B84B;border-top:1px solid #C8922A;border-bottom:1px solid #C8922A;padding:16px 0;max-width:none}
+#page-content .page-intro .hp-creds{color:#D7E1EC}
+#page-content .page-intro .hp-fineprint{color:#fff}
 @media(max-width:560px){#page-content h1{font-size:1.9rem}#page-content h2{font-size:1.4rem}}
 .stat-row{display:flex;gap:16px;margin:20px 0 22px;flex-wrap:wrap}
 .stat-card{flex:1 1 180px;background:#f0f4f9;border-top:3px solid #1E3A5F;border-radius:3px;padding:20px 16px;text-align:center}
@@ -335,7 +338,7 @@
 
 /* Narrow Planning Window (light band) */
 .hp-navyband .hp-inner{max-width:1160px;margin:0 auto}
-#page-content .hp-navyband p{text-align:center;max-width:90ch;margin:0 auto 18px;color:var(--ink)}
+#page-content .hp-navyband p{text-align:center;max-width:none;margin:0 auto 18px;color:var(--ink)}
 .hp-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
 .hp-card{background:#f0f4f9;border-top:3px solid #1E3A5F;border-radius:3px;padding:18px 20px}
 .hp-card h3{font-family:Georgia,"Times New Roman",serif;color:#1E3A5F;font-size:16px;font-weight:700;margin:0 0 6px}
@@ -344,7 +347,7 @@
 
 /* Price Waterhouse pull-quote band */
 #page-content section.hp-quoteband{background:#182F4C;color:#EAF0F7;width:100vw;position:relative;left:50%;transform:translateX(-50%);padding:44px 24px;text-align:center;border-bottom:0}
-#page-content .hp-quoteband blockquote{color:#EAF0F7;margin:0 auto;max-width:76ch}
+#page-content .hp-quoteband blockquote{color:#EAF0F7;margin:0 auto;max-width:none}
 .hp-quoteband cite{color:#D8A94A;display:block;margin-top:16px;font-style:normal;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
 
 /* Hero credentials line */
@@ -353,27 +356,18 @@
 /* Narrow Planning Window subhead */
 #page-content .hp-navyband h3.hp-subhead{color:#1E3A5F;text-align:center;font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin:30px 0 4px}
 
-/* HelpVet advisor band */
-#page-content section.hp-helpvet{background:#16283F;color:#EAF0F7;width:100vw;position:relative;left:50%;transform:translateX(-50%);padding:48px 24px;text-align:center;border-bottom:0}
-#page-content .hp-helpvet .eyebrow{margin-bottom:14px}
-#page-content .hp-helpvet h3{font-family:Georgia,"Times New Roman",serif;color:#fff;font-size:1.5rem;font-weight:700;margin:0 0 14px}
-#page-content .hp-helpvet p{color:#CBD6E4;max-width:90ch;margin:0 auto 16px}
-.hp-helpvet .hp-term{display:inline-block;border:1px solid #C8922A;color:#E8B84B;font-weight:700;font-size:13px;letter-spacing:.03em;padding:8px 16px;border-radius:2px}
+/* HelpVet advisor band — gold-highlighted, contained width, distinct from the full-bleed navy sections */
+#page-content section.hp-helpvet{background:#FBF3E1;color:#1E3A5F;max-width:900px;margin:0 auto;padding:32px 32px;text-align:center;border:1px solid #C8922A;border-radius:4px}
+#page-content .hp-helpvet .eyebrow{margin-bottom:14px;color:#A9761F}
+#page-content .hp-helpvet p{color:#1E3A5F;max-width:none;margin:0 auto}
+.hp-helpvet .hp-term{display:inline-block;border:1px solid #C8922A;color:#A9761F;font-weight:700;font-size:13px;letter-spacing:.03em;padding:8px 16px;border-radius:2px}
 
 /* Narrow Planning Window pull-quote */
-#page-content .hp-navyband .hp-pull{font-family:Georgia,"Times New Roman",serif;font-style:italic;color:#1E3A5F;text-align:center;font-size:1.05rem;max-width:80ch;margin:22px auto 6px;padding:18px 0;border-top:1px solid #C8922A;border-bottom:1px solid #C8922A}
+#page-content .hp-navyband .hp-pull{font-family:Georgia,"Times New Roman",serif;font-style:italic;color:#1E3A5F;text-align:center;font-size:1.05rem;max-width:none;margin:22px auto 6px;padding:18px 0;border-top:1px solid #C8922A;border-bottom:1px solid #C8922A}
 
 /* Testimonial card */
-#page-content .hp-testimonial{font-family:Georgia,"Times New Roman",serif;font-style:italic;color:#1E3A5F;text-align:center;font-size:1.15rem;max-width:76ch;margin:24px auto 6px;border:0;padding:0;background:none}
+#page-content .hp-testimonial{font-family:Georgia,"Times New Roman",serif;font-style:italic;color:#1E3A5F;text-align:center;font-size:1.15rem;max-width:none;margin:24px auto 6px;border:0;padding:0;background:none}
 #page-content .hp-testimonial-cite{text-align:center;color:var(--gold);font-size:.82rem;letter-spacing:.03em;text-transform:uppercase;margin:0 0 18px}
-
-/* Letterhead (matches RTF header block) */
-#page-content section.hp-letterhead{text-align:center;padding:32px 0 28px;border-bottom:3px solid var(--gold)}
-#page-content .hp-letterhead-name{font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-weight:700;font-size:1.9rem;margin:0 0 6px}
-#page-content .hp-letterhead-sub{color:#2A2A2A;font-size:1rem;margin:0 0 10px}
-#page-content .hp-letterhead-label{color:var(--gold);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin:0 0 18px}
-#page-content .hp-letterhead-banner-wrap{margin:0}
-#page-content .hp-letterhead-banner{display:inline-block;background:var(--gold);color:#fff;font-weight:700;font-size:.85rem;letter-spacing:.03em;text-transform:uppercase;padding:10px 22px;border-radius:2px}
 </style>
 </head>
 <body>
@@ -449,24 +443,12 @@
 <div id="page-content">
 <main>
 
-  <!-- LETTERHEAD -->
-  <section class="hp-letterhead">
-    <p class="hp-letterhead-name">LTCCPAs.com</p>
-    <p class="hp-letterhead-sub">Insurance Review Services</p>
-    <p class="hp-letterhead-label">Independent Insurance Reviews &middot; CPA Practice</p>
-    <p class="hp-letterhead-banner-wrap"><span class="hp-letterhead-banner">Request Your Personalized Illustration</span></p>
-  </section>
-
-  <!-- HERO -->
+  <!-- HERO (single navy box — all content stays together, matching the RTF) -->
   <section class="page-intro">
     <p class="eyebrow">CPA &amp; Independent Analyst &nbsp;&middot;&nbsp; No Carrier Obligations</p>
     <h1>Independent Long-Term Care Planning<br>by a Certified Public Accountant</h1>
-    <p class="lead">Independent long-term care and life insurance planning for partners at the Big 4, professionals, business owners, executives, and affluent families &mdash; analytical, objective, and with no carrier obligations.</p>
-  </section>
-
-  <!-- HERO DETAIL -->
-  <section class="hp-intro-detail">
     <p class="sub">Former Price Waterhouse (London) CPA, Chartered Accountant (England &amp; Wales), and independent insurance analyst with more than 25 years specializing in Life and Long-Term Care planning.</p>
+    <p class="lead">Independent long-term care and life insurance planning for partners at the Big 4, professionals, business owners, executives, and affluent families &mdash; analytical, objective, and with no carrier obligations.</p>
     <p class="tag">Sound planning protects both your assets and the people who depend on you.</p>
     <p class="hp-creds">Former Price Waterhouse, London &nbsp;&middot;&nbsp; CPA (California) &nbsp;&middot;&nbsp; CGMA &nbsp;&middot;&nbsp; FCA (England &amp; Wales) &nbsp;&middot;&nbsp; Independent Insurance Strategist</p>
     <p class="hp-fineprint">No fee. No obligation. I respond within one business day.</p>
