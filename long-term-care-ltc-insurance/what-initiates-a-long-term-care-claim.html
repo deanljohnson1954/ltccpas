@@ -18,6 +18,71 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="../css/style.css?v=6">
+<style>
+/* Claim Triggers page — matches the RTF exactly: colors, order, wording */
+.ct-wrap { max-width: 900px; margin: 0 auto; padding: 0 24px 60px; }
+
+.ct-hero { background:#1E3A5F; text-align:center; padding:48px 24px 40px; }
+.ct-hero .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:13px; color:#C8922A; margin:0 0 16px; }
+.ct-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff; font-size:34px; line-height:1.25; margin:0 0 16px; }
+.ct-hero p.sub { color:#DCE4EE; max-width:720px; margin:0 auto; font-size:17px; line-height:1.6; }
+
+.ct-wrap p.body-text { text-align:justify; color:#1A1A1A; font-size:16px; line-height:1.7; margin:0 0 20px; }
+
+.ct-cpa-insight { background:#fff; border-top:3px solid #C8922A; box-shadow:0 1px 6px rgba(0,0,0,0.08); border-radius:0 0 6px 6px; padding:22px 26px; margin:24px 0 32px; }
+.ct-cpa-insight h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:20px; text-align:center; margin:0 0 12px; }
+.ct-cpa-insight p { text-align:justify; color:#1A1A1A; font-size:16px; line-height:1.7; margin:0; }
+
+.ct-wrap h2 { text-align:center; font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:26px; margin:44px 0 18px; }
+
+.ct-intro-card { background:#182F4C; border-radius:6px; padding:24px 28px; margin:0 0 28px; text-align:center; }
+.ct-intro-card h3 { color:#fff; font-family:'EB Garamond',Georgia,serif; font-size:20px; margin:0 0 12px; }
+.ct-intro-card p { color:#DCE4EE; font-size:15px; line-height:1.6; margin:0; }
+
+.ct-req-list { display:flex; flex-direction:column; gap:16px; margin:0 0 32px; }
+.ct-req-item { display:flex; gap:20px; align-items:flex-start; background:#F1F5F9; border-left:4px solid #1E3A5F; border-radius:0 6px 6px 0; padding:22px 26px; }
+.ct-req-num { flex-shrink:0; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:26px; color:#C8922A; width:50px; text-align:center; }
+.ct-req-body h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; margin:0 0 6px; }
+.ct-req-label { display:block; font-weight:700; text-transform:uppercase; letter-spacing:.15em; font-size:11px; color:#C8922A; margin:0 0 10px; }
+.ct-req-body p { color:#1A1A1A; font-size:15px; line-height:1.6; margin:0 0 10px; text-align:justify; }
+.ct-req-body p:last-child { margin-bottom:0; }
+.ct-pullquote { text-align:center; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-style:italic; color:#C8922A; font-size:17px; margin:0 0 12px !important; }
+
+.ct-adl-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:#C8922A; border:2px solid #C8922A; border-radius:4px; overflow:hidden; margin:12px 0; }
+.ct-adl-grid span { background:#fff; color:#1E3A5F; font-weight:700; font-family:'EB Garamond',Georgia,serif; font-size:15px; text-align:center; padding:14px 8px; }
+
+.ct-misconceptions { background:#1E3A5F; border-radius:6px; padding:26px 30px; margin:0 0 28px; }
+.ct-misconceptions .label { display:block; text-align:center; font-weight:700; text-transform:uppercase; letter-spacing:.2em; font-size:13px; color:#C8922A; margin:0 0 16px; }
+.ct-misconceptions .intro { color:#fff; text-align:center; font-size:16px; margin:0 0 14px; }
+.ct-misconceptions ul { list-style:none; margin:0 auto 16px; padding:0; max-width:420px; }
+.ct-misconceptions ul li { color:#fff; font-size:15px; line-height:2; padding-left:22px; position:relative; }
+.ct-misconceptions ul li::before { content:'\2022'; color:#C8922A; position:absolute; left:0; }
+.ct-misconceptions .closing { text-align:center; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#C8922A; font-size:18px; margin:0; }
+
+.ct-policy-different { background:#fff; border-top:3px solid #C8922A; box-shadow:0 1px 6px rgba(0,0,0,0.08); border-radius:0 0 6px 6px; padding:24px 28px; margin:0 0 28px; }
+.ct-policy-different p { text-align:justify; color:#1A1A1A; font-size:15px; line-height:1.7; margin:0 0 14px; }
+.ct-policy-different p.closing { text-align:center; font-weight:700; color:#1E3A5F; font-family:'EB Garamond',Georgia,serif; font-size:17px; margin:0; }
+
+.ct-key-facts { background:#F1F5F9; border-radius:6px; padding:26px 30px; margin:0 0 28px; }
+.ct-key-facts ul { list-style:none; margin:0; padding:0; }
+.ct-key-facts ul li { color:#1A1A1A; font-size:15px; line-height:1.9; padding-left:22px; position:relative; }
+.ct-key-facts ul li::before { content:'\2022'; color:#C8922A; position:absolute; left:0; }
+
+.ct-related { background:#F1F5F9; border-radius:6px; padding:22px 30px; margin:0 0 32px; text-align:center; }
+.ct-related a { color:#1E3A5F; font-weight:700; text-decoration:none; }
+.ct-related a:hover { text-decoration:underline; }
+.ct-related .sep { color:#C8922A; font-weight:700; margin:0 10px; }
+
+.ct-cta { background:#1E3A5F; border-radius:6px; padding:34px 30px; margin:0 0 24px; text-align:center; }
+.ct-cta h2 { color:#fff; font-family:'EB Garamond',Georgia,serif; font-size:30px; margin:0 0 16px; }
+.ct-cta p.msg { color:#DCE4EE; font-size:16px; line-height:1.6; max-width:640px; margin:0 auto 16px; }
+.ct-cta p.name { color:#C8922A; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:20px; margin:0 0 8px; }
+.ct-cta p.contact { color:#fff; font-size:15px; margin:0 0 4px; }
+.ct-cta p.site { color:#fff; font-size:15px; margin:0 0 20px; }
+.ct-cta a.contact-bert { display:inline-block; background:#C8922A; color:#182F4C; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:16px; padding:10px 28px; border-radius:4px; text-decoration:none; }
+
+.ct-disclaimer { text-align:center; font-style:italic; color:#5A6672; font-size:13px; line-height:1.7; margin:0 0 8px; }
+</style>
 </head>
 <body>
 <div class="top-bar"><div class="inner"><div><a href="../about-us.html">Meet Withbert W. Payne, CPA</a> &nbsp;|&nbsp; <a href="../contact.html">Request a Complimentary Review</a></div><div><span class="phone" style="font-weight:400;font-size:11px;">Call &nbsp;(925) 708-6501</span><br><span style="font-size:11px;color:var(--gold-light);font-weight:400;">For a Complimentary Review</span></div></div></div>
@@ -73,89 +138,137 @@
 </ul></nav>
 
 <div id="page-content">
-<div class="page-hero"><div class="inner">
-  <div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="#">LTC Insurance</a> &rsaquo; <span>Claim Triggers</span></div>
-  <h1>Claim Triggers &mdash; What Initiates a Long-Term Care Claim?</h1>
-  <p>The benefit eligibility standards that must be met before a long-term care insurance policy begins paying &mdash; and what every policyholder should understand before a claim arises.</p>
+<div class="ct-hero"><div class="inner">
+  <div class="eyebrow">Home &rsaquo; LTC Insurance &rsaquo; Claim Triggers</div>
+  <h1>When Does Long-Term Care Insurance Begin Paying Benefits?</h1>
+  <p class="sub">Understanding the five claim requirements every policyholder and family should know &mdash; before a claim occurs.</p>
 </div></div>
 
-<div class="page-wrap"><div class="two-col">
-<div class="content-area">
+<div class="ct-wrap">
 
-<p>A long-term care (LTC) insurance claim is triggered when a licensed healthcare professional certifies that a policyholder meets one or both of the following benefit eligibility standards. Understanding these standards before a claim arises ensures that families can respond quickly and access benefits without delay.</p>
+<p class="body-text">Most people purchase long-term care insurance hoping they will never need it. But if a claim becomes necessary, understanding exactly what activates your benefits can remove a great deal of uncertainty at an already stressful time.</p>
 
-<h2>The Five Claim Triggers</h2>
+<p class="body-text">In most tax-qualified long-term care policies, benefits begin when a licensed health care practitioner certifies that the policy&rsquo;s claim requirements have been met. The structure of those requirements is broadly consistent across modern policies &mdash; but the details vary meaningfully from one contract to the next, and it is the details that determine how quickly a family is reimbursed.</p>
 
-<div style="display:flex;flex-direction:column;gap:1.5rem;margin:1.75rem 0;">
+<div class="ct-cpa-insight">
+  <h3>CPA Insight</h3>
+  <p>Many families do not discover how their policy actually works until a claim occurs. Reviewing your coverage before it is needed can prevent confusion, reduce delays, and make certain that expectations match the benefits the contract actually provides.</p>
+</div>
 
-  <div style="display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem;background:#f7f9fc;border-left:4px solid var(--navy);border-radius:0 6px 6px 0;">
-    <div style="flex-shrink:0;width:44px;height:44px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;font-family:'EB Garamond',serif;">01</div>
-    <div>
-      <h3 style="margin:0 0 0.5rem;font-size:1.1rem;color:var(--navy);">ADL Deficit</h3>
-      <p style="margin:0;">The insured is unable to perform at least 2 of 6 <strong>activities of daily living</strong> &mdash; bathing, dressing, eating, toileting, transferring, and continence &mdash; without substantial assistance.</p>
+<h2>What Must Be Satisfied Before Benefits Begin</h2>
+
+<div class="ct-intro-card">
+  <h3>Two Qualifying Triggers. Three Supporting Requirements.</h3>
+  <p>Either the ADL trigger or the cognitive trigger opens the door to a claim &mdash; both are not required. Requirements three through five must then be satisfied before benefits are actually paid.</p>
+</div>
+
+<div class="ct-req-list">
+
+  <div class="ct-req-item">
+    <div class="ct-req-num">01</div>
+    <div class="ct-req-body">
+      <h3>Activities of Daily Living (ADLs)</h3>
+      <span class="ct-req-label">Qualifying Trigger</span>
+      <p>Benefits generally become available when the insured is unable to perform at least two of the six Activities of Daily Living without substantial assistance:</p>
+      <div class="ct-adl-grid">
+        <span>Bathing</span><span>Dressing</span><span>Eating</span>
+        <span>Toileting</span><span>Transferring</span><span>Continence</span>
+      </div>
     </div>
   </div>
 
-  <div style="display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem;background:#f7f9fc;border-left:4px solid var(--navy);border-radius:0 6px 6px 0;">
-    <div style="flex-shrink:0;width:44px;height:44px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;font-family:'EB Garamond',serif;">02</div>
-    <div>
-      <h3 style="margin:0 0 0.5rem;font-size:1.1rem;color:var(--navy);">Cognitive Impairment</h3>
-      <p style="margin:0;">The insured has a severe cognitive condition, such as Alzheimer&rsquo;s disease or another form of dementia, which requires <strong>substantial supervision</strong> to protect their health and safety.</p>
+  <div class="ct-req-item">
+    <div class="ct-req-num">02</div>
+    <div class="ct-req-body">
+      <h3>Severe Cognitive Impairment</h3>
+      <span class="ct-req-label">Qualifying Trigger</span>
+      <p>Alzheimer&rsquo;s disease, dementia, or another qualifying cognitive disorder may trigger benefits when substantial supervision is required to protect the insured&rsquo;s health and safety &mdash; even if physical assistance is not yet needed. Cognitive claims are frequently overlooked by families because the insured may still appear physically capable.</p>
     </div>
   </div>
 
-  <div style="display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem;background:#f7f9fc;border-left:4px solid var(--navy);border-radius:0 6px 6px 0;">
-    <div style="flex-shrink:0;width:44px;height:44px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;font-family:'EB Garamond',serif;">03</div>
-    <div>
-      <h3 style="margin:0 0 0.5rem;font-size:1.1rem;color:var(--navy);">Elimination Period</h3>
-      <p style="margin:0;">Most policies require a waiting period &mdash; typically <strong>30 to 100 days</strong> &mdash; of qualifying care before benefits begin. This functions like a deductible and affects how quickly coverage kicks in.</p>
+  <div class="ct-req-item">
+    <div class="ct-req-num">03</div>
+    <div class="ct-req-body">
+      <h3>Certification by a Licensed Health Care Practitioner</h3>
+      <p>A licensed health care practitioner must certify that the insured meets the policy&rsquo;s benefit trigger. For the ADL trigger, tax-qualified policies require certification that the inability is expected to last at least 90 days. Certification is generally renewed at least once every twelve months for as long as the claim remains open.</p>
     </div>
   </div>
 
-  <div style="display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem;background:#f7f9fc;border-left:4px solid var(--navy);border-radius:0 6px 6px 0;">
-    <div style="flex-shrink:0;width:44px;height:44px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;font-family:'EB Garamond',serif;">04</div>
-    <div>
-      <h3 style="margin:0 0 0.5rem;font-size:1.1rem;color:var(--navy);">Physician Certification</h3>
-      <p style="margin:0;">A licensed healthcare practitioner must certify that the impairment is expected to last at least <strong>90 days</strong> &mdash; a requirement under HIPAA for tax-qualified LTC policies.</p>
+  <div class="ct-req-item">
+    <div class="ct-req-num">04</div>
+    <div class="ct-req-body">
+      <h3>Elimination (Waiting) Period</h3>
+      <p>Most policies require a waiting period &mdash; commonly 30 to 100 days &mdash; before benefits begin.</p>
+      <p class="ct-pullquote">Think of this as a time deductible rather than a dollar deductible.</p>
+      <p>The mechanics differ by contract. Some policies waive the elimination period for home care entirely. Some count calendar days, while others credit only days on which paid care is actually received. Some require the period to be satisfied once per lifetime; others require it again with each new claim. These provisions rarely appear in marketing material &mdash; they live in the contract.</p>
     </div>
   </div>
 
-  <div style="display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem;background:#f7f9fc;border-left:4px solid var(--navy);border-radius:0 6px 6px 0;">
-    <div style="flex-shrink:0;width:44px;height:44px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;font-family:'EB Garamond',serif;">05</div>
-    <div>
-      <h3 style="margin:0 0 0.5rem;font-size:1.1rem;color:var(--navy);">Care Plan Established</h3>
-      <p style="margin:0;">A plan of care prescribed by a licensed professional must be in place, specifying the <strong>type and frequency of care</strong> needed by the insured.</p>
+  <div class="ct-req-item">
+    <div class="ct-req-num">05</div>
+    <div class="ct-req-body">
+      <h3>Written Plan of Care</h3>
+      <p>A written Plan of Care must be established by a licensed health care professional describing the type, frequency, and level of care required. The care actually delivered &mdash; and, in most policies, the providers delivering it &mdash; must correspond to that plan in order for benefits to be paid.</p>
     </div>
   </div>
 
 </div>
 
-<div style="background:#eef2f8;border:1px solid #c5cedf;border-radius:6px;padding:1.5rem 1.75rem;margin:2rem 0;">
-  <h3 style="margin:0 0 0.75rem;color:var(--navy);font-size:1rem;">Please Note</h3>
-  <p style="margin:0;font-size:0.95rem;line-height:1.7;">Policies vary. Always review your specific contract for benefit triggers, definitions of &ldquo;substantial assistance,&rdquo; and any inflation or indemnity provisions. Contact your insurance carrier or a licensed LTC specialist to begin the claims process.</p>
+<h2>What Does Not Trigger a Claim?</h2>
+
+<div class="ct-misconceptions">
+  <span class="label">Common Misconceptions</span>
+  <p class="intro">Long-term care insurance generally does not begin paying benefits simply because someone:</p>
+  <ul>
+    <li>Is hospitalized</li>
+    <li>Has surgery</li>
+    <li>Receives a cancer diagnosis</li>
+    <li>Suffers a heart attack</li>
+    <li>Is receiving Medicare</li>
+    <li>Is simply getting older</li>
+  </ul>
+  <p class="closing">Benefits begin only when the policy&rsquo;s claim requirements are satisfied.</p>
 </div>
 
-<div class="callout"><p>Have questions about your policy&rsquo;s claim triggers? <strong>All reviews are 100% complimentary.</strong> Our CPA team will review your contract and walk you through exactly what qualifies under your coverage. <a href="../contact.html">Contact us today &rarr;</a></p></div>
+<p class="body-text">A diagnosis by itself is not a trigger. What the policy measures is function and supervision &mdash; what the insured can no longer do safely alone. A serious illness may of course lead to a qualifying condition, but it is the resulting need for hands-on assistance or substantial supervision, not the diagnosis, that opens a claim.</p>
 
-</div>
-<div class="sidebar">
-  <div class="sidebar-box"><h3>Request a Complimentary Review</h3><p>Our CPA team will review your current coverage and make recommendations &mdash; at no cost to you.</p><p style="font-size:18px;font-weight:700;color:var(--navy);">(925) 708-6501</p><a class="btn-gold" href="../contact.html">Request a Complimentary Review</a></div>
-  <div class="sidebar-box"><h3>Related Topics</h3><ul>
-    <li><a href="what-is-long-term-care-insurance.html">What is LTC Insurance?</a></li>
-    <li><a href="now-is-the-time-for-long-term-planning.html">Now is the Time</a></li>
-  </ul></div>
-  <div class="sidebar-box"><h3>Key Facts</h3><p style="font-size:13px;">70% of Americans over 65 will need LTC. The six ADLs that determine eligibility: bathing, dressing, eating, toileting, transferring, and continence. Physician certification of 90-day impairment is required for tax-qualified policies.</p></div>
-</div>
+<h2>Every Policy Is Different</h2>
+
+<div class="ct-policy-different">
+  <p>Benefit triggers, elimination periods, inflation protection, home care provisions, and indemnity versus reimbursement benefits vary by carrier and by policy generation. Two policies issued ten years apart &mdash; even by the same carrier &mdash; can pay very differently in identical circumstances.</p>
+  <p class="closing">Before a claim occurs, it is wise to understand how your own policy works.</p>
 </div>
 
-<p style="font-style:italic;font-size:11px;margin-top:24px;color:#6b7a90;line-height:1.7;">For educational purposes only. Not financial, legal, or insurance advice. Withbert W. Payne, CPA, CGMA &middot; CA License No. 0E90257 &middot; This is a solicitation for insurance.</p>
+<h2>Key Facts</h2>
+
+<div class="ct-key-facts">
+  <ul>
+    <li>Someone turning 65 today has approximately a 70% likelihood of needing some form of long-term care during their remaining years.</li>
+    <li>Most tax-qualified policies pay benefits upon either the inability to perform two of six Activities of Daily Living, or severe cognitive impairment &mdash; not both.</li>
+    <li>A licensed health care practitioner &mdash; not the insurance company &mdash; certifies that the trigger has been met.</li>
+    <li>Understanding your policy early helps families avoid unnecessary delays when a claim finally arises.</li>
+  </ul>
 </div>
 
-<div class="contact-teaser">
-  <h2>Ready to Learn More?</h2>
-  <p>Speak with a CPA who specializes exclusively in long-term care insurance.</p>
-  <span class="phone-big">(925) 708-6501</span>
-  <a href="../contact.html" class="btn-gold" style="font-size:16px;padding:14px 36px;">Request a Complimentary Review</a>
+<h2>Related Topics</h2>
+
+<div class="ct-related">
+  <a href="what-is-long-term-care-insurance.html">Understanding Long-Term Care</a><span class="sep">&middot;</span><a href="long-term-care-insurance-benefits.html">LTC Benefits</a><span class="sep">&middot;</span><a href="frequently-asked-questions.html">Frequently Asked Questions</a><span class="sep">&middot;</span><a href="fact-vs-fiction-about-long-term-care-insurance.html">Fact vs. Fiction</a>
+</div>
+
+<div class="ct-cta">
+  <h2>Questions About Your Coverage?</h2>
+  <p class="msg">I will gladly explain how your current policy works and what benefits may be available if a claim becomes necessary. There is no cost and no obligation.</p>
+  <p class="name">Withbert W. Payne, CPA, CGMA, FCA</p>
+  <p class="contact">(925) 708-6501 &middot; withbert.payne@insurance-review-services.com</p>
+  <p class="site">LTCCPAs.com &middot; CA Insurance License No. 0E90257</p>
+  <a class="contact-bert" href="../contact.html">Contact Bert</a>
+</div>
+
+<p class="ct-disclaimer">For educational purposes only. Not financial, legal, or tax advice. Policy provisions, benefit triggers, and claim requirements vary by contract; the terms of your own policy govern. Coverage is subject to medical underwriting and policy availability.</p>
+<p class="ct-disclaimer">Independent CPA-Level Long-Term Care Planning and Insurance Reviews for Professionals, Business Owners, Executives, and Affluent Families.</p>
+<p class="ct-disclaimer">This is a solicitation for insurance. &middot; &copy; 2026 Insurance Review Services &middot; LTCCPAs.com &middot; All rights reserved.</p>
+
 </div>
 </div>
 
