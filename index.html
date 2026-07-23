@@ -287,87 +287,79 @@
   },
   "speakable": {
     "@type": "SpeakableSpecification",
-    "cssSelector": [".page-intro h1", ".page-intro p", "blockquote"]
+    "cssSelector": [".hp-hero h1", ".hp-hero p"]
   }
 }
 </script>
 
 <style>
-/* Home page content styles — scoped to main / #page-content */
-:root{--ink:#222;--muted:#555;--line:#e4e4e4}
-#page-content main{max-width:1160px;margin:0 auto;padding:0 24px}
-#page-content section{padding:40px 0;border-bottom:1px solid var(--line)}
-#page-content section:last-child{border-bottom:0}
-#page-content .eyebrow{font-size:.95rem;font-weight:800;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;text-align:center;margin:0 0 16px}
-#page-content h1{font-family:Georgia,'Times New Roman',serif;color:var(--navy);text-align:center;font-size:2.5rem;line-height:1.15;font-weight:700;margin:0 0 20px}
-#page-content h2{font-family:Georgia,'Times New Roman',serif;color:var(--navy);text-align:center;font-size:1.7rem;font-weight:700;margin:0 auto 20px;padding-bottom:10px;position:relative;max-width:max-content;border:0;background:none}
-#page-content h2::after{content:"";display:block;width:64px;height:2px;background:var(--gold);margin:10px auto 0}
-#page-content p{margin:0 0 16px;text-align:justify;color:var(--ink)}
-#page-content p.center{text-align:center}
-#page-content .lead{font-size:1.18rem;font-weight:700;text-align:center;max-width:640px;margin:0 auto 18px}
-#page-content .sub{text-align:center;max-width:640px;margin:0 auto 16px}
-#page-content .tag{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--navy);text-align:center;font-size:1.15rem;margin:8px auto 22px;max-width:640px}
-.lbl{color:var(--navy);font-weight:700}
-#page-content ul{list-style:none;padding:0;margin:0 0 18px}
-#page-content ul li{text-align:left;padding:6px 0 6px 20px;position:relative;color:var(--ink)}
-#page-content ul li::before{content:"\2022";color:var(--gold);position:absolute;left:0;font-weight:700}
-.cta{display:inline-block;background:var(--gold);color:#fff;font-weight:700;text-decoration:none;padding:14px 34px;border-radius:2px;font-size:1.05rem}
-.cta-wrap{text-align:center;margin:22px 0 8px}
-#page-content .hp-fineprint{text-align:center;color:var(--muted);font-size:.92rem;margin:0}
-.hp-fineprint a{color:var(--gold)}
-.hp-arrow{display:block;text-align:center;color:var(--gold);font-weight:700;text-decoration:none;margin:6px 0 0}
-#page-content blockquote{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--navy);text-align:center;font-size:1.25rem;max-width:none;margin:24px auto 6px;border:0;padding:0;background:none}
-.cite{text-align:center;color:var(--muted);margin:0}
-#page-content .hp-phone{text-align:center;font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:1.35rem;font-weight:700;margin:0 0 14px}
-#page-content section.page-intro{background:#1E3A5F;color:#fff;width:100vw;position:relative;left:50%;transform:translateX(-50%);padding:48px 24px 40px;text-align:center;border-bottom:0}
-#page-content .page-intro h1{color:#fff}
-#page-content .page-intro .sub{color:#D7E1EC}
-#page-content .page-intro .lead{color:#C9D3DF}
-#page-content .page-intro .tag{color:#E8B84B;border-top:1px solid #C8922A;border-bottom:1px solid #C8922A;padding:16px 0}
-#page-content .page-intro .hp-creds{color:#D7E1EC;max-width:640px;margin-left:auto;margin-right:auto}
-#page-content .page-intro .hp-fineprint{color:#fff}
-@media(max-width:560px){#page-content h1{font-size:1.9rem}#page-content h2{font-size:1.4rem}}
-.stat-row{display:flex;gap:16px;margin:20px 0 22px;flex-wrap:wrap}
-.stat-card{flex:1 1 180px;background:#f0f4f9;border-top:3px solid #1E3A5F;border-radius:3px;padding:20px 16px;text-align:center}
-.stat-card--alert{background:#fff8ed;border-top-color:#C8922A}
-.stat-num{font-family:Georgia,"Times New Roman",serif;font-size:2rem;font-weight:700;color:#1E3A5F;line-height:1.1}
-.stat-card--alert .stat-num{color:#C8922A}
-.stat-unit{font-size:1.1rem;font-weight:400}
-.stat-desc{font-size:.88rem;color:#444;margin-top:8px;line-height:1.45}
-.stat-src{color:#888;font-size:.8rem}
+/* Home page — matches the RTF exactly: colors, order, wording */
+.hp-hero { background:#1E3A5F; text-align:center; padding:48px 24px 44px; }
+.hp-hero .eyebrow { font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:14px; color:#C8922A; margin:0 0 16px; }
+.hp-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff; font-size:32px; line-height:1.25; margin:0 0 16px; }
+.hp-hero p.sub { color:#D8C79A; font-size:15px; margin:0 0 16px; }
+.hp-hero p.body { color:#fff; font-size:16px; line-height:1.6; max-width:700px; margin:0 auto 26px; }
+.hp-hero a.hp-cta { display:inline-block; background:#C8922A; color:#182F4C; font-weight:700; font-size:15px; letter-spacing:.04em; padding:14px 30px; border-radius:2px; text-decoration:none; }
 
-/* Narrow Planning Window (light band) */
-.hp-navyband .hp-inner{max-width:1160px;margin:0 auto}
-#page-content .hp-navyband p{text-align:center;max-width:none;margin:0 auto 18px;color:var(--ink)}
-.hp-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
-.hp-card{background:#f0f4f9;border-top:3px solid #1E3A5F;border-radius:3px;padding:18px 20px}
-.hp-card h3{font-family:Georgia,"Times New Roman",serif;color:#1E3A5F;font-size:16px;font-weight:700;margin:0 0 6px}
-#page-content .hp-card p{color:#444;text-align:left;margin:0;font-size:15px;line-height:1.5}
-@media(max-width:640px){.hp-cards{grid-template-columns:1fr}}
+.hp-wrap { max-width:900px; margin:0 auto; padding:0 24px; }
+.hp-label { text-align:center; font-weight:700; letter-spacing:.15em; text-transform:uppercase; font-size:14px; color:#C8922A; margin:44px 0 6px; }
+.hp-wrap h2 { text-align:center; font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:26px; margin:0 0 20px; }
+.hp-wrap > p.body-text { color:#222; font-size:16px; line-height:1.7; margin:0 0 18px; }
 
-/* Price Waterhouse pull-quote band */
-#page-content section.hp-quoteband{background:#182F4C;color:#EAF0F7;width:100vw;position:relative;left:50%;transform:translateX(-50%);padding:44px 24px;text-align:center;border-bottom:0}
-#page-content .hp-quoteband blockquote{color:#EAF0F7;margin:0 auto;max-width:none}
-.hp-quoteband cite{color:#D8A94A;display:block;margin-top:16px;font-style:normal;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.hp-wrap ul.hp-list { list-style:none; padding:0; margin:0 0 8px; }
+.hp-wrap ul.hp-list li { color:#222; font-size:16px; line-height:1.9; padding-left:22px; position:relative; }
+.hp-wrap ul.hp-list li::before { content:'\2022'; color:#C8922A; font-weight:700; position:absolute; left:0; }
 
-/* Hero credentials line */
-#page-content .hp-creds{text-align:center;color:#1E3A5F;font-weight:700;font-size:.82rem;letter-spacing:.02em;margin:0 0 18px}
+.hp-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:0; background:#F6ECD6; border-radius:6px; margin:0 0 8px; }
+.hp-steps .step { padding:26px 22px; text-align:center; border-left:1px solid #fff; }
+.hp-steps .step:first-child { border-left:none; }
+.hp-steps .num { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#C8922A; font-size:34px; line-height:1; margin:0 0 8px; }
+.hp-steps .step h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-weight:700; font-size:17px; margin:0 0 8px; }
+.hp-steps .step p { color:#222; font-size:14px; line-height:1.5; margin:0; }
+@media(max-width:640px){ .hp-steps { grid-template-columns:1fr; } .hp-steps .step { border-left:none; border-top:1px solid #fff; } .hp-steps .step:first-child { border-top:none; } }
 
-/* Narrow Planning Window subhead */
-#page-content .hp-navyband h3.hp-subhead{color:#1E3A5F;text-align:center;font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin:30px 0 4px}
+.hp-wrap > p.intro-line { text-align:center; color:#222; font-size:16px; margin:0 0 18px; }
 
-/* HelpVet advisor band — gold-highlighted, contained width, distinct from the full-bleed navy sections */
-#page-content section.hp-helpvet{background:#FBF3E1;color:#1E3A5F;max-width:640px;margin:56px auto 40px;padding:32px 36px;text-align:center;border:2px solid #C8922A;border-radius:16px;box-shadow:0 4px 14px rgba(200,146,42,.18)}
-#page-content .hp-helpvet .eyebrow{margin-bottom:14px;color:#A9761F}
-#page-content .hp-helpvet p{color:#1E3A5F;max-width:none;margin:0 auto}
-.hp-helpvet .hp-term{display:inline-block;border:1px solid #C8922A;color:#A9761F;font-weight:700;font-size:13px;letter-spacing:.03em;padding:8px 16px;border-radius:2px}
+.hp-checks { display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; margin:0 0 20px; }
+.hp-checks .item { color:#1E3A5F; font-weight:700; font-size:15px; line-height:1.6; padding-left:24px; position:relative; }
+.hp-checks .item::before { content:'\2713'; color:#1E3A5F; font-weight:700; position:absolute; left:0; }
+@media(max-width:600px){ .hp-checks { grid-template-columns:1fr; } }
 
-/* Narrow Planning Window pull-quote */
-#page-content .hp-navyband .hp-pull{font-family:Georgia,"Times New Roman",serif;font-style:italic;color:#1E3A5F;text-align:center;font-size:1.05rem;max-width:none;margin:22px auto 6px;padding:18px 0;border-top:1px solid #C8922A;border-bottom:1px solid #C8922A}
+.hp-helpvet { background:#1E3A5F; border-radius:6px; padding:22px 26px; margin:8px 0 8px; text-align:center; }
+.hp-helpvet .star-h { color:#C8922A; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:18px; margin:0 0 10px; }
+.hp-helpvet p { color:#fff; font-size:15px; line-height:1.6; margin:0; }
 
-/* Testimonial card */
-#page-content .hp-testimonial{font-family:Georgia,"Times New Roman",serif;font-style:italic;color:#1E3A5F;text-align:center;font-size:1.15rem;max-width:none;margin:24px auto 6px;border:0;padding:0;background:none}
-#page-content .hp-testimonial-cite{text-align:center;color:var(--gold);font-size:.82rem;letter-spacing:.03em;text-transform:uppercase;margin:0 0 18px}
+.hp-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:0; background:#F6ECD6; border-radius:6px; margin:0 0 20px; }
+.hp-stats .tile { padding:22px 14px; text-align:center; border-left:1px solid #fff; }
+.hp-stats .tile:first-child { border-left:none; }
+.hp-stats .num { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F; font-size:24px; line-height:1.1; }
+.hp-stats .cap { color:#1E3A5F; font-size:13px; margin-top:6px; }
+@media(max-width:680px){ .hp-stats { grid-template-columns:1fr 1fr; } .hp-stats .tile:nth-child(3){ border-left:none; } }
+
+.hp-wrap p.italic-note { text-align:center; font-style:italic; color:#1E3A5F; font-size:15px; margin:0 0 20px; }
+
+.hp-compare { width:100%; border-collapse:collapse; margin:0 0 14px; font-size:14px; }
+.hp-compare th { padding:12px 14px; font-weight:700; text-align:center; color:#fff; background:#1E3A5F; }
+.hp-compare th.rec { background:#C8922A; color:#182F4C; }
+.hp-compare td { padding:10px 14px; border-bottom:1px solid #DDDDDD; }
+.hp-compare td.term { font-weight:700; color:#1E3A5F; background:#fff; }
+.hp-compare td.cpa { background:#F3EAD6; text-align:center; }
+.hp-compare td.prod { background:#F2F4F7; text-align:center; }
+.hp-wrap p.compare-note { text-align:center; font-style:italic; color:#555; font-size:14px; margin:0 0 20px; }
+
+.hp-pullquote { text-align:center; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-style:italic; color:#C8922A; font-size:18px; margin:0 0 20px !important; }
+
+.hp-cta { background:#1E3A5F; border-radius:6px; padding:34px 30px; margin:8px 0 0; text-align:center; }
+.hp-cta h2 { color:#fff; font-family:'EB Garamond',Georgia,serif; font-size:26px; margin:0 0 16px; }
+.hp-cta p.msg { color:#fff; font-size:15px; line-height:1.6; max-width:600px; margin:0 auto 16px; }
+.hp-cta p.phone { color:#C8922A; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:22px; margin:0 0 10px; }
+.hp-cta p.email { color:#D8C79A; font-size:14px; margin:0 0 14px; }
+.hp-cta p.online { color:#C7D0DB; font-size:14px; margin:0; }
+.hp-cta p.online a { color:#fff; font-style:italic; text-decoration:underline; }
+
+.hp-checkband { background:#182F4C; border-radius:6px; padding:20px 24px; margin:24px 0 0; text-align:center; }
+.hp-checkband span { color:#C8922A; font-weight:700; font-size:14px; margin:0 18px; display:inline-block; }
+@media(max-width:560px){ .hp-checkband span { display:block; margin:6px 0; } }
 </style>
 </head>
 <body>
@@ -441,127 +433,135 @@
 </ul></nav>
 
 <div id="page-content">
-<main>
 
-  <!-- HERO (single navy box — all content stays together, matching the RTF) -->
-  <section class="page-intro">
-    <p class="eyebrow">CPA &amp; Independent Analyst &nbsp;&middot;&nbsp; No Carrier Obligations</p>
-    <h1>Independent Long-Term Care Planning<br>by a Certified Public Accountant</h1>
-    <p class="sub">Former Price Waterhouse (London) CPA, Chartered Accountant (England &amp; Wales), and independent insurance analyst with more than 25 years specializing in Life and Long-Term Care planning.</p>
-    <p class="lead">Independent long-term care and life insurance planning for partners at the Big 4, professionals, business owners, executives, and affluent families &mdash; analytical, objective, and with no carrier obligations.</p>
-    <p class="tag">Sound planning protects both your assets and the people who depend on you.</p>
-    <p class="hp-creds">Former Price Waterhouse, London &nbsp;&middot;&nbsp; CPA (California) &nbsp;&middot;&nbsp; CGMA &nbsp;&middot;&nbsp; FCA (England &amp; Wales) &nbsp;&middot;&nbsp; Independent Insurance Strategist</p>
-    <p class="hp-fineprint">No fee. No obligation. I respond within one business day.</p>
-  </section>
+<div class="hp-hero"><div class="inner">
+  <div class="eyebrow">Objective Long-Term Care Planning by a CPA</div>
+  <h1>Independent Long-Term Care Planning by a Certified Public Accountant</h1>
+  <p class="sub">Former Price Waterhouse (London) &middot; CPA (California) &middot; CGMA &middot; FCA (England &amp; Wales)</p>
+  <p class="body">Helping partners at the Big 4, executives, business owners, and affluent families make better long-term care decisions through objective, carrier-neutral analysis.</p>
+  <a class="hp-cta" href="contact.html">Request Your Personalized Illustration</a>
+</div></div>
 
-  <!-- SERVICE TO THOSE WHO HAVE SERVED -->
-  <section class="hp-helpvet">
-    <p class="eyebrow">Service to Those Who Have Served</p>
-    <p>Proudly serving veterans and their families as an <strong>Appointed HelpVet Advisor (2026&ndash;2028)</strong> &mdash; providing complimentary, independent life and long-term care policy reviews.</p>
-  </section>
+<div class="hp-wrap">
 
-  <!-- NARROW PLANNING WINDOW -->
-  <section class="hp-navyband">
-    <div class="hp-inner">
-      <p class="eyebrow">For Partners at the Big 4</p>
-      <h2>A Narrow Planning Window &mdash; Used Well</h2>
-      <p>Drawing on my years with Price Waterhouse (London) and decades in insurance analysis, I understand the planning realities that partners at the Big 4 face as retirement approaches. Mandatory retirement compresses the planning window into the years when a partner is still earning and at the best health and price.</p>
-      <p>A high income sustains a high standard of living; private-pay care in California can exceed $20,000 a month per person; and long-term care falls outside Medicare. Even a partner who could self-insure is often committing capital inefficiently to do so.</p>
-      <p class="hp-pull">Planning opportunities are often greatest during the final years before mandatory retirement &mdash; while income is high, health is favorable, and underwriting options remain open.</p>
-      <h3 class="hp-subhead">Where an Independent, CPA-Led Plan Does the Most Work</h3>
-      <div class="hp-cards">
-        <div class="hp-card">
-          <h3>Ahead of mandatory retirement</h3>
-          <p>Long-term care funding structured while you are still earning and insurable.</p>
-        </div>
-        <div class="hp-card">
-          <h3>Asset protection</h3>
-          <p>Shielding significant assets from extended care costs.</p>
-        </div>
-        <div class="hp-card">
-          <h3>Business-owner strategies</h3>
-          <p>C-corporation and business-owner premium structures.</p>
-        </div>
-        <div class="hp-card">
-          <h3>Executive coordination</h3>
-          <p>Aligning coverage with existing executive benefits.</p>
-        </div>
-        <div class="hp-card">
-          <h3>Estate-efficient structuring</h3>
-          <p>Trust-owned and estate-conscious ownership design.</p>
-        </div>
-        <div class="hp-card">
-          <h3>Independent review</h3>
-          <p>Carrier-neutral analysis of coverage already in force.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="hp-label">Why Clients Contact Me</div>
+<h2>You Are Probably Here for One of These Reasons</h2>
 
-  <!-- PRICE WATERHOUSE QUOTE -->
-  <section class="hp-quoteband">
-    <blockquote>I began my career in public accounting at Price Waterhouse in London. I bring that same analytical discipline to a partner&rsquo;s insurance decisions.</blockquote>
-    <cite>Withbert (Bert) W. Payne, CPA, CGMA, FCA</cite>
-  </section>
+<p class="intro-line">Clients typically contact me when they want to:</p>
+<ul class="hp-list">
+  <li>Review existing long-term care or life insurance</li>
+  <li>Compare today&rsquo;s policy designs to coverage they bought years ago</li>
+  <li>Protect retirement assets from an extended-care event</li>
+  <li>Coordinate insurance with their estate plan</li>
+  <li>Evaluate tax-efficient premium strategies</li>
+  <li>Obtain a second opinion before making a major insurance decision</li>
+</ul>
 
-  <!-- COST OF CARE -->
-  <section>
-    <p class="eyebrow">The Cost of Care in the Bay Area</p>
-    <h2>The Arithmetic Behind the Risk</h2>
-    <p>Long-term care in the Bay Area is among the most expensive in the nation. A semi-private nursing-home room now averages about $15,208 a month &mdash; $182,000 a year &mdash; and a private room runs closer to $20,000 (CareScout, 2025). A dementia diagnosis is what makes the arithmetic serious: care can extend eight to ten years, sometimes longer, which at Bay Area rates represents an exposure of $1.5 million to well over $2 million. Medicare pays nothing toward custodial long-term care.</p>
-    <p>Planning is most valuable while your options remain open &mdash; before a change in health narrows them.</p>
-    <div class="stat-row">
-      <div class="stat-card">
-        <div class="stat-num">$20,000<span class="stat-unit">/mo</span></div>
-        <div class="stat-desc">Bay Area private room<br><span class="stat-src">CareScout, 2025</span></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">8&ndash;10<span class="stat-unit"> yrs</span></div>
-        <div class="stat-desc">Typical duration of dementia care,<br>or longer</div>
-      </div>
-    </div>
-  </section>
+<div class="hp-label">A Simple Path Forward</div>
+<h2>Your First Three Steps</h2>
 
-  <!-- BEYOND LONG-TERM CARE -->
-  <section>
-    <p class="eyebrow">Beyond Long-Term Care</p>
-    <h2>Life Insurance Optimization</h2>
-    <p>Many existing life insurance policies can be improved through independent review. Opportunities may include:</p>
-    <ul>
-      <li>Increasing guaranteed death benefits</li>
-      <li>Adding living benefit riders</li>
-      <li>Reviewing trust-owned policies</li>
-      <li>Evaluating conversion opportunities</li>
-      <li>Identifying underperforming policies</li>
-    </ul>
-  </section>
+<div class="hp-steps">
+  <div class="step"><div class="num">1</div><h3>Request Your Illustration</h3><p>A customized analysis built around your objectives, not a sales quota.</p></div>
+  <div class="step"><div class="num">2</div><h3>Receive Your CPA Review</h3><p>An independent evaluation of available strategies and any existing coverage.</p></div>
+  <div class="step"><div class="num">3</div><h3>Choose With Confidence</h3><p>Carrier-neutral recommendations designed around your financial goals.</p></div>
+</div>
 
-  <!-- OBJECTIVE, CARRIER-NEUTRAL ANALYSIS -->
-  <section>
-    <p class="eyebrow">Objective, Carrier-Neutral Analysis</p>
-    <h2>How an Independent Review Helps</h2>
-    <ul>
-      <li>Strengthened guaranteed benefits through independent policy review</li>
-      <li>Designed lifetime long-term care solutions for affluent families</li>
-      <li>Carrier-neutral reviews with no obligation to any insurer</li>
-      <li>Complimentary consultations, nationwide</li>
-    </ul>
-    <p class="hp-testimonial">&ldquo;A CPA&rsquo;s approach made a complicated insurance decision understandable.&rdquo;</p>
-    <p class="hp-testimonial-cite">&mdash; Client, San Francisco Bay Area</p>
-  </section>
+<div class="hp-label">The Difference</div>
+<h2>Why Clients Choose a CPA</h2>
 
-  <!-- SPEAK DIRECTLY WITH BERT -->
-  <section id="review">
-    <p class="eyebrow">Speak Directly with Bert</p>
-    <h2>Schedule a Conversation with Bert</h2>
-    <p class="center">A complimentary, no-obligation illustration shows your projected premium, monthly long-term care benefit, and guaranteed death benefit across highly rated carriers. I manage every inquiry personally.</p>
-    <p class="hp-phone"><a href="tel:+19257086501" style="color:inherit;text-decoration:none;">(925) 708-6501</a></p>
-    <p class="hp-fineprint"><a href="mailto:withbert.payne@insurance-review-services.com">withbert.payne@insurance-review-services.com</a></p>
-    <p class="hp-fineprint">LTCCPAs.com</p>
-    <p class="hp-fineprint">Prefer to begin online? <a href="LTC-Insurance-Application.pdf?v=12" download="LTC-Insurance-Application.pdf">Access the secure application.</a></p>
-  </section>
+<p class="intro-line">No competing insurance website can make this claim as convincingly.</p>
+<div class="hp-checks">
+  <div class="item">Independent &mdash; not tied to one carrier</div>
+  <div class="item">Tax-aware planning</div>
+  <div class="item">Estate-planning coordination</div>
+  <div class="item">Business-owner premium strategies</div>
+  <div class="item">Objective review of existing policies</div>
+  <div class="item">Underwriting analysis</div>
+  <div class="item">A long-term perspective &mdash; not product-driven</div>
+  <div class="item">Every review personally conducted by Bert Payne</div>
+</div>
 
-</main>
+<div class="hp-label">Clientele</div>
+<h2>Who I Work With</h2>
+
+<div class="hp-checks">
+  <div class="item">Partners at the Big 4 approaching mandatory retirement</div>
+  <div class="item">Corporate executives</div>
+  <div class="item">CPAs and attorneys</div>
+  <div class="item">Business owners</div>
+  <div class="item">Affluent families</div>
+  <div class="item">Trustees and family offices</div>
+  <div class="item">Veterans and their families (HelpVet Advisor)</div>
+  <div class="item">Advisors coordinating on behalf of clients</div>
+</div>
+
+<div class="hp-helpvet">
+  <p class="star-h">&#9733; Appointed HelpVet Advisor (2026&ndash;2028)</p>
+  <p>I am honored to help veterans and their families receive complimentary, objective insurance reviews through my appointment as an Appointed HelpVet Advisor.</p>
+</div>
+
+<div class="hp-label">The Financial Reality in California</div>
+<h2>What Long-Term Care Costs Here</h2>
+
+<div class="hp-stats">
+  <div class="tile"><div class="num">$15,000+</div><div class="cap">Semi-private room, per month</div></div>
+  <div class="tile"><div class="num">$20,000</div><div class="cap">Private room, per month</div></div>
+  <div class="tile"><div class="num">8&ndash;10 yrs</div><div class="cap">Typical dementia care duration</div></div>
+  <div class="tile"><div class="num">$1.5&ndash;$2M+</div><div class="cap">Potential total family exposure</div></div>
+</div>
+<p class="italic-note">Planning is far easier before care is needed. Good health creates choices; waiting often removes them.</p>
+
+<div class="hp-label">What Happens Next</div>
+<h2>What Your Personalized Review Includes</h2>
+
+<div class="hp-checks">
+  <div class="item">Independent multi-carrier analysis</div>
+  <div class="item">Customized illustrations</div>
+  <div class="item">Review of any existing policies</div>
+  <div class="item">Premium comparisons</div>
+  <div class="item">Tax-planning considerations</div>
+  <div class="item">Trust-ownership guidance</div>
+  <div class="item">Business-owner planning strategies</div>
+  <div class="item">A clear explanation of your options</div>
+</div>
+
+<div class="hp-label">Two Different Starting Points</div>
+<h2>CPA-Led Review vs. a Product-Focused Sale</h2>
+
+<table class="hp-compare">
+  <thead><tr><th></th><th class="rec">CPA-Led Review</th><th>Product-Focused Sale</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Analysis</td><td class="cpa">Independent</td><td class="prod">Product-focused</td></tr>
+    <tr><td class="term">Carrier selection</td><td class="cpa">Multiple carriers</td><td class="prod">Usually limited</td></tr>
+    <tr><td class="term">Tax considerations</td><td class="cpa">Included</td><td class="prod">Limited</td></tr>
+    <tr><td class="term">Estate coordination</td><td class="cpa">Coordinated</td><td class="prod">Usually separate</td></tr>
+    <tr><td class="term">Business-owner planning</td><td class="cpa">Considered</td><td class="prod">Often omitted</td></tr>
+  </tbody>
+</table>
+<p class="compare-note">This is not a criticism of insurance agents &mdash; it simply describes two different places to begin.</p>
+
+<div class="hp-label">Background</div>
+<h2>A Disciplined, Independent Approach</h2>
+
+<p class="body-text">Most financial assets are reviewed regularly. Insurance portfolios are often left untouched for years. As a California CPA, a Fellow of the Institute of Chartered Accountants in England &amp; Wales, and a former Price Waterhouse auditor in London, I apply the same independent analytical discipline to life and long-term care insurance that auditors apply to financial statements.</p>
+<p class="hp-pullquote">&ldquo;Every significant insurance policy deserves a second opinion.&rdquo;</p>
+
+<h2>Ready to Begin?</h2>
+<p class="body-text" style="text-align:center;">Whether you are evaluating new coverage or reviewing policies you have owned for years, an independent CPA review can help you make a more informed decision.</p>
+
+<div class="hp-cta">
+  <h2>Speak With Bert</h2>
+  <p class="msg">Schedule a confidential, no-obligation conversation about your existing life insurance or long-term care coverage. I manage every inquiry personally.</p>
+  <p class="phone">(925) 708-6501</p>
+  <p class="email">withbert.payne@insurance-review-services.com</p>
+  <p class="online">Prefer to begin online? <a href="LTC-Insurance-Application.pdf?v=12" download="LTC-Insurance-Application.pdf">Access the application.</a></p>
+</div>
+
+<div class="hp-checkband">
+  <span>&#10003; Independent</span><span>&#10003; Objective</span><span>&#10003; Complimentary</span><span>&#10003; No Obligation</span><span>&#10003; Personally Conducted by Bert Payne</span>
+</div>
+
+</div>
 
   <!-- Legal Disclaimer -->
   <div style="background:#f4f6f9;border-top:1px solid #dde3ec;padding:24px;text-align:center;">
