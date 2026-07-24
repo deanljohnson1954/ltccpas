@@ -22,16 +22,44 @@ function initNav() {
     });
   }
 
-  // Mobile dropdown toggles — must re-attach after each SPA nav replacement
+  // Click-to-open dropdowns (all viewports) — must re-attach after each
+  // SPA nav replacement. Click toggles the menu instead of relying on
+  // hover, which closes the menu the instant the mouse crosses any gap
+  // on the way down to a subsection.
   document.querySelectorAll('.has-dropdown > a').forEach(link => {
     link.addEventListener('click', e => {
-      const nav = document.querySelector('nav');
-      if (nav && nav.classList.contains('open')) {
-        e.preventDefault();
-        link.closest('.has-dropdown').classList.toggle('open');
+      e.preventDefault();
+      const item = link.closest('.has-dropdown');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.has-dropdown.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
+      });
+      if (!wasOpen) {
+        item.classList.add('open');
+        link.setAttribute('aria-expanded', 'true');
       }
     });
   });
+
+  // Close any open dropdown when clicking outside the nav
+  if (!document.body.dataset.dropdownOutsideBound) {
+    document.body.dataset.dropdownOutsideBound = '1';
+    document.addEventListener('click', e => {
+      if (e.target.closest('.has-dropdown')) return;
+      document.querySelectorAll('.has-dropdown.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Escape') return;
+      document.querySelectorAll('.has-dropdown.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 }
 initNav();
 
