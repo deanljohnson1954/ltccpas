@@ -45,21 +45,16 @@
 .txa-list li { padding:6px 0 6px 24px; position:relative; color:#2B2B2B; font-size:15.5px; }
 .txa-list li:before { content:"\00bb"; position:absolute; left:0; color:#C8922A; font-weight:700; }
 
-.txa-cta { display:flex; flex-wrap:wrap; margin:8px 0 8px; border-radius:6px; overflow:hidden; }
-.txa-cta-info { background:#182F4C; color:#fff; flex:1 1 320px; padding:30px 28px; text-align:center; }
-.txa-cta-info p.badge { font-weight:700; text-transform:uppercase; letter-spacing:.1em; font-size:11px; color:#C8922A; margin:0 0 10px; }
-.txa-cta-info h2 { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:21px; margin:0 0 12px; border:none; padding:0; }
-.txa-cta-info p.contact { color:#D9E0EA; font-size:14px; margin:0; }
-.txa-cta-btn { flex:0 0 auto; background:#C8922A; display:flex; align-items:center; justify-content:center; padding:20px 32px; }
-.txa-cta-btn a { color:#182F4C; font-weight:700; font-size:16px; text-decoration:none; }
+.txa-cta { background:#182F4C; color:#fff; text-align:center; padding:34px 28px; border-radius:6px; margin:8px 0 8px; }
+.txa-cta p.badge { font-weight:700; text-transform:uppercase; letter-spacing:.1em; font-size:11px; color:#C8922A; margin:0 0 10px; }
+.txa-cta h2 { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:21px; margin:0 0 18px; border:none; padding:0; }
+.txa-cta a.btn { display:inline-block; background:#C8922A; color:#182F4C; font-weight:700; font-size:16px; text-decoration:none; padding:14px 32px; border-radius:2px; margin:0 0 16px; }
+.txa-cta p.contact { color:#D9E0EA; font-size:14px; margin:0; }
 
 .txa-disclosure { background:#F4F6F9; border-left:4px solid #1E3A5F; border-radius:0 6px 6px 0; padding:18px 24px; margin:24px 0 50px; }
 .txa-disclosure h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:15px; margin:0 0 8px; }
 .txa-disclosure p { color:#555B63; font-size:13px; line-height:1.7; margin:0; }
 
-@media (max-width: 640px) {
-  .txa-cta-info, .txa-cta-btn { flex-basis:100%; }
-}
 </style>
 </head>
 <body>
@@ -176,12 +171,10 @@
 </div>
 
 <div class="txa-cta">
-  <div class="txa-cta-info">
-    <p class="badge">No Cost, No Obligation</p>
-    <h2>Review the Most Tax-Efficient Way to Fund Your Coverage</h2>
-    <p class="contact">Withbert W. Payne, CPA, CGMA, FCA &middot; (925) 708-6501 &middot; LTCCPAs.com</p>
-  </div>
-  <div class="txa-cta-btn"><a href="contact.html">Request Your Personalized Illustration</a></div>
+  <p class="badge">No Cost, No Obligation</p>
+  <h2>Review the Most Tax-Efficient Way to Fund Your Coverage</h2>
+  <a class="btn" href="contact.html">Request Your Personalized Illustration</a>
+  <p class="contact">Withbert W. Payne, CPA, CGMA, FCA &middot; (925) 708-6501 &middot; LTCCPAs.com</p>
 </div>
 
 <div class="txa-wrap">
