@@ -15,3 +15,13 @@
 /home/contact-us    /contact     301
 /home/newsletters   /articles    301
 /home/*             /            301
+
+# Retired articles, consolidated into /long-term-care-ltc-insurance/long-term-care-planning.
+# These pages no longer exist, so the note above does not apply: the source paths
+# resolve to nothing and the target is a different page, so there is no loop. Both
+# the extensionless and .html forms are listed because the platform's own canonical
+# 308 (/X.html -> /X) would otherwise land on a deleted path.
+/long-term-care-ltc-insurance/now-is-the-time-for-long-term-planning        /long-term-care-ltc-insurance/long-term-care-planning    301
+/long-term-care-ltc-insurance/now-is-the-time-for-long-term-planning.html   /long-term-care-ltc-insurance/long-term-care-planning    301
+/long-term-care-ltc-insurance/ltc-planning-by-a-cpa                         /long-term-care-ltc-insurance/long-term-care-planning    301
+/long-term-care-ltc-insurance/ltc-planning-by-a-cpa.html                    /long-term-care-ltc-insurance/long-term-care-planning    301
