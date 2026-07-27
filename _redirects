@@ -3,8 +3,8 @@
 # IMPORTANT: Cloudflare Pages automatically serves clean URLs for any
 # .html file (e.g. a request for /about-us.html gets a built-in 308 to
 # /about-us, which then serves about-us.html). Because of that, every
-# extensionless old URL (e.g. /long-term-care-ltc-insurance/fact-vs-fiction-
-# about-long-term-care-insurance) already resolves to the correct current
+# extensionless old URL (e.g. /long-term-care-ltc-insurance/what-initiates-
+# a-long-term-care-claim) already resolves to the correct current
 # page with NO redirect rule needed here. Do not add rules that redirect
 # an extensionless path to its .html equivalent -- that fights the
 # platform's own canonical redirect and creates an infinite loop.
@@ -16,11 +16,18 @@
 /home/newsletters   /articles    301
 /home/*             /            301
 
-# Retired articles, consolidated into /long-term-care-ltc-insurance/long-term-care-planning.
-# These pages no longer exist, so the note above does not apply: the source paths
-# resolve to nothing and the target is a different page, so there is no loop. Both
-# the extensionless and .html forms are listed because the platform's own canonical
-# 308 (/X.html -> /X) would otherwise land on a deleted path.
+# Retired articles. These pages no longer exist, so the note above does not apply:
+# the source paths resolve to nothing and the target is a different page, so there
+# is no loop. Both the extensionless and .html forms are listed because the
+# platform's own canonical 308 (/X.html -> /X) would otherwise land on a deleted path.
+#
+# Consolidated into /long-term-care-ltc-insurance/long-term-care-facts-myths-and-faq.
+/long-term-care-ltc-insurance/frequently-asked-questions                            /long-term-care-ltc-insurance/long-term-care-facts-myths-and-faq    301
+/long-term-care-ltc-insurance/frequently-asked-questions.html                       /long-term-care-ltc-insurance/long-term-care-facts-myths-and-faq    301
+/long-term-care-ltc-insurance/fact-vs-fiction-about-long-term-care-insurance        /long-term-care-ltc-insurance/long-term-care-facts-myths-and-faq    301
+/long-term-care-ltc-insurance/fact-vs-fiction-about-long-term-care-insurance.html   /long-term-care-ltc-insurance/long-term-care-facts-myths-and-faq    301
+
+# Consolidated into /long-term-care-ltc-insurance/long-term-care-planning.
 /long-term-care-ltc-insurance/now-is-the-time-for-long-term-planning        /long-term-care-ltc-insurance/long-term-care-planning    301
 /long-term-care-ltc-insurance/now-is-the-time-for-long-term-planning.html   /long-term-care-ltc-insurance/long-term-care-planning    301
 /long-term-care-ltc-insurance/ltc-planning-by-a-cpa                         /long-term-care-ltc-insurance/long-term-care-planning    301
