@@ -1293,6 +1293,13 @@ footer {
   .footer-inner { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Keep the desktop nav on one row between the mobile breakpoint and full width */
+@media (min-width: 861px) and (max-width: 1060px) {
+  nav > ul { padding: 0 12px; }
+  nav > ul > li > a { padding: 14px 9px; font-size: 13px; }
+  nav > ul > li > a::after { left: 9px; right: 9px; }
+}
+
 @media (max-width: 860px) {
   /* Nav */
   #nav-toggle { display: flex; }
