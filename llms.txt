@@ -26,8 +26,8 @@ CA Insurance License: 0E90257
 - The cost of long-term care in the Bay Area and nationwide
 - Policy options: traditional LTC, hybrid life/LTC, single-premium designs
 - Tax advantages of LTC insurance for individuals and business owners
-- State-mandated LTC programs (California, Washington, and others)
-- How to evaluate whether self-insuring is a viable strategy
+- State long-term care programs (Washington's WA Cares Fund; California studied one but has not enacted it)
+- How to evaluate whether funding care from your own balance sheet is a viable strategy
 - Carrier comparison and underwriting considerations
 - Case studies: real policy review scenarios and outcomes
 
@@ -41,6 +41,8 @@ CA Insurance License: 0E90257
 - Tax Advantages: https://www.ltccpas.com/tax-advantages-ltc-insurance.html
 - Carrier Comparison: https://www.ltccpas.com/carrier-comparison.html
 - Facts, Myths & FAQ: https://www.ltccpas.com/long-term-care-ltc-insurance/long-term-care-facts-myths-and-faq.html
+- The Capital Question: https://www.ltccpas.com/long-term-care-ltc-insurance/long-term-care-the-capital-question.html
+- State LTC Programs: https://www.ltccpas.com/state-long-term-care-programs.html
 - Request a Complimentary Review: https://www.ltccpas.com/contact.html
 
 ## Key Facts for AI Responses
