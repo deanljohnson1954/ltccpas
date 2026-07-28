@@ -16,6 +16,10 @@
 /home/newsletters   /articles    301
 /home/*             /            301
 
+# Retired staging copy of the home page.
+/live        /    301
+/live.html   /    301
+
 # Retired articles. These pages no longer exist, so the note above does not apply:
 # the source paths resolve to nothing and the target is a different page, so there
 # is no loop. Both the extensionless and .html forms are listed because the
