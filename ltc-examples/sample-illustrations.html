@@ -133,6 +133,22 @@
   .si-cta h2 { font-size:23px; }
   .si-cta .phone { font-size:27px; }
 }
+
+/* Tablet and below: the comparison table reflows into one block per row
+   instead of clipping its right-hand column behind a horizontal scrollbar. */
+@media (max-width:1000px) {
+  .si-matrix { min-width:0; display:block; font-size:14px; }
+  .si-matrix thead { display:none; }
+  .si-matrix tbody, .si-matrix tr, .si-matrix td { display:block; width:auto; }
+  .si-matrix tr { border:1px solid #C9D4E2; margin:0 0 16px; }
+  .si-matrix td { text-align:right; border:0; border-bottom:1px solid #E8EEF5; padding:10px 16px; }
+  .si-matrix tr td:last-child { border-bottom:0; }
+  .si-matrix td:first-child { text-align:left; background:#1E3A5F !important; color:#fff !important;
+    font-family:'EB Garamond',Georgia,serif; font-size:16px; font-weight:700; }
+  .si-matrix td:not(:first-child):before { content:attr(data-l); float:left; margin-right:18px;
+    color:#1E3A5F; font-weight:600; text-align:left; }
+  .si-matrix tr.key td:not(:first-child):before, .si-matrix tr.best td:not(:first-child):before { color:#7A5A12; }
+}
 </style>
 </head>
 <body>
@@ -236,43 +252,43 @@
   <tbody>
     <tr>
       <td>1. &nbsp;Monthly long-term care benefit (per insured)</td>
-      <td>$15,000</td><td>$20,000</td><td>$40,000</td><td>$40,000 starting</td>
+      <td data-l="Illustration 1 — Semiprivate">$15,000</td><td data-l="Illustration 2 — Private Room">$20,000</td><td data-l="Illustration 3 — Concierge · Level">$40,000</td><td data-l="Illustration 4 — Concierge · 3% Compound">$40,000 starting</td>
     </tr>
     <tr>
       <td>2. &nbsp;Combined monthly benefit (jointly)</td>
-      <td>$30,000</td><td>$40,000</td><td>$80,000</td><td>$80,000 starting</td>
+      <td data-l="Illustration 1 — Semiprivate">$30,000</td><td data-l="Illustration 2 — Private Room">$40,000</td><td data-l="Illustration 3 — Concierge · Level">$80,000</td><td data-l="Illustration 4 — Concierge · 3% Compound">$80,000 starting</td>
     </tr>
     <tr>
       <td>3. &nbsp;Guaranteed death benefit</td>
-      <td>$360,000</td><td>$480,000</td><td>$960,000</td><td>$960,000</td>
+      <td data-l="Illustration 1 — Semiprivate">$360,000</td><td data-l="Illustration 2 — Private Room">$480,000</td><td data-l="Illustration 3 — Concierge · Level">$960,000</td><td data-l="Illustration 4 — Concierge · 3% Compound">$960,000</td>
     </tr>
     <tr>
       <td>4. &nbsp;One-time single premium</td>
-      <td>$203,900</td><td>$271,867</td><td>$447,553</td><td>$515,530</td>
+      <td data-l="Illustration 1 — Semiprivate">$203,900</td><td data-l="Illustration 2 — Private Room">$271,867</td><td data-l="Illustration 3 — Concierge · Level">$447,553</td><td data-l="Illustration 4 — Concierge · 3% Compound">$515,530</td>
     </tr>
     <tr>
       <td>5. &nbsp;Less: guaranteed cash value, end of Year 1</td>
-      <td>$85,954</td><td>$114,605</td><td>$229,210</td><td>$229,210</td>
+      <td data-l="Illustration 1 — Semiprivate">$85,954</td><td data-l="Illustration 2 — Private Room">$114,605</td><td data-l="Illustration 3 — Concierge · Level">$229,210</td><td data-l="Illustration 4 — Concierge · 3% Compound">$229,210</td>
     </tr>
     <tr>
       <td>6. &nbsp;Net capital at risk <sup>1</sup></td>
-      <td class="gold">$117,946</td><td class="gold">$157,262</td><td class="gold">$218,343</td><td class="gold">$286,320</td>
+      <td class="gold" data-l="Illustration 1 — Semiprivate">$117,946</td><td class="gold" data-l="Illustration 2 — Private Room">$157,262</td><td class="gold" data-l="Illustration 3 — Concierge · Level">$218,343</td><td class="gold" data-l="Illustration 4 — Concierge · 3% Compound">$286,320</td>
     </tr>
     <tr>
       <td>7. &nbsp;Equivalent months of today&rsquo;s care <sup>2</sup></td>
-      <td>about 4 months</td><td>about 4 months</td><td>about 3 months</td><td>about 4 months</td>
+      <td data-l="Illustration 1 — Semiprivate">about 4 months</td><td data-l="Illustration 2 — Private Room">about 4 months</td><td data-l="Illustration 3 — Concierge · Level">about 3 months</td><td data-l="Illustration 4 — Concierge · 3% Compound">about 4 months</td>
     </tr>
     <tr>
       <td>8. &nbsp;Long-term care benefits</td>
-      <td>Lifetime &middot; no cap</td><td>Lifetime &middot; no cap</td><td>Lifetime &middot; no cap</td><td>Lifetime &middot; no cap</td>
+      <td data-l="Illustration 1 — Semiprivate">Lifetime &middot; no cap</td><td data-l="Illustration 2 — Private Room">Lifetime &middot; no cap</td><td data-l="Illustration 3 — Concierge · Level">Lifetime &middot; no cap</td><td data-l="Illustration 4 — Concierge · 3% Compound">Lifetime &middot; no cap</td>
     </tr>
     <tr>
       <td>9. &nbsp;Potential tax-deductible LTC premium *</td>
-      <td>$121,676</td><td>$162,235</td><td>$228,289</td><td>$296,266</td>
+      <td data-l="Illustration 1 — Semiprivate">$121,676</td><td data-l="Illustration 2 — Private Room">$162,235</td><td data-l="Illustration 3 — Concierge · Level">$228,289</td><td data-l="Illustration 4 — Concierge · 3% Compound">$296,266</td>
     </tr>
     <tr>
       <td>10. &nbsp;Guaranteed gain if care is never needed</td>
-      <td>$156,100</td><td>$208,133</td><td>$512,447</td><td>$444,470</td>
+      <td data-l="Illustration 1 — Semiprivate">$156,100</td><td data-l="Illustration 2 — Private Room">$208,133</td><td data-l="Illustration 3 — Concierge · Level">$512,447</td><td data-l="Illustration 4 — Concierge · 3% Compound">$444,470</td>
     </tr>
   </tbody>
 </table>
@@ -437,10 +453,10 @@
 </div><!-- .si-wrap -->
 
 <div class="si-cta">
-  <h2>Request Your Personalized Illustration/Quote</h2>
+  <h2>Request an Illustration/Quote</h2>
   <p>Every illustration is customized to your age, health, family objectives, business structure, and desired level of protection. Request a one-page personalized illustration. The discussion takes 20 minutes and is complimentary.</p>
   <a class="phone" href="tel:+19257086501">(925) 708-6501</a>
-  <a href="../contact.html" class="btn-gold">Request Your Personalized Illustration/Quote</a>
+  <a href="../contact.html" class="btn-gold">Request an Illustration/Quote</a>
 </div>
 
 <div class="si-disclaimer">

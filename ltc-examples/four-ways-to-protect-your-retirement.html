@@ -120,6 +120,22 @@
   .fw-h2 { font-size:23px; }
   .fw-cta h2 { font-size:23px; }
 }
+
+/* Tablet and below: the comparison table reflows into one block per row
+   instead of clipping its right-hand column behind a horizontal scrollbar. */
+@media (max-width:1000px) {
+  .fw-compare { min-width:0; display:block; font-size:14px; }
+  .fw-compare thead { display:none; }
+  .fw-compare tbody, .fw-compare tr, .fw-compare td { display:block; width:auto; }
+  .fw-compare tr { border:1px solid #C9D4E2; margin:0 0 16px; }
+  .fw-compare td { text-align:right; border:0; border-bottom:1px solid #E8EEF5; padding:10px 16px; }
+  .fw-compare tr td:last-child { border-bottom:0; }
+  .fw-compare td:first-child { text-align:left; background:#1E3A5F !important; color:#fff !important;
+    font-family:'EB Garamond',Georgia,serif; font-size:16px; font-weight:700; }
+  .fw-compare td:not(:first-child):before { content:attr(data-l); float:left; margin-right:18px;
+    color:#1E3A5F; font-weight:600; text-align:left; }
+  .fw-compare tr.key td:not(:first-child):before, .fw-compare tr.best td:not(:first-child):before { color:#7A5A12; }
+}
 </style>
 
 </head>
@@ -354,15 +370,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td>Uses existing assets</td><td class="yes">&#10003;</td><td class="no">&mdash;</td><td>Sometimes</td><td class="yes">&#10003;</td></tr>
-    <tr><td>Lowest premium</td><td class="no">&mdash;</td><td class="yes">&#10003;</td><td class="no">&mdash;</td><td class="no">&mdash;</td></tr>
-    <tr><td>Care benefit per dollar</td><td>High</td><td>Highest</td><td>Moderate</td><td>Moderate</td></tr>
-    <tr><td>Death benefit</td><td class="yes">&#10003;</td><td class="no">&mdash;</td><td class="yes">&#10003;</td><td>Residual/limited</td></tr>
-    <tr><td>Cash or account value</td><td class="yes">&#10003;</td><td class="no">&mdash;</td><td>Usually</td><td class="yes">&#10003;</td></tr>
-    <tr><td>Return-of-premium feature</td><td>Often</td><td>No</td><td>Sometimes</td><td>Account value</td></tr>
-    <tr><td>Premiums guaranteed not to increase</td><td class="yes">&#10003;</td><td>Generally no</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
-    <tr><td>Simplified underwriting</td><td>Sometimes</td><td class="no">&mdash;</td><td>Sometimes</td><td>Often</td></tr>
-    <tr class="best"><td>Best suited for</td><td>Wealth preservation</td><td>Maximum protection</td><td>Protection + legacy</td><td>Those who may not medically qualify</td></tr>
+    <tr><td>Uses existing assets</td><td class="yes" data-l="Asset-Based — Single Premium">&#10003;</td><td class="no" data-l="Traditional">&mdash;</td><td data-l="Hybrid — Ongoing Premium">Sometimes</td><td class="yes" data-l="Annuity + LTC">&#10003;</td></tr>
+    <tr><td>Lowest premium</td><td class="no" data-l="Asset-Based — Single Premium">&mdash;</td><td class="yes" data-l="Traditional">&#10003;</td><td class="no" data-l="Hybrid — Ongoing Premium">&mdash;</td><td class="no" data-l="Annuity + LTC">&mdash;</td></tr>
+    <tr><td>Care benefit per dollar</td><td data-l="Asset-Based — Single Premium">High</td><td data-l="Traditional">Highest</td><td data-l="Hybrid — Ongoing Premium">Moderate</td><td data-l="Annuity + LTC">Moderate</td></tr>
+    <tr><td>Death benefit</td><td class="yes" data-l="Asset-Based — Single Premium">&#10003;</td><td class="no" data-l="Traditional">&mdash;</td><td class="yes" data-l="Hybrid — Ongoing Premium">&#10003;</td><td data-l="Annuity + LTC">Residual/limited</td></tr>
+    <tr><td>Cash or account value</td><td class="yes" data-l="Asset-Based — Single Premium">&#10003;</td><td class="no" data-l="Traditional">&mdash;</td><td data-l="Hybrid — Ongoing Premium">Usually</td><td class="yes" data-l="Annuity + LTC">&#10003;</td></tr>
+    <tr><td>Return-of-premium feature</td><td data-l="Asset-Based — Single Premium">Often</td><td data-l="Traditional">No</td><td data-l="Hybrid — Ongoing Premium">Sometimes</td><td data-l="Annuity + LTC">Account value</td></tr>
+    <tr><td>Premiums guaranteed not to increase</td><td class="yes" data-l="Asset-Based — Single Premium">&#10003;</td><td data-l="Traditional">Generally no</td><td class="yes" data-l="Hybrid — Ongoing Premium">&#10003;</td><td class="yes" data-l="Annuity + LTC">&#10003;</td></tr>
+    <tr><td>Simplified underwriting</td><td data-l="Asset-Based — Single Premium">Sometimes</td><td class="no" data-l="Traditional">&mdash;</td><td data-l="Hybrid — Ongoing Premium">Sometimes</td><td data-l="Annuity + LTC">Often</td></tr>
+    <tr class="best"><td>Best suited for</td><td data-l="Asset-Based — Single Premium">Wealth preservation</td><td data-l="Traditional">Maximum protection</td><td data-l="Hybrid — Ongoing Premium">Protection + legacy</td><td data-l="Annuity + LTC">Those who may not medically qualify</td></tr>
   </tbody>
 </table>
 </div>
@@ -394,9 +410,9 @@
 
 <div class="fw-cta">
   <p class="eyebrow">No Obligation</p>
-  <h2>Request Your Personalized Illustration/Quote</h2>
+  <h2>Request an Illustration/Quote</h2>
   <p>I will review your health, your assets, and your objectives, then prepare a complimentary illustration of the solution best suited to you.</p>
-  <a href="../contact.html" class="btn-gold">Request Your Personalized Illustration/Quote</a>
+  <a href="../contact.html" class="btn-gold">Request an Illustration/Quote</a>
   <p class="by">Withbert W. Payne, CPA, CGMA, FCA &nbsp;&middot;&nbsp; <a href="tel:+19257086501">(925) 708-6501</a></p>
 </div>
 

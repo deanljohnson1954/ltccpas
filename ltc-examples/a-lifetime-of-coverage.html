@@ -129,6 +129,22 @@
   .lc-cta h2 { font-size:23px; }
   .lc-cta .phone { font-size:27px; }
 }
+
+/* Tablet and below: the comparison table reflows into one block per row
+   instead of clipping its right-hand column behind a horizontal scrollbar. */
+@media (max-width:1000px) {
+  .lc-matrix { min-width:0; display:block; font-size:14px; }
+  .lc-matrix thead { display:none; }
+  .lc-matrix tbody, .lc-matrix tr, .lc-matrix td { display:block; width:auto; }
+  .lc-matrix tr { border:1px solid #C9D4E2; margin:0 0 16px; }
+  .lc-matrix td { text-align:right; border:0; border-bottom:1px solid #E8EEF5; padding:10px 16px; }
+  .lc-matrix tr td:last-child { border-bottom:0; }
+  .lc-matrix td:first-child { text-align:left; background:#1E3A5F !important; color:#fff !important;
+    font-family:'EB Garamond',Georgia,serif; font-size:16px; font-weight:700; }
+  .lc-matrix td:not(:first-child):before { content:attr(data-l); float:left; margin-right:18px;
+    color:#1E3A5F; font-weight:600; text-align:left; }
+  .lc-matrix tr.key td:not(:first-child):before, .lc-matrix tr.best td:not(:first-child):before { color:#7A5A12; }
+}
 </style>
 
 </head>
@@ -291,18 +307,18 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td>Monthly benefit per insured, first 24 months</td><td>$15,000</td><td>$20,000</td><td>$40,000</td><td>$40,000</td></tr>
-    <tr><td>Monthly benefit per insured, thereafter for life</td><td>$15,000</td><td>$20,000</td><td>$25,000</td><td>$14,000, +3%/yr</td></tr>
-    <tr><td>Combined monthly benefit for the couple, for life</td><td>$30,000</td><td>$40,000</td><td>$50,000</td><td>$28,000, +3%/yr</td></tr>
-    <tr><td>Long-term care benefits</td><td>Lifetime &middot; no cap</td><td>Lifetime &middot; no cap</td><td>Lifetime &middot; no cap</td><td>Lifetime &middot; no cap</td></tr>
-    <tr><td>Inflation protection</td><td>None &mdash; level</td><td>None &mdash; level</td><td>None &mdash; level</td><td>3% compound</td></tr>
-    <tr><td>Guaranteed death benefit if care is never needed</td><td>$360,000</td><td>$480,000</td><td>$960,000</td><td>$960,000</td></tr>
-    <tr><td>One-time single premium</td><td>$203,900</td><td>$271,867</td><td>$447,553</td><td>$515,530</td></tr>
-    <tr><td>Less: guaranteed cash value, Year 1</td><td>$85,954</td><td>$114,605</td><td>$229,210</td><td>$229,210</td></tr>
-    <tr><td>Net capital at risk</td><td>$117,946</td><td>$157,262</td><td>$218,343</td><td>$286,320</td></tr>
-    <tr class="key"><td>Net capital, in months of the continuing benefit</td><td>3.9</td><td>3.9</td><td>4.4</td><td>10.2</td></tr>
-    <tr><td>Qualified long-term care premium component</td><td>$121,676</td><td>$162,235</td><td>$228,289</td><td>$296,266</td></tr>
-    <tr><td>Guaranteed gain if care is never needed</td><td>$156,100</td><td>$208,133</td><td>$512,447</td><td>$444,470</td></tr>
+    <tr><td>Monthly benefit per insured, first 24 months</td><td data-l="Essential Protection — Illustration 1">$15,000</td><td data-l="Professional Protection — Illustration 2">$20,000</td><td data-l="Affluent Protection — Illustration 3">$40,000</td><td data-l="Concierge Protection — Illustration 4">$40,000</td></tr>
+    <tr><td>Monthly benefit per insured, thereafter for life</td><td data-l="Essential Protection — Illustration 1">$15,000</td><td data-l="Professional Protection — Illustration 2">$20,000</td><td data-l="Affluent Protection — Illustration 3">$25,000</td><td data-l="Concierge Protection — Illustration 4">$14,000, +3%/yr</td></tr>
+    <tr><td>Combined monthly benefit for the couple, for life</td><td data-l="Essential Protection — Illustration 1">$30,000</td><td data-l="Professional Protection — Illustration 2">$40,000</td><td data-l="Affluent Protection — Illustration 3">$50,000</td><td data-l="Concierge Protection — Illustration 4">$28,000, +3%/yr</td></tr>
+    <tr><td>Long-term care benefits</td><td data-l="Essential Protection — Illustration 1">Lifetime &middot; no cap</td><td data-l="Professional Protection — Illustration 2">Lifetime &middot; no cap</td><td data-l="Affluent Protection — Illustration 3">Lifetime &middot; no cap</td><td data-l="Concierge Protection — Illustration 4">Lifetime &middot; no cap</td></tr>
+    <tr><td>Inflation protection</td><td data-l="Essential Protection — Illustration 1">None &mdash; level</td><td data-l="Professional Protection — Illustration 2">None &mdash; level</td><td data-l="Affluent Protection — Illustration 3">None &mdash; level</td><td data-l="Concierge Protection — Illustration 4">3% compound</td></tr>
+    <tr><td>Guaranteed death benefit if care is never needed</td><td data-l="Essential Protection — Illustration 1">$360,000</td><td data-l="Professional Protection — Illustration 2">$480,000</td><td data-l="Affluent Protection — Illustration 3">$960,000</td><td data-l="Concierge Protection — Illustration 4">$960,000</td></tr>
+    <tr><td>One-time single premium</td><td data-l="Essential Protection — Illustration 1">$203,900</td><td data-l="Professional Protection — Illustration 2">$271,867</td><td data-l="Affluent Protection — Illustration 3">$447,553</td><td data-l="Concierge Protection — Illustration 4">$515,530</td></tr>
+    <tr><td>Less: guaranteed cash value, Year 1</td><td data-l="Essential Protection — Illustration 1">$85,954</td><td data-l="Professional Protection — Illustration 2">$114,605</td><td data-l="Affluent Protection — Illustration 3">$229,210</td><td data-l="Concierge Protection — Illustration 4">$229,210</td></tr>
+    <tr><td>Net capital at risk</td><td data-l="Essential Protection — Illustration 1">$117,946</td><td data-l="Professional Protection — Illustration 2">$157,262</td><td data-l="Affluent Protection — Illustration 3">$218,343</td><td data-l="Concierge Protection — Illustration 4">$286,320</td></tr>
+    <tr class="key"><td>Net capital, in months of the continuing benefit</td><td data-l="Essential Protection — Illustration 1">3.9</td><td data-l="Professional Protection — Illustration 2">3.9</td><td data-l="Affluent Protection — Illustration 3">4.4</td><td data-l="Concierge Protection — Illustration 4">10.2</td></tr>
+    <tr><td>Qualified long-term care premium component</td><td data-l="Essential Protection — Illustration 1">$121,676</td><td data-l="Professional Protection — Illustration 2">$162,235</td><td data-l="Affluent Protection — Illustration 3">$228,289</td><td data-l="Concierge Protection — Illustration 4">$296,266</td></tr>
+    <tr><td>Guaranteed gain if care is never needed</td><td data-l="Essential Protection — Illustration 1">$156,100</td><td data-l="Professional Protection — Illustration 2">$208,133</td><td data-l="Affluent Protection — Illustration 3">$512,447</td><td data-l="Concierge Protection — Illustration 4">$444,470</td></tr>
   </tbody>
 </table>
 </div>
@@ -330,11 +346,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td>Single pay (one-time)</td><td>$203,900</td><td>$271,867</td><td>$447,553</td><td>$515,530</td></tr>
-    <tr class="key"><td>5-Pay</td><td>$58,262 / yr</td><td>$77,683 / yr</td><td>$133,536 / yr</td><td>$149,652 / yr</td></tr>
-    <tr><td>10-Pay</td><td>$29,686 / yr</td><td>$39,581 / yr</td><td>$66,947 / yr</td><td>$75,854 / yr</td></tr>
-    <tr><td>20-Pay</td><td>$17,986 / yr</td><td>$23,981 / yr</td><td>$39,977 / yr</td><td>$45,898 / yr</td></tr>
-    <tr><td>Pay to age 95</td><td>$12,762 / yr</td><td>$17,016 / yr</td><td>$28,124 / yr</td><td>$32,377 / yr</td></tr>
+    <tr><td>Single pay (one-time)</td><td data-l="Essential Protection — Illustration 1">$203,900</td><td data-l="Professional Protection — Illustration 2">$271,867</td><td data-l="Affluent Protection — Illustration 3">$447,553</td><td data-l="Concierge Protection — Illustration 4">$515,530</td></tr>
+    <tr class="key"><td>5-Pay</td><td data-l="Essential Protection — Illustration 1">$58,262 / yr</td><td data-l="Professional Protection — Illustration 2">$77,683 / yr</td><td data-l="Affluent Protection — Illustration 3">$133,536 / yr</td><td data-l="Concierge Protection — Illustration 4">$149,652 / yr</td></tr>
+    <tr><td>10-Pay</td><td data-l="Essential Protection — Illustration 1">$29,686 / yr</td><td data-l="Professional Protection — Illustration 2">$39,581 / yr</td><td data-l="Affluent Protection — Illustration 3">$66,947 / yr</td><td data-l="Concierge Protection — Illustration 4">$75,854 / yr</td></tr>
+    <tr><td>20-Pay</td><td data-l="Essential Protection — Illustration 1">$17,986 / yr</td><td data-l="Professional Protection — Illustration 2">$23,981 / yr</td><td data-l="Affluent Protection — Illustration 3">$39,977 / yr</td><td data-l="Concierge Protection — Illustration 4">$45,898 / yr</td></tr>
+    <tr><td>Pay to age 95</td><td data-l="Essential Protection — Illustration 1">$12,762 / yr</td><td data-l="Professional Protection — Illustration 2">$17,016 / yr</td><td data-l="Affluent Protection — Illustration 3">$28,124 / yr</td><td data-l="Concierge Protection — Illustration 4">$32,377 / yr</td></tr>
   </tbody>
 </table>
 </div>
@@ -413,10 +429,10 @@
 </div><!-- .lc-wrap -->
 
 <div class="lc-cta">
-  <h2>Request Your Personalized Illustration/Quote</h2>
+  <h2>Request an Illustration/Quote</h2>
   <p>Every illustration is prepared for your own age, health, retirement objectives, business ownership structure, desired monthly benefit, and preferred funding method. It takes about 20 minutes to prepare and review, is complimentary, and is personally conducted by Withbert W. Payne, CPA.</p>
   <p>At the higher benefit levels, the amount applied for triggers full underwriting, including a paramedical examination and laboratory work. Underwriting is the one part of this that cannot be arranged after the fact, which is why the review is worth having while health is not a question.</p>
-  <a href="../contact.html" class="btn-gold">Request Your Personalized Illustration/Quote</a>
+  <a href="../contact.html" class="btn-gold">Request an Illustration/Quote</a>
   <a class="phone" href="tel:+19257086501">Call (925) 708-6501</a>
 </div>
 
