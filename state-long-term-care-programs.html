@@ -19,81 +19,118 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/style.css?v=7">
 <style>
-/* State LTC Programs — reproduces the source document's palette:
-   #1E3A5F navy, #C8922A gold, #1B1B1B body, #FAF3E6 cream, #E8EDF4 pale blue,
-   #D9D2C4 rules, #4A5568 secondary text. Times/Arial map to the site's
+/* State LTC Programs — reproduces the source document's colour table:
+   #1E3A5F navy, #C8922A gold, #222222 body, #333333 / #4A4A4A secondary,
+   #FBF7EF cream, #EDF1F6 and #DCE4EE panels, #F3E6C8 highlight,
+   #B9C6D6 / #DDDDDD rules. Times/Arial map to the site's
    EB Garamond / Source Sans 3. */
 
-.slp-hero { background:#1E3A5F; text-align:center; padding:42px 24px 44px; border-bottom:4px solid #C8922A; }
-.slp-hero .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:13px; color:#C8922A; margin:0 0 16px; }
-.slp-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff; font-size:34px; line-height:1.25; margin:0 0 14px; }
-.slp-hero p.sub { color:#E8EDF4; font-style:italic; max-width:660px; margin:0 auto; font-size:16px; line-height:1.6; }
+.slp-hero { background:#1E3A5F; text-align:center; padding:44px 24px 46px; border-bottom:4px solid #C8922A; }
+.slp-hero .eyebrow { font-weight:700; letter-spacing:.24em; text-transform:uppercase; font-size:12.5px; color:#C8922A; margin:0 0 18px; }
+.slp-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff;
+  font-size:clamp(26px,5.2vw,38px); overflow-wrap:break-word; line-height:1.22; margin:0 0 18px; }
+.slp-hero p.sub { color:#DCE4EE; font-size:16.5px; line-height:1.7; max-width:820px; margin:0 auto; }
 
-.slp-wrap { max-width:820px; margin:0 auto; padding:42px 24px 8px; }
-.slp-wrap p { color:#1B1B1B; font-size:16px; line-height:1.75; margin:0 0 20px; }
+.slp-wrap { max-width:920px; margin:0 auto; padding:42px 24px 8px; }
+.slp-wrap p { color:#222222; font-size:16px; line-height:1.75; margin:0 0 20px; }
 
-.slp-wrap h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:25px; line-height:1.3;
-  margin:40px 0 18px; padding-bottom:12px; border-bottom:2px solid #C8922A; }
+.slp-h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:clamp(21px,3.4vw,28px);
+  line-height:1.3; margin:46px 0 16px; padding-bottom:12px; border-bottom:2px solid #C8922A; }
+.slp-deck { color:#4A4A4A; font-style:italic; font-size:15.5px; line-height:1.7; margin:-8px 0 22px; }
 
-/* Cream question / pull-quote panels */
-.slp-callout { background:#FAF3E6; border-left:4px solid #C8922A; padding:24px 28px; margin:26px 0; }
-.slp-callout p { font-family:'EB Garamond',Georgia,serif; font-style:italic; font-weight:700;
-  color:#1E3A5F; font-size:20px; line-height:1.5; margin:0; }
+/* Callouts */
+.slp-answer { background:#F3E6C8; border-left:5px solid #C8922A; padding:26px 30px; margin:0 0 26px; }
+.slp-answer .label { display:block; font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:11.5px; color:#8A6416; margin:0 0 12px; }
+.slp-answer .big { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F;
+  font-size:clamp(19px,3.2vw,25px); line-height:1.35; margin:0 0 12px; }
+.slp-answer p { color:#222222; font-size:15.5px; line-height:1.75; margin:0; }
 
-/* Navy fact tiles */
-.slp-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:26px 0; }
-.slp-stats .tile { background:#1E3A5F; padding:24px 20px; text-align:center; }
-.slp-stats .num { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#C8922A; font-size:30px; line-height:1.15; display:block; margin:0 0 8px; }
-.slp-stats .cap { color:#fff; font-size:13.5px; line-height:1.55; display:block; }
+.slp-note { background:#FBF7EF; border-left:4px solid #C8922A; padding:22px 26px; margin:0 0 26px; }
+.slp-note .label { display:block; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:11.5px; color:#C8922A; margin:0 0 10px; }
+.slp-note p { color:#222222; font-size:15.5px; line-height:1.75; margin:0; }
 
-/* California timeline */
-.slp-timeline { margin:24px 0; }
-.slp-timeline .row { display:grid; grid-template-columns:170px 1fr; gap:20px; align-items:start;
-  background:#FAF3E6; border-bottom:2px solid #fff; padding:16px 22px; }
-.slp-timeline .row:last-child { border-bottom:none; }
-.slp-timeline .date { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F; font-size:17px; line-height:1.4; }
-.slp-timeline .what { color:#1B1B1B; font-size:15.5px; line-height:1.65; }
+.slp-warn { background:#EDF1F6; border-left:5px solid #1E3A5F; padding:26px 30px; margin:0 0 26px; }
+.slp-warn .label { display:block; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:11.5px; color:#1E3A5F; margin:0 0 12px; }
+.slp-warn .lead { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F; font-size:21px; margin:0 0 12px; }
+.slp-warn p { color:#222222; font-size:15.5px; line-height:1.75; margin:0; }
 
-/* Status notice */
-.slp-notice { background:#E8EDF4; border-top:3px solid #1E3A5F; border-bottom:3px solid #1E3A5F; padding:22px 26px; margin:26px 0; text-align:center; }
-.slp-notice p { color:#1E3A5F; font-size:16.5px; font-weight:600; line-height:1.65; margin:0; }
+.slp-emph { background:#FBF7EF; border:1px solid #DDDDDD; border-left:4px solid #C8922A; padding:22px 26px; margin:0 0 26px; }
+.slp-emph p { color:#222222; font-size:15.5px; line-height:1.75; margin:0; }
 
-/* Lists */
+/* Stat tiles */
+.slp-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:0 0 26px; }
+@media(max-width:820px){ .slp-stats { grid-template-columns:1fr; } }
+.slp-stat { background:#EDF1F6; border-top:3px solid #C8922A; padding:22px 24px; }
+.slp-stat .n { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F;
+  font-size:26px; line-height:1.15; margin:0 0 10px; }
+.slp-stat p { color:#222222; font-size:15px; line-height:1.7; margin:0; }
+
+/* Square-bullet lists, as the source sets them */
 .slp-list { list-style:none; padding:0; margin:0 0 22px; }
-.slp-list li { padding:7px 0 7px 26px; position:relative; color:#1B1B1B; font-size:15.5px; line-height:1.7; }
-.slp-list li:before { content:"\25CF"; position:absolute; left:0; top:7px; color:#C8922A; font-size:11px; }
+.slp-list li { padding:9px 0 9px 26px; position:relative; color:#222222; font-size:15.5px; line-height:1.7; }
+.slp-list li:before { content:"\25AA"; position:absolute; left:0; top:8px; color:#C8922A; font-size:14px; }
 
-.slp-numbered { list-style:none; padding:0; margin:0 0 22px; counter-reset:slp; }
-.slp-numbered li { counter-increment:slp; padding:12px 0 12px 46px; position:relative;
-  color:#1B1B1B; font-size:15.5px; line-height:1.7; border-bottom:1px solid #D9D2C4; }
-.slp-numbered li:last-child { border-bottom:none; }
-.slp-numbered li:before { content:counter(slp); position:absolute; left:0; top:12px;
-  width:28px; height:28px; border-radius:50%; background:#1E3A5F; color:#fff;
-  font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:15px;
-  display:flex; align-items:center; justify-content:center; }
+/* Tables */
+.slp-table-wrap { overflow-x:auto; margin:0 0 18px; }
+.slp-table { width:100%; border-collapse:collapse; font-size:15px; min-width:620px; }
+.slp-table thead th { background:#1E3A5F; color:#fff; text-align:left; padding:13px 16px; font-size:11.5px;
+  font-weight:700; letter-spacing:.08em; text-transform:uppercase; vertical-align:bottom; }
+.slp-table td { padding:13px 16px; border-bottom:1px solid #B9C6D6; color:#222222; vertical-align:top; }
+.slp-table tbody tr:nth-child(even) td { background:#FBF7EF; }
+.slp-table tbody tr:last-child td { border-bottom:none; }
+.slp-table td:first-child { font-weight:600; color:#1E3A5F; }
+.slp-buys td:not(:first-child) { text-align:right; white-space:nowrap; }
+.slp-buys td:last-child { color:#8A6416; font-weight:700; }
+@media(max-width:760px){
+  .slp-table { min-width:0; display:block; font-size:14.5px; }
+  .slp-table thead { display:none; }
+  .slp-table tbody, .slp-table tr, .slp-table td { display:block; width:auto; }
+  .slp-table tr { border:1px solid #B9C6D6; margin:0 0 16px; }
+  .slp-table td { border:0; border-bottom:1px solid #B9C6D6; }
+  .slp-table tr td:last-child { border-bottom:0; }
+  .slp-table td:first-child { background:#1E3A5F !important; color:#fff !important;
+    font-family:'EB Garamond',Georgia,serif; font-size:17px; font-weight:700; }
+  .slp-table td:not(:first-child):before { content:attr(data-l); display:block; color:#1E3A5F;
+    font-weight:700; font-size:11px; letter-spacing:.08em; text-transform:uppercase; margin:0 0 4px; }
+  .slp-buys td:not(:first-child) { text-align:left; white-space:normal; }
+}
 
-.slp-note { color:#4A5568; font-size:14.5px; line-height:1.7; font-style:italic; margin:0 0 20px; }
+/* Numbered cards */
+.slp-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:0 0 26px; }
+@media(max-width:820px){ .slp-cards { grid-template-columns:1fr; } }
+.slp-card { background:#EDF1F6; border-top:3px solid #C8922A; padding:22px 24px; }
+.slp-card .n { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#C8922A; font-size:22px; margin:0 0 8px; }
+.slp-card h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; line-height:1.3; margin:0 0 10px; }
+.slp-card p { color:#222222; font-size:15px; line-height:1.7; margin:0; }
+
+/* CPA perspective */
+.slp-cpa { background:#1E3A5F; padding:34px 32px; margin:34px 0 0; }
+.slp-cpa .label { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:11.5px; color:#C8922A; margin:0 0 16px; }
+.slp-cpa p { color:#DCE4EE; font-size:15.5px; line-height:1.8; margin:0 0 16px; }
+.slp-cpa p:last-child { margin:0; }
+.slp-cpa p strong { color:#fff; }
+
+/* Continue pointer */
+.slp-continue { background:#EDF1F6; border-left:4px solid #1E3A5F; padding:22px 26px; margin:30px 0 0; }
+.slp-continue .label { display:block; font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:11.5px; color:#1E3A5F; margin:0 0 12px; }
+.slp-continue p { color:#222222; font-size:15.5px; line-height:1.8; margin:0; }
+.slp-continue a { color:#1E3A5F; font-weight:700; }
 
 /* CTA */
-.slp-cta { background:#1E3A5F; text-align:center; padding:42px 28px; margin:38px 0 0; }
-.slp-cta .eyebrow { font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:12px; color:#C8922A; margin:0 0 14px; }
-.slp-cta h2 { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:27px; line-height:1.3; margin:0 0 16px; }
-.slp-cta p.msg { color:#E8EDF4; font-size:15.5px; line-height:1.7; max-width:660px; margin:0 auto 22px; }
-.slp-cta .phone { font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:30px; color:#C8922A; text-decoration:none; display:block; margin:0 0 20px; }
-.slp-cta .phone:hover { color:#E8B84B; }
+.slp-cta { background:#FBF7EF; border-top:3px solid #C8922A; border-bottom:3px solid #C8922A; text-align:center; padding:44px 28px; margin:36px 0 0; }
+.slp-cta .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:12px; color:#8A6416; margin:0 0 14px; }
+.slp-cta h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:clamp(22px,4vw,29px); line-height:1.3; margin:0 0 18px; }
+.slp-cta p.msg { color:#222222; font-size:16px; line-height:1.75; max-width:720px; margin:0 auto 24px; }
 .slp-cta .btn-gold { font-size:17px; padding:14px 36px; }
-.slp-cta p.name { color:#E8EDF4; font-size:14.5px; line-height:1.6; margin:24px 0 0; }
+.slp-cta p.after { color:#4A4A4A; font-size:14.5px; line-height:1.7; margin:22px 0 0; }
+.slp-cta p.after a { color:#1E3A5F; font-weight:700; text-decoration:none; }
 
-.slp-disclaimer { max-width:820px; margin:0 auto; padding:26px 24px 50px; }
-.slp-disclaimer p { font-style:italic; color:#4A5568; font-size:12px; line-height:1.75; margin:0; }
-
-@media (max-width:760px) {
-  .slp-hero h1 { font-size:27px; }
-  .slp-stats { grid-template-columns:1fr; }
-  .slp-timeline .row { grid-template-columns:1fr; gap:4px; }
-  .slp-cta h2 { font-size:23px; }
-  .slp-cta .phone { font-size:26px; }
-}
+/* Sources and disclosure */
+.slp-sources { max-width:920px; margin:0 auto; padding:30px 24px 50px; }
+.slp-sources h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; margin:0 0 12px; }
+.slp-sources h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:16px; margin:22px 0 10px; }
+.slp-sources p { color:#4A4A4A; font-size:12.5px; line-height:1.8; margin:0; }
+.slp-sources p.disclosure { font-style:italic; font-size:12px; }
 </style>
 </head>
 <body>
@@ -146,140 +183,175 @@
 </ul></nav>
 
 <div id="page-content">
-
-<div class="slp-hero">
-  <p class="eyebrow">State LTC Programs</p>
-  <h1>State Long-Term Care Programs</h1>
-  <p class="sub">What California residents should know &mdash; and what has not actually been enacted.</p>
-</div>
+<section class="slp-hero">
+  <p class="eyebrow">State Long-Term Care Programs</p>
+  <h1>What State Long-Term Care Programs Actually Pay</h1>
+  <p class="sub">Washington began paying benefits on July 1, 2026. California has no program, no payroll tax, and no deadline. Here is what each of those facts means for a California family.</p>
+</section>
 
 <div class="slp-wrap">
 
-<p>Washington has established the nation&rsquo;s first state-operated long-term care program, funded by employee payroll contributions. Benefits became available to eligible Washington workers on July 1, 2026.</p>
+  <p>Washington State is the first and, so far, the only state paying long-term care benefits from a payroll tax. Its program has been widely reported, widely misunderstood, and widely used in insurance marketing &mdash; including marketing directed at Californians who are not subject to it.</p>
 
-<p>California studied whether a statewide program could help its residents meet future extended care expenses. No California payroll tax and no mandatory program has been enacted.</p>
+  <p>This page answers two separate questions. What does a state program of this kind actually pay for? And where does California genuinely stand today? The answers matter in opposite directions: the first explains why private coverage still has a job to do even where a state program exists, and the second explains why no Californian should be buying anything today to avoid a tax that does not exist.</p>
 
-<p>The discussion nevertheless raises a planning question worth answering on your own terms:</p>
-
-<div class="slp-callout">
-  <p>Would a limited state benefit be enough to protect your retirement income and your assets if extended care were needed?</p>
-</div>
-
-<h2>Washington State: The WA Cares Fund</h2>
-
-<p>Washington employees generally contribute 0.58 percent of gross wages. Unlike Social Security, the contribution is not subject to a wage cap, so the cost rises with earnings. A worker earning $100,000 contributes approximately $580 a year; a worker earning $300,000 contributes approximately $1,740.</p>
-
-<p>For 2026, the maximum available benefit is $36,500 over the participant&rsquo;s lifetime, subject to contribution and eligibility requirements. The benefit amount is adjusted annually for inflation.</p>
-
-<div class="slp-stats">
-  <div class="tile">
-    <span class="num">0.58%</span>
-    <span class="cap">of gross wages &mdash; no income cap</span>
+  <div class="slp-answer">
+    <span class="label">The Short Answer</span>
+    <span class="big">Washington pays a lifetime maximum of about $36,500. California pays nothing, because California has no program.</span>
+    <p>In California today there is no long-term care payroll tax, no enrolment, no exemption, and no deadline of any kind. Any communication telling you otherwise is inaccurate.</p>
   </div>
-  <div class="tile">
-    <span class="num">$36,500</span>
-    <span class="cap">maximum lifetime benefit in 2026 &mdash; indexed for inflation</span>
+
+  <h2 class="slp-h2">What Washington Actually Built</h2>
+  <p>The WA Cares Fund was enacted in 2019 and, after two delays, began collecting in July 2023 and began paying in July 2026. It is a modest, universal benefit funded entirely by workers.</p>
+
+  <div class="slp-stats">
+    <div class="slp-stat"><span class="n">0.58%</span><p>of gross wages, with no wage cap. Collected from workers only; employers do not contribute.</p></div>
+    <div class="slp-stat"><span class="n">$36,500</span><p>lifetime maximum, adjusted annually for inflation. Not a monthly benefit &mdash; a lifetime ceiling.</p></div>
+    <div class="slp-stat"><span class="n">July 2026</span><p>first benefits payable, three years after payroll collection began in July 2023.</p></div>
   </div>
-  <div class="tile">
-    <span class="num">July 2026</span>
-    <span class="cap">benefits first available to eligible participants</span>
+
+  <h2 class="slp-h2">How a Worker Qualifies</h2>
+  <ul class="slp-list">
+    <li>Contributions must be made over ten years without a break of five or more consecutive years, or over three of the last six years, with at least 500 hours worked in each qualifying year.</li>
+    <li>Workers born before 1968 may receive a partial benefit scaled to the number of years contributed.</li>
+    <li>Benefits are payable to those needing assistance with at least three activities of daily living &mdash; a higher threshold than the two-of-six standard used by most private policies.</li>
+    <li>Legislation effective January 1, 2026 added portability, so workers who leave Washington may elect to continue participating and claim benefits elsewhere.</li>
+  </ul>
+
+  <h2 class="slp-h2">What $36,500 Buys in California</h2>
+  <p class="slp-deck">The clearest way to judge a state benefit is to spend it. The figures below are 2025 California statewide medians published in March 2026; Bay Area costs run above the state median.</p>
+
+  <div class="slp-table-wrap">
+    <table class="slp-table slp-buys">
+      <thead><tr>
+        <th>Care setting</th>
+        <th>California median</th>
+        <th>Months $36,500 covers</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Adult day services</td><td data-l="California median">$2,037 per month</td><td data-l="Months $36,500 covers">About 18 months</td></tr>
+        <tr><td>Assisted living</td><td data-l="California median">$7,000 per month</td><td data-l="Months $36,500 covers">About 5 months</td></tr>
+        <tr><td>In-home care (44 hrs/week)</td><td data-l="California median">$7,627 per month</td><td data-l="Months $36,500 covers">About 5 months</td></tr>
+        <tr><td>Memory care</td><td data-l="California median">About $8,800 per month</td><td data-l="Months $36,500 covers">About 4 months</td></tr>
+        <tr><td>Nursing home, semi-private</td><td data-l="California median">$12,167 per month</td><td data-l="Months $36,500 covers">About 3 months</td></tr>
+        <tr><td>Nursing home, private room</td><td data-l="California median">$15,178 per month</td><td data-l="Months $36,500 covers">About 2 months</td></tr>
+      </tbody>
+    </table>
   </div>
-</div>
 
-<p>Washington allowed workers who held qualifying private long-term care insurance before November 1, 2021, to apply for a permanent exemption. That application window closed on December 31, 2022. Purchasing private coverage today does not create a new Washington exemption.</p>
+  <p>A benefit of this size is real and it is not nothing. It is also, on California numbers, a matter of months rather than years. That is the point worth taking from Washington: a state program is a floor, and it was designed as one.</p>
 
-<h2>California: Studied, Not Enacted</h2>
+  <h2 class="slp-h2">A State Benefit and a Private Policy Are Not the Same Instrument</h2>
 
-<p>California created a Long-Term Care Insurance Task Force in 2019 to examine whether a statewide long-term care program was feasible, and how one might be designed.</p>
-
-<div class="slp-timeline">
-  <div class="row">
-    <div class="date">December 2022</div>
-    <div class="what">Feasibility report submitted, evaluating several possible program designs.</div>
+  <div class="slp-table-wrap">
+    <table class="slp-table">
+      <thead><tr>
+        <th></th>
+        <th>A state program of the WA Cares type</th>
+        <th>A private long-term care policy</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Benefit ceiling</td><td data-l="A state program of the WA Cares type">Fixed lifetime maximum</td><td data-l="A private long-term care policy">Chosen at purchase; lifetime benefit available on some designs</td></tr>
+        <tr><td>Benefit trigger</td><td data-l="A state program of the WA Cares type">Typically a higher functional threshold</td><td data-l="A private long-term care policy">Commonly two of six activities of daily living, or cognitive impairment alone</td></tr>
+        <tr><td>Who qualifies</td><td data-l="A state program of the WA Cares type">Workers meeting contribution and vesting rules</td><td data-l="A private long-term care policy">Anyone who qualifies medically at application</td></tr>
+        <tr><td>Residency</td><td data-l="A state program of the WA Cares type">Tied to the state, with limited portability</td><td data-l="A private long-term care policy">Follows the insured, subject to policy terms</td></tr>
+        <tr><td>Inflation</td><td data-l="A state program of the WA Cares type">Benefit ceiling indexed by statute</td><td data-l="A private long-term care policy">Inflation protection selected and paid for at issue</td></tr>
+        <tr><td>If care is never needed</td><td data-l="A state program of the WA Cares type">Contributions are not returned</td><td data-l="A private long-term care policy">Some designs return a death benefit or premium; others do not</td></tr>
+        <tr><td>Cost</td><td data-l="A state program of the WA Cares type">A payroll tax on wages, for as long as you work</td><td data-l="A private long-term care policy">A premium, on a schedule chosen at purchase</td></tr>
+      </tbody>
+    </table>
   </div>
-  <div class="row">
-    <div class="date">December 2023</div>
-    <div class="what">Actuarial report submitted, examining potential benefits, costs, and financing.</div>
+
+  <p>This is not an argument that a public program is a poor idea. It is an observation about scale. The two instruments are designed to do different jobs, and owning one does not answer the question the other was built to answer.</p>
+
+  <h2 class="slp-h2">The Washington Exemption Window Is Closed</h2>
+  <p>Washington did allow workers to exempt themselves permanently by owning private long-term care insurance. That window required a policy purchased before November 1, 2021 and an exemption application filed by December 31, 2022. It has not reopened, and buying a private policy in Washington today does not exempt anyone from the payroll deduction.</p>
+
+  <div class="slp-note">
+    <span class="label">Worth Noting</span>
+    <p>Roughly 450,000 Washington workers exempted themselves during that window. The scale of that response is precisely why other states studying the model have been advised against offering a comparable window &mdash; a point that matters more to Californians than the exemption itself.</p>
   </div>
-  <div class="row">
-    <div class="date">July 1, 2024</div>
-    <div class="what">The legislation authorizing the Task Force expired.</div>
+
+  <p>Washington voters were also asked, in November 2024, whether participation should become voluntary. They declined by roughly fifty-six percent to forty-four.</p>
+
+  <h2 class="slp-h2">Where California Actually Stands</h2>
+  <p>California studied a state program. It did not create one. The sequence is a matter of public record and it ends in 2024.</p>
+
+  <ul class="slp-list">
+    <li>2019 &mdash; AB 567 (Calderon) established the Long Term Care Insurance Task Force within the California Department of Insurance to study the feasibility of a statewide program.</li>
+    <li>December 2022 &mdash; the Task Force submitted a feasibility report to the Governor, the Legislature, and the Insurance Commissioner setting out five possible program designs.</li>
+    <li>December 2023 &mdash; the accompanying actuarial report was approved and submitted to the Legislature. The Task Force held its final meeting that month.</li>
+    <li>July 1, 2024 &mdash; the statute authorising the Task Force was repealed on its own terms. The Task Force no longer exists.</li>
+    <li>Today &mdash; no enabling legislation has been enacted. There is no program, no payroll tax, no qualifying-coverage standard, and no opt-out date.</li>
+  </ul>
+
+  <p>The Legislature may take the reports up at some point, or may not. If it does, it is free to adopt some, all, or none of what was recommended. Everything beyond that is speculation, and this page does not trade in it.</p>
+
+  <div class="slp-warn">
+    <span class="label">What You Will Not Find on This Page</span>
+    <span class="lead">No deadline. No countdown. No tax to beat.</span>
+    <p>In August 2023 the California Department of Insurance issued a formal alert to agents and brokers about marketing that told Californians a payroll tax was imminent and that they should buy coverage before a stated date. The Department was explicit: any communication asserting that a public program will be enacted on a particular date is untrue and is presumed to be a knowing violation of the law, carrying penalties of up to $25,000 per violation for a broker. If you have received a letter or an email urging you to act before a California long-term care deadline, you have my professional opinion on it in one sentence: there is no such deadline, and you should treat the source accordingly.</p>
   </div>
+
+  <h2 class="slp-h2">The One Timing Point That Is Genuinely True</h2>
+  <p>There is a real observation buried under the false urgency, and it runs the opposite way to how it is usually sold.</p>
+  <p>When the California Task Force considered whether to allow people with private coverage to opt out of a future program, it noted what happened in Washington: a time-limited window produced a rush of applications in the months before the deadline. Its recommendation was that if any opt-out were permitted, the cut-off should be set at something like the date the Governor signs the legislation &mdash; which would make policies purchased after that date ineligible.</p>
+
+  <div class="slp-emph">
+    <p>Read plainly, that recommendation means there would be no window to react at all. If California ever enacts a program with an opt-out, the only coverage likely to qualify is coverage already in force on the day it is signed. That is a reason to make the decision on its own merits and on your own schedule. It is not a reason to hurry, because there is nothing to hurry toward &mdash; and a policy bought for tax reasons that turn out not to apply is a poor policy twice over.</p>
+  </div>
+
+  <h2 class="slp-h2">Where Other States Stand</h2>
+  <p>Roughly a dozen states have examined a Washington-style program. Bills have been introduced in states including New York, Pennsylvania, and Minnesota, and several remain in committee. New York has drawn the most attention, in part because its drafts have not included a Washington-style exemption window.</p>
+  <p>As of today, Washington remains the only state collecting a long-term care payroll tax and the only state paying benefits from one. Every other state, California included, is at the study or proposal stage.</p>
+
+  <h2 class="slp-h2">What This Means for a California Household</h2>
+  <div class="slp-cards">
+    <div class="slp-card">
+      <span class="n">01</span>
+      <h3>The cost is the constant</h3>
+      <p>Whether or not a program is ever enacted, a private room in a California nursing home runs about $15,000 a month today. One year is roughly $180,000; five years is roughly $900,000. Legislation does not change that arithmetic.</p>
+    </div>
+    <div class="slp-card">
+      <span class="n">02</span>
+      <h3>A state benefit is a floor</h3>
+      <p>Even on the most generous design California studied, a public benefit would cover a fraction of an extended claim. The planning question is the gap above the floor, and that question is unchanged by whether the floor ever gets built.</p>
+    </div>
+    <div class="slp-card">
+      <span class="n">03</span>
+      <h3>Health sets the timetable</h3>
+      <p>The deadline that actually exists is a medical one. Underwriting standards tighten with age and with diagnosis, and roughly half of applicants over seventy are declined or rated. That is the clock worth watching.</p>
+    </div>
+  </div>
+
+  <div class="slp-cpa">
+    <p class="label">My CPA Perspective</p>
+    <p>Clients bring me this question in tax terms, and it is worth being clear that it is not a tax question yet. There is nothing in the California tax code to plan around. I will not build a recommendation on a statute that has not been written, and I would be cautious of anyone who offers to.</p>
+    <p>What Washington does provide is a useful reference point. It tells us what a legislature considers a reasonable public contribution to this risk: a lifetime ceiling of about $36,500, funded by a tax on wages, payable at a higher functional threshold than a private contract uses. Set that against a Bay Area cost of care and the size of the remaining exposure is not a matter of opinion.</p>
+    <p>So the analysis I run is the same one I would run if Washington had never passed anything: what the care is likely to cost, what your own capital can absorb, and what a private contract would cost to cover the difference. If California legislates one day, that work will still be the work. My compensation does not vary by which carrier you choose, and it does not vary by whether you buy at all.</p>
+  </div>
+
+  <div class="slp-continue">
+    <span class="label">Continue</span>
+    <p>If a state program is a floor, the next question is how far above it you need to be. <a href="long-term-care-ltc-insurance/how-much-long-term-care-insurance-is-enough.html">How Much Long-Term Care Insurance Is Enough?</a> works that figure out from California costs. <a href="paying-for-long-term-care.html">Paying for Long-Term Care</a> sets out how the care itself gets paid for, including what Medicare and Medi-Cal do and do not cover. <a href="ltc-examples/four-ways-to-protect-your-retirement.html">Four Ways to Secure Long-Term Care Coverage</a> compares the categories of private coverage side by side.</p>
+  </div>
+
+  <div class="slp-cta">
+    <p class="eyebrow">Complimentary &middot; No Obligation</p>
+    <h2>Plan for the Gap, Not the Headline</h2>
+    <p class="msg">A review starts with your own numbers &mdash; the cost of care where you expect to receive it, what your capital can absorb, and what the difference would cost to insure. No state program changes that starting point.</p>
+    <a class="btn btn-gold" href="contact.html">Request a Complimentary Review</a>
+    <p class="after">Prefer to speak first? Call Bert directly at <a href="tel:+19257086501">(925) 708-6501</a>. Already own a policy? The same review applies to coverage you have held for years.</p>
+  </div>
+
 </div>
 
-<div class="slp-notice">
-  <p>As of July 2026, California has not enacted a statewide long-term care payroll tax, has not established a contribution rate, and has not announced an opt-out period.</p>
+<div class="slp-sources">
+  <h2>Sources</h2>
+  <p>Washington State Employment Security Department and the WA Cares Fund (program design, contribution rate, vesting, benefit maximum, and 2025 amendments effective January 1, 2026); Washington Secretary of State (November 2024 general election results, Initiative 2124); California Department of Insurance, Long Term Care Insurance Task Force (AB 567 feasibility report, December 2022; actuarial report, December 2023; statutory sunset July 1, 2024) and the Department&rsquo;s Agent and Broker Alert of August 23, 2023; CareScout 2025 Cost of Care Survey, published March 2026, California statewide medians. Cost figures are medians and are not quotations. Bay Area costs generally run above the California median.</p>
+  <h3>Important Disclosure</h3>
+  <p class="disclosure">This page is for informational purposes only and does not constitute personalized insurance, legal, or tax advice. Withbert W. Payne is a California-licensed insurance professional (CA License No. 0E90257). Descriptions of state programs and proposed legislation are general summaries of publicly available information as of August 1, 2026 and are subject to change; nothing here should be read as a prediction that any legislation will or will not be enacted. Insurance products, availability, and provisions vary by state and by carrier, and all coverage is subject to underwriting and to the terms of the issued policy. Long-term care benefit payments reduce the policy&rsquo;s death benefit and cash surrender value. Long-term care benefits are generally income-tax-free; insurance decisions should be coordinated with your tax, legal, and financial advisers. All consultations are complimentary. This is a solicitation for insurance.</p>
 </div>
-
-<p>The Task Force reports considered several possible structures, including mandatory participation with an opt-out for residents who already own private coverage, and payroll-based financing. Those were planning alternatives presented for legislative consideration &mdash; not enacted law. No one can presently say what private coverage, if any, would qualify for an exemption under legislation that has not yet been written.</p>
-
-<h2>Why the Discussion Still Matters</h2>
-
-<p>A state program of the kind California studied is intended to provide a basic level of assistance. It is not intended to pay the full cost of an extended care event. The Task Force examined designs that would offset only part of a household&rsquo;s expenses.</p>
-
-<p>That distinction matters in California, where several years of home care, assisted living, memory care, or skilled nursing can place substantial pressure on:</p>
-
-<ul class="slp-list">
-  <li>Retirement income</li>
-  <li>Investment portfolios</li>
-  <li>The inheritance you intended to leave</li>
-  <li>A healthy spouse&rsquo;s financial security</li>
-  <li>The time and wellbeing of adult children</li>
-</ul>
-
-<p>A public benefit may help. It should not be mistaken for a complete plan.</p>
-
-<h2>Public Benefits and Private Coverage Serve Different Purposes</h2>
-
-<p>A state program and a privately owned policy are not substitutes for one another. Depending on how it is designed, private coverage may provide:</p>
-
-<ul class="slp-list">
-  <li>A substantially larger monthly benefit</li>
-  <li>Benefits payable for several years, or for life</li>
-  <li>Care at home, in assisted living, or in a skilled nursing facility</li>
-  <li>Inflation protection</li>
-  <li>Joint benefits covering both spouses</li>
-  <li>A death benefit if care is never needed</li>
-  <li>Benefits that remain in force if you move to another state</li>
-</ul>
-
-<p class="slp-note">Benefits, limitations, and guarantees vary by policy, and coverage is subject to medical and financial underwriting.</p>
-
-<h2>Do Not Buy Coverage Solely for a Possible Tax Exemption</h2>
-
-<p>Private coverage should be evaluated first on whether it provides meaningful protection for your family. No one can promise that a policy purchased today will satisfy the requirements of legislation that has not yet been written.</p>
-
-<p>Planning earlier is still valuable, for a different reason. Premiums and eligibility are driven by age and health, and future insurability cannot be guaranteed.</p>
-
-<div class="slp-callout">
-  <p>The strongest reason to plan now is not speculation about a future tax. It is the cost of waiting until health has changed.</p>
-</div>
-
-<h2>Questions Worth Answering</h2>
-
-<ol class="slp-numbered">
-  <li>How much monthly care could our retirement plan absorb without changing how we live?</li>
-  <li>How long could we pay that cost before it disrupted our income or our investment strategy?</li>
-  <li>Would one spouse remain financially secure if the other required care for several years?</li>
-  <li>Do we want to rely on family members to coordinate or provide that care?</li>
-  <li>Would traditional, hybrid, or asset-based coverage better suit our objectives?</li>
-</ol>
-
-</div><!-- .slp-wrap -->
-
-<div class="slp-cta">
-  <p class="eyebrow">Carrier-Neutral &nbsp;&middot;&nbsp; CPA-Led &nbsp;&middot;&nbsp; No Obligation</p>
-  <h2>Request a Complimentary Review</h2>
-  <p class="msg">A personalized illustration shows the monthly and lifetime benefits available to you, annual, limited-pay, and single-premium options, guaranteed cash value where applicable, the death benefit if care is never needed, and the amount of personal capital committed to the insurance company.</p>
-  <a class="phone" href="tel:+19257086501">(925) 708-6501</a>
-  <a href="contact.html" class="btn-gold">Request a Complimentary Review</a>
-  <p class="name">Withbert (Bert) W. Payne, CPA, CGMA, FCA &nbsp;&middot;&nbsp; California Insurance License No. 0E90257</p>
-</div>
-
-<div class="slp-disclaimer">
-  <p>This page is provided for general educational purposes and reflects publicly available information as of July 2026. California has not enacted a statewide long-term care payroll tax and has not announced an opt-out period. Legislative proposals may be introduced, amended, delayed, or withdrawn, and any future legislation may establish requirements different from the concepts evaluated by the California Long-Term Care Insurance Task Force. No representation is made that purchasing private insurance will qualify any individual for an exemption from a future state program. Insurance products are subject to underwriting, policy terms, exclusions, and carrier availability. This is a solicitation for insurance. Nothing on this page is legal, tax, or investment advice.</p>
-</div>
-
 </div><!-- #page-content -->
 
 <footer><div class="footer-inner">
