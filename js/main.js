@@ -63,6 +63,20 @@ function initNav() {
 }
 initNav();
 
+/* ── 2b. Pin the chrome's relative links ────────────────────────
+   The router swaps #page-content and <nav> and calls fixPaths() on
+   both, but the top bar, header and footer are never replaced. They
+   keep the relative hrefs of whichever page was loaded first while
+   the URL changes underneath them, so after one navigation from the
+   home page into a subdirectory every one of them points a level too
+   deep: contact.html resolves to /long-term-care-ltc-insurance/
+   contact.html, which is a 404. Resolving them against the document
+   they actually arrived with, once, makes them immune -- fixPaths()
+   skips anything already absolute, so this cannot double-apply. */
+['.top-bar', 'header', 'footer'].forEach(sel => {
+  document.querySelectorAll(sel).forEach(el => fixPaths(el, window.location.href));
+});
+
 /* ── 3. SPA Router ─────────────────────────────────────────── */
 async function navigate(url, pushState = true) {
   const content = document.getElementById('page-content');
