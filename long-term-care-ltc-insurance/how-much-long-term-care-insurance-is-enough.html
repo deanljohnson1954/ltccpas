@@ -18,6 +18,145 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="../css/style.css?v=7">
+<style>
+/* How Much Is Enough — reproduces the source document's palette:
+   #1E3A5F navy, #C8922A gold, #222222 body, #555555 / #666666 secondary,
+   #FAF6EE cream, #F5E7C8 highlight, #EAEFF5 and #E6EAF0 panels,
+   #DDE3EB / #DDD6C8 rules. Times/Arial map to the site's
+   EB Garamond / Source Sans 3. */
+
+.hm-hero { background:#1E3A5F; text-align:center; padding:44px 24px 46px; border-bottom:4px solid #C8922A; }
+.hm-hero .eyebrow { font-weight:700; letter-spacing:.24em; text-transform:uppercase; font-size:12.5px; color:#C8922A; margin:0 0 18px; }
+.hm-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff; font-size:38px; line-height:1.22; margin:0 0 18px; }
+.hm-hero p.sub { color:#DDE3EB; font-size:16.5px; line-height:1.7; max-width:820px; margin:0 auto; }
+
+/* Stat band */
+.hm-stats { background:#E6EAF0; padding:28px 24px; }
+.hm-stats .grid { max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.hm-stats .s { text-align:center; }
+.hm-stats .n { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F; font-size:34px; line-height:1.1; margin:0 0 8px; }
+.hm-stats .d { display:block; color:#555555; font-size:13.5px; line-height:1.55; }
+@media(max-width:720px){ .hm-stats .grid { grid-template-columns:1fr; gap:20px; } }
+
+.hm-wrap { max-width:920px; margin:0 auto; padding:42px 24px 8px; }
+.hm-wrap p { color:#222222; font-size:16px; line-height:1.75; margin:0 0 20px; }
+
+.hm-h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:28px; line-height:1.3;
+  margin:46px 0 16px; padding-bottom:12px; border-bottom:2px solid #C8922A; }
+.hm-deck { color:#555555; font-style:italic; font-size:15.5px; line-height:1.7; margin:-8px 0 22px; }
+
+/* The short answer */
+.hm-answer { background:#F5E7C8; border-left:5px solid #C8922A; padding:26px 30px; margin:0 0 26px; }
+.hm-answer .label { display:block; font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:11.5px; color:#8A6416; margin:0 0 12px; }
+.hm-answer .big { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F;
+  font-size:26px; line-height:1.35; margin:0 0 12px; }
+.hm-answer p { color:#222222; font-size:15.5px; line-height:1.75; margin:0; }
+
+/* Formula band */
+.hm-formula { background:#1E3A5F; padding:28px 24px; margin:0 0 26px; text-align:center; }
+.hm-formula p { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:20px; line-height:1.5; margin:0; }
+.hm-formula .op { color:#C8922A; font-weight:700; margin:0 10px; }
+
+/* Numbered steps and factors */
+.hm-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:0 0 26px; }
+@media(max-width:820px){ .hm-steps { grid-template-columns:1fr; } }
+.hm-step { background:#EAEFF5; border-top:3px solid #C8922A; padding:22px 24px; }
+.hm-step .n { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#C8922A; font-size:22px; margin:0 0 8px; }
+.hm-step h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; line-height:1.3; margin:0 0 10px; }
+.hm-step p { color:#222222; font-size:15px; line-height:1.7; margin:0; }
+
+.hm-factors { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:0 0 26px; }
+@media(max-width:820px){ .hm-factors { grid-template-columns:1fr; } }
+
+/* Worked calculation */
+.hm-worked { background:#FAF6EE; border:1px solid #DDD6C8; padding:26px 28px; margin:0 0 26px; }
+.hm-worked h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:21px; margin:0 0 16px; }
+.hm-worked .row { padding:14px 0; border-bottom:1px solid #DDD6C8; }
+.hm-worked .row:last-child { border-bottom:none; padding-bottom:0; }
+.hm-worked .t { display:block; font-weight:700; color:#1E3A5F; font-size:15.5px; margin:0 0 4px; }
+.hm-worked .v { display:block; color:#222222; font-size:15.5px; line-height:1.7; }
+.hm-worked .row.result .t, .hm-worked .row.result .v { color:#8A6416; }
+
+/* Tables */
+.hm-table-wrap { overflow-x:auto; margin:0 0 14px; }
+.hm-table { width:100%; border-collapse:collapse; font-size:15px; min-width:640px; }
+.hm-table thead th { background:#1E3A5F; color:#fff; text-align:left; padding:13px 16px; font-size:11.5px;
+  font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.hm-table thead th:not(:first-child) { text-align:right; }
+.hm-table td { padding:13px 16px; border-bottom:1px solid #DDE3EB; color:#222222; }
+.hm-table td:not(:first-child) { text-align:right; font-weight:700; color:#1E3A5F; white-space:nowrap; }
+.hm-table tbody tr:nth-child(even) td { background:#FAF6EE; }
+.hm-table tbody tr:last-child td { border-bottom:none; }
+.hm-table td.cost { color:#8A6416; }
+@media(max-width:760px){
+  .hm-table { min-width:0; display:block; }
+  .hm-table thead { display:none; }
+  .hm-table tbody, .hm-table tr, .hm-table td { display:block; width:auto; }
+  .hm-table tr { border:1px solid #DDE3EB; margin:0 0 14px; }
+  .hm-table td { border:0; border-bottom:1px solid #DDE3EB; text-align:right; }
+  .hm-table tr td:last-child { border-bottom:0; }
+  .hm-table td:first-child { background:#1E3A5F !important; color:#fff !important; text-align:left;
+    font-family:'EB Garamond',Georgia,serif; font-size:17px; }
+  .hm-table td:not(:first-child):before { content:attr(data-l); float:left; color:#1E3A5F; font-weight:600; }
+}
+
+.hm-source { color:#666666; font-size:12.5px; line-height:1.7; margin:0 0 24px; }
+
+/* Two routes */
+.hm-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:0 0 22px; }
+@media(max-width:760px){ .hm-pair { grid-template-columns:1fr; } }
+.hm-route { background:#EAEFF5; border-top:3px solid #1E3A5F; padding:22px 24px; }
+.hm-route h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:20px; margin:0 0 10px; }
+.hm-route p { color:#222222; font-size:15px; line-height:1.7; margin:0; }
+
+/* Callouts */
+.hm-note { background:#FAF6EE; border-left:4px solid #C8922A; padding:22px 26px; margin:0 0 26px; }
+.hm-note .label { display:block; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:11.5px; color:#C8922A; margin:0 0 10px; }
+.hm-note p { color:#222222; font-size:15.5px; line-height:1.75; margin:0; }
+
+/* Square-bullet lists */
+.hm-list { list-style:none; padding:0; margin:0 0 22px; }
+.hm-list li { padding:9px 0 9px 26px; position:relative; color:#222222; font-size:15.5px; line-height:1.7; }
+.hm-list li:before { content:"\25A0"; position:absolute; left:0; top:10px; color:#C8922A; font-size:11px; }
+/* Eight items in two columns, read down the left column first, as the source sets them */
+.hm-list.two { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(4,auto);
+  grid-auto-flow:column; gap:0 30px; }
+@media(max-width:760px){ .hm-list.two { display:block; } }
+
+/* Cross-reference line */
+.hm-xref { background:#EAEFF5; border-left:4px solid #1E3A5F; padding:18px 22px; margin:0 0 26px;
+  color:#222222; font-size:15px; line-height:1.75; }
+.hm-xref a { color:#1E3A5F; font-weight:700; }
+
+/* CPA perspective */
+.hm-cpa { background:#1E3A5F; padding:34px 32px; margin:34px 0 0; }
+.hm-cpa .label { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:11.5px; color:#C8922A; margin:0 0 16px; }
+.hm-cpa p { color:#DDE3EB; font-size:15.5px; line-height:1.8; margin:0 0 16px; }
+.hm-cpa p:last-child { margin:0; }
+.hm-cpa p strong { color:#fff; }
+
+/* CTA */
+.hm-cta { background:#FAF6EE; border-top:3px solid #C8922A; border-bottom:3px solid #C8922A; text-align:center; padding:44px 28px; margin:36px 0 0; }
+.hm-cta .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:12px; color:#8A6416; margin:0 0 14px; }
+.hm-cta h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:29px; line-height:1.3; margin:0 0 18px; }
+.hm-cta p.msg { color:#222222; font-size:16px; line-height:1.75; max-width:720px; margin:0 auto 24px; }
+.hm-cta .btn-gold { font-size:17px; padding:14px 36px; }
+.hm-cta .phone { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:30px; color:#1E3A5F; text-decoration:none; margin:22px 0 10px; }
+.hm-cta .phone:hover { color:#C8922A; }
+.hm-cta p.own { color:#555555; font-size:14.5px; margin:0; }
+
+.hm-disclosure { max-width:920px; margin:0 auto; padding:30px 24px 50px; }
+.hm-disclosure h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; margin:0 0 12px; }
+.hm-disclosure p { font-style:italic; color:#666666; font-size:12px; line-height:1.8; margin:0; }
+
+@media (max-width:760px) {
+  .hm-hero h1 { font-size:28px; }
+  .hm-h2 { font-size:23px; }
+  .hm-answer .big { font-size:21px; }
+  .hm-formula p { font-size:16px; }
+  .hm-cta h2 { font-size:23px; }
+}
+</style>
 </head>
 <body>
 <div class="top-bar"><div class="inner"><div><a href="../about-us.html">Meet Withbert W. Payne, CPA</a> &nbsp;|&nbsp; <a href="../contact.html">Request a Complimentary Review</a></div><div><span class="phone" style="font-weight:400;font-size:11px;">Call &nbsp;(925) 708-6501</span><br><span style="font-size:11px;color:var(--gold-light);font-weight:400;">For a Complimentary Review</span></div></div></div>
@@ -70,122 +209,232 @@
 </ul></nav>
 
 <div id="page-content">
-
-<div class="page-hero"><div class="inner">
-  <div class="breadcrumb"><a href="../index.html">Home</a> &mdash; <a href="#">LTC Insurance</a> &mdash; <span>How Much is Enough?</span></div>
+<section class="hm-hero">
+  <p class="eyebrow">Sizing the Benefit</p>
   <h1>How Much Long-Term Care Insurance Is Enough?</h1>
-  <p>There is no one-size-fits-all answer &mdash; the right coverage depends on where you live, your assets, your family history, and how long care may be needed. Here is how to think through it.</p>
-</div></div>
+  <p class="sub">The right amount of coverage depends on where you will receive care, what you own, and how long care may be needed. This page gives you the method &mdash; and the number that method keeps producing for families in the San Francisco Bay Area.</p>
+</section>
 
-<!-- Key Stats -->
-<div class="trust-bar">
-  <div class="inner">
-    <div class="trust-stat">
-      <span class="number">70%</span>
-      <span class="label">Chance of Needing LTC After Age 65</span>
+<section class="hm-stats"><div class="grid">
+  <div class="s"><span class="n">~70%</span><span class="d">Likelihood that someone turning 65 today will need some form of long-term care</span></div>
+  <div class="s"><span class="n">1 in 5</span><span class="d">Will need long-term care for longer than five years</span></div>
+  <div class="s"><span class="n">$15,178</span><span class="d">California median monthly cost of a private nursing home room</span></div>
+</div></section>
+
+<div class="hm-wrap">
+
+  <div class="hm-answer">
+    <span class="label">The Short Answer</span>
+    <span class="big">$20,000 a month, with no cap on the benefit period.</span>
+    <p>For a Bay Area household planning today, that is where the arithmetic on this page keeps landing. It is not a rule, and it is not a number I can apply to you without seeing your situation &mdash; but it is the honest answer to the question in the title, and the rest of this page shows exactly how it is derived and how to run the same calculation for yourself.</p>
+  </div>
+
+  <h2 class="hm-h2">There Is No Universal Answer &mdash; But There Is a Method</h2>
+  <p>The most common question I receive is: "How much long-term care insurance do I need?" Most answers to it are unsatisfying, because they stop at "it depends." It does depend &mdash; on location, age, health, family history, and the assets and income you intend to protect. But a dependency is not the same thing as an unknown. There is a straightforward way to arrive at a defensible number, and it takes three steps.</p>
+
+  <div class="hm-formula">
+    <p>Expected monthly cost of care <span class="op">&minus;</span> Sustainable monthly self-funding <span class="op">=</span> Monthly benefit to consider</p>
+  </div>
+
+  <h2 class="hm-h2">How to Estimate Your Own Number</h2>
+  <div class="hm-steps">
+    <div class="hm-step">
+      <span class="n">01</span>
+      <h3>Start With the Cost Where You Will Live</h3>
+      <p>Not the national median. The cost of the setting you would actually use, in the place you expect to be living when care begins. In the Bay Area that is materially above both the national and the California figure.</p>
     </div>
-    <div class="trust-stat">
-      <span class="number">20%</span>
-      <span class="label">Will Need Care for 5+ Years</span>
+    <div class="hm-step">
+      <span class="n">02</span>
+      <h3>Subtract What You Could Sustainably Pay</h3>
+      <p>The monthly income you could redirect to care without disrupting a spouse&rsquo;s standard of living, liquidating long-term assets, or interrupting a legacy you intend to leave. Income you can sustain &mdash; not assets you would have to sell.</p>
     </div>
-    <div class="trust-stat">
-      <span class="number">$135,500</span>
-      <span class="label">National Annual Median Cost of Care</span>
+    <div class="hm-step">
+      <span class="n">03</span>
+      <h3>Carry the Difference Forward</h3>
+      <p>The result is today&rsquo;s number. Care usually begins fifteen to twenty-five years after the decision to insure. Grow the figure to that horizon, or buy inflation protection that grows it for you.</p>
     </div>
   </div>
-</div>
 
-<div class="page-wrap"><div class="two-col">
-<div class="content-area">
+  <h2 class="hm-h2">The Calculation, Worked</h2>
+  <p>Take a Bay Area couple in their early sixties. They expect that if care is needed it will be private-room nursing or comparable in-home support, and they want the surviving spouse&rsquo;s standard of living untouched.</p>
 
-<h2>There Is No One-Size-Fits-All Answer</h2>
-<p>The most common question we receive is: "How much LTC insurance do I need?" The honest answer is: it depends. The right coverage is shaped by where you live, your age, your assets, your family history, and your personal tolerance for financial risk. What is certain is that most people significantly underestimate both the cost and the duration of care they may eventually need.</p>
-
-<!-- Bay Area Cost Cards -->
-<h2>San Francisco Bay Area: What Care Actually Costs</h2>
-<p>National averages understate the real cost for Bay Area residents. Here is what care costs in one of the most expensive care markets in the country:</p>
-<div style="display:flex;gap:16px;flex-wrap:wrap;margin:20px 0 28px;">
-  <div style="flex:1;min-width:160px;background:var(--navy);color:#fff;border-radius:8px;padding:22px 18px;text-align:center;">
-    <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:6px;">Private Room</div>
-    <div style="font-size:28px;font-weight:800;color:var(--gold-light);">$15,000</div>
-    <div style="font-size:13px;opacity:.8;margin-top:4px;">per month</div>
+  <div class="hm-worked">
+    <h3>Step by step</h3>
+    <div class="row">
+      <span class="t">Cost today.</span>
+      <span class="v">The California median for a private nursing home room is $15,178 a month. Bay Area facilities run above the state median, so the planning figure is roughly $16,000.</span>
+    </div>
+    <div class="row">
+      <span class="t">Cost at the time of claim.</span>
+      <span class="v">Care most often begins in the late seventies or eighties &mdash; for this couple, about twenty years out. At 3% compounding, $16,000 becomes roughly $28,900 a month.</span>
+    </div>
+    <div class="row">
+      <span class="t">Sustainable self-funding.</span>
+      <span class="v">They estimate they could direct about $9,000 a month of retirement income to care at that point without disturbing the household or selling long-term assets.</span>
+    </div>
+    <div class="row result">
+      <span class="t">The difference.</span>
+      <span class="v">$28,900 less $9,000 is approximately $20,000 a month &mdash; the benefit that needs to be in force when the claim arrives.</span>
+    </div>
   </div>
-  <div style="flex:1;min-width:160px;background:var(--navy);color:#fff;border-radius:8px;padding:22px 18px;text-align:center;">
-    <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:6px;">Semi-Private Room</div>
-    <div style="font-size:28px;font-weight:800;color:var(--gold-light);">$12,000</div>
-    <div style="font-size:13px;opacity:.8;margin-top:4px;">per month</div>
+
+  <p>Run the same arithmetic for a household already in its late seventies and the horizon shortens, the inflation factor shrinks, and the number lands in much the same place &mdash; because today&rsquo;s Bay Area cost of a private room, memory care, or around-the-clock home support is already close to it once a second shift, a second resident, or supplemental care is added. That is why the answer keeps coming out near $20,000 a month. It is not a slogan. It is what the cost of care in this market, carried forward honestly, actually requires.</p>
+
+  <h2 class="hm-h2">What Care Actually Costs</h2>
+  <p class="hm-deck">California median monthly costs, with the same figures carried forward at 3% annual growth. Bay Area costs run above the state median in every category.</p>
+
+  <div class="hm-table-wrap">
+    <table class="hm-table">
+      <thead><tr>
+        <th>Care setting</th>
+        <th>California median today</th>
+        <th>In 10 years</th>
+        <th>In 20 years</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Adult day services</td><td data-l="Today">$2,037</td><td data-l="In 10 years">$2,740</td><td data-l="In 20 years" class="cost">$3,680</td></tr>
+        <tr><td>In-home care (44 hours per week)</td><td data-l="Today">$7,627</td><td data-l="In 10 years">$10,250</td><td data-l="In 20 years" class="cost">$13,780</td></tr>
+        <tr><td>Assisted living</td><td data-l="Today">$7,000</td><td data-l="In 10 years">$9,410</td><td data-l="In 20 years" class="cost">$12,640</td></tr>
+        <tr><td>Memory care (estimated)</td><td data-l="Today">$8,800</td><td data-l="In 10 years">$11,830</td><td data-l="In 20 years" class="cost">$15,890</td></tr>
+        <tr><td>Nursing home, semi-private room</td><td data-l="Today">$12,167</td><td data-l="In 10 years">$16,350</td><td data-l="In 20 years" class="cost">$21,980</td></tr>
+        <tr><td>Nursing home, private room</td><td data-l="Today">$15,178</td><td data-l="In 10 years">$20,400</td><td data-l="In 20 years" class="cost">$27,410</td></tr>
+      </tbody>
+    </table>
   </div>
-  <div style="flex:1;min-width:160px;background:var(--navy);color:#fff;border-radius:8px;padding:22px 18px;text-align:center;">
-    <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:6px;">Home Health Care</div>
-    <div style="font-size:28px;font-weight:800;color:var(--gold-light);">$6,000</div>
-    <div style="font-size:13px;opacity:.8;margin-top:4px;">per month</div>
+  <p class="hm-source">Source: CareScout 2025 Cost of Care Survey, California medians, published March 2026. Projections apply 3% compound annual growth and are illustrative, not guaranteed. Two people needing care at the same time double the exposure.</p>
+
+  <h2 class="hm-h2">Two Ways to Reach $20,000</h2>
+  <p>The benefit has to be adequate when the claim arrives, not when the policy is issued. There are two routes to the same destination, and the right one depends on how far away that arrival is.</p>
+
+  <div class="hm-pair">
+    <div class="hm-route">
+      <h3>Buy the Benefit Now</h3>
+      <p>A level benefit of $20,000 a month with no inflation rider. Simple, immediately adequate with real margin, and the strongest choice when care may be needed within roughly a decade. Its weakness is time: a level benefit is gradually outgrown over a twenty-year horizon.</p>
+    </div>
+    <div class="hm-route">
+      <h3>Buy Less Now and Let It Compound</h3>
+      <p>A smaller initial benefit paired with compound inflation protection. A 3% compound rider approximately doubles the benefit in twenty-four years; a 5% rider in about fourteen. The initial benefit is lower and the premium buys growth rather than size.</p>
+    </div>
   </div>
+
+  <p>Whichever route you take, ask for the benefit at the projected year of claim, not the benefit at issue. An illustration that shows only the opening figure is answering a question you did not ask.</p>
+
+  <h2 class="hm-h2">Five Things That Move the Number</h2>
+  <p>The method is the same for everyone. These five inputs are what make one household&rsquo;s answer different from another&rsquo;s.</p>
+
+  <div class="hm-factors">
+    <div class="hm-step">
+      <span class="n">01</span>
+      <h3>Location</h3>
+      <p>The single largest variable. A benefit calibrated to the national median is inadequate here. Anchor it to where you live &mdash; or where you plan to retire.</p>
+    </div>
+    <div class="hm-step">
+      <span class="n">02</span>
+      <h3>Duration</h3>
+      <p>Federal data puts average need at 3.7 years for women and 2.2 years for men, and one person in five needs care for more than five years. The average is not the risk.</p>
+    </div>
+    <div class="hm-step">
+      <span class="n">03</span>
+      <h3>Inflation</h3>
+      <p>Care costs have risen faster than general inflation over the long run. Whether you buy growth or buy size, the benefit must keep pace with the market you will be in.</p>
+    </div>
+    <div class="hm-step">
+      <span class="n">04</span>
+      <h3>What You Intend to Protect</h3>
+      <p>There is no asset level at which coverage suddenly becomes appropriate. The question is whether you have assets and income you would rather not expose to an unpredictable, open-ended expense.</p>
+    </div>
+    <div class="hm-step">
+      <span class="n">05</span>
+      <h3>Personal and Family Circumstances</h3>
+      <p>Health, family history of cognitive disease, and marital status all move the figure. Couples have options individuals do not, including shared-care provisions that let one spouse draw on the other&rsquo;s unused benefit.</p>
+    </div>
+  </div>
+
+  <h2 class="hm-h2">Why Three- and Five-Year Benefit Periods May Not Be Enough</h2>
+  <p>A three-year or five-year benefit period covers the average claim. That is precisely the problem: the average claim is not the one that damages a family. Although many claims are considerably shorter, cognitive impairment can produce exceptionally long ones &mdash; dementia commonly runs four to eight years from diagnosis, and a minority of claims run far longer than that.</p>
+  <p>The exposure a cap leaves behind is arithmetic, not rhetoric. At a benefit of $20,000 a month, here is what the family absorbs when the claim outruns the benefit period:</p>
+
+  <div class="hm-table-wrap">
+    <table class="hm-table">
+      <thead><tr>
+        <th>If the claim runs</th>
+        <th>And the benefit period is</th>
+        <th>Years uncovered</th>
+        <th>Absorbed by the family</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>5 years</td><td data-l="Benefit period">3 years</td><td data-l="Years uncovered">2</td><td data-l="Absorbed by the family" class="cost">$480,000</td></tr>
+        <tr><td>8 years</td><td data-l="Benefit period">3 years</td><td data-l="Years uncovered">5</td><td data-l="Absorbed by the family" class="cost">$1,200,000</td></tr>
+        <tr><td>8 years</td><td data-l="Benefit period">5 years</td><td data-l="Years uncovered">3</td><td data-l="Absorbed by the family" class="cost">$720,000</td></tr>
+        <tr><td>12 years</td><td data-l="Benefit period">5 years</td><td data-l="Years uncovered">7</td><td data-l="Absorbed by the family" class="cost">$1,680,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="hm-note">
+    <span class="label">On lifetime benefits</span>
+    <p>Subject to the policy&rsquo;s eligibility requirements and its monthly benefit limit, a benefit period with no cap can continue for as long as qualifying care is needed. Where it is available, medically obtainable, and affordable, I recommend it &mdash; particularly for clients with a family history of cognitive disease. It is also the feature most often given away in a policy exchange or replacement: once surrendered, it generally cannot be bought back.</p>
+  </div>
+
+  <h2 class="hm-h2">The Structure Decisions That Change the Number</h2>
+  <p>Two policies with the same headline benefit can behave very differently at claim time. Before settling on a figure, settle these:</p>
+
+  <ul class="hm-list two">
+    <li>Monthly benefit rather than a daily cap &mdash; a heavy week does not forfeit the unused balance of a light one</li>
+    <li>The monthly limit and the total benefit pool are two different numbers; know both</li>
+    <li>Elimination period: how many days, whether calendar or service days, and whether home care is exempt</li>
+    <li>Reimbursement of actual charges versus a cash indemnity benefit</li>
+    <li>Whether the benefit is paid at parity across home care, assisted living, memory care, and nursing care</li>
+    <li>Shared-care provisions for couples</li>
+    <li>Inflation protection: simple or compound, and at what rate</li>
+    <li>Whether the premium is guaranteed, and the effect of benefits paid on any remaining death benefit</li>
+  </ul>
+
+  <p class="hm-xref">Claim requirements are set out in full on the <a href="what-initiates-a-long-term-care-claim.html">Claim Triggers page</a>; what the benefit pays for is on the <a href="long-term-care-insurance-benefits.html">LTC Benefits page</a>; the policy categories themselves are compared on <a href="../ltc-examples/four-ways-to-protect-your-retirement.html">Four Ways to Secure Long-Term Care Coverage</a>.</p>
+
+  <h2 class="hm-h2">Will the Premium Hold?</h2>
+  <p>A benefit you cannot sustain the premium on is not a plan. Traditional long-term care policies are generally guaranteed renewable &mdash; the carrier cannot cancel the policy for health reasons, but it can raise premiums on an entire class of policyholders with regulatory approval, and the industry has done so substantially and repeatedly. Many hybrid and asset-based designs offer premiums guaranteed not to increase, which is a meaningful part of why my recommendations often lean that way. The trade-off is that traditional coverage generally buys more care dollars per premium dollar. Confirm which structure you are being shown before comparing prices.</p>
+
+  <h2 class="hm-h2">What If You Move?</h2>
+  <p>Many Bay Area families retire somewhere less expensive. Benefits under a modern policy generally follow you anywhere in the United States, subject to the policy&rsquo;s terms and its provider requirements. This works in your favor: a benefit sized to Bay Area costs is generous almost anywhere else. The reverse is not true &mdash; a benefit sized to Boise does not travel back here. If there is any chance you stay, size for staying, and let inflation protection cover the geographic uncertainty. Coverage outside the United States is limited or excluded on most policies; read that provision if it matters to you.</p>
+
+  <h2 class="hm-h2">What Medi-Cal Actually Leaves You</h2>
+  <p>Medi-Cal is not a Bay Area long-term care plan for a family with assets, and assuming otherwise is the most expensive mistake in this area.</p>
+
+  <ul class="hm-list">
+    <li>California reinstated the Medi-Cal asset test on January 1, 2026, at $130,000 for a single applicant and $195,000 where both spouses apply. The community spouse resource allowance is $162,660.</li>
+    <li>The home is generally exempt from the asset test but remains exposed to estate recovery.</li>
+    <li>Look-back provisions are phasing in through 2028.</li>
+    <li>Facility choice is limited to providers that accept Medi-Cal, and it does not fund the kind of care most of my clients have in mind.</li>
+    <li>California&rsquo;s Partnership program: no approved insurer is currently issuing new Partnership policies in California. Policies already issued retain their asset protection.</li>
+  </ul>
+
+  <h2 class="hm-h2">A Word on Availability and Underwriting</h2>
+  <p>Arriving at the right number and obtaining it are two different exercises. A benefit of this size with no cap on the benefit period is not offered on every design or by every carrier, and approval is never assured. Carriers review medical records, prescription history, application history, and &mdash; for many older applicants &mdash; an in-person cognitive assessment. Roughly half of applicants over age 70 are declined or offered coverage at a rated premium.</p>
+  <p>This is the real argument for acting earlier rather than later. The premium is lower at younger ages, but the more important variable is that the benefit you have calculated is still obtainable. Underwriting and the interview process are set out in full on the <a href="../underwriting-what-to-know.html">Underwriting page</a>.</p>
+
+  <div class="hm-cpa">
+    <p class="label">My CPA Perspective</p>
+    <p><strong>The number comes before the product.</strong> I model the self-funded scenario alongside the insured one before recommending any benefit amount, because for some families the honest answer is that they can absorb the risk. Where insurance is the better answer, I calculate the benefit first and then look for the design that delivers it &mdash; not the other way round. My compensation does not vary by carrier, so nothing in the recommendation depends on which company issues the policy.</p>
+    <p>And the number has to be one you can carry. A benefit that lapses in year twelve because the premium became uncomfortable protects nobody. Affordability is not a compromise on the calculation &mdash; it is part of it.</p>
+  </div>
+
+  <div class="hm-cta">
+    <p class="eyebrow">Complimentary &middot; No Obligation</p>
+    <h2>Find Your Own Number</h2>
+    <p class="msg">Withbert W. Payne reviews every case personally &mdash; no junior associates, no one-size-fits-all answers. Bring your location, your income picture, and your horizon, and we will run the calculation on this page against your own situation.</p>
+    <a class="btn btn-gold" href="../contact.html">Request an Illustration/Quote</a>
+    <a class="phone" href="tel:+19257086501">(925) 708-6501</a>
+    <p class="own">Already own a policy? Call for a complimentary review before you change, exchange, or surrender anything.</p>
+  </div>
+
 </div>
 
-<!-- Five Key Planning Factors -->
-<h2>Five Key Planning Factors</h2>
-
-<h3>1. Asset Protection</h3>
-<p>LTC insurance exists primarily to protect what you have built. Without coverage, a prolonged care event can deplete an estate in months. For clients with $200,000 or more in investable assets, LTC insurance is one of the most efficient asset-protection tools available &mdash; particularly policies that guarantee a death benefit if care is never needed.</p>
-
-<h3>2. Duration of Care</h3>
-<p>The average LTC claim lasts 2.5 years &mdash; but that average conceals enormous variation. Cognitive conditions such as Alzheimer's and dementia routinely produce claims of 10, 15, even 19 years. A 3-year or 5-year benefit period may cover the average, but it leaves you fully exposed to the scenarios that cause the greatest financial damage.</p>
-
-<h3>3. Care Cost Inflation</h3>
-<p>Care costs have historically risen 3%&mdash;5% per year. A policy bought today without inflation protection will cover a shrinking fraction of actual costs by the time you need it. A 3% compound inflation rider doubles your benefit in approximately 24 years; a 5% rider doubles it in approximately 14. Choosing the right inflation protection depends on your age and how many years until you are likely to need care.</p>
-
-<h3>4. Location</h3>
-<p>Where you live is the single largest variable in LTC cost. A policy calibrated to the national median is inadequate in the Bay Area, where private-room nursing home care runs $15,000 per month. Your coverage should be anchored to the cost of care where you live &mdash; or where you plan to retire.</p>
-
-<h3>5. Personal Situation</h3>
-<p>Family history of cognitive disease, current health status, marital status, and your broader financial picture all shape how much coverage is appropriate. Married couples have additional options &mdash; including shared-care riders that allow one spouse to draw on the other's unused benefit pool. A personalized analysis is the only reliable way to arrive at the right number.</p>
-
-<!-- Warning Callout -->
-<div style="background:#fff3cd;border-left:5px solid #c8982a;padding:20px 24px;border-radius:4px;margin:28px 0;">
-  <h3 style="margin:0 0 10px;color:#7a5c00;">Why Capped Policies (3&rsquo;5 Years) Are Not Enough</h3>
-  <p style="margin:0;font-size:15px;color:#5a4200;">Industry claims data shows extended care needs running <strong>13 to 20+ years</strong> in the longest cases. A 3-year or 5-year benefit cap would be exhausted in the early stages of such a claim &mdash; leaving the family to absorb millions of dollars in out-of-pocket costs. <strong>We recommend lifetime benefit policies</strong> for clients who can qualify, particularly those with family history of cognitive disease. A lifetime benefit means the policy pays for as long as care is needed &mdash; no matter how long that is.</p>
+<div class="hm-disclosure">
+  <h2>Sources and Disclosure</h2>
+  <p>Cost figures are California medians from the CareScout 2025 Cost of Care Survey, published March 2026. Probability and duration of need are from the U.S. Department of Health and Human Services and the Administration for Community Living. Dementia duration is from the Alzheimer&rsquo;s Association. Medi-Cal figures are 2026 California Department of Health Care Services amounts. Bay Area figures are estimates based on current market rates and vary by facility and level of care. Projections shown are illustrative and are not guarantees of future cost or policy performance. Coverage availability, benefit amounts, benefit periods, riders, and terms vary by carrier, by policy, by state, and by individual underwriting; approval is not assured. Long-term care benefit payments reduce the policy&rsquo;s death benefit and cash surrender value. This page is general information and is not tax, legal, or investment advice; consult your own advisers regarding your circumstances. This is a solicitation for insurance. An insurance agent may contact you.</p>
 </div>
-
-<!-- CTA -->
-<div class="callout">
-  <h3 style="margin:0 0 10px;">Get a Personalized Coverage Analysis</h3>
-  <p style="margin:0 0 16px;">Withbert W. Payne will personally review your situation and recommend the right coverage amount &mdash; factoring in your location, assets, health profile, and goals. All reviews are 100% complimentary.</p>
-  <a href="../contact.html" class="btn-gold" style="display:inline-block;">Request a Complimentary Review</a>
-</div>
-
-<!-- Legal Disclaimer -->
-<div style="margin-top:32px;padding:18px;background:#f4f6f9;border-radius:4px;border:1px solid #dde3ec;">
-  <p style="font-size:11px;color:#6b7a90;margin:0;line-height:1.7;"><strong>Data Sources &amp; Disclaimer:</strong> Statistics on LTC need probability and national cost medians are drawn from the U.S. Department of Health &amp; Human Services (HHS) and the Genworth Cost of Care Survey. Claims data referenced above is sourced from OneAmerica's published claims experience. Individual claim results shown are representative of the largest claims in OneAmerica's portfolio and are not guarantees of future policy performance. San Francisco Bay Area cost figures are estimates based on current market rates and will vary by facility and level of care. This page is for informational purposes only and does not constitute an offer or solicitation to sell insurance. Coverage availability and terms vary by state and individual underwriting. This is a solicitation for insurance.</p>
-</div>
-
-</div>
-<div class="sidebar">
-  <div class="sidebar-box"><h3>Request a Complimentary Review</h3><p>Bert will personally calculate the right coverage amount for your specific situation &mdash; at no cost.</p><p style="font-size:18px;font-weight:700;color:var(--navy);">(925) 708-6501</p><a class="btn-gold" href="../contact.html">Request a Complimentary Review</a></div>
-  <div class="sidebar-box"><h3>Related Topics</h3><ul>
-    <li><a href="what-is-long-term-care-insurance.html">Understanding LTC Insurance</a></li>
-    <li class="has-dropdown"><a href="#">Resources &#9662;</a><ul class="dropdown">
-    
-    
-    <li><a href="../tax-advantages-ltc-insurance.html">Tax Advantages</a></li>
-    <li><a href="../ltc-statistics.html">LTC Statistics</a></li>
-    <li><a href="../paying-for-long-term-care.html">Paying for Long-Term Care</a></li>
-  </ul></li>
-
-    <li><a href="../articles/article-ltc-importance.html">The Insurance Most Families Miss</a></li>
-    <li><a href="../contact.html">Request a Complimentary Review</a></li>
-  </ul></div>
-  <div class="sidebar-box"><h3>Bay Area Care Costs</h3><p style="font-size:13px;line-height:1.8;">Private room: <strong>$15,000/mo</strong><br>Semi-private room: <strong>$12,000/mo</strong><br>Home health care: <strong>$6,000/mo</strong></p></div>
-  <div class="sidebar-box"><h3>Key Fact</h3><p style="font-size:13px;">20% of Americans will need long-term care for <strong>5 years or more</strong>. A 3-year policy cap leaves this group fully exposed.</p></div>
-</div>
-</div></div>
-
-<div class="contact-teaser">
-  <h2>Get a Personalized Coverage Analysis</h2>
-  <p>Withbert W. Payne personally reviews every case &mdash; no junior associates, no one-size-fits-all answers.</p>
-  <span class="phone-big">(925) 708-6501</span>
-  <a href="../contact.html" class="btn-gold" style="font-size:16px;padding:14px 36px;">Request a Complimentary Review</a>
-</div>
-</div>
+</div><!-- #page-content -->
 
 <footer><div class="footer-inner">
   <div class="footer-col"><h4>LTCCPAS.COM</h4><p>Independent insurance reviews and policy optimization by a CPA and Licensed Insurance Broker. Serving clients nationwide.</p><a href="https://www.linkedin.com/in/withbertpayne/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn &mdash; Withbert Payne</a></div>
