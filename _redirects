@@ -57,3 +57,10 @@
 /long-term-care-ltc-insurance/now-is-the-time-for-long-term-planning.html   /long-term-care-ltc-insurance/long-term-care-planning    301
 /long-term-care-ltc-insurance/ltc-planning-by-a-cpa                         /long-term-care-ltc-insurance/long-term-care-planning    301
 /long-term-care-ltc-insurance/ltc-planning-by-a-cpa.html                    /long-term-care-ltc-insurance/long-term-care-planning    301
+
+# Superseded by /ltc-examples/four-ways-to-protect-your-retirement. This was the
+# older copy of the same article -- same <h1>, same four designs -- left behind
+# when the rebuilt version was published at the ltc-examples path. It had no
+# inbound links and was never listed in the sitemap.
+/long-term-care-ltc-insurance/long-term-care-solutions                      /ltc-examples/four-ways-to-protect-your-retirement    301
+/long-term-care-ltc-insurance/long-term-care-solutions.html                 /ltc-examples/four-ways-to-protect-your-retirement    301
