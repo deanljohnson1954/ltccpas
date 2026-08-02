@@ -3,297 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paying for Long-Term Care &mdash; Funding Options & Elimination Periods &mdash; LTCCPAs.com</title>
-<meta name="description" content="Where the money comes from, how long benefits last, and how flexible your payment structure can be &mdash; the key funding mechanics every LTC applicant should understand.">
+<title>Paying for Long-Term Care &mdash; LTCCPAs.com</title>
+<meta name="description" content="What care actually costs in California, which assets can fund a premium, how elimination periods work, and the four ways families pay for care compared side by side.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LTCCPAs.com">
-<meta property="og:title" content="Paying for Long-Term Care &mdash; Funding Options & Elimination Periods &mdash; LTCCPAs.com">
-<meta property="og:description" content="Where the money comes from, how long benefits last, and how flexible your payment structure can be &mdash; the key funding mechanics every LTC applicant should understand.">
+<meta property="og:title" content="Paying for Long-Term Care &mdash; LTCCPAs.com">
+<meta property="og:description" content="What care actually costs in California, which assets can fund a premium, how elimination periods work, and the four ways families pay for care compared side by side.">
 <meta property="og:url" content="https://www.ltccpas.com/paying-for-long-term-care.html">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paying for Long-Term Care &mdash; LTCCPAs.com">
-<meta name="twitter:description" content="Where the money comes from, how long benefits last, and how flexible your payment structure can be &mdash; the key funding mechanics every LTC applicant should understand.">
+<meta name="twitter:description" content="What care actually costs in California, which assets can fund a premium, how elimination periods work, and the four ways families pay for care compared side by side.">
 <link rel="canonical" href="https://www.ltccpas.com/paying-for-long-term-care.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/style.css?v=7">
 <style>
-.asset-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 20px 0;
+/* Paying for LTC — reproduces the source document's palette:
+   #1E3A5F navy, #C8922A gold, #1A1A1A body, #595959 secondary,
+   #FAF6EE cream, #F6EBD4 highlight, #EDF1F6 and #F2EFE9 panels,
+   #E8E4DC / #D9D9D9 / #C9C4BA rules. Times/Arial map to the site's
+   EB Garamond / Source Sans 3. */
+
+.pf-hero { background:#1E3A5F; text-align:center; padding:44px 24px 46px; border-bottom:4px solid #C8922A; }
+.pf-hero .eyebrow { font-weight:700; letter-spacing:.24em; text-transform:uppercase; font-size:12.5px; color:#C8922A; margin:0 0 18px; }
+.pf-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff; font-size:38px; line-height:1.22; margin:0 0 18px; }
+.pf-hero p.sub { color:#E8E4DC; font-size:16.5px; line-height:1.7; max-width:800px; margin:0 auto; }
+
+.pf-wrap { max-width:920px; margin:0 auto; padding:42px 24px 8px; }
+.pf-wrap p { color:#1A1A1A; font-size:16px; line-height:1.75; margin:0 0 20px; }
+
+.pf-h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:28px; line-height:1.3;
+  margin:46px 0 16px; padding-bottom:12px; border-bottom:2px solid #C8922A; }
+.pf-deck { color:#595959; font-style:italic; font-size:15.5px; line-height:1.7; margin:-8px 0 22px; }
+
+/* Callouts: cream = context, gold-tint = correction or warning */
+.pf-note { background:#FAF6EE; border-left:4px solid #C8922A; padding:22px 26px; margin:0 0 24px; }
+.pf-note .label { display:block; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:11.5px; color:#C8922A; margin:0 0 10px; }
+.pf-note p { color:#1A1A1A; font-size:15.5px; line-height:1.75; margin:0; }
+
+.pf-key { background:#F6EBD4; border-left:4px solid #1E3A5F; padding:22px 26px; margin:0 0 24px; }
+.pf-key .label { display:block; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:11.5px; color:#8A6416; margin:0 0 10px; }
+.pf-key p { color:#1A1A1A; font-size:15.5px; line-height:1.75; margin:0; }
+
+/* Cost table */
+.pf-table-wrap { overflow-x:auto; margin:0 0 14px; }
+.pf-costs { width:100%; border-collapse:collapse; font-size:15.5px; min-width:560px; }
+.pf-costs thead th { background:#1E3A5F; color:#fff; text-align:left; padding:13px 18px; font-size:11.5px;
+  font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+.pf-costs thead th:not(:first-child) { text-align:right; }
+.pf-costs td { padding:13px 18px; border-bottom:1px solid #E8E4DC; color:#1A1A1A; }
+.pf-costs td:not(:first-child) { text-align:right; font-weight:700; color:#1E3A5F; white-space:nowrap; }
+.pf-costs tbody tr:nth-child(even) td { background:#FAF6EE; }
+.pf-costs tbody tr:last-child td { border-bottom:none; }
+
+.pf-source { color:#595959; font-size:12.5px; line-height:1.7; margin:0 0 24px; }
+
+/* Asset chips */
+.pf-assets { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:0 0 24px; }
+.pf-assets .a { background:#EDF1F6; border-left:3px solid #C8922A; padding:16px 18px;
+  color:#1E3A5F; font-weight:600; font-size:14.5px; line-height:1.5; }
+@media(max-width:860px){ .pf-assets { grid-template-columns:1fr 1fr; } }
+@media(max-width:520px){ .pf-assets { grid-template-columns:1fr; } }
+
+/* Two-up card pairs */
+.pf-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:0 0 24px; }
+@media(max-width:760px){ .pf-pair { grid-template-columns:1fr; } }
+.pf-card { background:#F2EFE9; border-top:3px solid #1E3A5F; padding:22px 24px; }
+.pf-card h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:20px; margin:0 0 10px; }
+.pf-card .tag { display:block; font-weight:700; letter-spacing:.14em; text-transform:uppercase; font-size:11px; color:#C8922A; margin:0 0 8px; }
+.pf-card p { color:#1A1A1A; font-size:15px; line-height:1.7; margin:0 0 12px; }
+.pf-card p:last-child { margin-bottom:0; }
+.pf-card ul { list-style:none; padding:0; margin:0; }
+.pf-card li { padding:6px 0 6px 26px; position:relative; color:#1A1A1A; font-size:14.5px; line-height:1.6; }
+.pf-card li:before { content:"\2713"; position:absolute; left:0; color:#C8922A; font-weight:700; }
+
+/* Bullet and check lists */
+.pf-list { list-style:none; padding:0; margin:0 0 22px; }
+.pf-list li { padding:9px 0 9px 26px; position:relative; color:#1A1A1A; font-size:15.5px; line-height:1.7;
+  border-bottom:1px solid #E8E4DC; }
+.pf-list li:last-child { border-bottom:none; }
+.pf-list li:before { content:"\2022"; position:absolute; left:0; top:8px; color:#C8922A; font-weight:700; font-size:17px; }
+
+.pf-checks { list-style:none; padding:0; margin:0 0 22px; }
+.pf-checks li { padding:9px 0 9px 28px; position:relative; color:#1A1A1A; font-size:15.5px; line-height:1.7; }
+.pf-checks li:before { content:"\2713"; position:absolute; left:0; top:9px; color:#C8922A; font-weight:700; }
+
+.pf-checks.two { display:grid; grid-template-columns:1fr 1fr; gap:0 30px; }
+@media(max-width:760px){ .pf-checks.two { grid-template-columns:1fr; } }
+
+/* Four approaches */
+.pf-approach { border:1px solid #C9C4BA; margin:0 0 26px; }
+.pf-approach .head { background:#1E3A5F; padding:18px 26px; }
+.pf-approach .head .n { display:block; font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:11px; color:#C8922A; margin:0 0 6px; }
+.pf-approach .head h3 { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:23px; line-height:1.3; margin:0; }
+.pf-approach .body { padding:24px 26px; }
+.pf-approach .body p { color:#1A1A1A; font-size:15.5px; line-height:1.75; margin:0 0 16px; }
+.pf-approach .body > :last-child { margin-bottom:0; }
+
+/* Side-by-side comparison */
+.pf-compare { width:100%; border-collapse:collapse; font-size:14px; min-width:860px; }
+.pf-compare thead th { background:#1E3A5F; color:#fff; padding:13px 14px; text-align:left; font-size:11px;
+  font-weight:700; letter-spacing:.08em; text-transform:uppercase; border:1px solid #2A4468; }
+.pf-compare thead th:first-child { width:190px; background:#16294A; }
+.pf-compare td { padding:13px 14px; border:1px solid #E8E4DC; color:#1A1A1A; line-height:1.65; vertical-align:top; }
+.pf-compare td:first-child { font-weight:600; color:#1E3A5F; background:#F2EFE9; }
+.pf-compare tbody tr:nth-child(even) td { background:#FCFBF9; }
+.pf-compare tbody tr:nth-child(even) td:first-child { background:#F2EFE9; }
+@media(max-width:900px){
+  .pf-compare { min-width:0; display:block; }
+  .pf-compare thead { display:none; }
+  .pf-compare tbody, .pf-compare tr, .pf-compare td { display:block; width:auto; }
+  .pf-compare tr { border:1px solid #C9C4BA; margin:0 0 16px; }
+  .pf-compare td { border:0; border-bottom:1px solid #E8E4DC; }
+  .pf-compare tr td:last-child { border-bottom:0; }
+  .pf-compare td:first-child { background:#1E3A5F !important; color:#fff !important;
+    font-family:'EB Garamond',Georgia,serif; font-size:17px; }
+  .pf-compare td:not(:first-child):before { content:attr(data-l); display:block; font-weight:700;
+    letter-spacing:.1em; text-transform:uppercase; font-size:10.5px; color:#C8922A; margin:0 0 6px; }
 }
-.asset-chip {
-  border: 1.5px solid var(--border);
-  border-radius: 6px;
-  padding: 14px 16px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--navy);
-  background: var(--white);
-}
-.elim-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin: 24px 0;
-}
-.elim-card {
-  border: 1.5px solid var(--border);
-  border-radius: 10px;
-  padding: 28px 24px;
-  text-align: center;
-  background: var(--white);
-}
-.elim-card .elim-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 64px;
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1;
-  display: block;
-}
-.elim-card .elim-unit {
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--navy);
-  display: block;
-  margin-bottom: 10px;
-}
-.elim-card h3 {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--navy);
-  margin: 0 0 8px;
-}
-.elim-card p {
-  font-size: 13px;
-  color: var(--muted);
-  margin: 0;
-  line-height: 1.6;
-}
-.option-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin: 20px 0;
-}
-.option-card {
-  border: 2px solid var(--border);
-  border-radius: 10px;
-  padding: 24px;
-  background: var(--white);
-}
-.option-card.featured {
-  border-color: var(--gold);
-  background: #fffdf5;
-}
-.option-card .opt-label {
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--gold);
-  margin-bottom: 8px;
-  display: block;
-}
-.option-card h3 {
-  font-size: 18px;
-  color: var(--navy);
-  margin: 0 0 12px;
-}
-.option-card p {
-  font-size: 13.5px;
-  color: var(--text);
-  line-height: 1.7;
-  margin: 0 0 14px;
-}
-.pay-chips {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.pay-chip {
-  border: 1.5px solid var(--border);
-  border-radius: 4px;
-  padding: 5px 12px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--navy);
-  background: var(--white);
-}
-.intl-box {
-  background: #eef3f8;
-  border-top: 4px solid var(--gold);
-  border-radius: 0 0 8px 8px;
-  padding: 24px 28px;
-  margin: 24px 0;
-}
-.intl-box p {
-  font-size: 15px;
-  color: var(--text);
-  margin: 0 0 12px;
-  line-height: 1.7;
-}
-.intl-box p:last-child { margin-bottom: 0; }
-.intl-box strong { color: var(--navy); }
-.canada-note {
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: 6px;
-  padding: 14px 18px;
-  margin-top: 14px;
-  font-size: 13px;
-  color: var(--text);
-  line-height: 1.6;
-}
-/* Section 5 */
-.pay-opt {
-  border: 1.5px solid var(--border);
-  border-radius: 10px;
-  padding: 24px 28px;
-  margin: 20px 0;
-  background: var(--white);
-}
-.pay-opt.solution {
-  border-color: var(--gold);
-  background: #fffdf5;
-}
-.pay-opt-num {
-  display: block;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--white);
-  background: var(--navy);
-  padding: 12px 20px;
-  margin: -24px -28px 20px;
-  border-radius: 8px 8px 0 0;
-}
-.pay-opt.solution .pay-opt-num {
-  background: var(--gold);
-}
-.pay-opt h3 {
-  font-size: 18px;
-  color: var(--navy);
-  margin: 0 0 12px;
-}
-.pay-opt > p {
-  font-size: 14px;
-  color: var(--text);
-  line-height: 1.7;
-  margin: 0 0 12px;
-}
-.pay-opt ul {
-  padding-left: 20px;
-  margin: 0 0 14px;
-}
-.pay-opt ul li {
-  font-size: 14px;
-  color: var(--text);
-  line-height: 1.7;
-  margin-bottom: 6px;
-}
-.solution-label {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--white);
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  padding: 3px 10px;
-  border-radius: 3px;
-  margin-bottom: 8px;
-}
-.feature-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin: 16px 0 0;
-}
-.feature-card {
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  padding: 14px 16px;
-  background: var(--white);
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-.feature-card .fc-check {
-  color: var(--gold);
-  font-size: 18px;
-  line-height: 1;
-  flex-shrink: 0;
-}
-.feature-card .fc-body h4 {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--navy);
-  margin: 0 0 4px;
-}
-.feature-card .fc-body p {
-  font-size: 12px;
-  color: var(--muted);
-  margin: 0;
-  line-height: 1.5;
-}
-.comp-table-wrap {
-  overflow-x: auto;
-  margin: 20px 0 32px;
-  border-radius: 8px;
-  border: 1.5px solid var(--border);
-}
-.comp-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-.comp-table th {
-  background: var(--navy);
-  color: var(--white);
-  padding: 11px 12px;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-}
-.comp-table th:first-child { text-align: left; }
-.comp-table th.col-best { background: var(--gold); }
-.comp-table td {
-  padding: 10px 12px;
-  border-bottom: 1px solid #eee;
-  color: var(--text);
-  text-align: center;
-}
-.comp-table tr:last-child td { border-bottom: none; }
-.comp-table td:first-child {
-  text-align: left;
-  font-weight: 600;
-  color: var(--navy);
-  background: #f8f9fb;
-}
-.comp-table td:nth-child(5) {
-  font-weight: 600;
-  color: #a07800;
-  background: #fffef7;
-}
-@media (max-width: 860px) {
-  .asset-grid { grid-template-columns: repeat(2, 1fr); }
-  .elim-grid { grid-template-columns: 1fr; }
-  .option-cards { grid-template-columns: 1fr; }
-  .feature-grid { grid-template-columns: 1fr; }
+
+/* Continue */
+.pf-continue { border:1px solid #C9C4BA; border-left:4px solid #C8922A; background:#FAF6EE; padding:22px 26px; margin:34px 0 0; }
+.pf-continue .label { display:block; font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:11px; color:#C8922A; margin:0 0 10px; }
+.pf-continue p { color:#1A1A1A; font-size:15.5px; line-height:1.75; margin:0; }
+.pf-continue a { color:#1E3A5F; font-weight:700; }
+
+/* CTA */
+.pf-cta { background:#1E3A5F; text-align:center; padding:44px 28px; margin:38px 0 0; }
+.pf-cta .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:12px; color:#C8922A; margin:0 0 14px; }
+.pf-cta h2 { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:29px; line-height:1.3; margin:0 0 18px; }
+.pf-cta p.msg { color:#E8E4DC; font-size:16px; line-height:1.75; max-width:720px; margin:0 auto 22px; }
+.pf-cta .phone { font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:32px; color:#C8922A; text-decoration:none; display:block; margin:0 0 22px; }
+.pf-cta .phone:hover { color:#E8B84B; }
+.pf-cta .btn-gold { font-size:16px; padding:14px 34px; letter-spacing:.08em; text-transform:uppercase; }
+.pf-cta p.existing { color:#E8E4DC; font-size:14.5px; margin:24px 0 0; }
+
+.pf-disclaimer { max-width:920px; margin:0 auto; padding:30px 24px 50px; }
+.pf-disclaimer p { font-style:italic; color:#595959; font-size:12px; line-height:1.8; margin:0 0 10px; }
+.pf-disclaimer p.sig { font-style:normal; color:#1E3A5F; font-weight:600; font-size:12.5px; margin:0; }
+
+@media (max-width:760px) {
+  .pf-hero h1 { font-size:28px; }
+  .pf-h2 { font-size:23px; }
+  .pf-approach .head h3 { font-size:20px; }
+  .pf-cta h2 { font-size:23px; }
+  .pf-cta .phone { font-size:27px; }
 }
 </style>
+
 </head>
 <body>
 <div class="top-bar"><div class="inner"><div><a href="about-us.html">Meet Withbert W. Payne, CPA</a> &nbsp;|&nbsp; <a href="contact.html">Request a Complimentary Review</a></div><div><span class="phone" style="font-weight:400;font-size:11px;">Call &nbsp;(925) 708-6501</span><br><span style="font-size:11px;color:var(--gold-light);font-weight:400;">For a Complimentary Review</span></div></div></div>
@@ -346,252 +204,316 @@
 
 <div id="page-content">
 
-<div class="page-hero"><div class="inner">
-  <div class="breadcrumb"><a href="index.html">Home</a> &mdash; <span>Paying for Long-Term Care</span></div>
+<div class="pf-hero">
+  <p class="eyebrow">Funding Mechanics</p>
   <h1>Paying for Long-Term Care</h1>
-  <p>Where the money comes from, how long benefits last, and how flexible your payment structure can be &mdash; the key funding mechanics every LTC applicant should understand.</p>
-</div></div>
-
-<div class="page-wrap"><div class="two-col">
-<div class="content-area">
-
-<!-- Source of Premium -->
-<h2>Source of Premium</h2>
-
-<div style="background:#eef3f8;border-top:4px solid var(--gold);border-radius:0 0 8px 8px;padding:20px 24px 8px;margin-bottom:20px;">
-  <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold);margin:0 0 12px;">Where Can the Premium Come From?</p>
-  <p style="font-size:15px;line-height:1.7;color:var(--text);margin-bottom:16px;">Your LTC premium does not have to come from new money. A wide range of existing assets can be <strong>simply reallocated</strong> to fund your policy &mdash; making the transition straightforward and tax-efficient.</p>
+  <p class="sub">Where the money comes from, how long benefits last, and how flexible your payment structure can be &mdash; the mechanics every applicant should understand before choosing a policy.</p>
 </div>
 
-<div class="asset-grid">
-  <div class="asset-chip">Certificates of Deposit (CDs)</div>
-  <div class="asset-chip">Stocks &amp; Equities</div>
-  <div class="asset-chip">Mutual Funds</div>
-  <div class="asset-chip">Money Market Accounts</div>
-  <div class="asset-chip">Savings Accounts</div>
-  <div class="asset-chip">Cash</div>
+<div class="pf-wrap">
+
+<div class="pf-note">
+  <span class="label">Start Here</span>
+  <p>Two different questions hide inside the phrase &ldquo;paying for long-term care.&rdquo; The first is how the care itself gets paid for &mdash; government programs, insurance, or your own capital. The second is how the premium gets paid, and from which asset. This page answers both, in that order, because the second question only becomes interesting once the first one is settled.</p>
 </div>
 
-<div class="insight-callout" style="margin:0 0 32px;">
-  <p><strong>Existing life insurance policies</strong> can also be transferred via a <strong>1035 Exchange</strong> &mdash; a tax-free transfer that repositions an underperforming life policy into a new LTC-inclusive policy without triggering a taxable event.</p>
+<h2 class="pf-h2">What the Care Actually Costs</h2>
+
+<p>Planning begins with a number, and most people underestimate it by a wide margin. The figures below are California statewide medians from the most recent CareScout Cost of Care Survey &mdash; rates collected from providers between July and November 2025 and published in March 2026. Your own market may run above or below them.</p>
+
+<div class="pf-table-wrap">
+<table class="pf-costs">
+  <thead>
+    <tr><th>Care Setting</th><th>Median Monthly</th><th>Median Annual</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Adult day health care</td><td>$2,037</td><td>$24,440</td></tr>
+    <tr><td>In-home care (44 hrs/week at about $40/hr)</td><td>$7,627</td><td>about $91,500</td></tr>
+    <tr><td>Assisted living community</td><td>$7,000</td><td>$84,000</td></tr>
+    <tr><td>Memory care (estimated)</td><td>about $8,800</td><td>about $105,600</td></tr>
+    <tr><td>Nursing home, semi-private room</td><td>$12,167</td><td>$146,000</td></tr>
+    <tr><td>Nursing home, private room</td><td>$15,178</td><td>$182,135</td></tr>
+  </tbody>
+</table>
 </div>
 
-<!-- Elimination Period -->
-<h2>Long-Term Care Elimination Period</h2>
-<p>The elimination period is the waiting period before your LTC policy begins paying benefits &mdash; similar to a deductible measured in days rather than dollars.</p>
+<p class="pf-source">Memory care is estimated. CareScout does not publish a separate memory care median; the figure shown reflects the customary premium over the assisted living rate. Source: CareScout 2025 Cost of Care Survey, published March 2026.</p>
 
-<div class="elim-grid">
-  <div class="elim-card">
-    <span class="elim-num">0</span>
-    <span class="elim-unit">Days</span>
-    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:8px;">Home Health Care</p>
-    <h3>0 Days Elimination Period</h3>
-    <p>Benefits for home health care can begin paying as soon as <strong>day zero</strong> &mdash; no waiting period required. Care begins and benefits begin simultaneously.</p>
+<div class="pf-key">
+  <span class="label">The Number That Matters Is Not Today&rsquo;s</span>
+  <p>Care costs have been inflating in the range of three to five percent a year. At three percent, a year of assisted living moves from roughly $84,000 today to about $113,000 in ten years, and a semi-private nursing home year moves from about $146,000 to roughly $196,000. If you are planning for care at 80 or 85, the relevant figure is the one you will actually face &mdash; not the one on the page today.</p>
+</div>
+
+<h2 class="pf-h2">Source of Premium</h2>
+
+<p>Your premium does not have to come from new money. In most cases it comes from capital you already hold, simply repositioned &mdash; money that is currently sitting in a low-yielding account doing very little, moved into a contract that does two jobs at once.</p>
+
+<div class="pf-assets">
+  <div class="a">Certificates of Deposit (CDs)</div>
+  <div class="a">Stocks &amp; Equities</div>
+  <div class="a">Savings Accounts</div>
+  <div class="a">Mutual Funds</div>
+  <div class="a">Money Market Accounts</div>
+  <div class="a">Cash</div>
+  <div class="a">Nonqualified Annuities</div>
+  <div class="a">Eligible Life Insurance Policies</div>
+</div>
+
+<div class="pf-pair">
+  <div class="pf-card">
+    <span class="tag">A Note on IRAs and Qualified Money</span>
+    <p>An IRA cannot itself own life insurance, and a distribution taken in order to pay a premium is generally taxable &mdash; with an additional penalty possible before age 59&frac12;. Qualified money can still play a part in a funding strategy, but only after its own tax analysis. Do not treat an IRA as interchangeable with a savings account here.</p>
   </div>
-  <div class="elim-card">
-    <span class="elim-num">90</span>
-    <span class="elim-unit">Days</span>
-    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:8px;">All Other Facility Care</p>
-    <h3>90 Days Elimination Period</h3>
-    <p>For assisted living, skilled nursing, and all other facility-based care, a <strong>90-day waiting period</strong> applies &mdash; measured within 270 calendar days &mdash; before benefits are paid.</p>
+  <div class="pf-card">
+    <span class="tag">Section 1035 Exchanges</span>
+    <p>A properly structured Section 1035 exchange may allow an eligible life insurance or annuity contract to be exchanged for a qualified long-term care contract without current recognition of gain. Eligibility, ownership and insured requirements, surrender charges, outstanding loans, and policy basis all need review before anything is signed.</p>
   </div>
 </div>
 
-<!-- Premiums Can Be Funded in Two Ways -->
-<h2>Premiums Can Be Funded in Two Ways</h2>
-<p>Premiums can be funded in two ways &mdash; a single one-time payment, or a structured recurring premium schedule that spreads the cost over time.</p>
+<h2 class="pf-h2">How the Premium Is Paid</h2>
 
-<div class="option-cards">
-  <div class="option-card">
-    <span class="opt-label">Option A</span>
+<p>Premiums are funded one of two ways: a single payment at issue, or a structured schedule that spreads the cost over a fixed number of years. The right choice is usually a cash-flow question rather than a coverage question.</p>
+
+<div class="pf-pair">
+  <div class="pf-card">
     <h3>Single Premium</h3>
-    <p>Pay once at the time of policy issue &mdash; fully fund the long-term care rider with a single lump sum and never pay again. Ideal for asset repositioning or single-premium strategies.</p>
+    <p>Paid once, at policy issue. No further scheduled premiums are due &mdash; assuming the policy is issued as illustrated and no later loan, withdrawal, or surrender affects its guarantees. This is the structure most often used for asset repositioning.</p>
   </div>
-  <div class="option-card">
-    <span class="opt-label">Option B</span>
+  <div class="pf-card">
     <h3>Recurring Premium</h3>
-    <p>Spread the cost of the long-term care rider over time with a structured payment schedule. Choose the period that fits your cash flow:</p>
-    <div class="pay-chips">
-      <span class="pay-chip">5-Pay</span>
-      <span class="pay-chip">10-Pay</span>
-      <span class="pay-chip">20-Pay</span>
-      <span class="pay-chip">Pay-to-95</span>
+    <p>A structured schedule chosen to fit your cash flow:</p>
+    <ul>
+      <li>5-Pay &mdash; five annual premiums</li>
+      <li>10-Pay &mdash; ten annual premiums</li>
+      <li>20-Pay &mdash; twenty annual premiums</li>
+      <li>Annual premiums payable through age 95</li>
+    </ul>
+  </div>
+</div>
+
+<h2 class="pf-h2">Elimination Periods</h2>
+
+<p>The elimination period is the waiting period before benefits become payable &mdash; a deductible measured in days rather than dollars.</p>
+
+<div class="pf-note">
+  <span class="label">Example Policy Provisions</span>
+  <p>The periods below describe one carrier&rsquo;s design. Elimination periods, the way they are measured, and the settings they apply to differ materially from policy to policy. Read the contract you are actually buying.</p>
+</div>
+
+<div class="pf-pair">
+  <div class="pf-card">
+    <span class="tag">0 Days &middot; Home Health Care</span>
+    <p>Benefits for qualifying home health care can begin as soon as day zero. Care and benefits begin together.</p>
+  </div>
+  <div class="pf-card">
+    <span class="tag">90 Days &middot; Facility Care</span>
+    <p>For assisted living, skilled nursing, and other facility-based care, a 90-day waiting period applies, measured within 270 calendar days.</p>
+  </div>
+</div>
+
+<div class="pf-key">
+  <span class="label">Two Dates, Not One</span>
+  <p>Coverage begins when the policy takes effect. Benefits become payable only after claim eligibility is established and any applicable elimination period is satisfied. Those are two different dates, and confusing them is the single most common misunderstanding I correct at the kitchen table.</p>
+</div>
+
+<h2 class="pf-h2">Care Received Outside the United States</h2>
+
+<p class="pf-deck">Example policy provisions &mdash; other carriers and policies differ. International provisions vary more widely than almost any other benefit feature. Confirm them in the specific contract before relying on them.</p>
+
+<ul class="pf-list">
+  <li>Facility care received outside the United States, its territories, and Canada may be covered.</li>
+  <li>Non-facility care received outside the United States is generally not covered.</li>
+  <li>Canada is not treated as international coverage under this design: all forms of contractual care are eligible, benefits are reimbursement-based, and exchange rate conversion applies.</li>
+</ul>
+
+<h2 class="pf-h2">Who Pays for the Care: Four Approaches</h2>
+
+<p>Once the cost is understood, the question becomes who pays it. Most families default to one of three answers &mdash; a government program, a traditional insurance policy, or their own balance sheet &mdash; without examining the limitations of each. A fourth approach addresses several of those limitations at once.</p>
+
+<div class="pf-approach">
+  <div class="head">
+    <span class="n">Approach 1 of 4</span>
+    <h3>Government Programs</h3>
+  </div>
+  <div class="body">
+    <p>Medicare generally does not cover ongoing custodial long-term care. It may cover limited skilled nursing or home health services when its medical and eligibility requirements are satisfied &mdash; typically short-term skilled care following a qualifying hospital stay.</p>
+    <p>Medi-Cal, California&rsquo;s Medicaid program, does cover long-term care services, but eligibility turns on income and asset limits. For most families that means spending down assets before any coverage begins.</p>
+    <div class="pf-key">
+      <p>Government programs are safety nets of last resort. They are not retirement planning tools, and building a plan around them means accepting the loss of assets you spent a working life accumulating.</p>
     </div>
   </div>
 </div>
 
-<!-- International Facility Coverage -->
-<h2>International Facility Coverage</h2>
-
-<div class="intl-box">
-  <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold);margin:0 0 12px;">Care Outside the United States</p>
-  <p>Coverage is provided for facility care received in locales <strong>outside the U.S., its territories, and Canada</strong>. There is no international coverage for non-facility care.</p>
-  <div class="canada-note">
-    <strong>Canada:</strong> Not treated as international coverage &mdash; all forms of contractual care are eligible. Benefits are reimbursement-based; exchange rate conversion from Canadian to US dollars will apply.
+<div class="pf-approach">
+  <div class="head">
+    <span class="n">Approach 2 of 4</span>
+    <h3>Traditional Long-Term Care Insurance</h3>
+  </div>
+  <div class="body">
+    <p>Traditional health-based long-term care insurance was the original solution, and on a pure care-dollars-per-premium-dollar basis it is still often the most efficient product on the market. Its difficulties are real, however, and they have driven a number of insurers out of the business.</p>
+    <ul class="pf-list">
+      <li>Premiums can be expensive, particularly for older applicants or those with health conditions.</li>
+      <li>It is widely viewed as &ldquo;use it or lose it&rdquo; &mdash; if care is never needed, premiums paid generally return no residual value unless a return-of-premium option was purchased.</li>
+      <li>Policyholders have experienced substantial, repeated rate increases, sometimes with limited warning.</li>
+      <li>Underwriting has tightened. Many applicants in their sixties and seventies find they no longer qualify, at precisely the point they begin to want the coverage.</li>
+    </ul>
+    <div class="pf-key">
+      <span class="label">A Correction Worth Making</span>
+      <p>Traditional policies are frequently described as cancellable. That is not accurate. Tax-qualified individual policies are generally guaranteed renewable: the insurer cannot cancel your policy because your health deteriorated or because you filed a claim, provided the required premiums are paid. What the insurer can do is raise premiums for an entire approved class of policyholders. The risk is a rate increase, not cancellation &mdash; and the distinction matters when you compare products.</p>
+    </div>
   </div>
 </div>
 
-<!-- Common Ways to Pay for Long-Term Care -->
-<h2 style="margin-top:36px;">Common Ways to Pay for Long-Term Care</h2>
-<p>Once you understand the actual cost of long-term care, the next question is how to pay for it. Most people default to one of three options &mdash; government programs, traditional insurance, or self-funding &mdash; without fully understanding the limitations of each. A fourth option has emerged that addresses the shortcomings of all three.</p>
-
-<div class="pay-opt">
-  <span class="pay-opt-num">Option 1 &middot; Government Programs</span>
-  <h3>Government Programs</h3>
-  <p>Programs like Medicare and Medicaid are often the first options people consider &mdash; but they come with significant restrictions that catch most families off guard.</p>
-  <p><strong>Medicare</strong> has specific age and diagnosis requirements. It will not pay for most long-term care or personal care services &mdash; only short-term skilled nursing following a qualifying hospital stay.</p>
-  <p><strong>Medicaid</strong> can cover some long-term care services, but eligibility is based on income and asset thresholds that require most people to spend down their assets before qualifying.</p>
-  <div class="insight-callout">
-    <p>Government programs are designed as safety nets of last resort &mdash; not as retirement planning tools. Relying on them means potentially losing assets you spent a lifetime building before any coverage begins.</p>
+<div class="pf-approach">
+  <div class="head">
+    <span class="n">Approach 3 of 4</span>
+    <h3>Self-Funding</h3>
+  </div>
+  <div class="body">
+    <p>Some clients intend to pay for care out of their own capital. A small number genuinely can. For most, the arithmetic is less comfortable than it first appears.</p>
+    <ul class="pf-list">
+      <li>An extended dementia claim can run many years and cost well over $1 million, depending on the care setting and duration. The Alzheimer&rsquo;s Association reports average survival of four to eight years after diagnosis, with some people living as long as twenty.</li>
+      <li>Self-funding transfers the entire financial risk to the household, with no leverage and no ring-fenced protection for the healthy spouse.</li>
+      <li>Care costs continue to inflate at three to five percent a year, so the exposure grows for as long as the risk goes unfunded.</li>
+    </ul>
+    <div class="pf-key">
+      <span class="label">The Income Problem</span>
+      <p>A couple with $2 million may feel entirely secure. But if $1.5 million of that portfolio has to be liquidated to pay for care, as much as three quarters of the household&rsquo;s income-producing capital disappears with it. The assets may well cover the bill. The retirement income built on those assets does not survive the transaction &mdash; and the healthy spouse lives with the consequences for years afterward.</p>
+    </div>
   </div>
 </div>
 
-<div class="pay-opt">
-  <span class="pay-opt-num">Option 2 &middot; Traditional LTC Insurance</span>
-  <h3>Traditional LTC Insurance</h3>
-  <p>Traditional, health-based long-term care insurance was once the primary solution for LTC planning &mdash; but it has developed a problematic history, driving many insurers out of the market entirely.</p>
-  <ul>
-    <li>It can be very expensive to purchase, especially for older applicants or those with health conditions.</li>
-    <li>Widely viewed as a &ldquo;use it or lose it&rdquo; policy &mdash; if you never need care, every premium dollar paid is gone with no residual value.</li>
-    <li>Consumers have experienced significant and unexpected premium increases &mdash; sometimes 30&ndash;80% &mdash; with little warning.</li>
-    <li>Some carriers have reduced benefits, and several major insurers have left the LTC market altogether.</li>
-  </ul>
-  <div class="insight-callout">
-    <p><strong>The hard-to-qualify problem:</strong> Traditional LTC underwriting has become increasingly strict. Many applicants in their 60s and 70s find themselves uninsurable under traditional policies &mdash; leaving them without options at exactly the time they need coverage most.</p>
+<div class="pf-approach">
+  <div class="head">
+    <span class="n">Approach 4 of 4</span>
+    <h3>Asset-Based Long-Term Care</h3>
+  </div>
+  <div class="body">
+    <p>Asset-based long-term care &mdash; also called hybrid or linked-benefit coverage &mdash; is a life insurance policy or annuity contract that permits access to the death benefit or contract value to pay qualifying long-term care expenses. It exists to answer the objection that has always dogged traditional coverage: what happens if I never need the care.</p>
+    <p>Depending on the policy selected, asset-based coverage may provide:</p>
+    <ul class="pf-checks">
+      <li>A death benefit to heirs if long-term care benefits are not fully used, subject to the policy&rsquo;s provisions.</li>
+      <li>Premiums guaranteed on the policy as issued, so there is no exposure to the class-wide rate increases that affect traditional coverage.</li>
+      <li>Funding by repositioning an existing asset rather than committing new money.</li>
+      <li>Extended or lifetime benefit duration on certain policies, or through an extension-of-benefits rider.</li>
+      <li>Benefits generally received income-tax-free under a tax-qualified contract.</li>
+    </ul>
+    <div class="pf-key">
+      <span class="label">Read That List Carefully</span>
+      <p>Not every asset-based product offers all of those features. Benefit duration, the percentage of the death benefit available for care, cash value behavior, and premium guarantees all vary by carrier and by policy. This category is not one product, and the differences between contracts are larger than the marketing suggests.</p>
+    </div>
   </div>
 </div>
 
-<div class="pay-opt">
-  <span class="pay-opt-num">Option 3 &middot; Self-Funding</span>
-  <h3>Self-Funding</h3>
-  <p>Some people believe they can cover any LTC expenses out of pocket. Very few people can afford to pay for every LTC expense &mdash; and attempting to do so can rapidly destroy wealth built over an entire lifetime.</p>
-  <ul>
-    <li>A single extended care event &mdash; especially Alzheimer&rsquo;s, averaging 8+ years &mdash; can cost well over $1 million in today&rsquo;s dollars.</li>
-    <li>Self-funding transfers 100% of the financial risk to the individual, with no leverage and no protection for the healthy spouse.</li>
-    <li>Care costs inflate at 3&ndash;5% per year &mdash; meaning future care will cost significantly more than today&rsquo;s rates suggest.</li>
-  </ul>
-  <div class="insight-callout">
-    <p><strong>The income problem:</strong> A married couple with $2 million in assets may feel financially secure &mdash; but a $1.5 million LTC event drops their household income by 75%. The assets may technically cover the cost, but the retirement income they counted on vanishes far sooner than planned.</p>
-  </div>
+<h2 class="pf-h2">Side by Side</h2>
+<p class="pf-deck">The comparison below uses qualified language on purpose. Yes-or-no answers read well and mislead often.</p>
+
+<div class="pf-table-wrap">
+<table class="pf-compare">
+  <thead>
+    <tr><th></th><th>Government Programs</th><th>Traditional LTCi</th><th>Self-Funding</th><th>Asset-Based LTC</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Can it be canceled?</td>
+      <td data-l="Government Programs">Eligibility rules can change; benefits are not contractual</td>
+      <td data-l="Traditional LTCi">Generally guaranteed renewable if premiums are paid</td>
+      <td data-l="Self-Funding">Not applicable</td>
+      <td data-l="Asset-Based LTC">Contractual; in force while the policy remains in force</td>
+    </tr>
+    <tr>
+      <td>Premiums guaranteed?</td>
+      <td data-l="Government Programs">Not applicable</td>
+      <td data-l="Traditional LTCi">No &mdash; class-wide rate increases may occur</td>
+      <td data-l="Self-Funding">Not applicable</td>
+      <td data-l="Asset-Based LTC">Typically guaranteed as issued; confirm in the contract</td>
+    </tr>
+    <tr>
+      <td>Value if care is never needed</td>
+      <td data-l="Government Programs">None</td>
+      <td data-l="Traditional LTCi">None, unless a return-of-premium option was bought</td>
+      <td data-l="Self-Funding">Assets remain in the estate</td>
+      <td data-l="Asset-Based LTC">A death benefit may remain, subject to policy provisions</td>
+    </tr>
+    <tr>
+      <td>Spend-down required?</td>
+      <td data-l="Government Programs">Yes for Medi-Cal &mdash; income and asset limits apply</td>
+      <td data-l="Traditional LTCi">No</td>
+      <td data-l="Self-Funding">Yes &mdash; care is paid from your own capital</td>
+      <td data-l="Asset-Based LTC">No &mdash; the asset is repositioned, not spent</td>
+    </tr>
+    <tr>
+      <td>Benefit duration</td>
+      <td data-l="Government Programs">Medicare: limited skilled care only. Medi-Cal: while eligible</td>
+      <td data-l="Traditional LTCi">Set by benefit period; lifetime rare and costly</td>
+      <td data-l="Self-Funding">Until the capital is exhausted</td>
+      <td data-l="Asset-Based LTC">Set by policy; extended or lifetime available on some designs</td>
+    </tr>
+    <tr>
+      <td>Best suited for</td>
+      <td data-l="Government Programs">Households with limited assets, or after assets are exhausted</td>
+      <td data-l="Traditional LTCi">Those who want maximum care dollars per premium dollar and can qualify</td>
+      <td data-l="Self-Funding">Substantial liquid wealth and tolerance for the income risk</td>
+      <td data-l="Asset-Based LTC">Those who want the capital to do something either way</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
-<div class="pay-opt solution">
-  <span class="pay-opt-num">The Solution &nbsp;&middot;&nbsp; Option 4 &middot; Asset-Based Long-Term Care</span>
-  <h3>Asset-Based Long-Term Care</h3>
-  <p>To eliminate the pitfalls of the first three options, a strategy known as <strong>asset-based long-term care</strong> has emerged &mdash; also referred to as hybrid or linked-benefit products. It is a whole life insurance policy or annuity contract that allows access to 100% of the death benefit and/or annuity cash value for qualifying LTC expenses, paid monthly.</p>
-  <p>Asset-based LTC provides benefits if care is needed. If care is never needed, the asset passes to the next generation &mdash; making it part of your legacy rather than a sunk cost.</p>
-  <div class="feature-grid">
-    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Never &ldquo;use it or lose it&rdquo;</h4><p>Unused benefits become a death benefit for heirs.</p></div></div>
-    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Guaranteed premiums</h4><p>No unexpected rate increases, ever.</p></div></div>
-    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Fund with existing assets</h4><p>CDs, IRAs, annuities, savings, or a 1035 exchange.</p></div></div>
-    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Immediate LTC coverage</h4><p>Protection begins from day one of the policy.</p></div></div>
-    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Tax advantages</h4><p>LTC premiums may be deductible; 100% deductible for C Corporations.</p></div></div>
-    <div class="feature-card"><span class="fc-check">&#10003;</span><div class="fc-body"><h4>Legacy protection</h4><p>Assets pass to heirs if care is never required.</p></div></div>
-  </div>
+<h2 class="pf-h2">Before You Select a Policy</h2>
+
+<p>Whichever approach you choose, these are the provisions that determine what you actually own. Take this list to any conversation you have &mdash; with me or with anyone else.</p>
+
+<ul class="pf-checks two">
+  <li>Claim triggers: inability to perform two of six Activities of Daily Living, or severe cognitive impairment</li>
+  <li>Effect of loans, withdrawals, or surrender on cash value, care benefits, and death benefit</li>
+  <li>Monthly benefit amount and maximum benefit period</li>
+  <li>Carrier financial strength ratings and claims-paying history</li>
+  <li>Inflation protection &mdash; whether it is included, and at what rate</li>
+  <li>Underwriting standards &mdash; and the importance of applying while insurable</li>
+  <li>Reimbursement versus indemnity (cash) benefits</li>
+  <li>Whether the contract is tax-qualified</li>
+  <li>Whether benefits are shared between two insureds</li>
+  <li>California Partnership asset protection, where applicable</li>
+  <li>Whether premiums are waived while benefits are being paid</li>
+  <li>How benefits coordinate with any coverage already in place</li>
+</ul>
+
+<h2 class="pf-h2">Why a CPA Leads This Conversation</h2>
+
+<p>Long-term care is sold as an insurance decision. It is really a capital allocation decision with an insurance product attached, and that is an accountant&rsquo;s question before it is an agent&rsquo;s.</p>
+
+<ul class="pf-list">
+  <li>The self-fund-versus-insure question gets modeled, not asserted. If your balance sheet genuinely carries the risk, I will tell you so.</li>
+  <li>Which asset should fund the premium is a tax question. Repositioning a CD, a nonqualified annuity, and an IRA distribution produce three entirely different results.</li>
+  <li>Section 1035 exchange eligibility gets evaluated against the actual contract &mdash; basis, loans, surrender charges, and ownership &mdash; rather than assumed.</li>
+  <li>Where a corporation pays the premium, deductibility depends on policy design, the insured&rsquo;s relationship to the company, and applicable compensation and shareholder rules. Eligible premiums may be deductible; the answer is specific to the entity and belongs with the corporation&rsquo;s tax adviser, working from the actual contract.</li>
+  <li>I hold no carrier quota and no product allegiance. On a pure care-dollars-per-premium-dollar basis, traditional coverage often wins &mdash; and I will say that even though it is not what I most often place.</li>
+</ul>
+
+<div class="pf-continue">
+  <span class="label">Continue</span>
+  <p><a href="ltc-examples/four-ways-to-protect-your-retirement.html">Four Ways to Secure Long-Term Care Coverage</a> &mdash; this page covers how the money moves. That one compares the four categories of coverage themselves: traditional, hybrid, asset-based, and annuity-based, with the qualifying standards each one applies.</p>
 </div>
 
-<!-- Comparison Table -->
-<h2>Side-by-Side Comparison</h2>
-<p>Four ways to pay &mdash; see how they stack up across the metrics that matter most.</p>
-<div class="comp-table-wrap">
-  <table class="comp-table">
-    <thead>
-      <tr>
-        <th>Feature</th>
-        <th>Government Programs</th>
-        <th>Traditional LTCI</th>
-        <th>Self-Funding</th>
-        <th class="col-best">Asset-Based LTC</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Guaranteed not to be canceled</td>
-        <td>No</td><td>No</td><td>N/A</td>
-        <td>Yes</td>
-      </tr>
-      <tr>
-        <td>Premiums guaranteed not to increase</td>
-        <td>N/A</td><td>No</td><td>N/A</td>
-        <td>Yes</td>
-      </tr>
-      <tr>
-        <td>Value if care is never needed</td>
-        <td>None</td><td>None</td><td>Depleted</td>
-        <td>Death benefit to heirs</td>
-      </tr>
-      <tr>
-        <td>Asset spend-down required</td>
-        <td>Yes (Medicaid)</td><td>No</td><td>Yes</td>
-        <td>No</td>
-      </tr>
-      <tr>
-        <td>Fund with existing assets</td>
-        <td>No</td><td>No</td><td>Yes</td>
-        <td>Yes</td>
-      </tr>
-      <tr>
-        <td>Lifetime coverage available</td>
-        <td>Limited</td><td>Rare / costly</td><td>Risk of depletion</td>
-        <td>Yes &mdash; with LTC rider</td>
-      </tr>
-      <tr>
-        <td>Tax advantages</td>
-        <td>None</td><td>Limited</td><td>None</td>
-        <td>Yes &mdash; including C-Corp</td>
-      </tr>
-    </tbody>
-  </table>
+</div><!-- .pf-wrap -->
+
+<div class="pf-cta">
+  <p class="eyebrow">Complimentary &middot; No Obligation</p>
+  <h2>See What the Numbers Actually Say</h2>
+  <p class="msg">Before any product is discussed, we model what an extended care event would do to your balance sheet and your retirement income. Sometimes the answer is that you are already covered. That is a perfectly good outcome of the conversation.</p>
+  <a class="phone" href="tel:+19257086501">(925) 708-6501</a>
+  <a href="contact.html" class="btn-gold">Request an Illustration/Quote</a>
+  <p class="existing">Existing policyholders: a policy review is available at no charge.</p>
 </div>
 
-<!-- CTA -->
-<div class="callout" style="text-align:center;">
-  <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin:0 0 12px;">Ready to Explore the Smarter Option?</p>
-  <p style="margin:0 0 14px;">Withbert W. Payne, CPA, will walk you through how an asset-based LTC strategy compares to what you currently have &mdash; or don&rsquo;t have &mdash; in place.</p>
-  <p style="font-size:17px;font-weight:700;color:var(--navy);margin:0 0 16px;">(925) 708-6501 &middot; LTCCPAS.com</p>
-  <a href="contact.html" class="btn-gold" style="display:inline-block;">Request a Complimentary Review</a>
+<div class="pf-disclaimer">
+  <p>Elimination periods, benefit provisions, premium schedules, and international coverage vary by carrier and by policy; the provisions described on this page are illustrative examples and are not a description of every product available. Long-term care benefit payments reduce the policy&rsquo;s death benefit and cash surrender value. Section 1035 exchanges are subject to IRS rules and require review before execution. Care cost figures are California statewide medians from the CareScout 2025 Cost of Care Survey, published March 2026. For educational purposes only. Not tax, legal, or investment advice &mdash; consult your own advisers regarding your particular circumstances.</p>
+  <p class="sig">Withbert W. Payne, CPA, CGMA &middot; CA Insurance License No. 0E90257 &middot; This is a solicitation for insurance.</p>
 </div>
 
-<!-- Legal Disclaimer -->
-<p style="font-style:italic;font-size:11px;margin-top:24px;color:#6b7a90;line-height:1.7;">Benefit details, elimination periods, payment schedules, and international provisions vary by carrier and policy; the 1035 Exchange is subject to IRS rules &mdash; consult a qualified tax advisor before executing any exchange. For educational purposes only. Not financial, legal, or insurance advice. Withbert W. Payne, CPA, CGMA &middot; CA License No. 0E90257 &middot; This is a solicitation for insurance.</p>
 
-</div>
-<div class="sidebar">
-  <div class="sidebar-box">
-    <h3>Request a Complimentary Review</h3>
-    <p>See how an asset-based LTC strategy compares to self-insuring &mdash; one conversation, no obligation.</p>
-    <p style="font-size:18px;font-weight:700;color:var(--navy);">(925) 708-6501</p>
-    <a class="btn-gold" href="contact.html">Request a Complimentary Review</a>
-  </div>
-  <div class="sidebar-box">
-    <h3>Premium Payment Options</h3>
-    <p style="font-size:13px;line-height:2.2;">
-      Single Premium: <strong>Pay once</strong><br>
-      5-Pay: <strong>5 years</strong><br>
-      10-Pay: <strong>10 years</strong><br>
-      20-Pay: <strong>20 years</strong><br>
-      Pay-to-95: <strong>Lifetime</strong>
-    </p>
-  </div>
-  <div class="sidebar-box"><h3>Related Topics</h3><ul>
-    
-    <li><a href="long-term-care-ltc-insurance/what-is-long-term-care-insurance.html">Understanding LTC Insurance</a></li>
-        <li><a href="long-term-care-ltc-insurance/what-initiates-a-long-term-care-claim.html">Claim Triggers</a></li>
-    <li><a href="long-term-care-ltc-insurance/long-term-care-facts-myths-and-faq.html">Facts, Myths &amp; FAQ</a></li>
-    <li><a href="long-term-care-ltc-insurance/long-term-care-insurance-benefits.html">LTC Benefits</a></li>
-    <li><a href="long-term-care-ltc-insurance/long-term-care-the-capital-question.html">When You Can Afford the Care</a></li>
-    <li><a href="long-term-care-ltc-insurance/long-term-care-planning.html">LTC Planning</a></li>
-  </ul></div>
-</div>
-</div></div>
-
-<div class="contact-teaser">
-  <h2>Ready to Explore the Smarter Option?</h2>
-  <p>Withbert W. Payne, CPA will walk you through how an asset-based LTC strategy compares to what you currently have &mdash; or don't have &mdash; in place.</p>
-  <span class="phone-big">(925) 708-6501</span>
-  <a href="contact.html" class="btn-gold" style="font-size:16px;padding:14px 36px;">Request a Complimentary Review</a>
-</div>
-</div>
+</div><!-- #page-content -->
 
 <footer><div class="footer-inner">
   <div class="footer-col"><h4>LTCCPAS.COM</h4><p>Independent insurance reviews and policy optimization by a CPA and Licensed Insurance Broker. Serving clients nationwide.</p><a href="https://www.linkedin.com/in/withbertpayne/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn &mdash; Withbert Payne</a></div>
