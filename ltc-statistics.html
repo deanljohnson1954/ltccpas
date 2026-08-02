@@ -19,136 +19,114 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/style.css?v=7">
 <style>
-.stat-hero-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin: 28px 0;
+/* Key LTC Statistics — reproduces the source document's color table:
+   #1E3A5F navy, #C8922A gold, #E7C98A light gold, #2B2B2B body,
+   #6B7280 secondary, #FBF7EF cream, #EEF2F7 / #E4EAF1 / #D6DEE8 panels,
+   #D8DDE4 rules. Times/Arial map to the site's EB Garamond / Source Sans 3. */
+
+.ks-hero { background:#1E3A5F; text-align:center; padding:44px 24px 46px; border-bottom:4px solid #C8922A; }
+.ks-hero .eyebrow { font-weight:700; letter-spacing:.24em; text-transform:uppercase; font-size:12.5px; color:#E7C98A; margin:0 0 18px; }
+.ks-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff;
+  font-size:clamp(26px,5.2vw,38px); overflow-wrap:break-word; line-height:1.22; margin:0 0 18px; }
+.ks-hero p.sub { color:#D6DEE8; font-size:16.5px; line-height:1.7; max-width:840px; margin:0 auto; }
+
+.ks-wrap { max-width:940px; margin:0 auto; padding:42px 24px 8px; }
+.ks-wrap p { color:#2B2B2B; font-size:16px; line-height:1.75; margin:0 0 20px; }
+
+/* Section header: eyebrow, heading, deck */
+.ks-sec { margin:52px 0 20px; padding-bottom:14px; border-bottom:2px solid #C8922A; }
+.ks-sec .eyebrow { display:block; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  font-size:11.5px; color:#C8922A; margin:0 0 10px; }
+.ks-sec h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F;
+  font-size:clamp(21px,3.4vw,28px); line-height:1.3; margin:0 0 8px; }
+.ks-sec p.deck { color:#6B7280; font-style:italic; font-size:15px; line-height:1.65; margin:0; }
+
+/* Short answer */
+.ks-answer { background:#FBF7EF; border-left:5px solid #C8922A; padding:26px 30px; margin:0 0 26px; }
+.ks-answer .label { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F; font-size:22px; margin:0 0 14px; }
+.ks-answer p { color:#2B2B2B; font-size:15.5px; line-height:1.75; margin:0 0 14px; }
+.ks-answer p:last-child { margin:0; }
+
+/* Stat tiles */
+.ks-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:0 0 22px; }
+.ks-stats.two { grid-template-columns:1fr 1fr; }
+.ks-stats.one { grid-template-columns:1fr; }
+@media(max-width:820px){ .ks-stats, .ks-stats.two { grid-template-columns:1fr; } }
+.ks-stat { background:#EEF2F7; border-top:3px solid #C8922A; padding:22px 24px; text-align:center; }
+.ks-stat .n { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F;
+  font-size:clamp(22px,3.6vw,30px); line-height:1.15; margin:0 0 8px; overflow-wrap:break-word; }
+.ks-stat .t { display:block; font-weight:700; color:#1E3A5F; font-size:14px; letter-spacing:.03em; margin:0 0 8px; }
+.ks-stat p { color:#6B7280; font-size:14px; line-height:1.6; margin:0; }
+
+.ks-fine { color:#6B7280; font-size:13px; line-height:1.7; margin:0 0 26px; }
+
+/* Tables */
+.ks-table-wrap { overflow-x:auto; margin:0 0 16px; }
+.ks-table { width:100%; border-collapse:collapse; font-size:15px; min-width:560px; }
+.ks-table thead th { background:#1E3A5F; color:#fff; text-align:left; padding:13px 16px; font-size:11.5px;
+  font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.ks-table thead th:not(:first-child) { text-align:right; }
+.ks-table td { padding:12px 16px; border-bottom:1px solid #D8DDE4; color:#2B2B2B; }
+.ks-table td:not(:first-child) { text-align:right; font-weight:700; color:#1E3A5F; white-space:nowrap; }
+.ks-table tbody tr:nth-child(even) td { background:#FBF7EF; }
+.ks-table tbody tr:last-child td { border-bottom:none; }
+.ks-table tr.sub td:first-child { padding-left:34px; color:#6B7280; }
+.ks-table tr.total td { font-weight:700; }
+.ks-table tr.total td:first-child { color:#1E3A5F; }
+@media(max-width:720px){
+  .ks-table { min-width:0; display:block; font-size:14.5px; }
+  .ks-table thead { display:none; }
+  .ks-table tbody, .ks-table tr, .ks-table td { display:block; width:auto; }
+  .ks-table tr { border:1px solid #D8DDE4; margin:0 0 14px; }
+  .ks-table td { border:0; border-bottom:1px solid #D8DDE4; text-align:right; }
+  .ks-table tr td:last-child { border-bottom:0; }
+  .ks-table td:first-child { background:#1E3A5F !important; color:#fff !important; text-align:left;
+    font-family:'EB Garamond',Georgia,serif; font-size:17px; }
+  .ks-table tr.sub td:first-child { padding-left:16px; color:#fff; }
+  .ks-table td:not(:first-child):before { content:attr(data-l); float:left; color:#1E3A5F; font-weight:600; }
 }
-.stat-hero-card {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 28px 20px;
-  background: var(--white);
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
-  text-align: center;
-}
-.stat-hero-card .big-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1;
-  display: block;
-  margin-bottom: 10px;
-}
-.stat-hero-card .big-num.navy { color: var(--navy); }
-.stat-hero-card strong {
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 4px;
-}
-.stat-hero-card em {
-  font-style: italic;
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.4;
-  display: block;
-}
-.duration-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin: 20px 0;
-}
-.duration-card {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 22px;
-  background: var(--white);
-}
-.duration-card .dur-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 38px;
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: 6px;
-  display: block;
-}
-.duration-card .dur-num.navy { color: var(--navy); }
-.duration-card strong { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-.duration-card em { font-style: italic; font-size: 12px; color: var(--muted); line-height: 1.4; }
-.data-section { margin: 40px 0; }
-.data-section h3 {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-.stats-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 0; }
-.stats-table th {
-  background: var(--navy);
-  color: #fff;
-  padding: 10px 16px;
-  text-align: left;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .3px;
-}
-.stats-table th:last-child { text-align: right; }
-.stats-table td { padding: 10px 16px; border-bottom: 1px solid var(--border); color: var(--text); }
-.stats-table td:last-child { text-align: right; font-weight: 700; color: var(--gold); }
-.stats-table tr:last-child td { border-bottom: none; }
-.stats-table tr:nth-child(even) td { background: var(--off-white); }
-.stats-table td.bold-row { font-weight: 700; color: var(--navy); }
-.stats-table td.indent { padding-left: 32px; font-size: 13px; color: var(--muted); }
-.stats-table td.indent + td { color: var(--muted); font-weight: 400; }
-.two-stat-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin: 24px 0;
-}
-.callout-stat {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 28px 24px;
-  background: var(--white);
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
-}
-.callout-stat .cs-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1;
-  display: block;
-  margin-bottom: 10px;
-}
-.callout-stat strong { display: block; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-.callout-stat p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5; font-style: italic; }
-.sources-line {
-  font-size: 11px;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
-  padding-top: 16px;
-  margin-top: 48px;
-  line-height: 1.6;
-}
-@media (max-width: 860px) {
-  .stat-hero-grid { grid-template-columns: repeat(2, 1fr); }
-  .duration-grid { grid-template-columns: 1fr; }
-  .two-stat-cards { grid-template-columns: 1fr; }
-}
-@media (max-width: 520px) {
-  .stat-hero-grid { grid-template-columns: 1fr; }
-  .stat-hero-card .big-num { font-size: 40px; }
-}
+
+/* Callout */
+.ks-note { background:#E4EAF1; border-left:4px solid #1E3A5F; padding:22px 26px; margin:0 0 26px; }
+.ks-note .label { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F; font-size:19px; margin:0 0 10px; }
+.ks-note p { color:#2B2B2B; font-size:15.5px; line-height:1.75; margin:0 0 12px; }
+.ks-note p:last-child { margin:0; }
+
+/* Pull quote */
+.ks-quote { background:#FBF7EF; border-left:5px solid #C8922A; padding:26px 30px; margin:0 0 26px; }
+.ks-quote p { font-family:'EB Garamond',Georgia,serif; font-style:italic; color:#1E3A5F;
+  font-size:clamp(17px,2.6vw,21px); line-height:1.5; margin:0 0 12px; }
+.ks-quote cite { display:block; font-style:normal; color:#6B7280; font-size:14px; }
+
+/* Cautions */
+.ks-caution { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:0 0 26px; }
+@media(max-width:760px){ .ks-caution { grid-template-columns:1fr; } }
+.ks-caution div { background:#FBF7EF; border-top:3px solid #C8922A; padding:20px 22px;
+  color:#2B2B2B; font-size:15px; line-height:1.7; }
+.ks-caution strong { display:block; color:#1E3A5F; margin:0 0 6px; }
+
+/* CPA perspective */
+.ks-cpa { background:#1E3A5F; padding:34px 32px; margin:34px 0 0; }
+.ks-cpa .label { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#E7C98A; font-size:21px; margin:0 0 16px; }
+.ks-cpa p { color:#D6DEE8; font-size:15.5px; line-height:1.8; margin:0 0 16px; }
+.ks-cpa p:last-child { margin:0; }
+
+/* CTA */
+.ks-cta { background:#FBF7EF; border-top:3px solid #C8922A; border-bottom:3px solid #C8922A; text-align:center; padding:44px 28px; margin:36px 0 0; }
+.ks-cta .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:12px; color:#8A6416; margin:0 0 14px; }
+.ks-cta h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:clamp(22px,4vw,29px); line-height:1.3; margin:0 0 18px; }
+.ks-cta p.msg { color:#2B2B2B; font-size:16px; line-height:1.75; max-width:740px; margin:0 auto 24px; }
+.ks-cta .btn-gold { font-size:17px; padding:14px 36px; }
+.ks-cta .phone { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700;
+  font-size:clamp(24px,4.4vw,30px); color:#1E3A5F; text-decoration:none; margin:22px 0 10px; }
+.ks-cta .phone:hover { color:#C8922A; }
+.ks-cta p.own { color:#6B7280; font-size:14.5px; margin:0; }
+
+/* Sources */
+.ks-sources { max-width:940px; margin:0 auto; padding:30px 24px 50px; }
+.ks-sources h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; margin:0 0 12px; }
+.ks-sources p { color:#6B7280; font-size:12.5px; line-height:1.8; margin:0 0 12px; }
+.ks-sources p:last-child { margin:0; font-style:italic; font-size:12px; }
 </style>
 </head>
 <body>
@@ -201,320 +179,316 @@
 </ul></nav>
 
 <div id="page-content">
-
-<div class="page-hero"><div class="inner">
-  <div class="breadcrumb"><a href="index.html">Home</a> &mdash; <span>LTC Statistics</span></div>
+<section class="ks-hero">
+  <p class="eyebrow">LTC Statistics &amp; Data</p>
   <h1>Key Long-Term Care Statistics</h1>
-  <p>The numbers your clients need to understand &mdash; from average claim duration and age of first claim to care costs, claim triggers, and utilization patterns across all care settings.</p>
-</div></div>
+  <p class="sub">What the data actually shows &mdash; how likely care is, how long it lasts, what starts a claim, where care is delivered, and what it costs in California.</p>
+</section>
 
-<div class="page-wrap"><div class="two-col">
-<div class="content-area">
+<div class="ks-wrap">
 
-<!-- Key Stats Grid -->
-<div class="stat-hero-grid">
-  <div class="stat-hero-card">
-    <span class="big-num">70%</span>
-    <strong>Adults 65+ Who Will Need LTC</strong>
-    <em>Most families are unprepared for this risk.</em>
+  <p>Almost every long-term care conversation turns on a handful of numbers: how likely care is, how long it lasts, and what it costs. Those numbers are published, they are knowable, and they are frequently quoted incorrectly. What follows is the current data, each figure tied to its source and its date, with the limits of each figure stated rather than hidden.</p>
+
+  <p>Two national datasets do most of the work here. Federal survey data (Administration for Community Living) describes what happens to the general population. Insurance claims data describes what happens to people who bought coverage &mdash; a different and much smaller group. They are kept separate throughout, because they answer different questions.</p>
+
+  <div class="ks-answer">
+    <span class="label">The Short Answer</span>
+    <p>About seven in ten people turning 65 will need long-term care at some point. On average that care lasts about three years. One in five will need it for longer than five years &mdash; and one in three will never need it at all.</p>
+    <p>The average is not the risk. The tail is the risk. In California, three years in a nursing home at today's median semi-private rate costs roughly $438,000; five years costs roughly $730,000. That exposure, not the average, is what a policy is built to absorb.</p>
   </div>
-  <div class="stat-hero-card">
-    <span class="big-num navy">3.2 yrs</span>
-    <strong>Average Length of LTC Stay</strong>
-    <em>Across all long-term care settings combined.</em>
+
+  <div class="ks-sec">
+    <span class="eyebrow">Start Here</span>
+    <h2>The Numbers at a Glance</h2>
+    <p class="deck">Six figures that frame every long-term care decision.</p>
   </div>
-  <div class="stat-hero-card">
-    <span class="big-num">20%</span>
-    <strong>Will Need Care 5+ Years</strong>
-    <em>1 in 5 individuals face extended care needs.</em>
+
+  <div class="ks-stats">
+    <div class="ks-stat"><span class="n">70%</span><span class="t">Will Need Care After 65</span><p>Someone turning 65 today. (ACL)</p></div>
+    <div class="ks-stat"><span class="n">3 yrs</span><span class="t">Average Duration of Care</span><p>All settings, paid and unpaid. (ACL)</p></div>
+    <div class="ks-stat"><span class="n">1 in 5</span><span class="t">Will Need Over 5 Years</span><p>One in three will need none at all.</p></div>
+    <div class="ks-stat"><span class="n">$438,000</span><span class="t">Three Years of Nursing Care</span><p>California median, semi-private room.</p></div>
+    <div class="ks-stat"><span class="n">47%</span><span class="t">Declined or Deferred at 70&ndash;75</span><p>Insurability falls sharply with age.</p></div>
+    <div class="ks-stat"><span class="n">5.8M</span><span class="t">Hold Stand-Alone Coverage</span><p>Against 62 million Americans age 65+.</p></div>
   </div>
-  <div class="stat-hero-card">
-    <span class="big-num navy">$315K+</span>
-    <strong>Avg. 3-Year Nursing Home Cost</strong>
-    <em>At today's California rates.</em>
+
+  <p class="ks-fine">Each figure is sourced and qualified in the sections that follow. Nothing on this page is a projection of any individual's experience.</p>
+
+  <div class="ks-sec">
+    <span class="eyebrow">Duration of Care</span>
+    <h2>How Long Care Actually Lasts</h2>
+    <p class="deck">Federal survey data on the general population age 65 and older.</p>
   </div>
-  <div class="stat-hero-card">
-    <span class="big-num">47%</span>
-    <strong>Denial Rate After Age 70</strong>
-    <em>LTC underwriting tightens sharply with age.</em>
+
+  <div class="ks-table-wrap">
+    <table class="ks-table">
+      <thead><tr><th>Type of care</th><th>Average years used</th><th>% who use it</th></tr></thead>
+      <tbody>
+        <tr class="total"><td>Any long-term care services</td><td data-l="Average years used">3 years</td><td data-l="% who use it">69%</td></tr>
+        <tr class="total"><td>Any care at home</td><td data-l="Average years used">2 years</td><td data-l="% who use it">65%</td></tr>
+        <tr class="sub"><td>&mdash; Unpaid family care only</td><td data-l="Average years used">1 year</td><td data-l="% who use it">59%</td></tr>
+        <tr class="sub"><td>&mdash; Paid care at home</td><td data-l="Average years used">Less than 1 year</td><td data-l="% who use it">42%</td></tr>
+        <tr class="total"><td>Any care in a facility</td><td data-l="Average years used">1 year</td><td data-l="% who use it">37%</td></tr>
+        <tr class="sub"><td>&mdash; Nursing facility</td><td data-l="Average years used">1 year</td><td data-l="% who use it">35%</td></tr>
+        <tr class="sub"><td>&mdash; Assisted living</td><td data-l="Average years used">Less than 1 year</td><td data-l="% who use it">13%</td></tr>
+      </tbody>
+    </table>
   </div>
-  <div class="stat-hero-card">
-    <span class="big-num navy">11%</span>
-    <strong>Americans With LTC Coverage</strong>
-    <em>The coverage gap is enormous.</em>
+  <p class="ks-fine">Source: Administration for Community Living, LongTermCare.gov. More people receive care at home, and for longer, than in any facility. Much of it is unpaid family care &mdash; which is why the population average understates what a household actually pays for.</p>
+
+  <div class="ks-stats two">
+    <div class="ks-stat"><span class="n">3.7 yrs</span><span class="t">Women &mdash; Average Duration</span><p>Roughly 70% longer than men.</p></div>
+    <div class="ks-stat"><span class="n">2.2 yrs</span><span class="t">Men &mdash; Average Duration</span><p>Shorter, though often higher acuity.</p></div>
   </div>
-</div>
 
-<!-- Average Length of Stay -->
-<h2>Average Length of Stay</h2>
-<p>How long do people actually need care?</p>
-
-<div class="duration-grid">
-  <div class="duration-card">
-    <span class="dur-num">3.2 yrs</span>
-    <strong>Overall Average</strong>
-    <em>Across all settings &mdash; home, assisted living, and skilled nursing combined.</em>
+  <div class="ks-note">
+    <span class="label">Why Other Sources Show Longer Stays</span>
+    <p>You will see a nursing home average quoted as 835 days, or about 2.3 years. That figure counts the residents present in a facility on a given day, which oversamples people who stay a long time. Measured instead by discharge, the average nursing home stay is closer to 270 days.</p>
+    <p>Both numbers are correct; they answer different questions. Planning should use the range, not either endpoint.</p>
   </div>
-  <div class="duration-card">
-    <span class="dur-num">3.7 yrs</span>
-    <strong>Women &mdash; Average Stay</strong>
-    <em>Women outlive men and require care for nearly twice as long on average.</em>
+
+  <div class="ks-sec">
+    <span class="eyebrow">The Qualification Window</span>
+    <h2>Insurability Falls With Age</h2>
+    <p class="deck">Coverage is bought with health, not only with money.</p>
   </div>
-  <div class="duration-card">
-    <span class="dur-num navy">2.2 yrs</span>
-    <strong>Men &mdash; Average Stay</strong>
-    <em>Male claimants average a shorter duration, though intensity of care may be higher.</em>
+
+  <p>Long-term care coverage is medically underwritten. Premium rises with age, but the harder constraint is acceptance: the share of applicants declined climbs steeply through the sixties and approaches half by the early seventies.</p>
+
+  <div class="ks-table-wrap">
+    <table class="ks-table">
+      <thead><tr><th>Age at application</th><th>Share declined</th></tr></thead>
+      <tbody>
+        <tr><td>Under 50</td><td data-l="Share declined">11%</td></tr>
+        <tr><td>50 &ndash; 59</td><td data-l="Share declined">17%</td></tr>
+        <tr><td>60 &ndash; 69</td><td data-l="Share declined">24%</td></tr>
+        <tr><td>70 &ndash; 79</td><td data-l="Share declined">45%</td></tr>
+      </tbody>
+    </table>
   </div>
-  <div class="duration-card">
-    <span class="dur-num navy">835 days</span>
-    <strong>Nursing Home Average</strong>
-    <em>~2.3 years in skilled nursing. Short-term rehab discharges average just 270 days.</em>
+  <p class="ks-fine">Source: American Association for Long-Term Care Insurance. A separate AALTCI study found 38.2% of applicants aged 65&ndash;69 and 47% of applicants aged 70&ndash;75 were declined or deferred. These figures describe traditional long-term care insurance; underwriting standards differ by product type and by carrier, and an applicant declined by one insurer is not necessarily uninsurable.</p>
+
+  <div class="ks-sec">
+    <span class="eyebrow">The Claims Reality</span>
+    <h2>35 Years of Claims Experience</h2>
+    <p class="deck">Actual long-term care claims paid between 1989 and 12/31/2022.</p>
   </div>
-</div>
 
-<div class="insight-callout" style="margin:24px 0 32px;">
-  <p><em>"While the average stay is just over 3 years, 1 in 5 people will need care for 5 years or more &mdash; and women face nearly twice the risk as men. That's the scenario a well-designed LTC policy is built to protect against."</em></p>
-</div>
+  <p>The figures below come from a single insurer's published claims record spanning more than three decades. They describe policyholders &mdash; people who qualified, bought coverage, held it, and filed. That is a healthier and more affluent group than the general population, so these numbers should be read as the experience of the insured, not as a population forecast.</p>
 
-<!-- OneAmerica Claims Analysis -->
-<h2>OneAmerica Claims Analysis</h2>
-<p>35+ years of claims experience &mdash; data from 1989 through 12/31/2022</p>
-
-<div class="data-section">
-  <h3>Claimant Gender Split</h3>
-  <table class="stats-table">
-    <thead><tr><th>Gender</th><th>Share of Claims</th></tr></thead>
-    <tbody>
-      <tr><td class="bold-row">Female</td><td>59%</td></tr>
-      <tr><td class="bold-row">Male</td><td>41%</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="data-section">
-  <h3>Claimant Ages</h3>
-  <table class="stats-table">
-    <thead><tr><th>Youngest</th><th>Average Age</th><th style="text-align:right;">Oldest</th></tr></thead>
-    <tbody>
-      <tr><td>39</td><td>84</td><td>103</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="data-section">
-  <h3>Age at Initial Claim</h3>
-  <table class="stats-table">
-    <thead><tr><th>Age Band</th><th>% of Claims</th></tr></thead>
-    <tbody>
-      <tr><td>Under 69</td><td>3.41%</td></tr>
-      <tr><td>70 &ndash; 74</td><td>6.00%</td></tr>
-      <tr><td>75 &ndash; 79</td><td>13.17%</td></tr>
-      <tr><td>80 &ndash; 84</td><td>26.50%</td></tr>
-      <tr><td>85 &ndash; 89</td><td>30.34%</td></tr>
-      <tr><td>90 &ndash; 94</td><td>17.13%</td></tr>
-      <tr><td>95+</td><td>3.46%</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="data-section">
-  <h3>How Claims End</h3>
-  <table class="stats-table">
-    <thead><tr><th>Reason Claim Ends</th><th>Share</th></tr></thead>
-    <tbody>
-      <tr><td class="bold-row">Death</td><td>75%</td></tr>
-      <tr><td>Exhaust Benefits</td><td>11%</td></tr>
-      <tr><td>Other Reasons</td><td>14%</td></tr>
-    </tbody>
-  </table>
-  <p style="font-size:13px;color:var(--muted);font-style:italic;margin-top:10px;">75% of claims end at death &mdash; most policyholders receive benefits until the end of life. Only 11% exhaust their policy limits.</p>
-</div>
-
-<div class="data-section">
-  <h3>Reason for Initial Claim</h3>
-  <table class="stats-table">
-    <thead><tr><th>Category / Cause</th><th>Share</th></tr></thead>
-    <tbody>
-      <tr><td class="bold-row">Cognitive Issues (total)</td><td>55%</td></tr>
-      <tr><td class="indent">&bull;&nbsp; Nervous System (Alzheimer&rsquo;s, etc.)</td><td>29%</td></tr>
-      <tr><td class="indent">&bull;&nbsp; Mental / Behavioral (Dementia)</td><td>26%</td></tr>
-      <tr><td class="bold-row">Physical Issues (total)</td><td>28%</td></tr>
-      <tr><td class="indent">&bull;&nbsp; Musculoskeletal</td><td>10%</td></tr>
-      <tr><td class="indent">&bull;&nbsp; Cerebrovascular (Stroke)</td><td>9%</td></tr>
-      <tr><td class="indent">&bull;&nbsp; Accident / Injury</td><td>9%</td></tr>
-      <tr><td class="bold-row">Illness-Related (total)</td><td>12%</td></tr>
-      <tr><td class="indent">&bull;&nbsp; Heart Disease</td><td>7%</td></tr>
-      <tr><td class="indent">&bull;&nbsp; Cancer</td><td>5%</td></tr>
-      <tr><td class="bold-row">Other</td><td>5%</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="data-section">
-  <h3>Care Site &mdash; Initial vs. Final Setting</h3>
-  <table class="stats-table">
-    <thead><tr><th>Care Setting</th><th>Initial</th><th style="text-align:right;">Final</th></tr></thead>
-    <tbody>
-      <tr><td>Home Health Care</td><td>32%</td><td>26%</td></tr>
-      <tr><td>Assisted Living</td><td>47%</td><td>52%</td></tr>
-      <tr><td>Skilled Nursing</td><td>21%</td><td>23%</td></tr>
-    </tbody>
-  </table>
-  <p style="font-size:13px;color:var(--muted);font-style:italic;margin-top:10px;">Most claimants transition from home care to assisted living as their needs intensify over time.</p>
-</div>
-
-<div class="data-section">
-  <h3>Longest Claims on Record</h3>
-  <table class="stats-table">
-    <thead><tr><th>Months</th><th>Duration</th></tr></thead>
-    <tbody>
-      <tr><td>244</td><td>20 years, 4 months</td></tr>
-      <tr><td>192</td><td>16 years</td></tr>
-      <tr><td>177</td><td>14 years, 9 months</td></tr>
-      <tr><td>171</td><td>14 years, 3 months</td></tr>
-      <tr><td>158</td><td>13 years, 1 month</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- Service Utilization -->
-<h2>Service Utilization by Claim Type</h2>
-<p>Connecticut Partnership for LTC &mdash; 6,878 policyholders receiving benefit payments</p>
-
-<div class="data-section">
-  <h3>What Policyholders Claim For</h3>
-  <table class="stats-table">
-    <thead><tr><th>Service Type</th><th>% of Claims</th></tr></thead>
-    <tbody>
-      <tr><td>Home Health Aide</td><td>53%</td></tr>
-      <tr><td>Assisted Living Facility</td><td>29%</td></tr>
-      <tr><td>Nursing Home</td><td>27%</td></tr>
-      <tr><td>Personal Emergency</td><td>20%</td></tr>
-      <tr><td>Personal Care</td><td>9%</td></tr>
-      <tr><td>Durable Medical Device</td><td>7%</td></tr>
-      <tr><td>Hospice Care</td><td>1%</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="two-stat-cards">
-  <div class="callout-stat">
-    <span class="cs-num">60%</span>
-    <strong>Home-Based Care Claims</strong>
-    <p>60% of all claimants filed for home health aide or a skilled nursing home visit.</p>
+  <div class="ks-stats two">
+    <div class="ks-stat"><span class="n">73% / 27%</span><span class="t">Female / Male Claimants</span><p>Women file the large majority of claims.</p></div>
+    <div class="ks-stat"><span class="n">39 &middot; 84 &middot; 103</span><span class="t">Youngest &middot; Average &middot; Oldest</span><p>Age of claimants at time of claim.</p></div>
   </div>
-  <div class="callout-stat">
-    <span class="cs-num" style="font-size:38px;">$443,758</span>
-    <strong>Average Policy Benefit at Claim</strong>
-    <p>Avg. available benefit at time of claim. Avg. actual claim paid: $156,775. Highest single claim: $2.64 million.</p>
+
+  <div class="ks-sec">
+    <span class="eyebrow">When Claims Begin</span>
+    <h2>Age at Initial Claim</h2>
+    <p class="deck">Most claims begin in the mid-eighties &mdash; the concentration is striking.</p>
   </div>
-</div>
 
-<div style="background:#eef3f8;border-top:4px solid var(--gold);border-radius:0 0 8px 8px;padding:24px 28px;margin:24px 0;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-  <span style="display:block;font-size:3.4rem;font-weight:700;font-family:'EB Garamond',serif;color:var(--navy);line-height:1;">81</span>
-  <strong style="display:block;font-size:15px;font-weight:700;color:var(--navy);margin-top:6px;">Mean Age at Claim (Women)</strong>
-  <p style="font-size:14px;color:var(--text);margin:10px 0 0;line-height:1.6;">59% of the 6,878 claimants were women, with a mean age of 81 at the time the claim was filed.</p>
-</div>
-
-<div class="insight-callout" style="margin:24px 0 32px;">
-  <p><em>"This is really nursing-home avoidance protection &mdash; and the numbers validate that."</em><br>
-  <span style="font-size:12px;color:var(--muted);">&mdash; Jesse Slome, Director, American Association for Long-Term Care Insurance (AALTCI). Connecticut is the only state that publishes current LTC insurance claims data.</span></p>
-</div>
-
-<!-- 2026 Cost of Care California -->
-<h2>2026 Cost of Care &mdash; California</h2>
-<p>What long-term care actually costs today &nbsp;<span style="font-size:13px;color:var(--muted);">(Source: Genworth Cost of Care Survey 2025)</span></p>
-
-<div style="overflow-x:auto;margin:20px 0;">
-<table class="stats-table">
-  <thead>
-    <tr>
-      <th>Care Setting</th>
-      <th>Monthly</th>
-      <th>Annual</th>
-      <th style="text-align:left;">Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Home Health Aide (44 hrs/wk)</td>
-      <td>$6,200</td>
-      <td>$74,400</td>
-      <td style="text-align:left;font-weight:400;color:var(--muted);">Fastest Growing</td>
-    </tr>
-    <tr>
-      <td>Adult Day Care</td>
-      <td>$1,900</td>
-      <td>$22,800</td>
-      <td style="text-align:left;font-weight:400;color:var(--muted);">Social + medical supervision</td>
-    </tr>
-    <tr>
-      <td>Assisted Living Facility</td>
-      <td>$5,100</td>
-      <td>$61,200</td>
-      <td style="text-align:left;font-weight:400;color:var(--muted);">Room, board &amp; basic care</td>
-    </tr>
-    <tr>
-      <td>Memory Care</td>
-      <td>$6,200</td>
-      <td>$74,400</td>
-      <td style="text-align:left;font-weight:400;color:var(--muted);">Dementia care</td>
-    </tr>
-    <tr>
-      <td><strong>Nursing Home &mdash; Semi-Private</strong></td>
-      <td>$9,000</td>
-      <td>$108,000</td>
-      <td style="text-align:left;font-weight:400;color:var(--muted);">24-hour skilled care</td>
-    </tr>
-    <tr>
-      <td><strong>Nursing Home &mdash; Private Room</strong></td>
-      <td>$10,500</td>
-      <td>$126,000</td>
-      <td style="text-align:left;font-weight:700;color:var(--navy);">Highest Cost</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="sources-line">
-  <strong>Sources:</strong> Connecticut Partnership for LTC (2024) &middot; Genworth Cost of Care Survey 2025 &middot; AALTCI Research &middot; OneAmerica Claims Data (1989&ndash;2022)
-</div>
-
-</div>
-<div class="sidebar">
-  <div class="sidebar-box">
-    <h3>Request a Complimentary Review</h3>
-    <p>Let us analyze your current LTC coverage &mdash; or help you find the right policy if you don't have one yet.</p>
-    <p style="font-size:18px;font-weight:700;color:var(--navy);">(925) 708-6501</p>
-    <a class="btn-gold" href="contact.html">Request a Complimentary Review</a>
+  <div class="ks-table-wrap">
+    <table class="ks-table">
+      <thead><tr><th>Age band</th><th>Share of claims</th></tr></thead>
+      <tbody>
+        <tr><td>Under 69</td><td data-l="Share of claims">3.41%</td></tr>
+        <tr><td>70 &ndash; 74</td><td data-l="Share of claims">6.00%</td></tr>
+        <tr><td>75 &ndash; 79</td><td data-l="Share of claims">13.17%</td></tr>
+        <tr><td>80 &ndash; 84</td><td data-l="Share of claims">26.50%</td></tr>
+        <tr><td>85 &ndash; 89</td><td data-l="Share of claims">30.34%</td></tr>
+        <tr><td>90 &ndash; 94</td><td data-l="Share of claims">17.13%</td></tr>
+        <tr><td>95 and older</td><td data-l="Share of claims">3.46%</td></tr>
+      </tbody>
+    </table>
   </div>
-  <div class="sidebar-box">
-    <h3>Key Numbers at a Glance</h3>
-    <p style="font-size:13px;line-height:2.2;">
-      Need LTC after 65: <strong>70%</strong><br>
-      Avg. stay: <strong>3.2 years</strong><br>
-      Women avg. stay: <strong>3.7 years</strong><br>
-      Need care 5+ yrs: <strong>20%</strong><br>
-      Avg. 3-yr nursing home: <strong>$315K+</strong><br>
-      Denial rate after 70: <strong>47%</strong><br>
-      Americans with coverage: <strong>11%</strong>
-    </p>
-  </div>
-  <div class="sidebar-box"><h3>Related Topics</h3><ul>
-    
-    <li><a href="paying-for-long-term-care.html">Paying for Long-Term Care</a></li>
-    <li><a href="long-term-care-ltc-insurance/what-is-long-term-care-insurance.html">Understanding LTC Insurance</a></li>
-  </ul></div>
-</div>
-</div></div>
+  <p>Roughly three-quarters of all claims begin at age 80 or later. A policy bought at 55 is typically bought against an event 30 years away &mdash; which is why premium structure and inflation protection matter more than first-year price.</p>
 
-<div class="contact-teaser">
-  <h2>The Numbers Demand a Plan</h2>
-  <p>70% of Americans 65+ will need long-term care. The average nursing home now costs $108,000 per year in California. A well-structured policy changes everything.</p>
-  <span class="phone-big">(925) 708-6501</span>
-  <a href="contact.html" class="btn-gold" style="font-size:16px;padding:14px 36px;">Request a Complimentary Review</a>
+  <div class="ks-sec">
+    <span class="eyebrow">Reason for Initial Claim</span>
+    <h2>Why Claims Start</h2>
+    <p class="deck">Cognitive decline drives more claims than physical and illness causes combined.</p>
+  </div>
+
+  <div class="ks-table-wrap">
+    <table class="ks-table">
+      <thead><tr><th>Category / cause</th><th>Share</th></tr></thead>
+      <tbody>
+        <tr class="total"><td>Cognitive issues (total)</td><td data-l="Share">55%</td></tr>
+        <tr class="sub"><td>&mdash; Nervous system (Alzheimer's and related)</td><td data-l="Share">29%</td></tr>
+        <tr class="sub"><td>&mdash; Mental / behavioral (dementia)</td><td data-l="Share">26%</td></tr>
+        <tr class="total"><td>Physical issues (total)</td><td data-l="Share">28%</td></tr>
+        <tr class="sub"><td>&mdash; Musculoskeletal</td><td data-l="Share">10%</td></tr>
+        <tr class="sub"><td>&mdash; Cerebrovascular (stroke)</td><td data-l="Share">9%</td></tr>
+        <tr class="sub"><td>&mdash; Accident / injury</td><td data-l="Share">9%</td></tr>
+        <tr class="total"><td>Illness-related (total)</td><td data-l="Share">12%</td></tr>
+        <tr class="sub"><td>&mdash; Heart disease</td><td data-l="Share">7%</td></tr>
+        <tr class="sub"><td>&mdash; Cancer</td><td data-l="Share">5%</td></tr>
+        <tr class="total"><td>Other</td><td data-l="Share">5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>This is the single most useful number on the page for policy design. Cognitive claims tend to run long, are rarely reversed, and generally require supervision rather than skilled medical care &mdash; the type of care Medicare does not pay for.</p>
+
+  <div class="ks-sec">
+    <span class="eyebrow">The Course of a Claim</span>
+    <h2>How Claims End and Where Care Happens</h2>
+  </div>
+
+  <div class="ks-table-wrap">
+    <table class="ks-table">
+      <thead><tr><th>Reason the claim ends</th><th>Share</th></tr></thead>
+      <tbody>
+        <tr><td>Death</td><td data-l="Share">75%</td></tr>
+        <tr><td>Benefits exhausted</td><td data-l="Share">11%</td></tr>
+        <tr><td>Other reasons</td><td data-l="Share">14%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Three-quarters of claims end at death, meaning most policyholders receive benefits for the remainder of life. Only 11% exhaust their policy limits &mdash; but that 11% is precisely the group an unlimited or long benefit period is purchased to protect.</p>
+
+  <div class="ks-table-wrap">
+    <table class="ks-table">
+      <thead><tr><th>Care setting</th><th>Initial</th><th>Final</th></tr></thead>
+      <tbody>
+        <tr><td>Home health care</td><td data-l="Initial">32%</td><td data-l="Final">26%</td></tr>
+        <tr><td>Assisted living</td><td data-l="Initial">47%</td><td data-l="Final">52%</td></tr>
+        <tr><td>Skilled nursing</td><td data-l="Initial">21%</td><td data-l="Final">23%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Care migrates. Most claimants begin at home or in assisted living and move toward higher levels of care as needs intensify &mdash; which is why a policy that pays in only one setting fits poorly against the way claims actually unfold.</p>
+
+  <div class="ks-sec">
+    <span class="eyebrow">The Long Tail of Risk</span>
+    <h2>Longest Claims on Record</h2>
+    <p class="deck">A reminder of why long and unlimited benefit designs exist.</p>
+  </div>
+
+  <div class="ks-table-wrap">
+    <table class="ks-table">
+      <thead><tr><th>Months on claim</th><th>Duration</th></tr></thead>
+      <tbody>
+        <tr><td>244</td><td data-l="Duration">20 years, 4 months</td></tr>
+        <tr><td>192</td><td data-l="Duration">16 years</td></tr>
+        <tr><td>177</td><td data-l="Duration">14 years, 9 months</td></tr>
+        <tr><td>171</td><td data-l="Duration">14 years, 3 months</td></tr>
+        <tr><td>158</td><td data-l="Duration">13 years, 1 month</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ks-sec">
+    <span class="eyebrow">Service Utilization</span>
+    <h2>What Policyholders Claim For</h2>
+    <p class="deck">6,878 policyholders receiving benefit payments through a state partnership program.</p>
+  </div>
+
+  <div class="ks-table-wrap">
+    <table class="ks-table">
+      <thead><tr><th>Service type</th><th>% of claims</th></tr></thead>
+      <tbody>
+        <tr><td>Home health aide</td><td data-l="% of claims">53%</td></tr>
+        <tr><td>Assisted living facility</td><td data-l="% of claims">29%</td></tr>
+        <tr><td>Nursing home</td><td data-l="% of claims">27%</td></tr>
+        <tr><td>Personal emergency response</td><td data-l="% of claims">20%</td></tr>
+        <tr><td>Personal care</td><td data-l="% of claims">9%</td></tr>
+        <tr><td>Durable medical equipment</td><td data-l="% of claims">7%</td></tr>
+        <tr><td>Hospice care</td><td data-l="% of claims">1%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="ks-fine">Shares total more than 100% because most claimants use several services over the life of a claim. Source: Connecticut Partnership for Long-Term Care &mdash; the only state that publishes current long-term care insurance claims data.</p>
+
+  <div class="ks-stats two">
+    <div class="ks-stat"><span class="n">60%</span><span class="t">Home-Based Care Claims</span><p>Filed for a home health aide or in-home skilled visit.</p></div>
+    <div class="ks-stat"><span class="n">81</span><span class="t">Mean Age at Claim (Women)</span><p>59% of the 6,878 claimants were women.</p></div>
+  </div>
+
+  <div class="ks-stats one">
+    <div class="ks-stat"><span class="n">$443,758</span><span class="t">Average Benefit Available at Claim</span><p>Average amount actually paid: $156,775. Smallest claim on record: $19. Largest single claim: $2.64 million.</p></div>
+  </div>
+
+  <div class="ks-quote">
+    <p>&ldquo;This is really nursing-home avoidance protection &mdash; and the numbers validate that.&rdquo;</p>
+    <cite>&mdash; Jesse Slome, Director, American Association for Long-Term Care Insurance</cite>
+  </div>
+
+  <div class="ks-sec">
+    <span class="eyebrow">2026 Cost of Care</span>
+    <h2>What Care Costs in California</h2>
+    <p class="deck">Statewide medians. CareScout 2025 Cost of Care Survey, published March 2026.</p>
+  </div>
+
+  <div class="ks-table-wrap">
+    <table class="ks-table">
+      <thead><tr><th>Care setting</th><th>Monthly</th><th>Annual</th><th>vs. national</th></tr></thead>
+      <tbody>
+        <tr><td>In-home care (44 hrs/wk)</td><td data-l="Monthly">$7,627</td><td data-l="Annual">$91,520</td><td data-l="vs. national">14% higher</td></tr>
+        <tr><td>Adult day health care</td><td data-l="Monthly">$2,037</td><td data-l="Annual">$24,440</td><td data-l="vs. national">About level</td></tr>
+        <tr><td>Assisted living community</td><td data-l="Monthly">$7,000</td><td data-l="Annual">$84,000</td><td data-l="vs. national">13% higher</td></tr>
+        <tr><td>Memory care (estimated)</td><td data-l="Monthly">$8,800</td><td data-l="Annual">$105,600</td><td data-l="vs. national">Not separately surveyed</td></tr>
+        <tr><td>Nursing home &mdash; semi-private</td><td data-l="Monthly">$12,167</td><td data-l="Annual">$146,000</td><td data-l="vs. national">27% higher</td></tr>
+        <tr><td>Nursing home &mdash; private room</td><td data-l="Monthly">$15,178</td><td data-l="Annual">$182,135</td><td data-l="vs. national">41% higher</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>California is more expensive than the national median in nearly every setting. These are statewide medians &mdash; Bay Area rates commonly run above them, and no median describes an individual provider. Memory care is not surveyed separately; the figure shown reflects the customary premium over assisted living.</p>
+
+  <div class="ks-sec">
+    <span class="eyebrow">The Exposure</span>
+    <h2>What That Costs Over Time</h2>
+    <p class="deck">Today's California medians, before any inflation.</p>
+  </div>
+
+  <div class="ks-table-wrap">
+    <table class="ks-table">
+      <thead><tr><th>Nursing home care</th><th>1 year</th><th>3 years</th><th>5 years</th></tr></thead>
+      <tbody>
+        <tr><td>Semi-private room</td><td data-l="1 year">$146,000</td><td data-l="3 years">$438,000</td><td data-l="5 years">$730,000</td></tr>
+        <tr><td>Private room</td><td data-l="1 year">$182,135</td><td data-l="3 years">$546,405</td><td data-l="5 years">$910,675</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>At 3% annual care inflation, today's California private-room median of $182,135 a year becomes roughly $244,800 in ten years and $328,900 in twenty. A benefit amount fixed at today's cost will not still be adequate at claim, which is why inflation protection is a structural decision rather than an optional rider.</p>
+
+  <div class="ks-sec">
+    <span class="eyebrow">A Word of Caution</span>
+    <h2>How to Read These Numbers</h2>
+    <p class="deck">Four limits worth stating plainly.</p>
+  </div>
+
+  <div class="ks-caution">
+    <div><strong>An average is not a forecast.</strong> Three years is the midpoint of a wide distribution running from no care at all to more than twenty years. No household experiences the average.</div>
+    <div><strong>Claims data describes buyers, not the population.</strong> People who health-qualified and kept a policy for decades are not a cross-section of Americans. Their claim ages and durations reflect that selection.</div>
+    <div><strong>The federal duration figures include unpaid family care.</strong> Paid care alone averages under a year, but that understates cost exposure for households without a family caregiver available.</div>
+    <div><strong>Cost figures are medians at a point in time.</strong> Half of providers charge more. Rates vary by county, by acuity, and by room type, and they have risen faster than general inflation in recent years.</div>
+  </div>
+
+  <div class="ks-cpa">
+    <p class="label">My CPA Perspective</p>
+    <p>The number that changes planning is not the 70% headline. It is the 11% who exhaust their benefits and the 20% who need care beyond five years. A three-year benefit period covers the median experience and leaves the expensive tail uncovered &mdash; which is the exposure a household was trying to insure in the first place.</p>
+    <p>The second number that matters is 55% &mdash; the share of claims that begin with cognitive decline. Cognitive claims run long, and they require supervision rather than skilled medical care, which is exactly what Medicare does not pay for.</p>
+    <p>I do not sell against these statistics, and I am not compensated differently depending on which carrier a client chooses, or on whether a client buys anything at all. For some households the right conclusion is to fund the risk from their own balance sheet. The point of the data is to make that a decision rather than an assumption.</p>
+  </div>
+
+  <div class="ks-cta">
+    <p class="eyebrow">Complimentary &middot; No Obligation</p>
+    <h2>See Where You Actually Stand</h2>
+    <p class="msg">These are population figures. Your own exposure depends on your age, your health, your household, and the assets already standing behind the risk. I will run the numbers for your situation and show you what the coverage would and would not do.</p>
+    <a class="btn btn-gold" href="contact.html">Request a Complimentary Review</a>
+    <a class="phone" href="tel:+19257086501">(925) 708-6501</a>
+    <p class="own">Existing policyholders: a review of coverage you already own is complimentary as well.</p>
+  </div>
+
 </div>
+
+<div class="ks-sources">
+  <h2>Sources</h2>
+  <p>Administration for Community Living, LongTermCare.gov (duration and lifetime risk) &nbsp;&middot;&nbsp; American Association for Long-Term Care Insurance (decline rates, claims commentary) &nbsp;&middot;&nbsp; OneAmerica published claims experience, 1989 through 12/31/2022 (claimant demographics, claim triggers, care settings, longest claims) &nbsp;&middot;&nbsp; Connecticut Partnership for Long-Term Care, 2024 (service utilization and benefit amounts) &nbsp;&middot;&nbsp; CareScout 2025 Cost of Care Survey, published March 2026 (cost of care) &nbsp;&middot;&nbsp; Milliman analysis of NAIC 2024 Long-Term Care Experience Reporting (policies in force).</p>
+  <p>Withbert W. Payne, CPA, CGMA, FCA &nbsp;&middot;&nbsp; California Insurance License No. 0E90257 &nbsp;&middot;&nbsp; San Ramon, California</p>
+  <p>This is a solicitation for insurance. Statistics are presented for general educational purposes and do not predict any individual's experience or any policy's performance. Long-term care benefit payments reduce a policy's death benefit and cash surrender value. Coverage is subject to medical underwriting and approval is not assured. Tax treatment depends on your circumstances; consult your own CPA or tax adviser.</p>
 </div>
+</div><!-- #page-content -->
 
 <footer><div class="footer-inner">
   <div class="footer-col"><h4>LTCCPAS.COM</h4><p>Independent insurance reviews and policy optimization by a CPA and Licensed Insurance Broker. Serving clients nationwide.</p><a href="https://www.linkedin.com/in/withbertpayne/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn &mdash; Withbert Payne</a></div>
