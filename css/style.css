@@ -674,6 +674,17 @@ nav > ul > li > a.active {
 }
 .content-area ul li { color: var(--text); margin-bottom: 6px; font-size: 15.5px; line-height: 1.7; }
 
+/* Dark panels inside article content ----------------------------------
+   The three rules above set a dark body color on p, li and h3. Inside a
+   navy panel those beat the light color the panel sets on itself, so the
+   text renders near-invisible against the panel. Restore inheritance for
+   anything inside a dark panel; text with its own explicit color (an
+   accent <strong>, for instance) is unaffected. */
+.content-area .dark-panel,
+.content-area .dark-panel p,
+.content-area .dark-panel h3,
+.content-area .dark-panel ul li { color: inherit; }
+
 /* Sidebar */
 .sidebar { width: 300px; flex-shrink: 0; }
 .sidebar-box {
