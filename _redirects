@@ -81,3 +81,10 @@
 # makes the same argument from the federal data.
 /articles/article-ltc-importance         /ltc-risk-report    301
 /articles/article-ltc-importance.html    /ltc-risk-report    301
+
+# Retired. "WA Cares Fund and What California Is Planning" was listed in
+# Resources and is in the sitemap, so the address is indexed. What Washington
+# pays and where California stands are both covered in full on State LTC
+# Programs, which is where it now leads.
+/newsletters/january-11-2023             /state-long-term-care-programs    301
+/newsletters/january-11-2023.html        /state-long-term-care-programs    301
