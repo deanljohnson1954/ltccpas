@@ -73,3 +73,11 @@
 # nothing.
 /long-term-care-risk-report            /ltc-risk-report    301
 /long-term-care-risk-report.html       /ltc-risk-report    301
+
+# Retired. "The Insurance You Are Most Likely to Need - And Least Likely to
+# Have" was listed in Resources as "The Insurance Most Families Miss". It was
+# in the sitemap and linked from the nav and footer of every page, so the
+# address is indexed. It goes to The Risk Most Families Leave Uninsured, which
+# makes the same argument from the federal data.
+/articles/article-ltc-importance         /ltc-risk-report    301
+/articles/article-ltc-importance.html    /ltc-risk-report    301
