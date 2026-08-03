@@ -19,42 +19,108 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/style.css?v=7">
 <style>
-.txa-hero { background:#182F4C; text-align:center; padding:40px 24px 44px; border-bottom:4px solid #C8922A; }
-.txa-hero .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:13px; color:#C8922A; margin:0 0 16px; }
-.txa-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff; font-size:32px; line-height:1.3; margin:0 0 14px; }
-.txa-hero p.sub { font-style:italic; color:#D9E0EA; max-width:600px; margin:0 auto; font-size:16px; line-height:1.6; }
+/* Tax Advantages — reproduces the source document's color table:
+   #1E3A5F navy, #C8922A gold, #E3B341 bright gold, #8A6318 dark gold,
+   #F4EDE0 cream, #F2F4F7 panel, #4A4A4A secondary, #FFFFFF.
+   Times/Arial map to the site's EB Garamond / Source Sans 3. */
 
-.txa-wrap { max-width:820px; margin:0 auto; padding:44px 24px 8px; }
-.txa-wrap p { color:#2B2B2B; font-size:16px; line-height:1.75; margin:0 0 22px; }
-.txa-wrap h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:24px; text-align:center; margin:8px 0 26px; padding-bottom:14px; border-bottom:2px solid #C8922A; }
+.tx-hero { background:#1E3A5F; text-align:center; padding:44px 24px 46px; border-bottom:4px solid #C8922A; }
+.tx-hero .eyebrow { font-weight:700; letter-spacing:.22em; text-transform:uppercase; font-size:12px; color:#E3B341; margin:0 0 18px; }
+.tx-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff;
+  font-size:clamp(25px,4.6vw,36px); overflow-wrap:break-word; line-height:1.24; margin:0 0 16px; }
+.tx-hero p.sub { color:#F4EDE0; font-size:16.5px; line-height:1.7; max-width:820px; margin:0 auto; }
 
-.txa-card { background:#FBF6E9; border-left:5px solid #C8922A; border-radius:0 6px 6px 0; padding:20px 26px; margin:0 0 18px; }
-.txa-card h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; font-weight:700; margin:0 0 8px; }
-.txa-card p.badge { font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:#C8922A; font-size:12px; margin:0 0 8px; }
-.txa-card p { color:#2B2B2B; font-size:15px; line-height:1.7; margin:0; }
+.tx-wrap { max-width:940px; margin:0 auto; padding:42px 24px 8px; }
+.tx-wrap p { color:#1A1A1A; font-size:16px; line-height:1.75; margin:0 0 20px; }
 
-.txa-callout { background:#F6ECD6; border:2px solid #C8922A; border-radius:6px; padding:22px 28px; margin:8px 0 32px; text-align:center; }
-.txa-callout p { font-family:'EB Garamond',Georgia,serif; font-style:italic; font-weight:700; color:#6B4E12; font-size:17px; line-height:1.5; margin:0; }
+.tx-h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:clamp(21px,3.4vw,28px);
+  line-height:1.3; margin:48px 0 16px; padding-bottom:12px; border-bottom:2px solid #C8922A; }
 
-.txa-ca { background:#1E3A5F; padding:36px 28px; margin:0 0 32px; border-radius:6px; }
-.txa-ca h2 { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:22px; margin:0 0 16px; border:none; padding:0; text-align:left; }
-.txa-ca p { color:#D9E0EA; font-size:15px; line-height:1.75; margin:0 0 16px; }
-.txa-ca p:last-child { margin-bottom:0; }
+/* Short answer */
+.tx-answer { background:#F4EDE0; border-left:5px solid #C8922A; padding:26px 30px; margin:0 0 26px; }
+.tx-answer .label { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F; font-size:21px; margin:0 0 12px; }
+.tx-answer p { color:#1A1A1A; font-size:15.5px; line-height:1.75; margin:0; }
 
-.txa-list { list-style:none; padding:0; margin:0 0 22px; }
-.txa-list li { padding:6px 0 6px 24px; position:relative; color:#2B2B2B; font-size:15.5px; }
-.txa-list li:before { content:"\00bb"; position:absolute; left:0; color:#C8922A; font-weight:700; }
+/* Stat tiles */
+.tx-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:0 0 26px; }
+.tx-stats.three { grid-template-columns:repeat(3,1fr); }
+@media(max-width:900px){ .tx-stats { grid-template-columns:1fr 1fr; } }
+@media(max-width:600px){ .tx-stats, .tx-stats.three { grid-template-columns:1fr; } }
+.tx-stat { background:#F2F4F7; border-top:3px solid #C8922A; padding:20px 22px; }
+.tx-stat .n { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F;
+  font-size:clamp(21px,3.4vw,27px); line-height:1.15; margin:0 0 8px; overflow-wrap:break-word; }
+.tx-stat p { color:#4A4A4A; font-size:14.5px; line-height:1.6; margin:0; }
 
-.txa-cta { background:#182F4C; color:#fff; text-align:center; padding:34px 28px; border-radius:6px; margin:8px 0 8px; }
-.txa-cta p.badge { font-weight:700; text-transform:uppercase; letter-spacing:.1em; font-size:11px; color:#C8922A; margin:0 0 10px; }
-.txa-cta h2 { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:21px; margin:0 0 18px; border:none; padding:0; }
-.txa-cta a.btn { display:inline-block; background:#C8922A; color:#182F4C; font-weight:700; font-size:16px; text-decoration:none; padding:14px 32px; border-radius:2px; margin:0 0 16px; }
-.txa-cta p.contact { color:#D9E0EA; font-size:14px; margin:0; }
+.tx-fine { color:#4A4A4A; font-size:13px; line-height:1.7; margin:0 0 26px; }
 
-.txa-disclosure { background:#F4F6F9; border-left:4px solid #1E3A5F; border-radius:0 6px 6px 0; padding:18px 24px; margin:24px 0 50px; }
-.txa-disclosure h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:15px; margin:0 0 8px; }
-.txa-disclosure p { color:#555B63; font-size:13px; line-height:1.7; margin:0; }
+/* Tables */
+.tx-table-wrap { overflow-x:auto; margin:0 0 16px; }
+.tx-table { width:100%; border-collapse:collapse; font-size:15px; min-width:580px; }
+.tx-table thead th { background:#1E3A5F; color:#fff; text-align:left; padding:13px 16px; font-size:11.5px;
+  font-weight:700; letter-spacing:.08em; text-transform:uppercase; vertical-align:bottom; }
+.tx-table td { padding:13px 16px; border-bottom:1px solid #D6DCE4; color:#1A1A1A; vertical-align:top; line-height:1.6; }
+.tx-table td:first-child { font-weight:600; color:#1E3A5F; }
+.tx-table tbody tr:nth-child(even) td { background:#F4EDE0; }
+.tx-table tbody tr:last-child td { border-bottom:none; }
+.tx-limits td:not(:first-child) { text-align:right; font-weight:700; color:#1E3A5F; white-space:nowrap; }
+.tx-limits thead th:not(:first-child) { text-align:right; }
+.tx-ways td:last-child { text-align:center; font-weight:700; color:#8A6318; white-space:nowrap; }
+.tx-ways thead th:last-child { text-align:center; }
+@media(max-width:820px){
+  .tx-table { min-width:0; display:block; font-size:14.5px; }
+  .tx-table thead { display:none; }
+  .tx-table tbody, .tx-table tr, .tx-table td { display:block; width:auto; }
+  .tx-table tr { border:1px solid #C9D4E2; margin:0 0 16px; }
+  .tx-table td { border:0; border-bottom:1px solid #D6DCE4; }
+  .tx-table tr td:last-child { border-bottom:0; }
+  .tx-table td:first-child { background:#1E3A5F !important; color:#fff !important;
+    font-family:'EB Garamond',Georgia,serif; font-size:17px; font-weight:700; }
+  .tx-table td:not(:first-child):before { content:attr(data-l); display:block; color:#1E3A5F;
+    font-weight:700; font-size:11px; letter-spacing:.08em; text-transform:uppercase; margin:0 0 4px; }
+  .tx-limits td:not(:first-child), .tx-ways td:last-child { text-align:left; white-space:normal; }
+}
 
+/* Pull quote */
+.tx-quote { background:#1E3A5F; padding:30px 34px; margin:0 0 26px; text-align:center; }
+.tx-quote p { font-family:'EB Garamond',Georgia,serif; font-style:italic; color:#fff;
+  font-size:clamp(17px,2.7vw,22px); line-height:1.5; margin:0; }
+
+/* Callouts */
+.tx-note { background:#F4EDE0; border:1px solid #E3D9C2; border-left:5px solid #C8922A; padding:26px 30px; margin:0 0 26px; }
+.tx-note h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:22px; margin:0 0 12px; }
+.tx-note p { color:#1A1A1A; font-size:15.5px; line-height:1.75; margin:0; }
+
+/* Angle-bracket bullet list, as the source sets it */
+.tx-list { list-style:none; padding:0; margin:0 0 24px; }
+.tx-list li { padding:9px 0 9px 28px; text-indent:-28px; color:#1A1A1A; font-size:15.5px; line-height:1.7; }
+
+/* CPA perspective */
+.tx-cpa { background:#1E3A5F; padding:34px 32px; margin:36px 0 0; }
+.tx-cpa .by { font-weight:700; letter-spacing:.06em; font-size:13px; color:#E3B341; margin:0 0 6px; }
+.tx-cpa h2 { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:23px; margin:0 0 16px; }
+.tx-cpa p { color:#F4EDE0; font-size:15.5px; line-height:1.8; margin:0 0 16px; }
+.tx-cpa p:last-child { margin:0; }
+
+/* Continue and sources */
+.tx-block { background:#F2F4F7; border-left:4px solid #1E3A5F; padding:24px 28px; margin:30px 0 0; }
+.tx-block h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:20px; margin:0 0 12px; }
+.tx-block p { color:#1A1A1A; font-size:15px; line-height:1.9; margin:0; }
+.tx-block a { color:#1E3A5F; font-weight:700; }
+.tx-block.sources p { color:#4A4A4A; font-size:12.5px; line-height:1.8; }
+
+/* CTA */
+.tx-cta { background:#F4EDE0; border-top:3px solid #C8922A; border-bottom:3px solid #C8922A; text-align:center; padding:44px 28px; margin:36px 0 0; }
+.tx-cta .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:12px; color:#8A6318; margin:0 0 14px; }
+.tx-cta h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:clamp(21px,3.8vw,29px); line-height:1.3; margin:0 0 18px; }
+.tx-cta p.msg { color:#1A1A1A; font-size:16px; line-height:1.75; max-width:740px; margin:0 auto 24px; }
+.tx-cta .btn-gold { font-size:17px; padding:14px 36px; }
+.tx-cta p.line { color:#1E3A5F; font-weight:600; font-size:15.5px; margin:22px 0 8px; }
+.tx-cta p.line a { color:#1E3A5F; text-decoration:none; }
+.tx-cta p.own { color:#4A4A4A; font-size:14.5px; margin:0; }
+
+.tx-disclosure { max-width:940px; margin:0 auto; padding:30px 24px 50px; }
+.tx-disclosure h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:18px; margin:0 0 10px; }
+.tx-disclosure p { font-style:italic; color:#4A4A4A; font-size:12px; line-height:1.8; margin:0; }
 </style>
 </head>
 <body>
@@ -107,78 +173,187 @@
 </ul></nav>
 
 <div id="page-content">
-<div class="txa-hero"><div class="inner">
-  <p class="eyebrow">California &middot; 2026 Tax Planning</p>
-  <h1>Federal &amp; California Tax Advantages<br>of Long-Term Care Insurance</h1>
-  <p class="sub">Long-term care insurance may offer valuable tax benefits.</p>
-</div></div>
+<section class="tx-hero">
+  <p class="eyebrow">Federal &amp; California &middot; 2026 Tax Year</p>
+  <h1>Federal &amp; California Tax Advantages of Long-Term Care Insurance</h1>
+  <p class="sub">How a policy is owned decides how much of it is deductible &mdash; and California does not follow every federal rule.</p>
+</section>
 
-<div class="txa-wrap">
+<div class="tx-wrap">
 
-<p>Long-term care insurance can provide more than protection against the cost of care. Depending on how your policy is owned and funded, it may also provide significant federal tax advantages.</p>
+  <p>Long-term care insurance can do more than pay for care. Depending on how the policy is owned and funded, part or all of the premium may be deductible, and benefits from a tax-qualified contract are generally received income-tax-free. What varies &mdash; enormously &mdash; is how much that advantage is actually worth.</p>
 
-<h2>Federal Tax Highlights</h2>
+  <p>Two rules drive most of the difference. For an individual, the deductible premium is capped by age and then has to clear a floor of 7.5% of adjusted gross income, which most households never reach. For a business paying the premium for an employee, that age cap generally does not apply at all. Same policy, same premium, very different tax result.</p>
 
-<div class="txa-card">
-  <h3>Individuals</h3>
-  <p>Premiums for federally tax-qualified policies may qualify as deductible medical expenses, subject to IRS age-based limits and applicable tax rules.</p>
+  <p>California adds a third variable. It conforms to the Internal Revenue Code as of January 1, 2025, does not conform generally to the One Big Beautiful Bill Act, and does not recognize Health Savings Accounts at all. Its standard deduction is roughly a third of the federal one &mdash; which means a medical expense deduction that is worthless on your federal return can still reduce what you owe on Form 540.</p>
+
+  <div class="tx-answer">
+    <span class="label">The Short Answer</span>
+    <p>Benefits from a tax-qualified policy are generally received income-tax-free. Premiums are the open question. For most individuals the federal deduction is capped by age and never clears the AGI floor. For a C-Corporation the premium is generally deductible in full, with no age cap. California follows the federal medical expense rules but not the HSA rules &mdash; and because its standard deduction is far lower, more Californians benefit from itemizing at the state level than at the federal level. The structure decides the answer, and the structure is the part you control.</p>
+  </div>
+
+  <div class="tx-stats">
+    <div class="tx-stat"><span class="n">$6,200</span><p>2026 federal premium limit, age 71 and over (per person)</p></div>
+    <div class="tx-stat"><span class="n">No Age Cap</span><p>On premiums paid by a C-Corporation</p></div>
+    <div class="tx-stat"><span class="n">7.5%</span><p>Of AGI &mdash; the medical expense floor, federal and California</p></div>
+    <div class="tx-stat"><span class="n">&asymp; 3&times;</span><p>Federal standard deduction vs. California&rsquo;s</p></div>
+  </div>
+
+  <h2 class="tx-h2">First, the Contract Has to Be Tax-Qualified</h2>
+  <p>Everything below depends on one threshold question: is the policy a qualified long-term care insurance contract under IRC &sect;7702B? Qualified contracts pay benefits when a licensed health care practitioner certifies that the insured cannot perform at least two of the six activities of daily living for a period expected to last at least 90 days, or has a severe cognitive impairment &mdash; and they carry a defined set of consumer protections.</p>
+  <p>Most policies sold today are designed to be tax-qualified, and it will say so on the illustration. A non-qualified contract receives none of the treatment described on this page. Confirm it before you evaluate anything else.</p>
+
+  <h2 class="tx-h2">The Federal Age-Based Premium Limits</h2>
+  <p>The Internal Revenue Code caps how much qualified long-term care premium can be counted as a medical expense in a year. The cap is set by the insured person&rsquo;s attained age at the end of the tax year and is indexed annually. For 2026:</p>
+
+  <div class="tx-table-wrap">
+    <table class="tx-table tx-limits">
+      <thead><tr><th>Attained age at year end</th><th>2026 limit per insured person</th></tr></thead>
+      <tbody>
+        <tr><td>40 or under</td><td data-l="2026 limit">$500</td></tr>
+        <tr><td>41 to 50</td><td data-l="2026 limit">$930</td></tr>
+        <tr><td>51 to 60</td><td data-l="2026 limit">$1,860</td></tr>
+        <tr><td>61 to 70</td><td data-l="2026 limit">$4,960</td></tr>
+        <tr><td>71 and over</td><td data-l="2026 limit">$6,200</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Three points that are routinely missed. The limit is per insured person, so a married couple applies two limits, each based on that spouse&rsquo;s own age. Premium paid above the limit receives no federal treatment at all &mdash; it is simply a personal expense. And the limit is a ceiling on what may be counted, not a deduction you are handed; it still has to survive the rules in the next two sections.</p>
+  <p class="tx-fine">These amounts change every year. The figures above are the 2026 amounts published by the IRS in Revenue Procedure 2025-32.</p>
+
+  <h2 class="tx-h2">Five Ways the Premium Gets Paid &mdash; and What Each One Earns</h2>
+  <p>The single largest factor in the tax result is not the policy. It is who writes the check.</p>
+
+  <div class="tx-table-wrap">
+    <table class="tx-table tx-ways">
+      <thead><tr><th>Who pays the premium</th><th>Federal treatment</th><th>Age cap?</th></tr></thead>
+      <tbody>
+        <tr><td>Individual &mdash; employee or retiree</td><td data-l="Federal treatment">Counts as a medical expense on Schedule A, but only the portion of total medical expenses above 7.5% of AGI, and only if you itemize</td><td data-l="Age cap?">Yes</td></tr>
+        <tr><td>Self-employed &mdash; sole proprietor, partner, or more-than-2% S-Corporation shareholder</td><td data-l="Federal treatment">Above-the-line deduction for eligible premium, with no AGI floor; S-Corporation premiums are reported through W-2 wages first, subject to earned income limits</td><td data-l="Age cap?">Yes</td></tr>
+        <tr><td>C-Corporation, for an employee or employee-owner</td><td data-l="Federal treatment">Ordinary and necessary business expense, generally deductible in full and generally not taxable income to the covered employee</td><td data-l="Age cap?">No</td></tr>
+        <tr><td>Health Savings Account</td><td data-l="Federal treatment">Tax-free distribution may be used to pay premiums up to the age-based limit (no separate deduction &mdash; the money went in pre-tax)</td><td data-l="Age cap?">Yes</td></tr>
+        <tr><td>Employer, for employees generally</td><td data-l="Federal treatment">Deductible to the business and generally excluded from the employee&rsquo;s income; long-term care coverage cannot be offered through a cafeteria plan or a flexible spending account</td><td data-l="Age cap?">No</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="tx-h2">Why the Individual Deduction Is Often Worth Nothing</h2>
+  <p>This is the part of the subject that is oversold, so it is worth being direct about it. For a retired couple paying premiums personally, the federal deduction usually produces no benefit whatsoever &mdash; not a small one. None.</p>
+  <p>Two hurdles have to be cleared in sequence. First you have to itemize, which means your total itemized deductions must exceed a 2026 standard deduction of $16,100 single or $32,200 joint &mdash; before adding the extra $2,050 (unmarried) or $1,650 per qualifying spouse for filers 65 and older, and before the separate senior deduction of up to $6,000 per qualifying person available for 2025 through 2028 within income limits. Roughly nine in ten filers take the standard deduction.</p>
+  <p>Then, if you do itemize, only the age-capped premium counts, and only the portion of your combined medical expenses that exceeds 7.5% of AGI. A couple both aged 62 with $150,000 of AGI has to accumulate more than $11,250 of medical expenses before the first dollar becomes deductible. Their long-term care premiums alone will rarely get them there.</p>
+
+  <div class="tx-quote">
+    <p>&ldquo;If your long-term care premium is deductible, that is a reason to structure it well. It is never a reason to buy.&rdquo;</p>
+  </div>
+
+  <h2 class="tx-h2">The C-Corporation Route</h2>
+  <p>Where the tax treatment genuinely changes the arithmetic, it is almost always here. A C-Corporation may generally deduct the qualified long-term care premiums it pays for eligible employees &mdash; including employee-owners &mdash; as an ordinary business expense, without being limited by the individual age-based table, and the coverage is generally not taxable income to the covered employee.</p>
+
+  <div class="tx-stats three">
+    <div class="tx-stat"><span class="n">No Age Table</span><p>The corporate deduction is not capped at $930 or $6,200 per person. The full qualifying premium is generally deductible.</p></div>
+    <div class="tx-stat"><span class="n">Not Employee Income</span><p>Employer-paid qualified coverage is generally excluded from the covered employee&rsquo;s income.</p></div>
+    <div class="tx-stat"><span class="n">Real Conditions Apply</span><p>A bona fide employee, a documented plan, and reasonable overall compensation. It is a benefit plan, not a line item.</p></div>
+  </div>
+
+  <p>Two honest limits. S-Corporations and partnerships do not get this treatment &mdash; premiums for a more-than-2% shareholder or a partner flow onto the individual return and land right back under the age cap. And nobody should convert an entity, or form one, in order to deduct a long-term care premium. If a C-Corporation already exists and already has employees, this is one of the most efficient ways available to fund the coverage. If it does not, the conversation is a different one.</p>
+
+  <h2 class="tx-h2">Asset-Based Designs, Single Premiums, and 1035 Exchanges</h2>
+  <p>Many modern policies combine long-term care benefits with life insurance. Qualified long-term care benefits from these contracts are generally received income-tax-free, and if care is never needed, a generally income-tax-free death benefit may pass to beneficiaries instead &mdash; which is why they appeal to people who dislike the idea of paying premiums for a benefit they may never use.</p>
+  <p>Be careful about the premium side, though. A single premium paid into a linked-benefit contract does not work like an annual traditional premium for deduction purposes, and many single-premium designs produce no individual deduction at all. Any charges deducted from a life or annuity contract to pay for long-term care coverage generally reduce basis and are not separately deductible.</p>
+
+  <div class="tx-note">
+    <h2>The Provision Most People Have Never Heard Of</h2>
+    <p>An existing life insurance policy or a non-qualified annuity can generally be exchanged under IRC &sect;1035 into a qualified long-term care contract without recognizing gain. For an annuity carrying embedded gain that would otherwise come out as ordinary income, this is frequently the single largest tax advantage available anywhere in this subject: the gain can be applied to future care without ever being taxed. It has to be a direct carrier-to-carrier exchange. If the money passes through your hands first, the exchange is a taxable distribution and the advantage is gone. If you are holding an old annuity or a paid-up policy you no longer need for its original purpose, this is worth reviewing before anything else.</p>
+  </div>
+
+  <h2 class="tx-h2">California: Where It Follows Federal, and Where It Does Not</h2>
+  <p>California conforms to the Internal Revenue Code as of January 1, 2025, and adopts many federal rules for qualified long-term care contracts. It does not adopt all of them, and the differences run in both directions.</p>
+
+  <div class="tx-table-wrap">
+    <table class="tx-table">
+      <thead><tr><th>Item</th><th>Federal</th><th>California</th></tr></thead>
+      <tbody>
+        <tr><td>Medical expense floor</td><td data-l="Federal">7.5% of AGI</td><td data-l="California">Same &mdash; 7.5% of federal AGI</td></tr>
+        <tr><td>Age-based premium limits</td><td data-l="Federal">Apply</td><td data-l="California">Generally the same limits</td></tr>
+        <tr><td>Self-employed health insurance deduction</td><td data-l="Federal">Above the line</td><td data-l="California">Conforms; adjustment only where the taxpayer is an employee for California purposes</td></tr>
+        <tr><td>Benefits from a qualified contract</td><td data-l="Federal">Generally income-tax-free</td><td data-l="California">Generally follows</td></tr>
+        <tr><td>Health Savings Accounts</td><td data-l="Federal">Deductible; growth tax-free</td><td data-l="California">Not recognized &mdash; no deduction, and earnings are taxable</td></tr>
+        <tr><td>C-Corporation premium deduction</td><td data-l="Federal">Ordinary business expense</td><td data-l="California">Allowed against California income</td></tr>
+        <tr><td>Standard deduction, joint filers</td><td data-l="Federal">$32,200 (2026)</td><td data-l="California">$11,412 (2025, indexed annually)</td></tr>
+        <tr><td>One Big Beautiful Bill Act changes</td><td data-l="Federal">Apply</td><td data-l="California">California does not conform generally</td></tr>
+        <tr><td>Separate state long-term care credit</td><td data-l="Federal">&mdash;</td><td data-l="California">None</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tx-note">
+    <h2>The California Point Most People Miss</h2>
+    <p>You can itemize on your California return even if you took the standard deduction federally. Schedule CA (540) provides a box for exactly that. Because California&rsquo;s standard deduction is roughly a third of the federal amount, a medical expense deduction that produces nothing on Form 1040 can still reduce California tax &mdash; at rates that reach 13.3%. Qualified long-term care premiums, within the age limits, are part of that calculation. A related detail: California&rsquo;s itemized deduction limitation for higher incomes is computed in a way that excludes medical expenses from the reduction, so the medical deduction is not phased out along with the rest.</p>
+  </div>
+
+  <p>The Health Savings Account difference deserves its own sentence, because California and New Jersey are the only two states that do not recognize HSAs. A Californian who funds an HSA gets the federal deduction and none of the state one, and the account&rsquo;s earnings are taxable to California along the way. On the other side of the ledger, qualified medical expenses paid with a tax-free HSA distribution can be counted toward the California medical expense deduction &mdash; an adjustment on Schedule CA that is missed on a great many returns.</p>
+
+  <h2 class="tx-h2">What This Looks Like in a Current Design</h2>
+  <p>One design I am asked about often covers two insureds under a single-premium, asset-based contract with lifetime benefits and cash value from the first day. For a business owner, the funding conversation and the tax conversation are the same conversation.</p>
+
+  <div class="tx-stats three">
+    <div class="tx-stat"><span class="n">Two Insureds</span><p>One contract covering both spouses, with lifetime benefits available to either.</p></div>
+    <div class="tx-stat"><span class="n">Single Premium</span><p>One-time funding rather than a premium you carry, and cash value from day one.</p></div>
+    <div class="tx-stat"><span class="n">Entity Funded</span><p>Where a C-Corporation is already in place, the premium may be funded through the business.</p></div>
+  </div>
+
+  <p>I do not publish a net-of-tax cost figure for a design like this, and I would treat with caution any illustration that does. The value of the deduction depends entirely on the entity, the bracket, the state, and the year &mdash; the whole point of this page. Benefit levels, premium, and the deduction available in your own circumstances belong in an illustration built for you, not in a headline.</p>
+
+  <h2 class="tx-h2">Every Situation Is Different</h2>
+  <p>The most tax-efficient way to fund coverage depends on factors that differ from household to household:</p>
+
+  <ul class="tx-list">
+    <li>&rsaquo;&nbsp; Whether the policy is owned individually or through a business, and which type of entity</li>
+    <li>&rsaquo;&nbsp; Self-employed status, and whether earned income supports the deduction</li>
+    <li>&rsaquo;&nbsp; C-Corporation ownership, and whether a bona fide employment relationship exists</li>
+    <li>&rsaquo;&nbsp; Whether you itemize federally, only in California, or in neither</li>
+    <li>&rsaquo;&nbsp; Existing assets &mdash; particularly old life policies or non-qualified annuities carrying embedded gain</li>
+    <li>&rsaquo;&nbsp; Health Savings Account balances, and the California treatment of them</li>
+    <li>&rsaquo;&nbsp; Asset-based versus traditional long-term care insurance</li>
+    <li>&rsaquo;&nbsp; The age of each insured, since the limits are applied person by person</li>
+  </ul>
+
+  <p>As a CPA and a licensed insurance broker, I evaluate these alternatives together rather than one at a time, which is usually where the answer changes.</p>
+
+  <div class="tx-cpa">
+    <p class="by">Withbert (Bert) W. Payne, CPA, CGMA, FCA</p>
+    <h2>My CPA Perspective</h2>
+    <p>Nobody should buy long-term care insurance for the deduction. The tax treatment changes the price of a decision; it does not make a poorly designed policy into a good one, and it will not rescue coverage you cannot afford to keep. For most individual buyers over 65 who are paying premiums personally, the federal deduction is worth nothing at all, and I would rather tell you that at the start than let you discover it in April.</p>
+    <p>Where the tax treatment does matter, it matters a great deal: a C-Corporation owner and a client holding an old annuity with embedded gain are two genuinely different conversations, and both are frequently missed. I hold a CPA license, the CGMA, and an English chartered accountancy fellowship, and I trained at Price Waterhouse. I am also a licensed insurance broker, California License No. 0E90257. My compensation does not vary by carrier, by product, or by whether you buy anything at all &mdash; which means the tax analysis I give you is the same either way.</p>
+  </div>
+
+  <div class="tx-block">
+    <h2>Continue</h2>
+    <p><a href="paying-for-long-term-care.html">Paying for Long-Term Care</a> &middot; <a href="newsletters/january-7-2024.html">The Cost of Waiting on Long-Term Care Insurance</a> &middot; <a href="ltc-risk-report.html">The Long-Term Care Risk Report</a> &middot; <a href="long-term-care-ltc-insurance/ltc-insurance-can-be-a-winner.html">Win Either Way</a> &middot; <a href="ltc-statistics.html">Key Long-Term Care Statistics</a></p>
+  </div>
+
+  <div class="tx-block sources">
+    <h2>Sources</h2>
+    <p>IRS Revenue Procedure 2025-32 (2026 eligible long-term care premium limits and standard deduction amounts) &middot; Internal Revenue Code &sect;&sect;7702B, 213(d)(10), 106, 125(f), and 1035 &middot; IRS Publication 502 &middot; California Franchise Tax Board, 2025 Instructions for Schedule CA (540) and 2025 Form 540 booklet &middot; FTB Publication 1001.</p>
+  </div>
+
+  <div class="tx-cta">
+    <p class="eyebrow">Complimentary &middot; No Obligation</p>
+    <h2>Find Out Which Route Actually Applies to You</h2>
+    <p class="msg">A review of how your coverage is owned and funded, and what the deduction is genuinely worth in your circumstances.</p>
+    <a class="btn btn-gold" href="contact.html">Request a Complimentary Review</a>
+    <p class="line">Withbert (Bert) W. Payne, CPA, CGMA, FCA &middot; <a href="tel:+19257086501">(925) 708-6501</a> &middot; LTCCPAs.com</p>
+    <p class="own">Existing policyholders: a review of coverage already in force is complimentary as well.</p>
+  </div>
+
 </div>
 
-<div class="txa-card">
-  <h3>Self-Employed Individuals</h3>
-  <p>Sole proprietors, partners, and certain S-Corporation owners may qualify for an above-the-line federal deduction for eligible premiums, subject to IRS limitations.</p>
+<div class="tx-disclosure">
+  <h2>Important Disclosure</h2>
+  <p>This is a solicitation for insurance. This material is educational and is not tax, legal, or accounting advice; consult a qualified professional regarding your specific situation. Tax figures shown are for the 2026 federal tax year unless otherwise stated and are adjusted annually; California amounts shown are the most recently published. Tax laws change, conformity between federal and California law changes, and every situation is different. Insurance benefits are subject to underwriting and policy terms. Tax treatment of benefits is generally income-tax-free, subject to applicable tax rules. C-Corporation advantages apply only where applicable.</p>
 </div>
-
-<div class="txa-card">
-  <h3>C-Corporations</h3>
-  <p class="badge">Potentially the Most Efficient</p>
-  <p>A C-Corporation may generally deduct the qualifying long-term care insurance premiums it pays for eligible employees, including employee-owners, without being limited by the individual age-based deduction limits. This can make a C-Corporation one of the most tax-efficient ways to fund long-term care protection.</p>
-</div>
-
-<div class="txa-card">
-  <h3>Asset-Based Long-Term Care</h3>
-  <p>Many modern policies combine long-term care benefits with life insurance. Qualified long-term care benefits are generally received income-tax-free, and if care is never needed, a generally income-tax-free death benefit may pass to beneficiaries.</p>
-</div>
-
-<div class="txa-callout">
-  <p>Federal deduction limits are adjusted annually by the IRS. During your complimentary review, I will explain the current limits that apply to your situation.</p>
-</div>
-
-<div class="txa-ca">
-  <h2>California Tax Considerations</h2>
-  <p>California generally follows many federal tax rules for qualified long-term care benefits but does not always conform to every federal deduction available, particularly for certain self-employed deductions. California tax treatment depends on your individual circumstances.</p>
-  <p>Because California tax law differs from federal law in several areas, professional guidance is essential before making funding decisions.</p>
-</div>
-
-<h2>Every Situation Is Different</h2>
-<p>The most tax-efficient funding strategy depends upon factors such as:</p>
-<ul class="txa-list">
-  <li>Individual or business ownership</li>
-  <li>Self-employed status</li>
-  <li>C-Corporation ownership</li>
-  <li>Existing assets</li>
-  <li>Health Savings Accounts (HSAs)</li>
-  <li>Asset-based versus traditional long-term care insurance</li>
-</ul>
-<p>As both a CPA and a Licensed Insurance Broker, I help clients evaluate these alternatives and determine the most appropriate strategy for their circumstances.</p>
-
-</div>
-
-<div class="txa-cta">
-  <p class="badge">No Cost, No Obligation</p>
-  <h2>Review the Most Tax-Efficient Way to Fund Your Coverage</h2>
-  <a class="btn" href="contact.html">Request a Complimentary Review</a>
-  <p class="contact">Withbert W. Payne, CPA, CGMA, FCA &middot; (925) 708-6501 &middot; LTCCPAs.com</p>
-</div>
-
-<div class="txa-wrap">
-<div class="txa-disclosure">
-  <h3>Important Disclosure</h3>
-  <p>Tax laws change periodically, and every client&rsquo;s situation is unique. This information is provided for educational purposes only and should not be construed as tax or legal advice. Please consult your CPA or tax advisor regarding your specific circumstances. This is a solicitation for insurance.</p>
-</div>
-</div>
-
-</div>
+</div><!-- #page-content -->
 
 <footer><div class="footer-inner">
   <div class="footer-col"><h4>LTCCPAS.COM</h4><p>Independent insurance reviews and policy optimization by a CPA and Licensed Insurance Broker. Serving clients nationwide.</p><a href="https://www.linkedin.com/in/withbertpayne/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn &mdash; Withbert Payne</a></div>
