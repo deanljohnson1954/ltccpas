@@ -77,6 +77,67 @@ initNav();
   document.querySelectorAll(sel).forEach(el => fixPaths(el, window.location.href));
 });
 
+/* ── 2c. One call to action per view ────────────────────────────
+   "Request a Complimentary Review" sits in the header, in most pages'
+   closing CTA, and in the footer. The header is position:sticky, so
+   its button rides down the page and would share the screen with the
+   other two; and a page's closing CTA sits only 300-800px above the
+   footer button, well inside one screen. Two rules keep exactly one
+   on screen at a time:
+
+     - the footer button stands down on any page that closes with its
+       own CTA, so that page's own button is the one at the bottom;
+     - the header button hides while any other CTA is on screen and
+       comes back when none is, so it is the one at the top.
+
+   The footer markup stays identical on every page; only what is shown
+   differs. Re-run after each SPA navigation, since #page-content is
+   replaced and the new page may have a different closing CTA. */
+function oneCtaPerView() {
+  const isCta = el => /request a complimentary review/i.test(el.textContent);
+  const headerBtn = document.querySelector('header .header-actions a.btn-gold');
+  const footerBtn = document.querySelector('footer a.footer-btn');
+  const pageBtns = [...document.querySelectorAll('#page-content a')]
+    .filter(a => /btn/.test(a.className) && isCta(a));
+
+  if (footerBtn) footerBtn.style.display = pageBtns.length ? 'none' : '';
+  if (!headerBtn) return;
+
+  const others = pageBtns.slice();
+  if (footerBtn && !pageBtns.length) others.push(footerBtn);
+  if (!others.length) { headerBtn.style.display = ''; oneCtaPerView._others = null; return; }
+  oneCtaPerView._others = others;
+
+  // Measured against the viewport rather than watched with an
+  // IntersectionObserver: the header has to settle on the same frame the
+  // other button appears, and a rect test is synchronous where an
+  // observer callback is not.
+  if (!oneCtaPerView._bound) {
+    const sync = () => {
+      const list = oneCtaPerView._others;
+      if (!list || !headerBtn) return;
+      const h = window.innerHeight;
+      const shown = list.some(el => {
+        const b = el.getBoundingClientRect();
+        return b.bottom > 0 && b.top < h && b.width > 0;
+      });
+      headerBtn.style.display = shown ? 'none' : '';
+    };
+    let queued = false;
+    const onScrollOrResize = () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(() => { queued = false; sync(); });
+    };
+    window.addEventListener('scroll', onScrollOrResize, { passive: true });
+    window.addEventListener('resize', onScrollOrResize);
+    oneCtaPerView._bound = true;
+    oneCtaPerView._sync = sync;
+  }
+  oneCtaPerView._sync();
+}
+oneCtaPerView();
+
 /* ── 3. SPA Router ─────────────────────────────────────────── */
 async function navigate(url, pushState = true) {
   const content = document.getElementById('page-content');
@@ -128,6 +189,7 @@ async function navigate(url, pushState = true) {
     document.title = doc.title;
     content.innerHTML = newContent.innerHTML;
     decodeEmails();
+    oneCtaPerView();
 
     if (pushState) history.pushState({ url }, '', url);
 
