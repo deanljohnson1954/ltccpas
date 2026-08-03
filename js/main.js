@@ -97,8 +97,11 @@ function oneCtaPerView() {
   const isCta = el => /request a complimentary review/i.test(el.textContent);
   const headerBtn = document.querySelector('header .header-actions a.btn-gold');
   const footerBtn = document.querySelector('footer a.footer-btn');
-  const pageBtns = [...document.querySelectorAll('#page-content a')]
-    .filter(a => /btn/.test(a.className) && isCta(a));
+  // Matched on destination and wording, not on class: several pages style
+  // their gold button with inline CSS and carry no btn class at all, and a
+  // plain text link to the contact page is the same instruction either way.
+  const pageBtns = [...document.querySelectorAll('#page-content a[href*="contact"]')]
+    .filter(isCta);
 
   if (footerBtn) footerBtn.style.display = pageBtns.length ? 'none' : '';
   if (!headerBtn) return;
@@ -117,9 +120,17 @@ function oneCtaPerView() {
       const list = oneCtaPerView._others;
       if (!list || !headerBtn) return;
       const h = window.innerHeight;
+      // The header is position:sticky and therefore still in normal flow, so
+      // hiding its button shortens the header and shifts everything below it
+      // -- on a phone by about 5px. Testing the exact viewport edge lets that
+      // shift flip the answer back and forth, and a button sitting one pixel
+      // from the edge ends up shown alongside the header again. Judging a
+      // button on screen slightly before it arrives is well clear of that
+      // shift and errs the only safe way, towards hiding the header.
+      const M = 24;
       const shown = list.some(el => {
         const b = el.getBoundingClientRect();
-        return b.bottom > 0 && b.top < h && b.width > 0;
+        return b.bottom > -M && b.top < h + M && b.width > 0;
       });
       headerBtn.style.display = shown ? 'none' : '';
     };
