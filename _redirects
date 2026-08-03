@@ -65,10 +65,11 @@
 /long-term-care-ltc-insurance/long-term-care-solutions                      /ltc-examples/four-ways-to-protect-your-retirement    301
 /long-term-care-ltc-insurance/long-term-care-solutions.html                 /ltc-examples/four-ways-to-protect-your-retirement    301
 
-# The LTC Risk Report briefly lived at /long-term-care-risk-report, while "The
-# Risk Most Families Leave Uninsured" held /ltc-risk-report. That article has
-# been withdrawn and the Risk Report is back at its long-standing address, so
-# the temporary one points home. Only a few hours of links can exist, but they
-# cost nothing to honor.
+# The LTC Risk Report briefly lived at /long-term-care-risk-report while the
+# Resources slot was in flux. That article has since been retired and its slot
+# is held by "The Long-Term Care Risk Most Families Leave Uninsured" at
+# /ltc-risk-report, which is where both the old and the temporary address now
+# lead. The temporary one was live for only a few hours, but honoring it costs
+# nothing.
 /long-term-care-risk-report            /ltc-risk-report    301
 /long-term-care-risk-report.html       /ltc-risk-report    301
