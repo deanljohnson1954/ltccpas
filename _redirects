@@ -64,3 +64,10 @@
 # inbound links and was never listed in the sitemap.
 /long-term-care-ltc-insurance/long-term-care-solutions                      /ltc-examples/four-ways-to-protect-your-retirement    301
 /long-term-care-ltc-insurance/long-term-care-solutions.html                 /ltc-examples/four-ways-to-protect-your-retirement    301
+
+# Withdrawn. "The Risk Most Families Leave Uninsured" was published at this
+# address briefly and has been taken down. The address had carried the LTC Risk
+# Report for months and is in the wild, so it goes to that article at its own
+# URL rather than to a 404.
+/ltc-risk-report                                                            /long-term-care-risk-report    301
+/ltc-risk-report.html                                                       /long-term-care-risk-report    301
