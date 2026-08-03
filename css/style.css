@@ -1524,3 +1524,11 @@ footer {
 .assessment-moderate  { color:#c8982a; font-weight:700; font-size:0.78rem; }
 .assessment-weak      { color:#c0392b; font-weight:700; font-size:0.78rem; }
 .update-text { font-size:0.68rem; color:#555; line-height:1.45; text-align:left; }
+
+/* Long button labels on very narrow screens ----------------------------
+   .btn sets white-space:nowrap, so a label as long as "Request a
+   Complimentary Review" cannot break and pushes the page sideways on a
+   320px screen. Let long labels wrap and never exceed the room available. */
+@media (max-width: 420px) {
+  .btn, .btn-gold, .btn-gold-lg, .footer-btn { white-space: normal; max-width: 100%; }
+}
