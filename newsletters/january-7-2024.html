@@ -18,6 +18,118 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="../css/style.css?v=7">
+<style>
+/* The Cost of Waiting — reproduces the source document's color table:
+   #1E3A5F navy, #C8922A gold, #F0DFB8 and #D8C79B gold tints, #2E2E2E body,
+   #5A5A5A secondary, #FBF5E9 cream, #F2F5F8 / #FAFAFA / #D9E1EA panels,
+   #C9D3DF / #D9D9D9 rules. Times/Arial map to EB Garamond / Source Sans 3. */
+
+.cw-hero { background:#1E3A5F; text-align:center; padding:44px 24px 46px; border-bottom:4px solid #C8922A; }
+.cw-hero .eyebrow { font-weight:700; letter-spacing:.22em; text-transform:uppercase; font-size:12px; color:#C8922A; margin:0 0 18px; }
+.cw-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff;
+  font-size:clamp(25px,5vw,38px); overflow-wrap:break-word; line-height:1.22; margin:0 0 16px; }
+.cw-hero p.sub { color:#C9D3DF; font-size:16.5px; line-height:1.7; max-width:760px; margin:0 auto 18px; }
+.cw-hero p.by { color:#F0DFB8; font-size:13px; letter-spacing:.04em; margin:0; }
+
+.cw-wrap { max-width:920px; margin:0 auto; padding:42px 24px 8px; }
+.cw-wrap p { color:#2E2E2E; font-size:16px; line-height:1.75; margin:0 0 20px; }
+
+.cw-h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:clamp(21px,3.4vw,28px);
+  line-height:1.3; margin:46px 0 16px; padding-bottom:12px; border-bottom:2px solid #C8922A; }
+
+/* Short answer */
+.cw-answer { background:#FBF5E9; border-left:5px solid #C8922A; padding:26px 30px; margin:0 0 26px; }
+.cw-answer .label { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F; font-size:21px; margin:0 0 12px; }
+.cw-answer p { color:#2E2E2E; font-size:15.5px; line-height:1.75; margin:0; }
+
+/* Stat tiles */
+.cw-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:0 0 26px; }
+@media(max-width:900px){ .cw-stats { grid-template-columns:1fr 1fr; } }
+@media(max-width:560px){ .cw-stats { grid-template-columns:1fr; } }
+.cw-stat { background:#F2F5F8; border-top:3px solid #C8922A; padding:20px 22px; text-align:center; }
+.cw-stat .n { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#1E3A5F;
+  font-size:clamp(22px,3.6vw,29px); line-height:1.15; margin:0 0 8px; overflow-wrap:break-word; }
+.cw-stat p { color:#5A5A5A; font-size:14px; line-height:1.6; margin:0; }
+
+.cw-fine { color:#5A5A5A; font-size:13px; line-height:1.7; margin:0 0 26px; }
+
+/* Tables */
+.cw-table-wrap { overflow-x:auto; margin:0 0 14px; }
+.cw-table { width:100%; border-collapse:collapse; font-size:15px; min-width:560px; }
+.cw-table thead th { background:#1E3A5F; color:#fff; text-align:left; padding:13px 16px; font-size:11.5px;
+  font-weight:700; letter-spacing:.08em; text-transform:uppercase; vertical-align:bottom; }
+.cw-table thead th:not(:first-child) { text-align:right; }
+.cw-table td { padding:13px 16px; border-bottom:1px solid #C9D3DF; color:#2E2E2E; vertical-align:top; }
+.cw-table td:first-child { font-weight:600; color:#1E3A5F; }
+.cw-table td:not(:first-child) { text-align:right; font-weight:700; color:#1E3A5F; white-space:nowrap; }
+.cw-table tbody tr:nth-child(even) td { background:#FAFAFA; }
+.cw-table tbody tr:last-child td { border-bottom:none; }
+.cw-wide td:not(:first-child) { white-space:normal; font-weight:400; color:#2E2E2E; text-align:right; }
+@media(max-width:760px){
+  .cw-table { min-width:0; display:block; font-size:14.5px; }
+  .cw-table thead { display:none; }
+  .cw-table tbody, .cw-table tr, .cw-table td { display:block; width:auto; }
+  .cw-table tr { border:1px solid #C9D3DF; margin:0 0 16px; }
+  .cw-table td { border:0; border-bottom:1px solid #D9D9D9; text-align:right; }
+  .cw-table tr td:last-child { border-bottom:0; }
+  .cw-table td:first-child { background:#1E3A5F !important; color:#fff !important; text-align:left;
+    font-family:'EB Garamond',Georgia,serif; font-size:17px; }
+  .cw-table td:not(:first-child):before { content:attr(data-l); float:left; color:#1E3A5F; font-weight:600;
+    font-size:12px; text-transform:uppercase; letter-spacing:.06em; padding-right:14px; }
+  .cw-table td:not(:first-child) { white-space:normal; }
+}
+
+/* Em-dash bullet lists, as the source sets them */
+.cw-list { list-style:none; padding:0; margin:0 0 24px; }
+.cw-list li { padding:9px 0 9px 30px; text-indent:-30px; color:#2E2E2E; font-size:15.5px; line-height:1.7; }
+.cw-list a { color:#1E3A5F; font-weight:700; }
+
+/* Pull quote */
+.cw-quote { background:#1E3A5F; padding:30px 34px; margin:0 0 26px; text-align:center; }
+.cw-quote p { font-family:'EB Garamond',Georgia,serif; font-style:italic; color:#fff;
+  font-size:clamp(18px,2.8vw,23px); line-height:1.5; margin:0; }
+
+/* Four costs */
+.cw-costs { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:0 0 26px; }
+@media(max-width:900px){ .cw-costs { grid-template-columns:1fr 1fr; } }
+@media(max-width:560px){ .cw-costs { grid-template-columns:1fr; } }
+.cw-cost { background:#F2F5F8; border-top:3px solid #1E3A5F; padding:20px 22px; }
+.cw-cost .n { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#C8922A; font-size:24px; margin:0 0 6px; }
+.cw-cost h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:18px; line-height:1.3; margin:0 0 8px; }
+.cw-cost p { color:#2E2E2E; font-size:14.5px; line-height:1.65; margin:0; }
+
+/* No-deadline callout */
+.cw-flag { background:#FBF5E9; border:1px solid #D8C79B; border-left:5px solid #C8922A; padding:26px 30px; margin:0 0 26px; }
+.cw-flag .label { display:block; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:11.5px; color:#C8922A; margin:0 0 10px; }
+.cw-flag h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:22px; margin:0 0 12px; }
+.cw-flag p { color:#2E2E2E; font-size:15.5px; line-height:1.75; margin:0; }
+
+/* CPA perspective */
+.cw-cpa { background:#1E3A5F; padding:34px 32px; margin:34px 0 0; }
+.cw-cpa h2 { font-family:'EB Garamond',Georgia,serif; color:#F0DFB8; font-size:22px; margin:0 0 16px; }
+.cw-cpa p { color:#D9E1EA; font-size:15.5px; line-height:1.8; margin:0 0 16px; }
+.cw-cpa p:last-child { margin:0; }
+
+/* Continue and sources */
+.cw-block { background:#F2F5F8; border-left:4px solid #1E3A5F; padding:24px 28px; margin:30px 0 0; }
+.cw-block h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:20px; margin:0 0 12px; }
+.cw-block .cw-list { margin:0; }
+.cw-block .cw-list li { font-size:15px; }
+
+/* CTA */
+.cw-cta { background:#FBF5E9; border-top:3px solid #C8922A; border-bottom:3px solid #C8922A; text-align:center; padding:44px 28px; margin:36px 0 0; }
+.cw-cta .eyebrow { font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:12px; color:#8A6416; margin:0 0 14px; }
+.cw-cta h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:clamp(21px,3.8vw,29px); line-height:1.3; margin:0 0 18px; }
+.cw-cta p.msg { color:#2E2E2E; font-size:16px; line-height:1.75; max-width:740px; margin:0 auto 24px; }
+.cw-cta .btn-gold { font-size:17px; padding:14px 36px; }
+.cw-cta .phone { display:block; font-family:'EB Garamond',Georgia,serif; font-weight:700;
+  font-size:clamp(24px,4.4vw,30px); color:#1E3A5F; text-decoration:none; margin:22px 0 10px; }
+.cw-cta .phone:hover { color:#C8922A; }
+.cw-cta p.own { color:#5A5A5A; font-size:14.5px; margin:0; }
+
+.cw-disclosure { max-width:920px; margin:0 auto; padding:30px 24px 50px; }
+.cw-disclosure p { font-style:italic; color:#5A5A5A; font-size:12px; line-height:1.8; margin:0; }
+</style>
 </head>
 <body>
 <div class="top-bar"><div class="inner"><div><a href="../about-us.html">Meet Withbert W. Payne, CPA</a></div><div><span class="phone" style="font-weight:400;font-size:11px;">Call &nbsp;(925) 708-6501</span><br><span style="font-size:11px;color:var(--gold-light);font-weight:400;">For a Complimentary Review</span></div></div></div>
@@ -70,39 +182,177 @@
 </ul></nav>
 
 <div id="page-content">
-<div class="page-hero"><div class="inner"><div class="breadcrumb"><a href="../index.html">Home</a> &mdash; <span>The Cost of Waiting on LTC Insurance</span></div><h1>The Cost of Waiting on LTC Insurance</h1></div></div>
+<section class="cw-hero">
+  <p class="eyebrow">LTCCPAS.com &nbsp;&middot;&nbsp; Long-Term Care Planning</p>
+  <h1>The Cost of Waiting on Long-Term Care Insurance</h1>
+  <p class="sub">Waiting raises the premium. It can also remove the option altogether.</p>
+  <p class="by">Withbert (Bert) W. Payne, CPA, CGMA, FCA &nbsp;&middot;&nbsp; CA Insurance License No. 0E90257</p>
+</section>
 
-<div class="page-wrap"><div class="two-col">
-<div class="content-area">
-<div class="newsletter-body">
-    <h3>LONG-TERM CARE INSURANCE &mdash; LATEST NEWS</h3>
-    <p>As we enter 2024, long-term care insurance continues to be one of the most important financial planning considerations for individuals approaching retirement age. State-level LTC mandates are gaining momentum across the country, following Washington State's lead.</p>
+<div class="cw-wrap">
 
-    <h3>STATE MANDATES: WHAT YOU NEED TO KNOW</h3>
-    <p>California's Long Term Care Task Force, authorized by AB 567, is actively developing a state-sponsored LTC program. Similar legislative activity is underway in several other states. Employees who do not obtain qualifying private LTC coverage before mandates take effect may face payroll taxes that could have been avoided.</p>
+  <p>Long-term care insurance is one of the few things you cannot buy merely because you have decided to buy it. Eligibility is determined by health, not by the ability to pay. A household with substantial assets and a recent diagnosis may find that no carrier will issue a policy at any price.</p>
 
-    <h3>THE COST OF WAITING</h3>
-    <p>Every year you delay purchasing LTC insurance increases your premium costs. More importantly, as you age, you face a greater risk of becoming uninsurable due to health changes. Once a health condition disqualifies you from coverage, you may never be able to obtain it.</p>
+  <p>That is what makes delay different here from most financial decisions. If you postpone funding a retirement account, you can contribute more later. If you postpone long-term care coverage, you will pay a higher premium later &mdash; and you may receive no offer at all.</p>
 
-    <h3>WHY A SINGLE-PREMIUM POLICY MAKES SENSE NOW</h3>
-    <ul>
-      <li>One lump-sum payment provides lifetime coverage</li>
-      <li>Immediate cash surrender value &mdash; it's an asset on your balance sheet</li>
-      <li>If LTC is never needed, the death benefit exceeds the premium paid</li>
-      <li>Protects your retirement assets from the devastating cost of long-term care</li>
-    </ul>
+  <p>What follows sets out what a delay actually costs, using published industry pricing and underwriting data rather than estimates. None of it is attached to a deadline, and nothing here should be read as a reason to hurry a decision that deserves analysis.</p>
 
-    <h3>TO LEARN MORE</h3>
-    <p>Contact Bert Payne<br>
-    <strong>(925) 708-6501</strong><br>
-    <a href="mailto:bertltccpas@gmail.com">bertltccpas@gmail.com</a></p>
+  <div class="cw-answer">
+    <span class="label">The Short Answer</span>
+    <p>Waiting costs money in three ways and eligibility in a fourth. Between ages 55 and 65 the average annual premium for the same benefit design rises about 40 percent. The benefit pool itself ends up smaller, because inflation growth has ten fewer years to compound. Every year of delay is a year without protection. And the proportion of applicants declined for health reasons roughly doubles between the sixties and the seventies.</p>
   </div>
+
+  <div class="cw-stats">
+    <div class="cw-stat"><span class="n">&asymp; 40%</span><p>Higher annual premium at 65 than at 55</p></div>
+    <div class="cw-stat"><span class="n">$102,500</span><p>Smaller benefit pool at age 85</p></div>
+    <div class="cw-stat"><span class="n">45%</span><p>Of applicants aged 70&ndash;79 declined</p></div>
+    <div class="cw-stat"><span class="n">10 yrs</span><p>Of protection forgone</p></div>
+  </div>
+
+  <h2 class="cw-h2">Waiting Raises the Premium</h2>
+  <p>Age at application is the largest single driver of long-term care premium &mdash; larger than benefit amount and larger, in most cases, than the choice of carrier. The figures below come from the annual Price Index published by the American Association for Long-Term Care Insurance, which prices a standardized design across leading underwriters: an initial benefit pool of $165,000 growing at 3 percent compounded annually.</p>
+
+  <div class="cw-table-wrap">
+    <table class="cw-table">
+      <thead><tr><th>Applicant profile</th><th>Purchased at 55</th><th>Purchased at 65</th><th>Increase</th></tr></thead>
+      <tbody>
+        <tr><td>Couple, both insured (combined)</td><td data-l="At 55">$5,010</td><td data-l="At 65">$7,030</td><td data-l="Increase">+40%</td></tr>
+        <tr><td>Single man</td><td data-l="At 55">$2,200</td><td data-l="At 65">$3,280</td><td data-l="Increase">+49%</td></tr>
+        <tr><td>Single woman</td><td data-l="At 55">$3,750</td><td data-l="At 65">$5,290</td><td data-l="Increase">+41%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="cw-fine">Average annual premium, $165,000 initial benefit pool with 3 percent compound growth. Couple figures are from the 2026 Price Index, priced as of July 20, 2026; single-applicant figures are from the 2025 Index, which the 2026 edition reports as substantially unchanged for the comparable couple profile ($5,050 in 2025 against $5,010 in 2026). These are published averages, not quotes.</p>
+
+  <p>One further point belongs beside that table. For the same design and the same applicants, carriers do not price alike. Five insurers quoting an identical benefit for a couple both aged 60 returned annual premiums of $4,591, $5,661, $6,440, $6,712 and $7,173 &mdash; the highest more than 56 percent above the lowest, with spreads across the wider index reaching 80 percent. Comparison across carriers can recover part of what a delay costs. It cannot recover all of it, and it cannot recover health.</p>
+
+  <h2 class="cw-h2">Waiting Also Shrinks the Benefit</h2>
+  <p>A premium comparison understates the position, because the two buyers are not purchasing the same thing. Inflation growth compounds from the date the policy is issued. The earlier buyer gives that growth ten additional years, and by the age at which care is most commonly needed the difference is substantial.</p>
+
+  <div class="cw-table-wrap">
+    <table class="cw-table">
+      <thead><tr><th>Same $165,000 pool, 3% compound</th><th>At issue</th><th>At age 75</th><th>At age 85</th></tr></thead>
+      <tbody>
+        <tr><td>Purchased at age 55</td><td data-l="At issue">$165,000</td><td data-l="At age 75">$298,000</td><td data-l="At age 85">$400,500</td></tr>
+        <tr><td>Purchased at age 65</td><td data-l="At issue">$165,000</td><td data-l="At age 75">$221,800</td><td data-l="At age 85">$298,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="cw-fine">Arithmetic on a $165,000 initial pool compounding at 3 percent annually; rounded.</p>
+
+  <p>The later buyer pays roughly 40 percent more each year for a pool that is about $102,500 smaller at eighty-five. That is the part of the cost of waiting that no amount of shopping will offset.</p>
+
+  <h2 class="cw-h2">Waiting Can End the Option Entirely</h2>
+  <p>Premium is the recoverable cost. Insurability is not. Declines are uncommon among applicants in their forties and fifties and become ordinary in the seventies, and the change is not gradual at the boundary.</p>
+
+  <div class="cw-table-wrap">
+    <table class="cw-table">
+      <thead><tr><th>Age at application</th><th>Share of applicants declined</th></tr></thead>
+      <tbody>
+        <tr><td>Under 50</td><td data-l="Declined">11%</td></tr>
+        <tr><td>50&ndash;59</td><td data-l="Declined">17%</td></tr>
+        <tr><td>60&ndash;69</td><td data-l="Declined">24%</td></tr>
+        <tr><td>70&ndash;79</td><td data-l="Declined">45%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="cw-fine">American Association for Long-Term Care Insurance underwriting data. Standards differ by product type and by carrier; a separate finding puts declines at 38.2 percent for ages 65&ndash;69 and declined-or-deferred outcomes at 47 percent for ages 70&ndash;75. A decline is also a matter of record, which is why an application should not be filed to find out.</p>
+
+  <div class="cw-quote">
+    <p>&ldquo;You can recover from paying a higher premium. You cannot recover the insurability you have lost.&rdquo;</p>
+  </div>
+
+  <h2 class="cw-h2">What Can Change Between Now and Later</h2>
+  <p>The premium table assumes the later applicant is still in the same health class. Frequently that assumption does not hold, and the things that break it are rarely dramatic.</p>
+
+  <ul class="cw-list">
+    <li>&mdash; A new diagnosis can produce a rating, a postponement, an exclusion, or an outright decline.</li>
+    <li>&mdash; A change in prescriptions can alter eligibility even where the underlying condition seems minor.</li>
+    <li>&mdash; A fall, a memory complaint, a pending test, or an open specialist referral can suspend an application until it is resolved.</li>
+    <li>&mdash; Cognitive screening becomes a routine part of underwriting at older ages, and it is a common cause of adverse decisions.</li>
+    <li>&mdash; Products, benefit structures, pricing and underwriting rules change. A design available today may not be offered later, and closed designs do not reopen.</li>
+    <li>&mdash; An older applicant has fewer years over which the planning can do its work.</li>
+  </ul>
+
+  <h2 class="cw-h2">The Four Costs, Stated Plainly</h2>
+  <div class="cw-costs">
+    <div class="cw-cost"><span class="n">1</span><h3>A higher premium</h3><p>Painful, quantifiable, and survivable. This is the cost most people think of.</p></div>
+    <div class="cw-cost"><span class="n">2</span><h3>A smaller benefit</h3><p>Inflation growth has fewer years to compound before it is needed.</p></div>
+    <div class="cw-cost"><span class="n">3</span><h3>Years unprotected</h3><p>A claim arising during the interval falls entirely on the household.</p></div>
+    <div class="cw-cost"><span class="n">4</span><h3>The option itself</h3><p>The only one of the four that cannot be bought back at any price.</p></div>
+  </div>
+
+  <h2 class="cw-h2">What This Looks Like in a Current Design</h2>
+  <p>The figures above describe traditional long-term care insurance, which is where the published pricing data is. Much of my work involves a different structure: a single-premium policy covering two insureds, which produces a benefit if care is needed and a death benefit if it is not. One current illustration, for a healthy couple aged 50:</p>
+
+  <div class="cw-table-wrap">
+    <table class="cw-table cw-wide">
+      <thead><tr><th>Healthy couple, both age 50</th><th>Illustrated</th></tr></thead>
+      <tbody>
+        <tr><td>Single premium, one payment</td><td data-l="Illustrated">$271,867</td></tr>
+        <tr><td>Combined monthly long-term care benefit</td><td data-l="Illustrated">$40,000 ($20,000 per insured)</td></tr>
+        <tr><td>Death benefit if care is never needed</td><td data-l="Illustrated">$480,000</td></tr>
+        <tr><td>Estimated net capital at risk, after potential tax benefits</td><td data-l="Illustrated">$108,591</td></tr>
+        <tr><td>Effective net cost per insured</td><td data-l="Illustrated">&asymp; $54,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="cw-fine">Illustrative for a healthy couple aged 50 in a single health class on a single date, and not a quote. Lifetime benefits for two insureds depend on the policy selected. Cash surrender value is available from the first day but is subject to surrender charges, loans, withdrawals and the terms of the contract, and any amount taken reduces the benefits. The death benefit is generally income-tax-free subject to applicable tax rules. Potential tax benefits reflect a C corporation and apply only where applicable.</p>
+
+  <p>The same design can be illustrated at issue ages 55, 60, 65 and beyond, holding the benefit level constant so that the premium difference is visible on its own. Those figures are produced from current carrier illustrations on request &mdash; they are not projections, and I do not publish estimates of what a policy might cost in a future year.</p>
+
+  <div class="cw-flag">
+    <span class="label">There Is No Deadline</span>
+    <h2>An Important Distinction</h2>
+    <p>Some long-term care marketing attaches urgency to a state program. It should not. California has no state long-term care program, no long-term care payroll tax, and no enrollment deadline. The task force that studied one submitted its report in December 2023 and was repealed by its own statute on July 1, 2024. Washington&rsquo;s exemption window closed on December 31, 2022, and buying a policy today exempts nobody from anything. The California Department of Insurance issued an alert to agents and brokers on August 23, 2023 addressing precisely this kind of claim. The case for acting earlier is underwriting and pricing, both of which are documented above. It is not a deadline, and anyone presenting it as one is telling you something that is not true.</p>
+  </div>
+
+  <h2 class="cw-h2">Buying Earlier Still Requires Analysis</h2>
+  <p>Acting earlier is not the same as acting quickly. A policy purchased at fifty-five that does not fit the household is not an improvement on one purchased at sixty-five that does. The design has to sit correctly against assets, expected care costs, tax position, liquidity, and estate objectives, and the structure that suits a business owner with a C corporation is not the one that suits a retired couple drawing on a portfolio.</p>
+  <p>For some households the right conclusion is that no policy is needed at all. Where a decade of care for both spouses would not materially change the plan, self-funding is the correct answer, and I will say so.</p>
+
+  <div class="cw-cpa">
+    <h2>My CPA Perspective</h2>
+    <p>The most useful thing a household in its fifties can do is find out where it stands before the answer changes &mdash; and that is done through a preliminary underwriting review, discussed informally, not by filing an application to see what happens. A declined application becomes part of your record and follows you to the next carrier. Health history is worth reviewing before anything is submitted anywhere.</p>
+    <p>I hold CPA, CGMA and FCA credentials and California insurance license 0E90257, and I began my career at Price Waterhouse. I am independent: I compare designs and structures across multiple carriers, my compensation does not vary by carrier or by product, and it does not vary according to whether you buy anything at all. Underwriting comes before design in my process, because a recommendation built on a health picture nobody has examined is not a recommendation.</p>
+  </div>
+
+  <div class="cw-block">
+    <h2>Continue</h2>
+    <ul class="cw-list">
+      <li>&mdash; <a href="../ltc-risk-report.html">The Long-Term Care Risk Report</a> &mdash; the probability, the arithmetic, and whether the risk can be carried privately.</li>
+      <li>&mdash; <a href="../ltc-statistics.html">Key Long-Term Care Statistics</a> &mdash; the underlying utilization, duration and cost data for California.</li>
+      <li>&mdash; <a href="../long-term-care-ltc-insurance/ltc-insurance-can-be-a-winner.html">Win Either Way</a> &mdash; what a single-premium design produces across every outcome, including the one where care is never needed.</li>
+      <li>&mdash; <a href="../state-long-term-care-programs.html">What State Long-Term Care Programs Actually Pay</a> &mdash; Washington, California, and where the rest of the country stands.</li>
+    </ul>
+  </div>
+
+  <div class="cw-block">
+    <h2>Sources</h2>
+    <ul class="cw-list">
+      <li>&mdash; American Association for Long-Term Care Insurance, 2026 Long-Term Care Insurance Price Index, priced as of July 20, 2026; 2025 Price Index for the single-applicant comparison.</li>
+      <li>&mdash; American Association for Long-Term Care Insurance, underwriting decline data by age band.</li>
+      <li>&mdash; Benefit-pool figures are arithmetic on a $165,000 initial pool compounding at 3 percent annually.</li>
+      <li>&mdash; California Department of Insurance, Agent and Broker Alert, August 23, 2023.</li>
+      <li>&mdash; California SB 1255, repealing the Long Term Care Insurance Task Force statute effective July 1, 2024.</li>
+    </ul>
+  </div>
+
+  <div class="cw-cta">
+    <p class="eyebrow">Complimentary &middot; No Obligation</p>
+    <h2>Find Out What Waiting Would Cost You</h2>
+    <p class="msg">Eligibility is decided by health, not by the ability to pay. A review will establish what benefits are appropriate, which designs you presently qualify for, and whether applying now is financially sensible in your circumstances.</p>
+    <a class="btn btn-gold" href="../contact.html">Request a Complimentary Review</a>
+    <a class="phone" href="tel:+19257086501">(925) 708-6501</a>
+    <p class="own">Already own a policy? A review will tell you whether it still does what you bought it to do.</p>
+  </div>
+
 </div>
-<div class="sidebar">
-  <div class="sidebar-box"><h3>Request a Complimentary Review</h3><p style="font-size:14px;">All reviews are complimentary. Call us today.</p><p style="font-size:18px;font-weight:700;color:var(--navy);">(925) 708-6501</p><a class="btn-gold" href="../contact.html">Request a Complimentary Review</a></div>
+
+<div class="cw-disclosure">
+  <p>This is a solicitation for insurance. This material is educational and is not tax, legal, or accounting advice; consult a qualified professional regarding your specific situation. Insurance benefits are subject to underwriting and to policy terms. Premium figures shown are published industry averages for a standardized benefit design and are not quotes; actual premium depends on age, health, state of residence, benefit design and the insurance company selected. Illustration figures are illustrative for a healthy 50-year-old couple and will vary by carrier, health, age and design. Tax treatment of benefits is generally income-tax-free, subject to applicable tax rules. C-corporation advantages apply only where applicable. &copy; 2026 Insurance Review Services &middot; LTCCPAs.com. All rights reserved. Withbert (Bert) W. Payne, CPA, CGMA, FCA &middot; CA Insurance License No. 0E90257.</p>
 </div>
-</div></div>
-</div>
+</div><!-- #page-content -->
 
 <footer><div class="footer-inner">
   <div class="footer-col"><h4>LTCCPAS.COM</h4><p>Independent insurance reviews and policy optimization by a CPA and Licensed Insurance Broker. Serving clients nationwide.</p><a href="https://www.linkedin.com/in/withbertpayne/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn &mdash; Withbert Payne</a></div>
