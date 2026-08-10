@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Long-Term Care Risk Most Families Leave Uninsured &mdash; LTCCPAs.com</title>
-<meta name="description" content="Americans insure a one-in-430 house fire and leave a majority-probability care event uninsured. What the federal research, the payer data, and California costs actually show.">
+<title>Protecting Your Retirement Plan from the Cost of Long-Term Care &mdash; LTCCPAs.com</title>
+<meta name="description" content="What the research shows, what care costs in California, and how families keep the retirement plan intact.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LTCCPAs.com">
-<meta property="og:title" content="The Long-Term Care Risk Most Families Leave Uninsured &mdash; LTCCPAs.com">
-<meta property="og:description" content="Americans insure a one-in-430 house fire and leave a majority-probability care event uninsured.">
+<meta property="og:title" content="Protecting Your Retirement Plan from the Cost of Long-Term Care &mdash; LTCCPAs.com">
+<meta property="og:description" content="What the research shows, what care costs in California, and how families keep the retirement plan intact.">
 <meta property="og:url" content="https://www.ltccpas.com/ltc-risk-report.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The Long-Term Care Risk Most Families Leave Uninsured &mdash; LTCCPAs.com">
-<meta name="twitter:description" content="Americans insure a one-in-430 house fire and leave a majority-probability care event uninsured.">
+<meta name="twitter:title" content="Protecting Your Retirement Plan from the Cost of Long-Term Care &mdash; LTCCPAs.com">
+<meta name="twitter:description" content="What the research shows, what care costs in California, and how families keep the retirement plan intact.">
 <link rel="canonical" href="https://www.ltccpas.com/ltc-risk-report.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Sans+3:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/style.css?v=8">
 <style>
-/* The Risk Most Families Leave Uninsured — reproduces the source document's
-   color table: #1E3A5F navy, #C8922A gold, #1A1A1A body, #4A4A4A secondary,
-   #FBF7EF and #F4F1EA creams, #FAFAF8 panel, #E8E2D6 / #D8D2C6 / #C9C2B4
-   rules. Times/Arial map to the site's EB Garamond / Source Sans 3. */
+/* Protecting Your Retirement Plan from the Cost of Long-Term Care — reproduces
+   the source document's color table: #1E3A5F navy, #C8922A gold, #1A1A1A body,
+   #4A4A4A secondary, #FBF7EF and #F4F1EA creams, #FAFAF8 panel, #E8E2D6 /
+   #D8D2C6 / #C9C2B4 rules. Times/Arial map to the site's EB Garamond / Source Sans 3. */
 
 .ur-hero { background:#1E3A5F; text-align:center; padding:44px 24px 46px; border-bottom:4px solid #C8922A; }
 .ur-hero .eyebrow { font-weight:700; letter-spacing:.22em; text-transform:uppercase; font-size:12px; color:#C8922A; margin:0 0 18px; }
@@ -32,6 +32,9 @@
 
 .ur-wrap { max-width:940px; margin:0 auto; padding:42px 24px 8px; }
 .ur-wrap p { color:#1A1A1A; font-size:16px; line-height:1.75; margin:0 0 20px; }
+
+.ur-kicker { font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:12px; color:#8A6416; margin:48px 0 6px; }
+.ur-kicker + .ur-h2 { margin-top:0; }
 
 .ur-h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:clamp(21px,3.4vw,28px);
   line-height:1.3; margin:48px 0 16px; padding-bottom:12px; border-bottom:2px solid #C8922A; }
@@ -84,16 +87,24 @@
 .ur-quote p { font-family:'EB Garamond',Georgia,serif; font-style:italic; color:#fff;
   font-size:clamp(17px,2.6vw,21px); line-height:1.55; margin:0; }
 
-/* Card trios */
+/* Card trios / quartets */
 .ur-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:0 0 26px; }
-@media(max-width:760px){ .ur-cards { grid-template-columns:1fr; } }
+.ur-cards.four { grid-template-columns:repeat(4,1fr); }
+@media(max-width:760px){ .ur-cards, .ur-cards.four { grid-template-columns:1fr 1fr; } }
+@media(max-width:560px){ .ur-cards, .ur-cards.four { grid-template-columns:1fr; } }
 .ur-card { background:#F4F1EA; border-top:3px solid #1E3A5F; padding:20px 22px; }
 .ur-card h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; margin:0 0 8px; }
 .ur-card p { color:#1A1A1A; font-size:15px; line-height:1.7; margin:0; }
 
+/* Bulleted review list */
+.ur-review { list-style:none; padding:0; margin:0 0 26px; }
+.ur-review li { padding:9px 0 9px 26px; position:relative; color:#1A1A1A; font-size:15.5px; line-height:1.7; }
+.ur-review li:before { content:"\2022"; position:absolute; left:4px; color:#C8922A; font-weight:700; }
+
 /* CPA perspective */
 .ur-cpa { background:#1E3A5F; padding:34px 32px; margin:36px 0 0; }
-.ur-cpa h2 { font-family:'EB Garamond',Georgia,serif; color:#C8922A; font-size:23px; margin:0 0 16px; }
+.ur-cpa .ur-kicker { color:#C8922A; margin:0 0 6px; }
+.ur-cpa h2 { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:23px; margin:0 0 16px; }
 .ur-cpa p { color:#E8E2D6; font-size:15.5px; line-height:1.8; margin:0 0 16px; }
 .ur-cpa p:last-child { margin:0; }
 
@@ -157,7 +168,7 @@
     <li><a href="paying-for-long-term-care.html">Paying for LTC</a></li>
   </ul></li>
 <li class="has-dropdown"><a href="#">Resources &#9662;</a><ul class="dropdown">
-    <li><a href="ltc-risk-report.html">The Risk Most Families Leave Uninsured</a></li>
+    <li><a href="ltc-risk-report.html">Protecting Your Retirement Plan</a></li>
     <li><a href="newsletters/january-7-2024.html">The Cost of Waiting on LTC</a></li>
     <li><a href="newsletters/january-1-2023.html">The Best Time to Plan</a></li>
     <li><a href="ltc-statistics.html">LTC Statistics</a></li>
@@ -170,9 +181,9 @@
 
 <div id="page-content">
 <section class="ur-hero">
-  <p class="eyebrow">LTCCPAS.com &middot; Long-Term Care Planning</p>
-  <h1>The Long-Term Care Risk Most Families Leave Uninsured</h1>
-  <p class="sub">Americans insure a one-in-430 house fire and leave a majority-probability care event uninsured.</p>
+  <p class="eyebrow">Long-Term Care Planning</p>
+  <h1>Protecting Your Retirement Plan from the Cost of Long-Term Care</h1>
+  <p class="sub">What the research shows, what care costs in California, and how families keep the retirement plan intact.</p>
 </section>
 
 <div class="ur-wrap">
@@ -181,20 +192,21 @@
 
   <p>Then they leave uninsured the one event that is more likely to happen than all of those combined: the need for extended care.</p>
 
-  <p>This is not ignorance of the risk. It is a persistent underestimate of it &mdash; a mix of optimism, avoidance, and the widely held assumption that Medicare, personal savings, or family members will absorb the cost when the time comes. None of those assumptions survives contact with the published research, and the research on this subject is better than most people realize.</p>
+  <p>This is not ignorance of the risk. It is a persistent underestimate of it &mdash; a mix of optimism, avoidance, and the widely held assumption that Medicare, personal savings, or family members will absorb the cost when the time comes. None of those assumptions survive contact with the published research, and the research on this subject is better than most people realize.</p>
 
   <div class="ur-answer">
     <span class="label">The Short Answer</span>
-    <p>Federal researchers estimate that most people who reach 65 will develop a care need serious enough to meet the benefit trigger on a long-term care policy. Roughly one in five will need care for more than five years. Private insurance pays about five percent of the national long-term care bill; families pay nearly eight times that share out of their own pockets. For a California household, a private nursing home room runs $182,135 a year at the statewide median. The question this page examines is not whether the risk is real &mdash; the agencies, actuaries, and researchers agree it is &mdash; but who pays for it, and whether retaining it is the most efficient use of your capital.</p>
+    <p>Federal researchers estimate that most people who reach 65 will develop a care need serious enough to meet the benefit trigger on a long-term care policy. Roughly one in five will need care for more than five years. Private insurance pays about five percent of the national long-term care bill; families pay nearly eight times that share out of their own pockets. For a California household, a private nursing home room runs $182,135 a year at the statewide median. The question this page examines is not whether the risk is real &mdash; the agencies, actuaries, and researchers agree it is. It is whether long-term care behaves like a risk a household can reasonably carry on its own balance sheet, and what carrying it actually costs when it does not.</p>
   </div>
 
   <div class="ur-stats">
-    <div class="ur-stat"><span class="n">56%</span><p>will develop a significant care need after 65 (ASPE/Urban)</p></div>
+    <div class="ur-stat"><span class="n">56%</span><p>will develop a significant care need after 65 (ASPE / Urban Institute)</p></div>
     <div class="ur-stat"><span class="n">22%</span><p>will need care for more than five years</p></div>
-    <div class="ur-stat"><span class="n">5%</span><p>share of national LTC costs paid by private insurance</p></div>
-    <div class="ur-stat"><span class="n">$182,135</span><p>CA private nursing home room, per year</p></div>
+    <div class="ur-stat"><span class="n">5%</span><p>share of national long-term care costs paid by private insurance</p></div>
+    <div class="ur-stat"><span class="n">$182,135</span><p>California private nursing home room, per year</p></div>
   </div>
 
+  <p class="ur-kicker">The Frame</p>
   <h2 class="ur-h2">The Comparison That Reframes the Decision</h2>
   <p>Set long-term care beside the risks a household already insures without hesitation. The comparison is not rhetorical &mdash; the frequency data are published by the insurance industry&rsquo;s own statistical organizations.</p>
 
@@ -203,14 +215,14 @@
       <thead><tr><th>Risk</th><th>How often it happens</th><th>Typical cost</th><th>Duration</th><th>Routinely insured?</th></tr></thead>
       <tbody>
         <tr><td>Home fire</td><td data-l="How often">1 in 430 insured homes per year</td><td data-l="Typical cost">$88,170 average claim</td><td data-l="Duration">Weeks to months</td><td data-l="Routinely insured?">Yes &mdash; nearly universally</td></tr>
-        <tr><td>Auto collision</td><td data-l="How often">~6 claims per 100 vehicle years</td><td data-l="Typical cost">$9,486 average claim</td><td data-l="Duration">Days to weeks</td><td data-l="Routinely insured?">Yes &mdash; required by law</td></tr>
-        <tr><td>Property theft</td><td data-l="How often">1 in 850 insured homes per year</td><td data-l="Typical cost">Low thousands</td><td data-l="Duration">Immediate</td><td data-l="Routinely insured?">Yes &mdash; bundled in</td></tr>
+        <tr><td>Auto collision</td><td data-l="How often">~6 claims per 100 vehicle years</td><td data-l="Typical cost">$9,486 average claim</td><td data-l="Duration">Days to weeks</td><td data-l="Routinely insured?">Yes required by law</td></tr>
+        <tr><td>Property theft</td><td data-l="How often">1 in 850 insured homes per year</td><td data-l="Typical cost">Low thousands</td><td data-l="Duration">Immediate</td><td data-l="Routinely insured?">Yes bundled in</td></tr>
         <tr><td>Personal liability</td><td data-l="How often">1 in 1,150 insured homes per year</td><td data-l="Typical cost">Varies widely</td><td data-l="Duration">Months</td><td data-l="Routinely insured?">Yes &mdash; plus umbrella</td></tr>
         <tr><td>Extended care need</td><td data-l="How often">About 56 in 100 people reaching 65</td><td data-l="Typical cost">$182,135 per year in CA</td><td data-l="Duration">3.1 years average; 22% exceed five</td><td data-l="Routinely insured?">No &mdash; fewer than 1 in 10</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="ur-fine">Property and auto frequencies: Insurance Information Institute / ISO and HLDI claim-frequency data. Care figures: ASPE/Urban Institute (2022, revised) and CareScout 2025 California medians.</p>
+  <p class="ur-fine">Property and auto frequencies: Insurance Information Institute / ISO and Highway Loss Data Institute claim-frequency data. Care figures: ASPE / Urban Institute (2022, revised) and CareScout 2025 California medians.</p>
 
   <p>A one-in-430 annual chance of fire compounds to roughly a seven percent chance across thirty years of homeownership. Nearly every one of those homeowners is insured. The care event, at better than even odds, is the one most of them face bare.</p>
 
@@ -218,22 +230,25 @@
     <p>&ldquo;The case for long-term care coverage is not sentimental. It is arithmetical. The numbers that define this risk belong in every serious retirement analysis &mdash; not as a footnote, but as a primary planning variable.&rdquo;</p>
   </div>
 
+  <p class="ur-kicker">The Evidence</p>
   <h2 class="ur-h2">What the Independent Research Actually Shows</h2>
-  <p>The conclusions on this page are not mine alone. They track what the federal agencies, the actuarial literature, and the congressional research offices have published &mdash; and where those sources disagree with each other, I would rather show you the disagreement than pick the number that sells best.</p>
+  <p>The conclusions on this page are not mine alone. They track what the federal agencies, the actuarial literature, and the congressional research offices have published &mdash; and where those sources disagree, I would rather show you the disagreement than pick the number that sells best.</p>
 
   <h3 class="ur-h3">The probability: two federal figures, honestly stated</h3>
   <p>You will see 70 percent quoted almost everywhere in this industry, including on pages I have written. It comes from an HHS analysis (Johnson, 2019) finding that 70 percent of adults who survive to 65 develop severe care needs before they die &mdash; counting care delivered by unpaid family members as well as paid providers.</p>
-  <p>The more recent HHS/Urban Institute projection (Johnson &amp; Dey, 2022, revised) puts the figure at 56 percent for people turning 65 between 2021 and 2025 &mdash; measured at the stricter threshold that actually triggers benefits under a tax-qualified policy: help with at least two activities of daily living expected to last 90 days, or substantial supervision due to severe cognitive impairment.</p>
-  <p>Both are HHS figures. They measure different things. The 56 percent number is the conservative one and the one that matters for insurance planning, because it is drawn at the benefit trigger. I use it here. The argument does not need the larger number.</p>
+  <p>The more recent HHS / Urban Institute projection (Johnson &amp; Dey, 2022, revised) puts the figure at 56 percent for people turning 65 between 2021 and 2025 &mdash; measured at the stricter threshold that actually triggers benefits under a tax-qualified policy: help with at least two activities of daily living expected to last 90 days, or substantial supervision due to severe cognitive impairment.</p>
+  <p>Both are HHS figures. They measure different things. The 56 percent figure is the conservative one and the one that matters for insurance planning, because it is drawn at the benefit trigger. I use it throughout this page. The argument does not need the larger number.</p>
 
   <h3 class="ur-h3">The duration and cost, from the same source</h3>
+  <p>The same projection carries the duration and cost figures, broken out by sex. Reading them together is what keeps a planning conversation honest: the probability, the length, and the price all come from one place.</p>
+
   <div class="ur-table-wrap">
     <table class="ur-table ur-num">
       <thead><tr><th>Measure (people turning 65 in 2021&ndash;2025)</th><th>All</th><th>Men</th><th>Women</th></tr></thead>
       <tbody>
         <tr><td>Life expectancy at 65</td><td data-l="All">20.5 yrs</td><td data-l="Men">19.1 yrs</td><td data-l="Women">21.9 yrs</td></tr>
         <tr><td>Will develop a significant care need</td><td data-l="All">56.4%</td><td data-l="Men">48.6%</td><td data-l="Women">63.7%</td></tr>
-        <tr><td>Average years of need (whole population)</td><td data-l="All">3.1 yrs</td><td data-l="Men">2.5 yrs</td><td data-l="Women">3.6 yrs</td></tr>
+        <tr><td>Average years of need (entire population)</td><td data-l="All">3.1 yrs</td><td data-l="Men">2.5 yrs</td><td data-l="Women">3.6 yrs</td></tr>
         <tr><td>Average years of need, among those who need care</td><td data-l="All">5.4 yrs</td><td data-l="Men">5.1 yrs</td><td data-l="Women">5.6 yrs</td></tr>
         <tr><td>Will need care more than five years</td><td data-l="All">22.1%</td><td data-l="Men">17.5%</td><td data-l="Women">26.3%</td></tr>
         <tr><td>Projected lifetime paid care cost</td><td data-l="All">$120,900</td><td data-l="Men">$85,400</td><td data-l="Women">$154,300</td></tr>
@@ -242,10 +257,19 @@
   </div>
   <p class="ur-fine">ASPE Research Brief, Long-Term Services and Supports for Older Americans: Risks and Financing, 2022 (revised August 2022), Tables 1, 3, 5 and 6. Costs in 2020 dollars, national, and include only paid care.</p>
 
-  <p>Two cautions about that cost column, both of which the source states plainly. It is a national average across everyone, including the 44 percent who never develop a significant need &mdash; among those who do use paid care, the projected average is $245,400. And it is in 2020 dollars at national prices. California prices are materially higher, as the next section shows.</p>
+  <p>Two cautions about that cost column, both of which the source states plainly. It is a national average across everyone, including the 44 percent who never develop a significant need &mdash; among those who do use paid care, the projected average is $245,400. And it is in 2020 dollars at national prices. California prices are materially higher, as a later section shows.</p>
 
   <p>The same brief values the unpaid care that families provide at $204,000 per person among those receiving it &mdash; more than the value of all paid care. That is the part of the bill that does not arrive as an invoice. It arrives as a daughter reducing her hours.</p>
 
+  <h3 class="ur-h3">A second duration source, and why the numbers move</h3>
+  <p>You will also see a shorter set of duration figures in circulation &mdash; about three years on average, 3.7 years for women against 2.2 for men. Those come from the Administration for Community Living and are measured differently. They are not wrong; they answer a different question, and the gap between men and women is wider on that basis than on the federal projection used above.</p>
+  <p>It matters because the gap is often reported as a headline. In the ACL figures, women need care roughly 70 percent longer than men do. On the ASPE projection, the difference is closer to 45 percent. Either way, the direction is the same and the planning point is unchanged: a couple&rsquo;s exposure is not symmetrical, and planning that treats two spouses as a single averaged life understates one side of the household. I use the ASPE series on this page so that every duration, probability, and cost figure comes from one consistent projection rather than three sources stitched together.</p>
+
+  <h3 class="ur-h3">What the dementia statistic actually says</h3>
+  <p>One widely quoted line holds that one in three seniors develops Alzheimer&rsquo;s or another dementia. That is a misstatement of the Alzheimer&rsquo;s Association figure, which reports that one in three seniors dies with Alzheimer&rsquo;s or another dementia &mdash; a different measure, and a larger number than the incidence.</p>
+  <p>The figure that matters for planning is duration, not incidence. Survival after a dementia diagnosis commonly runs four to eight years, and a minority of cases run considerably longer. That range, not a decade quoted as though it were typical, is what a benefit period must be sized against.</p>
+
+  <p class="ur-kicker">The Payer Mix</p>
   <h2 class="ur-h2">Who Actually Pays for Long-Term Care</h2>
   <p>This is the question the whole subject turns on, and it has a published answer. The Congressional Research Service tracks the national payer mix each year.</p>
 
@@ -270,8 +294,9 @@
     <p>&ldquo;The two largest payers for long-term care in this country are a welfare program and the family checkbook. Neither is a plan.&rdquo;</p>
   </div>
 
+  <p class="ur-kicker">The Gap</p>
   <h2 class="ur-h2">The Perception Gap, Measured</h2>
-  <p>It would be reasonable to assume that a risk this well documented is widely understood. It is not. The University of Michigan National Poll on Healthy Aging surveyed adults aged 50 and older and found the gap between the actuarial picture and the public one to be very wide.</p>
+  <p>It would be reasonable to assume that a risk this well documented is widely understood. It is not. The University of Michigan National Poll on Healthy Aging surveyed adults aged 50 and older and found a very wide gap between the actuarial picture and the public one.</p>
 
   <div class="ur-stats three">
     <div class="ur-stat"><span class="n">43%</span><p>think it likely they will need care &mdash; against a 56% federal projection</p></div>
@@ -283,6 +308,7 @@
 
   <p>That last finding is the one I encounter most often in practice. People are not refusing to plan. They are planning against a picture of the system that is simply inaccurate &mdash; and by the time the picture corrects itself, the underwriting window has usually closed.</p>
 
+  <p class="ur-kicker">The Arithmetic</p>
   <h2 class="ur-h2">What Care Costs in California</h2>
   <p>National medians understate this state considerably. These are CareScout&rsquo;s 2025 California statewide medians, published March 2026, with the three-year change alongside.</p>
 
@@ -290,18 +316,87 @@
     <table class="ur-table ur-num">
       <thead><tr><th>Care setting (California median)</th><th>Per month</th><th>Per year</th><th>Change since 2022</th></tr></thead>
       <tbody>
-        <tr><td>Nursing home, private room</td><td data-l="Per month">$15,178</td><td data-l="Per year">$182,135</td><td data-l="Change since 2022">+20.4%</td></tr>
-        <tr><td>Nursing home, semi-private room</td><td data-l="Per month">$12,167</td><td data-l="Per year">$146,000</td><td data-l="Change since 2022">+15.3%</td></tr>
+        <tr><td>Adult day health care</td><td data-l="Per month">$2,037</td><td data-l="Per year">$24,440</td><td data-l="Change since 2022">+4.4%</td></tr>
         <tr><td>Assisted living community</td><td data-l="Per month">$6,900</td><td data-l="Per year">$82,800</td><td data-l="Change since 2022">+17.1%</td></tr>
         <tr><td>In-home care, 44 hours per week</td><td data-l="Per month">$7,627</td><td data-l="Per year">$91,520</td><td data-l="Change since 2022">&mdash;</td></tr>
-        <tr><td>Adult day health care</td><td data-l="Per month">$2,037</td><td data-l="Per year">$24,440</td><td data-l="Change since 2022">+4.4%</td></tr>
+        <tr><td>Memory care (estimated)</td><td data-l="Per month">~$8,800</td><td data-l="Per year">~$105,600</td><td data-l="Change since 2022">&mdash;</td></tr>
+        <tr><td>Nursing home, semi-private room</td><td data-l="Per month">$12,167</td><td data-l="Per year">$146,000</td><td data-l="Change since 2022">+15.3%</td></tr>
+        <tr><td>Nursing home, private room</td><td data-l="Per month">$15,178</td><td data-l="Per year">$182,135</td><td data-l="Change since 2022">+20.4%</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="ur-fine">CareScout Cost of Care Survey 2025 (published March 2026), California statewide medians. Memory care is not separately surveyed; where clients need a planning figure I use roughly $8,800 per month, which is an estimate rather than survey data. Bay Area costs commonly run above these statewide medians &mdash; that is my observation from practice, not a published survey result.</p>
+  <p class="ur-fine">CareScout Cost of Care Survey 2025 (published March 2026), California statewide medians. Memory care is not separately surveyed for California; the figure shown is my planning estimate and should be treated as such. Bay Area costs commonly run above these statewide medians &mdash; that is my observation from practice, not a published survey result.</p>
 
-  <p>On the inflation question I want to be more careful than this industry usually is. Care costs have clearly outpaced general inflation over the past several years &mdash; more than 20 percent on a California private room since 2022. But CareScout&rsquo;s 2025 survey recorded the first real slowdown since the pandemic, with most settings rising between one and five percent, against 9.2 percent the year before. Anyone telling you care inflation reliably runs at two to three times general inflation is quoting a period, not a law. Plan for costs that rise faster than your other expenses; do not plan on a fixed multiple.</p>
+  <p>On the inflation question, I want to be more careful than this industry usually is. Care costs have clearly outpaced general inflation over the past several years &mdash; more than 20 percent on a California private room since 2022. But CareScout&rsquo;s 2025 survey recorded the first real slowdown since the pandemic, with most settings rising between one and five percent, against 9.2 percent the year before. Anyone telling you care inflation reliably runs at two to three times general inflation is quoting a period, not a law. Plan for costs that rise faster than your other expenses; do not plan on a fixed multiple.</p>
 
+  <p>Projected forward at a deliberately conservative three percent, today&rsquo;s California private-room median of $15,178 a month becomes roughly $20,400 a month in ten years and roughly $27,400 a month in twenty. A plan built on today&rsquo;s cost of care is not a plan for the year care is likely to be needed.</p>
+
+  <p class="ur-kicker">The Test</p>
+  <h2 class="ur-h2">Four Conditions for Carrying a Risk Yourself</h2>
+  <p>A risk can reasonably be carried on your own balance sheet when four things are true: the probability is low, the cost is bounded, the timing is foreseeable, and the worst case can be absorbed without changing the plan. Long-term care satisfies none of the four.</p>
+
+  <div class="ur-table-wrap">
+    <table class="ur-table">
+      <thead><tr><th>Condition</th><th>What self-insurance requires</th><th>What long-term care delivers</th></tr></thead>
+      <tbody>
+        <tr><td>Probability</td><td data-l="What self-insurance requires">Low enough that most people never claim</td><td data-l="What long-term care delivers">A majority of those reaching 65 need care</td></tr>
+        <tr><td>Cost</td><td data-l="What self-insurance requires">Bounded and reasonably predictable</td><td data-l="What long-term care delivers">Six figures a year in California; no ceiling</td></tr>
+        <tr><td>Timing</td><td data-l="What self-insurance requires">Foreseeable, or capable of being deferred</td><td data-l="What long-term care delivers">Arrives without warning, often at the worst moment</td></tr>
+        <tr><td>Worst case</td><td data-l="What self-insurance requires">Absorbable without changing the plan</td><td data-l="What long-term care delivers">Years of memory care; catastrophic for most households</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The self-insurance strategy works when the risk is low-probability and the cost is bounded. Long-term care is high-probability and unbounded. That combination is precisely what insurance exists to address.</p>
+
+  <p class="ur-kicker">The Exposure</p>
+  <h2 class="ur-h2">What Self-Funding Actually Costs</h2>
+  <p>At the California private-room median, the total cost of a care event paid entirely from your own capital looks like this. These are today&rsquo;s dollars, before any inflation, and a couple&rsquo;s exposure is not a remote scenario &mdash; it is the ordinary case in which both spouses live long enough to need care.</p>
+
+  <div class="ur-table-wrap">
+    <table class="ur-table ur-num">
+      <thead><tr><th>Care event at $15,178 per month</th><th>One person</th><th>A couple</th></tr></thead>
+      <tbody>
+        <tr><td>3 years (near the average among those who need care)</td><td data-l="One person">$546,408</td><td data-l="A couple">$1,092,816</td></tr>
+        <tr><td>5 years (reached by 22% of people)</td><td data-l="One person">$910,680</td><td data-l="A couple">$1,821,360</td></tr>
+        <tr><td>10 years (a long dementia claim &mdash; the tail, not the norm)</td><td data-l="One person">$1,821,360</td><td data-l="A couple">$3,642,720</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Costs do not halve because you are married. One year of care for two people at the California private-room median is $364,272.</p>
+
+  <p>Self-funding depends not only on having sufficient assets today, but on those assets growing fast enough to keep pace with the cost of care. If care inflates at four percent annually and a portfolio earns five percent after tax, the real cushion is one percent a year. A sequence of below-average investment years, or a market drawdown at the wrong moment, eliminates that margin entirely.</p>
+
+  <p class="ur-kicker">The Timing Problem</p>
+  <h2 class="ur-h2">Care Events Do Not Arrive on Schedule</h2>
+  <p>Care needs arise unpredictably &mdash; following a stroke, a fall, a cognitive diagnosis, or a gradual decline that accelerates without warning. The financial demands begin immediately and do not pause for markets to recover. Sequence-of-returns risk, already the central hazard of a drawdown portfolio, is amplified when a care event forces large, unplanned withdrawals in a down year.</p>
+
+  <p>This is also the point at which the alternative closes. Coverage is medically underwritten; the practical window for obtaining it runs through a client&rsquo;s fifties and early sixties, and it narrows from there. A household that decides at 65 to self-fund, then reconsiders at 73 after a health event or a closer look at the cost projections, often finds that the coverage it might have bought is no longer available at any price. The underwriting window, once closed, does not reopen.</p>
+
+  <div class="ur-quote">
+    <p>&ldquo;A care event that arrives during a market correction is not an edge case. It is a foreseeable scenario that a self-funding strategy has to survive &mdash; and most portfolios are not sized to handle both at once.&rdquo;</p>
+  </div>
+
+  <p class="ur-kicker">The Self-Insurance Question</p>
+  <h2 class="ur-h2">Two Objections, Examined</h2>
+  <p>Among financially sophisticated families &mdash; those with meaningful retirement assets, professional incomes, and careful financial habits &mdash; the idea of self-funding long-term care risk has real surface appeal. If you have accumulated enough, why pay premiums when you could simply pay for care yourself? It is a reasonable question, and it deserves a rigorous answer, because the assumptions inside it are more fragile than they appear.</p>
+
+  <h3 class="ur-h3">&ldquo;I can self-fund the risk and pay for it myself.&rdquo;</h3>
+  <p>Long-term care is usually framed as an asset question. It behaves as an income question. Consider a married couple with $2 million of income-producing capital supporting their retirement. If an extended care event consumes a large share of that capital, the income it was producing falls with it &mdash; and the healthy spouse is left with a fraction of the income the retirement was built around, at the point in life when they are least able to rebuild it.</p>
+  <p>The household may have had enough on paper. What it did not have was a structure that kept the income intact while the care was paid for.</p>
+  <p class="ur-fine">Illustrative. A $1.5 million care event against $2 million of income-producing capital would reduce that capital, and the income it generates, by roughly three-quarters. Figures of this magnitude assume an extended claim beginning years from now, with care-cost inflation compounding in the interim.</p>
+
+  <h3 class="ur-h3">&ldquo;Average care is only two to three years &mdash; why insure for life?&rdquo;</h3>
+  <p>Coverage is not held against the average. It is held against the catastrophe. Buying long-term care coverage sized to the average is like buying fire insurance that covers small kitchen fires &mdash; the average is what happens to most people. The tail is what financially damages a family. The distribution matters more than the mean: many people need modest help for a short period, and a meaningful minority need years of paid, high-intensity care. It is that minority, not the average, that determines whether a household&rsquo;s plan survives.</p>
+
+  <div class="ur-stats three">
+    <div class="ur-stat"><span class="n">22%</span><p>five years or more &mdash; will need care for more than five years, and 26% of women</p></div>
+    <div class="ur-stat"><span class="n">3.6 / 2.5</span><p>years of care &mdash; average years of need for women and for men. The averages diverge.</p></div>
+    <div class="ur-stat"><span class="n">4&ndash;8 yrs</span><p>after a dementia diagnosis &mdash; common survival range. A minority run considerably longer.</p></div>
+  </div>
+
+  <p class="ur-kicker">The Household in Question</p>
   <h2 class="ur-h2">Why Affluent Families Insure Anyway</h2>
   <p>The households I work with can generally write the checks. That is exactly why the question deserves better than a reflex answer in either direction.</p>
 
@@ -309,36 +404,84 @@
 
   <p>So the affluent household faces a real but manageable central case and a genuinely damaging tail. That is the textbook shape of an insurable risk: not the loss you expect, but the loss you cannot absorb without dismantling something you spent a career building. The question is never whether you could pay. It is whether paying from portfolio &mdash; liquidating in whatever market happens to exist in the year care begins, with the tax consequences that follow &mdash; is a more efficient use of capital than transferring part of the exposure at a known cost.</p>
 
-  <p>For some households the honest answer is that it is not, and they should keep the risk. I say so when I think so.</p>
+  <p>For some households, the honest answer is that it is not, and they should keep the risk. I say so when I think so.</p>
 
-  <h2 class="ur-h2">Three Things This Page Will Not Relitigate</h2>
+  <h2 class="ur-h2">Four Things This Page Will Not Relitigate</h2>
   <p>Each of these has its own treatment elsewhere on this site. In summary:</p>
 
-  <div class="ur-cards">
+  <div class="ur-cards four">
     <div class="ur-card"><h3>Medicare</h3><p>An acute-care program. CMS states plainly that it does not cover custodial care when that is the only care needed.</p></div>
     <div class="ur-card"><h3>Medi-Cal</h3><p>Covers care, but only after assets are spent to eligibility levels. It is the outcome planning exists to prevent.</p></div>
     <div class="ur-card"><h3>Underwriting</h3><p>Health, not wealth, decides eligibility. The window narrows through the sixties and can close entirely.</p></div>
+    <div class="ur-card"><h3>Where care happens</h3><p>Most care today is delivered at home. Coverage limited to facility care underperforms relative to how care is received.</p></div>
   </div>
 
+  <p class="ur-kicker">The Alternative</p>
   <h2 class="ur-h2">A Design That Returns Value Even If Care Is Never Needed</h2>
   <p>The most reasonable objection to this coverage is the oldest one: that premiums paid for years may buy nothing at all. That objection had real force against the traditional products, and it has a structural answer in the modern ones.</p>
 
-  <p>Asset-based designs &mdash; also called hybrid or linked-benefit contracts &mdash; are built so that if care is never needed, a death benefit passes to beneficiaries instead. Some designs also keep a guaranteed surrender value accessible during life, subject to surrender charges and the contract&rsquo;s own terms, and any amount drawn reduces the benefits that remain. The capital does something either way. What it does, and on what guarantees, varies enormously between carriers.</p>
+  <p>Asset-based designs &mdash; also called hybrid or linked-benefit contracts &mdash; are structured so that if care is never needed, a death benefit passes to beneficiaries instead. Some designs also keep a guaranteed surrender value accessible during life, subject to surrender charges and the contract&rsquo;s terms, and any amount drawn reduces the benefits that remain. The capital does something either way. What it does, and on what guarantees, varies enormously between carriers.</p>
 
-  <p>That variation is the whole reason an independent review is worth running. In recent engagements, comparing the same client across multiple carriers has produced materially different structures and materially different guaranteed benefits for comparable outlay. That outcome is not luck. It is what an independent multi-carrier analysis produces, as against selecting a single insurer&rsquo;s product and accepting its terms. I do not publish specific case results here, because the design that fits one client&rsquo;s age, health, entity structure, and objectives tells you almost nothing about what would fit yours.</p>
+  <p>One point belongs in plain sight rather than in a footnote: on most of these designs the care benefit is paid by accelerating the death benefit. Care and legacy are funded from the same pool, and every dollar drawn for care reduces what heirs receive. The premium is not forfeited. But you are not given both in full.</p>
 
-  <h3 class="ur-h3">What a funded plan actually preserves</h3>
+  <h3 class="ur-h3">What transferring the risk costs</h3>
+  <p>The case against self-funding is not complete until it is priced. The relevant comparison is not premium against zero &mdash; it is premium against the exposure the premium removes. The figures below are from one current illustration for a healthy couple, both age 50 in California, on a single-premium whole life chassis with a qualified long-term care rider.</p>
+
+  <div class="ur-stats three">
+    <div class="ur-stat"><span class="n">&asymp; 7 months</span><p>you pay &mdash; once. A single premium of $203,900 is about seven months of combined care at today&rsquo;s California private-room median.</p></div>
+    <div class="ur-stat"><span class="n">A lifetime</span><p>the insurer pays. Care benefits with no cap on the number of years, subject to the policy&rsquo;s monthly benefit limit and eligibility requirements.</p></div>
+    <div class="ur-stat"><span class="n">$360,000</span><p>if care is never used &mdash; guaranteed death benefit to heirs, $156,100 more than the premium paid, generally income-tax-free under current law.</p></div>
+  </div>
+
+  <p>Put plainly: the single premium is roughly what seven months of combined care would cost out of pocket today. In exchange, the insurer assumes a lifetime obligation &mdash; whether the care event lasts two years or twenty-five. Self-funding is the better arithmetic only if you know, with certainty, that neither spouse will ever need more than about seven months of care. No one knows that.</p>
+
+  <p class="ur-fine">One illustration, one carrier, one age and health class, as of the date shown &mdash; not a quotation available to you, and not a case result. Long-term care benefit payments reduce the policy&rsquo;s death benefit and cash surrender value. Guarantees are subject to the issuing carrier&rsquo;s claims-paying ability. Premium deductibility for a business entity depends on the entity type and the policy&rsquo;s tax-qualified status and should be reviewed before it is relied on. Your own figures will differ.</p>
+
+  <p>That variation is the whole reason an independent review is worth running. Comparing the same client across multiple carriers routinely produces materially different structures and materially different guaranteed benefits for comparable outlay. That outcome is not luck. It is what an independent multi-carrier analysis produces, as against selecting a single insurer&rsquo;s product and accepting its terms. I do not publish client case results here, because the design that fits one client&rsquo;s age, health, entity structure, and objectives tells you almost nothing about what would fit yours.</p>
+
+  <h3 class="ur-h3">What a funded plan preserves</h3>
   <div class="ur-cards">
     <div class="ur-card"><h3>Staying home</h3><p>Home care is usually the preference and usually the first thing cut when funding is tight.</p></div>
     <div class="ur-card"><h3>Choosing the facility</h3><p>A funded plan means selecting on quality, not on which facility accepts the rate available.</p></div>
     <div class="ur-card"><h3>Protecting the spouse</h3><p>The healthy spouse keeps the portfolio, the house, and the standard of living built around them.</p></div>
   </div>
 
+  <p class="ur-kicker">The Second Opinion</p>
+  <h2 class="ur-h2">If You Already Own a Policy</h2>
+  <p>A review is not only for households starting from nothing. Coverage bought ten or twenty years ago was sized against the cost of care as it stood then, and several of its terms are worth re-testing against the figures on this page. Here is what an independent review examines:</p>
+
+  <ul class="ur-review">
+    <li>The benefit period and the daily or monthly benefit, measured against current local care costs rather than the costs at issue.</li>
+    <li>Whether inflation protection was elected, and at what rate &mdash; the single largest source of gap in older contracts.</li>
+    <li>Whether the premium is guaranteed or subject to future increases, and what a rate increase notice offers as alternatives.</li>
+    <li>The elimination period, and whether home care counts toward satisfying it.</li>
+    <li>Whether the riders elected years ago still match today&rsquo;s objectives, and whether ownership and beneficiary designations &mdash; including business or trust ownership &mdash; are still correct.</li>
+    <li>Whether an older contract should be kept as it is, supplemented, or exchanged. Older policies are sometimes better than anything available today, and that is a finding worth having in writing.</li>
+  </ul>
+
+  <div class="ur-answer">
+    <span class="label">When Should the Plan Be Reviewed?</span>
+    <p>On receipt of any premium increase notice &middot; when the benefit period is under three years or carries no inflation protection &middot; when the policy is more than ten years old &middot; after a marriage, divorce, death in the family, or a meaningful change in wealth or obligations &middot; and before any exchange, surrender, or replacement is signed. Sometimes a review confirms that the existing plan is exactly right. That is a useful answer too.</p>
+  </div>
+
   <div class="ur-cpa">
-    <h2>My CPA Perspective</h2>
+    <p class="ur-kicker">My CPA Perspective</p>
+    <h2>When Self-Funding Is the Right Answer &mdash; and When It Is Not</h2>
     <p>I came to this subject from auditing, not from selling. What persuades me is not the seventy percent headline &mdash; which, as I explained above, is the softer of the two federal figures. It is the payer table. A country where a means-tested welfare program and the family checkbook are the two largest payers for a near-universal risk is a country where most people have no plan, and where the ones with assets end up as the private payers by default.</p>
     <p>The second thing that persuades me is the shape of the distribution. Averages are reassuring here and largely useless. A 3.1-year average sits on top of a 22 percent tail that runs past five years, and it is that tail &mdash; usually cognitive, usually long &mdash; that does the financial damage. You are not insuring the average. You are insuring the tail.</p>
-    <p>What I will not tell you is that everyone should buy this. Some households genuinely should carry the risk themselves, and I say so when the numbers say so. My compensation does not vary by carrier, by product, or by whether you buy anything at all. What I sell, if anything, is the analysis &mdash; and I would rather give you the federal data with its inconsistencies visible than a page of confident numbers that agree with each other because someone chose them to.</p>
+    <p>For some households, self-funding is genuinely the correct decision. If a decade of care for both spouses would not change the retirement plan, the income it produces, or what passes to the next generation, then the capital is doing its job, and there is no case for a premium. I will say so.</p>
+    <p>For most households I review, the honest question is not whether they can afford a premium. It is whether the retirement plan can absorb a multi-year, high-cost care event arriving at the worst possible moment, lasting longer than any projection assumed, and costing more each year than it cost the year before &mdash; while the healthy spouse still needs the income that plan was built to produce. That question is answered by modeling both paths side by side on your own numbers, not by an argument in either direction.</p>
+    <p>My compensation does not vary by carrier, by product, or by whether you buy anything at all. What I sell, if anything, is the analysis &mdash; and I would rather give you the federal data with its inconsistencies visible than a page of confident numbers that agree with each other because someone chose them to.</p>
+  </div>
+
+  <p class="ur-kicker">The Part That Costs Nothing</p>
+  <h2 class="ur-h2">A Policy No One Knows About Is Not a Plan</h2>
+  <p>Whatever a household decides here &mdash; to transfer part of the risk or to keep all of it &mdash; one step belongs with the decision and costs nothing. Tell your spouse and your adult children what exists, where the documents are kept, and who is to act. Care decisions are made under time pressure, usually by someone else, and usually at the worst week of a family&rsquo;s year. A plan that lives only in your own head is not available to the people who will have to use it.</p>
+
+  <p>The same applies to the decision itself. The households that handle a long care event well are not, in my experience, the ones with the largest balance sheets. They are the ones that made a decision while there was still a decision available to make.</p>
+
+  <div class="ur-quote">
+    <p>&ldquo;Planning before a health event provides choices. Planning afterward usually eliminates them. Plan before a diagnosis. Not after.&rdquo;</p>
   </div>
 
   <div class="ur-block">
@@ -348,28 +491,29 @@
       <li>&mdash; <a href="newsletters/january-7-2024.html">The Cost of Waiting</a> &mdash; what a decade of delay does to premium, to benefit, and to insurability.</li>
       <li>&mdash; <a href="long-term-care-ltc-insurance/ltc-insurance-can-be-a-winner.html">Win Either Way</a> &mdash; the leverage illustration in full, across four outcomes.</li>
       <li>&mdash; <a href="ltc-statistics.html">Key Long-Term Care Statistics</a> &mdash; the underlying data, with its limits stated.</li>
+      <li>&mdash; <a href="long-term-care-ltc-insurance/how-much-long-term-care-insurance-is-enough.html">How Much Long-Term Care Insurance Is Enough?</a> &mdash; sizing a monthly benefit to your own cost of care.</li>
       <li>&mdash; <a href="tax-advantages-ltc-insurance.html">Federal &amp; California Tax Advantages</a> &mdash; deductibility, entity funding, and Section 1035 exchanges.</li>
     </ul>
   </div>
 
   <div class="ur-block sources">
     <h2>Sources</h2>
-    <p>ASPE / U.S. Department of Health &amp; Human Services, Long-Term Services and Supports for Older Americans: Risks and Financing, 2022 (Johnson &amp; Dey, revised August 2022). &middot; ASPE, What Is the Lifetime Risk of Needing and Receiving Long-Term Services and Supports? (Johnson, 2019). &middot; ASPE, Evaluating Long-Term Services and Supports Reform (January 2025). &middot; Congressional Research Service, Who Pays for Long-Term Services and Supports? (2025), using 2023 National Health Expenditure data. &middot; Congressional Budget Office, Rising Demand for Long-Term Services and Supports for Elderly People (2013). &middot; CareScout Cost of Care Survey 2025, California statewide medians, published March 2026. &middot; University of Michigan National Poll on Healthy Aging, adults aged 50&ndash;80. &middot; Insurance Information Institute / ISO and Highway Loss Data Institute claim-frequency data. &middot; Centers for Medicare &amp; Medicaid Services, coverage guidance on long-term care.</p>
+    <p>ASPE / U.S. Department of Health &amp; Human Services, Long-Term Services and Supports for Older Americans: Risks and Financing, 2022 (Johnson &amp; Dey, revised August 2022). &middot; ASPE, What Is the Lifetime Risk of Needing and Receiving Long-Term Services and Supports? (Johnson, 2019). &middot; ASPE, Evaluating Long-Term Services and Supports Reform (January 2025). &middot; Congressional Research Service, Who Pays for Long-Term Services and Supports? (2025), using 2023 National Health Expenditure data. &middot; Congressional Budget Office, Rising Demand for Long-Term Services and Supports for Elderly People (2013). &middot; CareScout Cost of Care Survey 2025, California statewide medians, published March 2026. &middot; Administration for Community Living, long-term care duration data. &middot; University of Michigan National Poll on Healthy Aging, adults aged 50&ndash;80. &middot; Alzheimer&rsquo;s Association, 2024 Alzheimer&rsquo;s Disease Facts and Figures. &middot; Insurance Information Institute / ISO and Highway Loss Data Institute claim-frequency data. &middot; Centers for Medicare &amp; Medicaid Services, coverage guidance on long-term care.</p>
   </div>
 
   <div class="ur-cta">
     <p class="eyebrow">Complimentary &middot; No Obligation</p>
     <h2>See Where the Arithmetic Lands for Your Household</h2>
-    <p class="msg">I will run the numbers on your own situation &mdash; what care would cost where you live, what you would carry yourself, and whether transferring part of that risk is the more efficient use of your capital. If the answer is that you should keep carrying it, I will tell you so.</p>
-    <a class="btn btn-gold" href="contact.html">Request a Complimentary Review</a>
-    <p class="line">Withbert W. Payne, CPA, CGMA, FCA &nbsp;&middot;&nbsp; <a href="tel:+19257086501">(925) 708-6501</a></p>
+    <p class="msg">I will run the numbers on your situation &mdash; what care would cost where you live, what you would carry yourself, and whether transferring part of that risk is a more efficient use of your capital. Modeled both ways, self-funded and insured, on your own figures. If the answer is that you should keep carrying it, I will tell you so.</p>
+    <a class="btn btn-gold" href="contact.html">Request an Illustration/Quote</a>
+    <p class="line">Withbert W. Payne, CPA, CGMA, FCA &nbsp;&middot;&nbsp; <a href="tel:+19257086501">(925) 708-6501</a> &nbsp;&middot;&nbsp; CA Insurance License No. 0E90257</p>
     <p class="own">If you already hold a policy, an independent review costs you nothing and may confirm that what you have is right.</p>
   </div>
 
 </div>
 
 <div class="ur-bio">
-  <p>Withbert W. Payne, CPA, CGMA, FCA is the founder of Insurance Review Services and a licensed California insurance broker (CA License No. 0E90257), providing independent long-term care and life insurance review for professionals, executives, and their families. He began his career at Price Waterhouse. This article is educational and does not constitute personalized financial, tax, legal, or insurance advice; consult your own advisers on your specific circumstances. Figures cited are drawn from the sources listed above and are current as of the date shown. Policy benefits, guarantees, and surrender values are subject to the terms of the individual contract and the claims-paying ability of the issuing carrier. This is a solicitation for insurance.</p>
+  <p>Withbert W. Payne, CPA, CGMA, FCA, is the founder of Insurance Review Services and a licensed California insurance broker (CA Insurance License No. 0E90257), providing independent long-term care and life insurance review for professionals, executives, and their families. He began his career at Price Waterhouse. This page is educational and does not constitute personalized financial, tax, legal, or insurance advice; consult your own advisers on your specific circumstances. Figures cited are drawn from the sources listed above and are current as of the date shown. California cost figures are medians and vary by facility, region, and level of care. Projections assume a constant rate of increase and are illustrative only. All coverage is medically underwritten, and approval is never assured. Policy benefits, guarantees, and surrender values are subject to the terms of the individual contract and the issuing carrier&rsquo;s claims-paying ability. Long-term care benefit payments reduce the policy&rsquo;s death benefit and cash surrender value. Benefit tax treatment is generally income-tax-free under current law &mdash; consult your CPA regarding your specific situation. This is an advertisement and a solicitation for insurance; a licensed insurance agent will contact you.</p>
 </div>
 </div><!-- #page-content -->
 
