@@ -32,7 +32,10 @@
 .wp-wrap { max-width:780px; margin:0 auto; padding:44px 24px 8px; }
 .wp-wrap + .wp-wrap { padding-top:0; }
 .wp-wrap p { color:#222222; font-size:16px; line-height:1.75; margin:0 0 22px; }
-.wp-wrap ul { color:#222222; font-size:16px; line-height:1.75; margin:0 0 22px; padding-left:26px; }
+/* list-style is restated because the global `ul { list-style: none }` reset,
+   which is there for the nav and footer, would otherwise leave these body
+   lists indented but unmarked. */
+.wp-wrap ul { color:#222222; font-size:16px; line-height:1.75; margin:0 0 22px; padding-left:26px; list-style:disc; }
 .wp-wrap ul li { margin:0 0 8px; }
 .wp-wrap h2 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:24px; text-align:center; margin:44px 0 10px; }
 .wp-wrap p.wp-kicker { text-align:center; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:12px; color:#C8922A; margin:44px 0 6px; }
