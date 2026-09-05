@@ -49,6 +49,8 @@
 .ab-hero h1 { font-family:'EB Garamond',Georgia,serif; font-weight:700; color:#fff; font-size:38px; line-height:1.2; margin:0 0 14px; }
 .ab-hero p.lead { font-family:'EB Garamond',Georgia,serif; color:#E4D5B2; font-size:21px; line-height:1.4; margin:0 0 20px; }
 .ab-hero p.body { color:#fff; font-size:16px; line-height:1.7; max-width:780px; margin:0 auto 22px; }
+.ab-hero p.body a { color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.35); }
+.ab-hero p.body a:hover { color:#C8922A; border-bottom-color:#C8922A; }
 .ab-hero p.creds { color:#BFD0E4; font-size:13.5px; line-height:1.7; margin:0 0 12px; }
 .ab-hero p.helpvet { color:#C8922A; font-weight:600; font-size:14px; margin:0; }
 
@@ -137,6 +139,54 @@
   .ab-speak h2 { font-size:23px; }
   .ab-speak .phone { font-size:27px; }
 }
+
+/* Career timeline. Numbered in gold against a navy spine, so six decades of
+   roles read as one sequence rather than as separate blocks. */
+.ab-time { margin:0 0 26px; border-left:2px solid #D7DEE8; padding-left:0; list-style:none; }
+.ab-time li { position:relative; padding:0 0 26px 30px; }
+.ab-time li:last-child { padding-bottom:0; }
+.ab-time li:before { content:attr(data-n); position:absolute; left:-13px; top:2px; width:24px; height:24px;
+  border-radius:50%; background:#1E3A5F; color:#C8922A; font-family:'Source Sans 3',Arial,sans-serif;
+  font-weight:700; font-size:12px; line-height:24px; text-align:center; }
+.ab-time h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; margin:0 0 3px; }
+.ab-time h3 .loc { font-family:'Source Sans 3',Arial,sans-serif; font-weight:400; font-size:14px; color:#5A6472; }
+.ab-time p.when { color:#C8922A; font-weight:700; font-size:12.5px; letter-spacing:.08em;
+  text-transform:uppercase; margin:0 0 8px; }
+.ab-time p { color:#333333; font-size:15px; line-height:1.7; margin:0; }
+
+/* Credential tiles */
+.ab-creds { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:0 0 24px; }
+.ab-cred { background:#FAF4E8; border-left:4px solid #C8922A; padding:18px 22px; }
+.ab-cred h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:19px; margin:0 0 5px; }
+.ab-cred p { color:#333333; font-size:14.5px; line-height:1.6; margin:0; }
+@media(max-width:640px){ .ab-creds { grid-template-columns:1fr; } }
+
+/* Testimonials */
+.ab-quotes { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:0 0 24px; }
+.ab-quote { background:#fff; border:1px solid #D7DEE8; border-top:3px solid #C8922A; padding:22px 20px; }
+.ab-quote p { font-family:'EB Garamond',Georgia,serif; font-style:italic; color:#222222;
+  font-size:15.5px; line-height:1.6; margin:0 0 12px; }
+.ab-quote p.who { font-family:'Source Sans 3',Arial,sans-serif; font-style:normal; font-weight:600;
+  color:#5A6472; font-size:13px; margin:0; }
+@media(max-width:760px){ .ab-quotes { grid-template-columns:1fr; } }
+
+/* FAQ */
+.ab-faq { margin:0 0 24px; }
+.ab-faq details { border-bottom:1px solid #D7DEE8; }
+.ab-faq details:first-of-type { border-top:1px solid #D7DEE8; }
+.ab-faq summary { cursor:pointer; list-style:none; padding:16px 30px 16px 0; position:relative;
+  font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:18px; line-height:1.4; }
+.ab-faq summary::-webkit-details-marker { display:none; }
+.ab-faq summary:after { content:"+"; position:absolute; right:4px; top:14px; color:#C8922A;
+  font-family:'Source Sans 3',Arial,sans-serif; font-size:22px; font-weight:600; line-height:1; }
+.ab-faq details[open] summary:after { content:"\2013"; }
+.ab-faq summary:hover { color:#C8922A; }
+.ab-faq .a { padding:0 30px 18px 0; }
+.ab-faq .a p { color:#333333; font-size:15px; line-height:1.75; margin:0 0 12px; }
+.ab-faq .a p:last-child { margin-bottom:0; }
+
+/* Two-column affiliation lists share the checks grid but read as plain items. */
+.ab-checks.plain-items .item { font-weight:400; color:#222222; }
 </style>
 
 <script type="application/ld+json">
@@ -152,11 +202,11 @@
   "author": { "@id": "https://www.ltccpas.com/#person" },
   "publisher": { "@id": "https://www.ltccpas.com/#organization" },
   "datePublished": "2026-05-25",
-  "dateModified": "2026-08-01"
+  "dateModified": "2026-08-25"
 }
 </script>
 <meta property="article:published_time" content="2026-05-25">
-<meta property="article:modified_time" content="2026-08-01">
+<meta property="article:modified_time" content="2026-08-25">
 </head>
 <body>
 
@@ -219,171 +269,315 @@
   <li><a href="contact.html">Contact Us</a></li>
 </ul></nav>
 
+
 <div id="page-content">
 
 <div class="ab-hero">
-  <p class="eyebrow">About</p>
-  <h1>Meet Withbert (Bert) W. Payne, CPA, CGMA, FCA</h1>
-  <p class="lead">Independent Life &amp; Long-Term Care Insurance Analyst</p>
-  <p class="body">Independent life and long-term care insurance reviews for partners at the Big 4, corporate executives, physicians, attorneys, business owners, trustees, and affluent families. Every review is personally conducted. Nothing is outsourced, and a sales quota never drives a recommendation.</p>
-  <p class="creds">Price Waterhouse, London &nbsp;&middot;&nbsp; CPA (California) &nbsp;&middot;&nbsp; CGMA &nbsp;&middot;&nbsp; FCA (England &amp; Wales) &nbsp;&middot;&nbsp; CA License No. 0E90257</p>
+  <p class="eyebrow">Insurance Review Services &middot; Objective LTC &amp; Life Planning</p>
+  <h1>Withbert (Bert) Payne, CPA</h1>
+  <p class="lead">Insurance Portfolio Review Specialist</p>
+  <p class="body"><a href="tel:+19257086501">(925) 708-6501</a> &nbsp;&middot;&nbsp; <a href="mailto:bertltccpas@gmail.com">bertltccpas@gmail.com</a> &nbsp;&middot;&nbsp; LTCCPAs.com &nbsp;&middot;&nbsp; <a href="https://www.linkedin.com/in/withbertpayne/" target="_blank" rel="noopener noreferrer">linkedin.com/in/withbertpayne</a></p>
+  <p class="creds">CPA &nbsp;&middot;&nbsp; CGMA &nbsp;&middot;&nbsp; FCA (England &amp; Wales) &nbsp;&middot;&nbsp; Chartered Accountant &nbsp;&middot;&nbsp; CA License No. 0E90257</p>
   <p class="helpvet">&#9733; &nbsp;Appointed HelpVet Advisor (2026&ndash;2028)</p>
 </div>
 
 <div class="ab-wrap">
 
-<h2 class="ab-h2">Independent Analysis &mdash; Not Product Sales</h2>
+<h2 class="ab-h2">About</h2>
 
-<p>Most financial assets are reviewed regularly. Insurance portfolios are often left untouched for years. As a California CPA, a Fellow of the Institute of Chartered Accountants in England &amp; Wales, and formerly of Price Waterhouse in London, I apply the same independent, audit-grade discipline to life and long-term care insurance that auditors apply to financial statements.</p>
+<p>Professionals carefully manage their investments &mdash; yet often go years without reviewing their insurance. That gap is where costly surprises hide. As a CPA, FCA, and former Internal Audit Manager at a major life insurer, I analyze policies line by line, as underwriters do.</p>
 
-<p>Rather than beginning with a new proposal, I begin with the policies you already own. That independent approach frequently identifies opportunities to strengthen guarantees, enhance living benefits, reduce unnecessary long-term costs, improve capital efficiency, and preserve family wealth.</p>
-
-<div class="ab-panel">
-  <p>&ldquo;Is your existing coverage already the best solution?&rdquo; Sometimes the answer is yes. Sometimes it is surprisingly not.</p>
-</div>
-
-<h2 class="ab-h2">Your Insurance Deserves the Same Oversight as Your Investments</h2>
-
-<p>Life and long-term care policies are frequently purchased, filed away, and forgotten. Years pass, families change, and the policy quietly stops matching the plan it was bought to support. An older policy may contain:</p>
-
-<ul class="ab-list">
-  <li>Guarantees that are weaker than the owner expects</li>
-  <li>Premiums that may rise substantially in later years</li>
-  <li>Benefits that no longer fit the family&rsquo;s needs</li>
-  <li>Conversion privileges that are approaching expiration</li>
-  <li>Living benefits the policyholder did not know existed</li>
-  <li>Opportunities to increase protection or improve capital efficiency</li>
-</ul>
-
-<p>None of these are visible from a premium notice. They are visible from the policy itself &mdash; and from the illustrations behind it.</p>
-
-<h2 class="ab-h2">Why Work With Bert</h2>
-<p class="ab-deck">Independent Analysis. Personal Attention. CPA Discipline.</p>
-
-<div class="ab-checks">
-  <div class="item">Audit-grade CPA review</div>
-  <div class="item">Insurance company internal audit experience</div>
-  <div class="item">Independent &mdash; not driven by product sales</div>
-  <div class="item">Carrier-neutral comparison of available strategies</div>
-  <div class="item">Reviews begin with what you already own</div>
-  <div class="item">Personally conducted &mdash; never delegated</div>
-  <div class="item">Price Waterhouse, London</div>
-  <div class="item">Complimentary, confidential, and without obligation</div>
-</div>
+<p>Through Insurance Review Services, I deliver independent, strategy-driven reviews that align your coverage with today&rsquo;s goals &mdash; not yesterday&rsquo;s assumptions &mdash; for professionals, executives, business owners, and high-net-worth families throughout the San Francisco Bay Area and beyond. The objective is clear: maximize benefit, minimize cost, and ensure that no premium dollar is wasted.</p>
 
 <div class="ab-panel">
-  <p>If your CPA left your financial statements untouched for decades, you would probably hire a new CPA. Your insurance deserves the same discipline.</p>
+  <p>&ldquo;My background is not in selling insurance. It is in the independent auditing, analysis, and evaluation of financial structures. That same discipline applies to every policy review &mdash; no carrier bias, no promotional agenda, no pressure.&rdquo;</p>
 </div>
-
-<h2 class="ab-h2">Who I Work With</h2>
-<p class="ab-deck">Professionals and families who value disciplined financial oversight.</p>
-
-<div class="ab-checks">
-  <div class="item">Partners at the Big 4</div>
-  <div class="item">Business owners</div>
-  <div class="item">Corporate executives</div>
-  <div class="item">Trustees and fiduciaries</div>
-  <div class="item">CPAs and attorneys</div>
-  <div class="item">Affluent families and their advisors</div>
-  <div class="item">Physicians</div>
-  <div class="item">Veterans and their families, through HelpVet</div>
-</div>
-
-<h2 class="ab-h2">Areas of Review and Planning</h2>
 
 <div class="ab-areas">
   <div class="ab-area">
-    <h3>Long-Term Care Planning</h3>
-    <p>Traditional, hybrid, and asset-based long-term care strategies; lifetime benefits; joint coverage; inflation protection; tax-efficient funding; and alternatives to leaving your own capital exposed to an extended care event.</p>
+    <h3>What I Review &amp; Optimize</h3>
+    <ul class="ab-list">
+      <li>Life Insurance &mdash; including chronic, critical, and LTC riders; ILIT and TOLI oversight</li>
+      <li>Long-Term Care Insurance &mdash; joint-life and hybrid; lifetime benefit designs</li>
+      <li>Disability Insurance &mdash; group versus individual; portability gaps</li>
+      <li>Business Coverage &mdash; buy-sell and key person agreements</li>
+      <li>Policy Performance &mdash; restructuring, lapse prevention, optimization</li>
+      <li>College and Retirement Funding using insurance strategies</li>
+    </ul>
   </div>
   <div class="ab-area">
-    <h3>Life Insurance Reviews</h3>
-    <p>Term, whole life, universal life, indexed universal life, guaranteed coverage, policy conversions, living benefits, and policy optimization.</p>
-  </div>
-  <div class="ab-area">
-    <h3>Trust and Estate Coordination</h3>
-    <p>Review of trust-owned policies, beneficiary structures, premium obligations, guarantees, and alignment with the estate plan.</p>
-  </div>
-  <div class="ab-area">
-    <h3>Executive and Business Planning</h3>
-    <p>Business-owned insurance, succession planning, key-person coverage, executive benefits, disability income protection, and potential business tax considerations.</p>
+    <h3>Why It Matters</h3>
+    <ul class="ab-list">
+      <li>Reviews frequently identify guarantees that can be reinforced, living benefits already owned, and premium exposure that can be reduced.</li>
+      <li>A review can reveal an opportunity to increase guaranteed protection without a material increase in premium.</li>
+      <li>Bay Area private-room care runs about $20,000 a month &mdash; a ten-year dementia- or accident-related care event can exceed $2 million.</li>
+      <li>Modern designs offer living benefits, asset protection, and hybrid return-of-premium features.</li>
+      <li>Many group LTD plans are not portable &mdash; benefits vanish when you change roles.</li>
+    </ul>
   </div>
 </div>
 
-<h2 class="ab-h2">Why Executives Contact Me</h2>
-
-<div class="ab-checks">
-  <div class="item">Preparing for retirement</div>
-  <div class="item">Business succession planning</div>
-  <div class="item">Reviewing older life or long-term care policies</div>
-  <div class="item">Trust-owned insurance</div>
-  <div class="item">Evaluating long-term care options</div>
-  <div class="item">Estate planning coordination</div>
-</div>
-
-<p>Most, however, contact me for one reason above all: an independent second opinion before a decision that is difficult to reverse.</p>
-
-<h2 class="ab-h2">What an Independent Review Uncovers</h2>
+<h2 class="ab-h2">How I Work</h2>
 
 <div class="ab-uncovers">
   <div class="ab-uncover">
+    <h3>Complimentary Review</h3>
+    <p>All I need is your in-force illustration, obtained directly from your insurer.</p>
+  </div>
+  <div class="ab-uncover">
+    <h3>Clear Diagnostics</h3>
+    <p>Side-by-side comparisons; transparent analysis with no jargon.</p>
+  </div>
+  <div class="ab-uncover">
+    <h3>Coordinated Advice</h3>
+    <p>I work alongside your CPA, attorney, and wealth advisor.</p>
+  </div>
+</div>
+
+<h2 class="ab-h2">Who I Serve</h2>
+
+<p>I help professionals, business owners, retirees, and families evaluate long-term care and life insurance options using a CPA&rsquo;s analytical framework. Whether you are a high-income executive protecting your estate, a business owner exploring C-corporation deduction strategies, or a family member helping an aging parent plan for care costs, I bring the same rigorous analysis to every situation.</p>
+
+<p>My clients span the San Francisco Bay Area and beyond &mdash; CPAs, attorneys, physicians, real estate investors, trust beneficiaries, and retirees who want an objective second opinion before making one of the most consequential financial decisions of their retirement years.</p>
+
+<h2 class="ab-h2">Why Work With a CPA</h2>
+
+<p>Most insurance agents are licensed to sell &mdash; but few have the financial training to audit. As a CPA and Chartered Accountant, I evaluate every policy through the lens of tax efficiency, cash flow impact, and long-term financial security. I do not simply ask &ldquo;what does this policy cover?&rdquo; &mdash; I ask, &ldquo;is this the most financially efficient way to protect your assets?&rdquo; That distinction matters enormously for business owners, corporate executives, trust beneficiaries, and high-income professionals.</p>
+
+<p>A CPA-trained advisor considers:</p>
+
+<ul class="ab-list">
+  <li>IRC &sect;7702B qualified LTC premium deductibility for business owners</li>
+  <li>C-corporation deduction strategies for owner-employees</li>
+  <li>Cash flow impact and premium funding options (single premium versus recurring)</li>
+  <li>Estate planning implications and spousal protection strategies</li>
+  <li>Hybrid life and LTC product analysis versus traditional stand-alone policies</li>
+  <li>Tax treatment of benefits received &mdash; generally income-tax-free under current tax law</li>
+</ul>
+
+<h2 class="ab-h2">What Makes This Practice Different</h2>
+
+<table class="ab-table">
+  <thead><tr><th>Distinction</th><th>What It Means</th></tr></thead>
+  <tbody>
+    <tr><td>CPA Credential</td><td>Most agents are licensed to sell &mdash; but few have the financial training to audit. Bert brings both.</td></tr>
+    <tr><td>Specialist Focus</td><td>Devoted specifically to life and long-term care insurance since 2009. No distractions, no divided loyalties.</td></tr>
+    <tr><td>Independent Broker</td><td>Represents no single carrier. Policies are compared across the full market to find your best fit.</td></tr>
+    <tr><td>Bay Area Expertise</td><td>Deep knowledge of local care costs, California tax rules, and Bay Area providers.</td></tr>
+    <tr><td>CPA-Trained Analysis</td><td>Every recommendation is filtered through a lens of tax efficiency, cash flow, and estate impact.</td></tr>
+  </tbody>
+</table>
+
+<h2 class="ab-h2">Why Independent Review Matters</h2>
+<p class="ab-deck">A second opinion belongs in every insurance decision.</p>
+
+<p>To avoid a conflict of interest, your coverage should be evaluated by someone other than the agent who sold it. The selling agent has an inherent interest in defending the existing policy. An independent review has no such constraint.</p>
+
+<div class="ab-uncovers">
+  <div class="ab-uncover">
+    <h3>No Fee</h3>
+    <p>All policy reviews are provided at no charge to the client. The insurance carriers compensate Insurance Review Services directly.</p>
+  </div>
+  <div class="ab-uncover">
+    <h3>No Obligation</h3>
+    <p>An initial review creates no commitment of any kind. The process is designed to inform your decision, not to pressure it.</p>
+  </div>
+  <div class="ab-uncover">
+    <h3>Personal</h3>
+    <p>Mr. Payne personally conducts every engagement. Reviews are not delegated to junior staff or automated systems.</p>
+  </div>
+</div>
+
+<h2 class="ab-h2">What an Independent Review Uncovers</h2>
+
+<div class="ab-areas">
+  <div class="ab-area">
     <h3>Stronger Guarantees</h3>
-    <p>Guarantees that can be reinforced or extended.</p>
+    <p>Guarantees that can be reinforced or extended, and living benefits the owner did not know were already in the contract.</p>
   </div>
-  <div class="ab-uncover">
-    <h3>Lower Long-Term Costs</h3>
-    <p>Ways to reduce unnecessary long-term premium exposure.</p>
+  <div class="ab-area">
+    <h3>Greater Capital Efficiency</h3>
+    <p>More efficient use of capital already committed &mdash; often an opportunity to increase protection without a material increase in premium.</p>
   </div>
-  <div class="ab-uncover">
+  <div class="ab-area">
     <h3>Coverage Gaps and Overlaps</h3>
     <p>Missing protection &mdash; or duplicate coverage paid for twice.</p>
   </div>
-  <div class="ab-uncover">
+  <div class="ab-area">
     <h3>At-Risk Policies</h3>
     <p>Older policies quietly underperforming or in danger of lapsing.</p>
   </div>
-  <div class="ab-uncover">
-    <h3>Overlooked Living Benefits</h3>
-    <p>Chronic, critical, and terminal illness benefits owners did not know they had.</p>
-  </div>
-  <div class="ab-uncover">
-    <h3>Capital Efficiency</h3>
-    <p>More efficient use of the capital already committed.</p>
-  </div>
 </div>
 
-<p>Often, a review reveals an opportunity to increase protection without a material increase in premium.</p>
+<p>None of these are visible from a premium notice. They are visible from the policy itself &mdash; and from the illustrations behind it.</p>
 
-<h2 class="ab-h2">A Recent Review</h2>
+<h2 class="ab-h2">Career Timeline</h2>
+<p class="ab-deck">Over six decades in finance, audit &amp; insurance.</p>
+
+<ol class="ab-time">
+  <li data-n="1">
+    <h3>Insurance Review Services <span class="loc">&middot; San Ramon, CA</span></h3>
+    <p class="when">2012&ndash;Present &middot; Founder &amp; President</p>
+    <p>Independent CPA-level reviews of life, disability, long-term care, and business insurance portfolios for professionals, executives, trustees, and families. Reviews are coordinated directly with clients&rsquo; CPAs, attorneys, and wealth advisors.</p>
+  </li>
+  <li data-n="2">
+    <h3>New York Life Insurance Company <span class="loc">&middot; Brentwood, CA</span></h3>
+    <p class="when">2009&ndash;2012 &middot; Agent</p>
+    <p>Served accounting and legal professionals with tailored life and long-term care solutions, deepening carrier-side expertise in the insurance needs of high-income clients.</p>
+  </li>
+  <li data-n="3">
+    <h3>Starcare International Inc. <span class="loc">&middot; Walnut Creek, CA</span></h3>
+    <p class="when">1980&ndash;2009 &middot; President &amp; Founder (assets sold 2001)</p>
+    <p>Founded and led a hospital financial-consulting firm specializing in Medicare reimbursement strategy and financial performance improvement &mdash; representing more than 75 hospitals over three decades.</p>
+  </li>
+  <li data-n="4">
+    <h3>Blue Cross of Northern California <span class="loc">&middot; Oakland, CA</span></h3>
+    <p class="when">1978&ndash;1980 &middot; Audit Manager, Medicare Program</p>
+    <p>Managed hospital audits and appeals for the Medicare program, overseeing compliance and financial accuracy across a large portfolio of hospital accounts.</p>
+  </li>
+  <li data-n="5">
+    <h3>CNA Life Insurance Company <span class="loc">&middot; Chicago, IL</span></h3>
+    <p class="when">1976&ndash;1978 &middot; Internal Audit Manager</p>
+    <p>Managed internal audits across Life and Health divisions &mdash; acquiring direct operational knowledge of how insurers assess risk, structure coverage, and manage financial performance.</p>
+  </li>
+  <li data-n="6">
+    <h3>Blue Cross Blue Shield <span class="loc">&middot; Chicago, IL</span></h3>
+    <p class="when">1971&ndash;1975 &middot; Manager, Hospital Audits</p>
+    <p>Directed hospital audits under the Medicare program, building deep insight into healthcare reimbursement and payer-side financial controls.</p>
+  </li>
+  <li data-n="7">
+    <h3>Price Waterhouse <span class="loc">&middot; London, United Kingdom</span></h3>
+    <p class="when">1968&ndash;1971 &middot; Auditor</p>
+    <p>Audited public companies at one of the world&rsquo;s premier professional services firms, developing the rigorous independent analytical standards that remain central to the practice today.</p>
+  </li>
+  <li data-n="8">
+    <h3>Hagley Knight &amp; Co., Chartered Accountants <span class="loc">&middot; London, England</span></h3>
+    <p class="when">1963&ndash;1968 &middot; Articled Clerk (Trainee Chartered Accountant)</p>
+    <p>Completed formal articleship training &mdash; the foundation of a career built on meticulous financial analysis, auditing small and medium-sized businesses under the demanding standards of English professional accountancy.</p>
+  </li>
+</ol>
+
+<h2 class="ab-h2">Credentials &amp; Professional Foundation</h2>
+
+<p>Withbert W. Payne received his early education at Oak Grove School in the Himalayas and earned his General Certificate of Education in Mathematics from the University of Cambridge. He subsequently trained as a Chartered Accountant at the H. Foulkes Lynch School of Accountancy in London, earning his Fellowship of the Institute of Chartered Accountants in England and Wales &mdash; the FCA designation, one of the most demanding and internationally respected professional accounting qualifications in the world. That formation established the intellectual framework that defines every client&rsquo;s engagement today.</p>
+
+<div class="ab-creds">
+  <div class="ab-cred"><h3>CPA</h3><p>Certified Public Accountant &mdash; California Board of Accountancy</p></div>
+  <div class="ab-cred"><h3>FCA</h3><p>Fellow, Institute of Chartered Accountants in England &amp; Wales, the highest level</p></div>
+  <div class="ab-cred"><h3>CGMA</h3><p>Chartered Global Management Accountant &mdash; joint designation of the AICPA and CIMA</p></div>
+  <div class="ab-cred"><h3>CA Lic. 0E90257</h3><p>Licensed insurance professional, State of California</p></div>
+</div>
+
+<p><strong>Education &amp; Training</strong></p>
+
+<ul class="ab-list">
+  <li>Chartered Accountant &mdash; H. Foulkes Lynch School of Accountancy, London</li>
+  <li>General Certificate of Education in Mathematics &mdash; University of Cambridge</li>
+  <li>Early education &mdash; Oak Grove School, Himalayas</li>
+</ul>
+
+<h2 class="ab-h2">How Every Engagement Works</h2>
+
+<p>Insurance Review Services provides independent, CPA-level reviews of life, disability, long-term care, and business insurance. Every engagement begins with a thorough analysis of the client&rsquo;s existing coverage, financial profile, and protection objectives &mdash; and Mr. Payne personally participates in every review.</p>
+
+<ul class="ab-list">
+  <li>We listen first &mdash; your needs, your health profile, and your financial picture drive our recommendations.</li>
+  <li>We audit your existing policy before suggesting any changes.</li>
+  <li>We compare carriers across the full market &mdash; we represent no single company.</li>
+  <li>We explain our findings in plain language, in writing.</li>
+  <li>We never charge a fee &mdash; our compensation comes from the carrier you choose if you choose to act.</li>
+</ul>
 
 <div class="ab-panel">
-  <p class="plain">A recent analysis substantially increased a client&rsquo;s guaranteed death benefit without a material increase in premium. Every situation is different &mdash; but objective reviews frequently uncover opportunities policy owners never knew existed.</p>
+  <p>&ldquo;I have no obligation to any insurance company. My only obligation is to my client.&rdquo;<br><span style="font-style:normal;font-size:14px;color:#5A6472;">&mdash; Withbert W. Payne, CPA, CGMA, FCA</span></p>
 </div>
 
-<h2 class="ab-h2">Experience at a Glance</h2>
+<p>Where coverage structures allow, we identify designs that provide a full return of all premiums paid, less any benefits received &mdash; so the premiums you pay are never lost. Where appropriate, we coordinate directly with the client&rsquo;s CPA, attorney, and wealth advisor, ensuring that insurance analysis integrates fully with the broader financial and estate plan.</p>
 
-<div class="ab-checks">
-  <div class="item">Hundreds of life and long-term care policies reviewed</div>
-  <div class="item">Price Waterhouse, London</div>
-  <div class="item">More than a decade devoted specifically to life and long-term care insurance</div>
-  <div class="item">California CPA and Licensed Insurance Broker</div>
-  <div class="item">More than five decades in accounting, finance, and insurance</div>
-  <div class="item">Serving clients nationwide</div>
+<h2 class="ab-h2">What Clients &amp; Colleagues Say</h2>
+
+<div class="ab-quotes">
+  <div class="ab-quote">
+    <p>&ldquo;Bert brought a level of financial rigor to our LTC review that I simply had not seen before. As a CPA myself, I appreciated that he spoke my language &mdash; tax impact, cash flow, estate implications. He did not just show me a brochure.&rdquo;</p>
+    <p class="who">&mdash; CPA, San Francisco Bay Area</p>
+  </div>
+  <div class="ab-quote">
+    <p>&ldquo;I had an existing LTC policy I had not looked at in years. Bert reviewed it, identified a coverage gap I was not aware of, and compared three alternatives &mdash; all at no charge. That kind of objective analysis is genuinely rare.&rdquo;</p>
+    <p class="who">&mdash; Retired Executive, Contra Costa County</p>
+  </div>
+  <div class="ab-quote">
+    <p>&ldquo;Withbert has been a trusted referral partner for our CPA clients who need objective LTC guidance. His dual background in accounting and insurance is exactly what complex financial situations require.&rdquo;</p>
+    <p class="who">&mdash; Financial Advisor, East Bay</p>
+  </div>
 </div>
 
-<h2 class="ab-h2">Professional Background</h2>
+<h2 class="ab-h2">Professional Affiliations</h2>
 
-<table class="ab-table">
-  <thead><tr><th>Organization</th><th>Role</th></tr></thead>
-  <tbody>
-    <tr><td>Price Waterhouse, London</td><td>Auditor</td></tr>
-    <tr><td>CNA Life Insurance Company</td><td>Internal Audit Manager</td></tr>
-    <tr><td>Blue Cross of Northern California</td><td>Audit Manager</td></tr>
-    <tr><td>Starcare International</td><td>Founder &amp; President</td></tr>
-    <tr><td>New York Life</td><td>Agent</td></tr>
-    <tr><td>Insurance Review Services</td><td>Founder &amp; Principal (2012&ndash;present)</td></tr>
-  </tbody>
-</table>
+<p>Bert is an active member of the professional and business communities he serves &mdash; reflecting a long-standing commitment to the Bay Area and his role as a trusted referral resource for CPAs, attorneys, and financial advisors.</p>
+
+<div class="ab-checks plain-items">
+  <div class="item">ProVisors &mdash; Pleasanton 1 Group (member since 2014)</div>
+  <div class="item">Irish Network Bay Area</div>
+  <div class="item">British American Business Council</div>
+  <div class="item">SFKIWIS</div>
+  <div class="item">Australian American Chamber of Commerce</div>
+  <div class="item">St. Andrew&rsquo;s Society of San Francisco</div>
+  <div class="item">German American Business Association</div>
+</div>
+
+<h2 class="ab-h2">Long-Term Care Insurance in California</h2>
+
+<p>California families face some of the highest long-term care costs in the nation. Bay Area home care can exceed $10,000 to $15,000 per month, and private-room skilled nursing runs about $20,000. Medicare does not cover extended custodial care, and Medi-Cal covers it only after assets are depleted. Planning early &mdash; before health changes make coverage unavailable &mdash; is critical.</p>
+
+<p>Services include long-term care insurance reviews, planning for individuals and couples, comparison across top-rated carriers, and analysis of hybrid life and LTC products. Clients across the San Francisco Bay Area, Sacramento, and throughout California are welcome.</p>
+
+<h2 class="ab-h2">Frequently Asked Questions</h2>
+
+<div class="ab-faq">
+  <details>
+    <summary>Does Medicare pay for long-term care?</summary>
+    <div class="a">
+      <p>No. Medicare covers short-term skilled nursing care following a qualifying hospital stay &mdash; typically up to 100 days under specific conditions. It does not cover extended custodial care (assistance with bathing, dressing, eating, and mobility), which is what most people mean by &ldquo;nursing home care.&rdquo;</p>
+      <p>Medi-Cal may cover long-term care, but only after assets are depleted. LTC insurance is designed to fill this gap.</p>
+    </div>
+  </details>
+  <details>
+    <summary>What does LTC insurance cover?</summary>
+    <div class="a">
+      <p>LTC insurance pays for care services &mdash; in a nursing facility, assisted-living community, memory-care unit, or your own home &mdash; when you can no longer perform two of six Activities of Daily Living or have a severe cognitive impairment such as Alzheimer&rsquo;s. Modern policies are flexible: most benefits are paid as a monthly maximum you can direct toward any qualifying care setting.</p>
+    </div>
+  </details>
+  <details>
+    <summary>How much LTC coverage do I need?</summary>
+    <div class="a">
+      <p>The right amount depends on your assets, income, health profile, family support, and where you plan to retire. In the Bay Area, home care often exceeds $10,000 to $15,000 per month, and private-room skilled nursing runs about $20,000. Bert will analyze your specific financial picture and help you determine a benefit amount that protects your estate without over-insuring.</p>
+    </div>
+  </details>
+  <details>
+    <summary>When should I buy LTC insurance?</summary>
+    <div class="a">
+      <p>The optimal window is typically ages 50 to 65. Premiums are lower when you are younger and healthier, and underwriting is more straightforward. Waiting until your seventies &mdash; or until after a significant health event &mdash; can make coverage unavailable or cost-prohibitive. The earlier you plan, the more options you have.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Can couples obtain joint LTC coverage?</summary>
+    <div class="a">
+      <p>Yes. Several carriers offer shared-benefit or joint-life LTC policies that allow spouses or partners to share a pool of benefits. These can be highly cost-effective for couples where one spouse is likely to need care while the other remains healthy. Bert will compare individual and joint options side by side.</p>
+    </div>
+  </details>
+  <details>
+    <summary>What happens if I never use the policy?</summary>
+    <div class="a">
+      <p>With traditional LTC insurance, unused benefits are not returned &mdash; like auto or homeowners&rsquo; insurance. However, hybrid life and LTC policies offer a death benefit to your heirs if you do not use the LTC benefits, and many offer a return-of-premium option. Bert will explain the trade-offs between traditional and hybrid products based on your priorities.</p>
+    </div>
+  </details>
+  <details>
+    <summary>What does a review with Bert cost?</summary>
+    <div class="a">
+      <p>Nothing. All consultations and policy reviews are complimentary. Bert is compensated by the carrier only if you choose to purchase or replace a policy &mdash; and only then. There is no fee for analysis, comparison, or recommendations, and you are under no obligation.</p>
+    </div>
+  </details>
+</div>
 
 </div><!-- .ab-wrap -->
 
@@ -392,32 +586,24 @@
   <p>As an Appointed HelpVet Advisor (2026&ndash;2028), I provide complimentary, objective insurance reviews to veterans and their families &mdash; helping them better understand the life insurance and long-term care protection they already own, and whether it continues to serve them well.</p>
 </div>
 
-<div class="ab-wrap">
-
-<h2 class="ab-h2">My Promise</h2>
-
-<div class="ab-promise">
-  <div class="item">Independent</div>
-  <div class="item">Objective</div>
-  <div class="item">Complimentary</div>
-  <div class="item">No Obligation</div>
-  <div class="item">Personally Conducted</div>
+<div class="ab-speak">
+  <h2>No Cost. No Obligation.</h2>
+  <p class="msg">A personal review by Withbert W. Payne, CPA &mdash; at no charge. Independent analysis of your existing or prospective coverage, with no obligation to act.</p>
+  <a class="phone" href="tel:+19257086501">(925) 708-6501</a>
+  <p class="email"><a href="mailto:bertltccpas@gmail.com">bertltccpas@gmail.com</a></p>
+  <p class="online">Online at <a href="index.html">LTCCPAs.com</a></p>
+  <a class="btn btn-gold" href="contact.html">Request an Illustration/Quote</a>
 </div>
-
-<p>My role is not simply to recommend insurance. It is to help clients make informed financial decisions through disciplined, CPA-level analysis.</p>
-
-</div><!-- .ab-wrap -->
 
 <p class="page-closing">For further information, please <a href="contact.html">reach out</a>.</p>
 
 <div class="ab-disclosure">
   <h2>Important Disclosure</h2>
-  <p>This page is for informational purposes only and does not constitute personalized insurance, legal, or financial advice. Insurance products and availability vary by state. Withbert W. Payne is a licensed insurance broker (CA License No. 0E90257). Policy illustrations and hypothetical results are shown for illustrative purposes only and are not guarantees of future performance. Results will vary based on individual health, age, carrier underwriting, and policy design. Death benefits are generally income-tax-free; insurance decisions should be coordinated with your tax, legal, and financial advisers when appropriate. This is a solicitation for insurance.</p>
+  <p>This page is for informational purposes only and does not constitute personalized insurance, legal, or financial advice. Insurance products and availability vary by state. Withbert W. Payne is a licensed insurance broker (CA License No. 0E90257). Policy illustrations and hypothetical results are shown for illustrative purposes only and are not guarantees of future performance. Results will vary based on individual health, age, carrier underwriting, and policy design. Benefits are generally received income-tax-free under current federal law; insurance decisions should be coordinated with your tax, legal, and financial advisers when appropriate. All consultations are complimentary and without obligation. An insurance agent may contact you as a result of this communication. This is a solicitation for insurance.</p>
 </div>
 
 
 </div><!-- #page-content -->
-
 <footer><div class="footer-inner">
   <div class="footer-col"><h4>LTCCPAS.COM</h4><p>Independent insurance reviews and policy optimization by a CPA and Licensed Insurance Broker. Serving clients nationwide.</p><a href="https://www.linkedin.com/in/withbertpayne/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn &mdash; Withbert Payne</a></div>
   <div class="footer-col"><h4>LTC Insurance</h4><ul>

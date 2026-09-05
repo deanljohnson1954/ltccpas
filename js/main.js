@@ -81,8 +81,9 @@ initNav();
    The same call to action sits in the header, in most pages' closing
    CTA, and in the footer. Every wording counts: the header and footer
    were rebranded to "Request a Policy Review" while the older pages'
-   closing CTAs still read "Request a Complimentary Review", and the
-   life-insurance posts close on "Schedule Your Private Consultation".
+   closing CTAs still read "Request a Complimentary Review", the
+   life-insurance posts close on "Schedule Your Private Consultation",
+   and the About page asks for an illustration or quote.
    A page carrying any of them is a page with its own CTA, and the
    invariant is about how many buttons share a screen, not about which
    words they use. The header is position:sticky, so
@@ -101,7 +102,7 @@ initNav();
    replaced and the new page may have a different closing CTA. */
 function oneCtaPerView() {
   const isCta = el =>
-    /request a (complimentary|policy) review|schedule your private consultation/i
+    /request a (complimentary|policy) review|schedule your private consultation|request an illustration/i
       .test(el.textContent);
   const headerBtn = document.querySelector('header .header-actions a.btn-gold');
   const footerBtn = document.querySelector('footer a.footer-btn');
