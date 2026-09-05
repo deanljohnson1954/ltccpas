@@ -79,10 +79,13 @@ initNav();
 
 /* ── 2c. One call to action per view ────────────────────────────
    The same call to action sits in the header, in most pages' closing
-   CTA, and in the footer. Both wordings count: the header and footer
+   CTA, and in the footer. Every wording counts: the header and footer
    were rebranded to "Request a Policy Review" while the older pages'
-   closing CTAs still read "Request a Complimentary Review", and a
-   page carrying either one is a page with its own CTA. The header is position:sticky, so
+   closing CTAs still read "Request a Complimentary Review", and the
+   life-insurance posts close on "Schedule Your Private Consultation".
+   A page carrying any of them is a page with its own CTA, and the
+   invariant is about how many buttons share a screen, not about which
+   words they use. The header is position:sticky, so
    its button rides down the page and would share the screen with the
    other two; and a page's closing CTA sits only 300-800px above the
    footer button, well inside one screen. Two rules keep exactly one
@@ -97,7 +100,9 @@ initNav();
    differs. Re-run after each SPA navigation, since #page-content is
    replaced and the new page may have a different closing CTA. */
 function oneCtaPerView() {
-  const isCta = el => /request a (complimentary|policy) review/i.test(el.textContent);
+  const isCta = el =>
+    /request a (complimentary|policy) review|schedule your private consultation/i
+      .test(el.textContent);
   const headerBtn = document.querySelector('header .header-actions a.btn-gold');
   const footerBtn = document.querySelector('footer a.footer-btn');
   // Matched on destination and wording, not on class: several pages style
