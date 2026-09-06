@@ -62,15 +62,20 @@
 /* Ten questions */
 .bn-questions { background:#F7F2E7; border:1px solid #D9B26A; padding:28px 30px; margin:0 0 26px; }
 .bn-questions h3 { font-family:'EB Garamond',Georgia,serif; color:#1E3A5F; font-size:22px; margin:0 0 18px; }
+/* Column flow, so 1-5 run down the left and 6-10 down the right as they do in
+   the source. With the default row flow the pairs would have to be interleaved
+   in the markup to land in the right columns, which puts the numbering out of
+   step with the document. */
 .bn-questions ol { list-style:none; padding:0; margin:0; counter-reset:bn;
-  display:grid; grid-template-columns:1fr 1fr; gap:2px 28px; }
+  display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(5,auto);
+  grid-auto-flow:column; gap:2px 28px; }
 .bn-questions li { counter-increment:bn; padding:9px 0 9px 34px; position:relative;
   color:#333333; font-size:15px; line-height:1.65; }
 .bn-questions li:before { content:counter(bn); position:absolute; left:0; top:9px;
   width:24px; height:24px; border-radius:50%; background:#1E3A5F; color:#fff;
   font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:13px;
   display:flex; align-items:center; justify-content:center; }
-@media(max-width:720px){ .bn-questions ol { grid-template-columns:1fr; } }
+@media(max-width:720px){ .bn-questions ol { grid-template-columns:1fr; grid-template-rows:none; grid-auto-flow:row; } }
 
 /* Claim triggers pointer */
 .bn-pointer { background:#F2F4F7; border-left:4px solid #1E3A5F; padding:20px 24px; margin:0 0 26px; }
@@ -113,11 +118,11 @@
   "author": { "@id": "https://www.ltccpas.com/#person" },
   "publisher": { "@id": "https://www.ltccpas.com/#organization" },
   "datePublished": "2026-06-26",
-  "dateModified": "2026-08-01"
+  "dateModified": "2026-08-25"
 }
 </script>
 <meta property="article:published_time" content="2026-06-26">
-<meta property="article:modified_time" content="2026-08-01">
+<meta property="article:modified_time" content="2026-08-25">
 </head>
 <body>
 <div class="top-bar"><div class="inner"><div><a href="../about-us.html">Meet Withbert W. Payne, CPA</a></div><div><span class="phone" style="font-weight:400;font-size:11px;">Call &nbsp;(925) 708-6501</span></div></div></div>
@@ -247,8 +252,32 @@
   </div>
 </div>
 
+<h2 class="bn-h2">Who May Be Paid to Provide the Care</h2>
+
+<p>A contract defines who may deliver covered care as carefully as it defines where care may be received. That definition is worth reading before a caregiver is engaged rather than after.</p>
+
+<div class="bn-grid">
+  <div class="bn-card">
+    <h4>Licensed Agencies and Facilities</h4>
+    <p>Care delivered by a licensed home health agency, a licensed assisted living community, or a licensed nursing facility is covered under essentially every contract. Where the policy requires an eligible provider, licensing is what makes the bill payable.</p>
+  </div>
+  <div class="bn-card">
+    <h4>Independent Caregivers</h4>
+    <p>Some policies reimburse a privately hired caregiver; others require that the caregiver be employed by a licensed agency. Where independent caregivers are covered, the contract commonly sets training or certification conditions.</p>
+  </div>
+  <div class="bn-card">
+    <h4>Family Members</h4>
+    <p>Informal care by a family member is reimbursable under many contracts, but the conditions vary widely &mdash; some exclude anyone living in the household, some require training, and some pay only under a cash or indemnity benefit.</p>
+  </div>
+  <div class="bn-card">
+    <h4>Care Under the Plan of Care</h4>
+    <p>Qualifying services are generally those described in the written plan of care. Care that falls outside the plan may not receive credit, which is why the plan is worth reviewing as care needs change.</p>
+  </div>
+</div>
+
 <h2 class="bn-h2">Additional Benefits That May Be Included</h2>
-<p class="bn-deck">Beyond the care itself, most modern contracts include provisions that support the family as much as the insured. These vary meaningfully between policies &mdash; and are among the provisions most often overlooked.</p>
+
+<p>Beyond the care itself, most modern contracts include provisions that support the family as much as the insured. These vary meaningfully between policies &mdash; and are among the provisions most often overlooked.</p>
 
 <div class="bn-grid">
   <div class="bn-card">
@@ -278,11 +307,13 @@
 </div>
 
 <h2 class="bn-h2">How Long the Benefits Last</h2>
-<p class="bn-deck">Two provisions determine the real value of a policy at claim time: how much it pays each month, and how long it keeps paying. The second is where older policies are frequently far more valuable than their owners realize.</p>
+
+<p>Two provisions determine the real value of a policy at claim time: how much it pays each month, and how long it keeps paying. The second is where older policies are frequently far more valuable than their owners realize.</p>
 
 <p>Some policies &mdash; and a great many older in-force contracts &mdash; pay qualifying benefits for as long as care is needed, with no lifetime maximum. This is among the most valuable provisions a long-term care policy can carry, and it is no longer widely available on newly issued coverage.</p>
 
 <div class="bn-callout">
+  <span class="label">Lifetime Benefits</span>
   <p>An in-force lifetime benefit should be valued independently before any reduction in coverage, replacement, exchange, or surrender is considered. Once it is given up, it generally cannot be bought back.</p>
 </div>
 
@@ -314,7 +345,8 @@
 </div>
 
 <h2 class="bn-h2">If Care Is Never Needed</h2>
-<p class="bn-deck">The most common objection to long-term care coverage is the fear of paying for something that is never used. Several policy structures address that concern directly.</p>
+
+<p>The most common objection to long-term care coverage is the fear of paying for something that is never used. Several policy structures address that concern directly.</p>
 
 <div class="bn-grid">
   <div class="bn-card">
@@ -356,14 +388,14 @@
   <h3>Ten Questions a Thorough Review Answers</h3>
   <ol>
     <li>What is the monthly or daily benefit, and what does it buy today?</li>
-    <li>What elimination period applies, and how are the days counted?</li>
     <li>Is the benefit period limited, or is it unlimited for life?</li>
-    <li>Is informal or family-provided care reimbursed, and under what conditions?</li>
     <li>How much of the benefit pool remains, and how quickly would it deplete?</li>
-    <li>Does a shared care, restoration, or waiver-of-premium provision apply?</li>
     <li>Does the policy include inflation protection &mdash; compound, simple, or none?</li>
-    <li>What happens to the premium and the benefit if the carrier files a rate increase?</li>
     <li>Is home care covered at the same level as facility care?</li>
+    <li>What elimination period applies, and how are the days counted?</li>
+    <li>Is informal or family-provided care reimbursed, and under what conditions?</li>
+    <li>Does a shared care, restoration, or waiver-of-premium provision apply?</li>
+    <li>What happens to the premium and the benefit if the carrier files a rate increase?</li>
     <li>Is there any return of premium, death benefit, or nonforfeiture value if care is never needed?</li>
   </ol>
 </div>
@@ -371,13 +403,12 @@
 </div><!-- .bn-wrap -->
 
 <div class="bn-close">
-  <p class="tag">Independent CPA-Level Long-Term Care Planning and Insurance Reviews for Professionals, Business Owners, Executives, and Affluent Families.</p>
-  <p class="disc">For educational purposes only. Not financial, legal, tax, or insurance advice. Benefit definitions, limits, and exclusions vary by policy; coverage is subject to medical underwriting and policy availability. Long-term care benefits are generally income-tax-free under a tax-qualified contract, subject to applicable tax rules &mdash; consult your own CPA or tax advisor. This is a solicitation for insurance.</p>
+  <p class="tag">Independent CPA-level long-term care planning and insurance reviews for professionals, business owners, executives, and affluent families.</p>
+  <p class="disc">For educational purposes only. Not financial, legal, tax, or insurance advice. Benefit definitions, limits, and exclusions vary by policy; coverage is subject to medical underwriting and policy availability. Long-term care benefits are generally income-tax-free under a tax-qualified contract, subject to applicable tax rules &mdash; consult your own CPA or tax advisor. This is an advertisement and a solicitation for insurance. A licensed insurance agent will contact you.</p>
 </div>
 
 
 </div><!-- #page-content -->
-
 <footer><div class="footer-inner">
   <div class="footer-col"><h4>LTCCPAS.COM</h4><p>Independent insurance reviews and policy optimization by a CPA and Licensed Insurance Broker. Serving clients nationwide.</p><a href="https://www.linkedin.com/in/withbertpayne/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn &mdash; Withbert Payne</a></div>
   <div class="footer-col"><h4>LTC Insurance</h4><ul>
