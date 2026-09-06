@@ -98,6 +98,25 @@
     letter-spacing:.1em; text-transform:uppercase; font-size:10.5px; color:#C8922A; margin:0 0 6px; }
 }
 
+/* What a diagnosis alone does not do. Two columns, because the six read as
+   one list rather than as a sequence. */
+.ct2-nots { list-style:none; padding:0; margin:0 0 22px; display:grid;
+  grid-template-columns:1fr 1fr; gap:0 28px; }
+.ct2-nots li { padding:9px 0 9px 26px; position:relative; color:#222222; font-size:15.5px;
+  line-height:1.7; border-bottom:1px solid #D8DEE9; }
+.ct2-nots li:before { content:"\00D7"; position:absolute; left:0; top:8px; color:#C8922A;
+  font-size:15px; font-weight:700; }
+@media(max-width:600px){ .ct2-nots { grid-template-columns:1fr; } }
+
+/* The claim sequence. Numbered because the order is the point. */
+.ct2-steps { list-style:none; padding:0; margin:0 0 26px; display:grid;
+  grid-template-columns:1fr 1fr; gap:14px 20px; counter-reset:none; }
+.ct2-steps li { position:relative; padding:18px 20px 18px 62px; background:#F4F6FA;
+  border-left:3px solid #C8922A; color:#222222; font-size:15px; line-height:1.7; }
+.ct2-steps .s { position:absolute; left:18px; top:16px; font-family:'EB Garamond',Georgia,serif;
+  font-weight:700; font-size:22px; color:#1E3A5F; }
+@media(max-width:720px){ .ct2-steps { grid-template-columns:1fr; } }
+
 /* Key facts */
 .ct2-facts { background:#1E3A5F; padding:30px 32px; margin:34px 0 0; }
 .ct2-facts h3 { font-family:'EB Garamond',Georgia,serif; color:#fff; font-size:23px; margin:0 0 18px; }
@@ -153,11 +172,11 @@
   "author": { "@id": "https://www.ltccpas.com/#person" },
   "publisher": { "@id": "https://www.ltccpas.com/#organization" },
   "datePublished": "2026-06-24",
-  "dateModified": "2026-08-01"
+  "dateModified": "2026-08-25"
 }
 </script>
 <meta property="article:published_time" content="2026-06-24">
-<meta property="article:modified_time" content="2026-08-01">
+<meta property="article:modified_time" content="2026-08-25">
 </head>
 <body>
 <div class="top-bar"><div class="inner"><div><a href="../about-us.html">Meet Withbert W. Payne, CPA</a></div><div><span class="phone" style="font-weight:400;font-size:11px;">Call &nbsp;(925) 708-6501</span></div></div></div>
@@ -219,9 +238,13 @@
 
 <div class="ct2-wrap">
 
+<h2 class="ct2-h2">How Eligibility Begins</h2>
+
 <p>Most people buy long-term care insurance hoping never to need it. If a claim does become necessary, knowing exactly what activates the benefits removes a great deal of uncertainty at an already difficult time.</p>
 
 <p>Eligibility generally begins when a licensed health care practitioner certifies that the insured satisfies one of the policy&rsquo;s benefit triggers. Actual payment may also depend on the elimination period, an approved plan of care, covered services, eligible care providers, and submission of the required claim documentation.</p>
+
+<p>Two questions are being asked at once, and they are easily confused. The first is whether the insured meets a qualifying standard &mdash; a matter of function and supervision that a practitioner answers. The second is whether the contract&rsquo;s own conditions for paying have been satisfied. Both must be met. Mistaking the one for the other is the most common reason a family believes a claim has been refused when in fact it has simply not yet been documented.</p>
 
 <p>This page describes the general structure of modern, federally tax-qualified long-term care policies. Older contracts, non-tax-qualified policies, and long-term care riders attached to life insurance or annuities may use different requirements &mdash; the terms of your own policy govern.</p>
 
@@ -238,7 +261,7 @@
   <div class="body">
     <h3>Cognitive Impairment</h3>
     <span class="badge">Qualifies on its own</span>
-    <p>A severe cognitive condition &mdash; such as Alzheimer&rsquo;s disease or another form of dementia &mdash; that requires substantial supervision to protect the insured&rsquo;s health and safety. A single certified determination meets this standard on its own; no ADL deficit is required.</p>
+    <p>A severe cognitive condition &mdash; such as Alzheimer&rsquo;s disease or another form of dementia &mdash; that requires substantial supervision to protect the insured&rsquo;s health and safety. A single certified determination meets this standard on its own; no deficit in the activities of daily living is required.</p>
   </div>
 </div>
 
@@ -247,13 +270,13 @@
   <div class="body">
     <h3>ADL Deficit</h3>
     <span class="badge">Requires at least two of six</span>
-    <p>The inability to perform at least two of the six activities of daily living &mdash; bathing, dressing, eating, toileting, transferring, and continence &mdash; without substantial assistance, and expected to last at least 90 days. A deficit in only one activity does not qualify.</p>
+    <p>The inability to perform at least two of the six activities of daily living &mdash; bathing, dressing, eating, toileting, transferring, and continence &mdash; without substantial assistance, and expected to last at least ninety days. A deficit in only one activity does not qualify.</p>
   </div>
 </div>
 
 <div class="ct2-key">
-  <h3>The 90-Day Test Is About Expected Duration &mdash; Not Waiting</h3>
-  <p>The standard asks whether the impairment is expected to last at least 90 days. It does not ordinarily mean the insured must wait 90 days before filing a claim. The elimination period is a separate provision, and it is described below.</p>
+  <h3>The Ninety-Day Test Is About Expected Duration</h3>
+  <p>The standard asks whether the impairment is expected to last at least ninety days. It does not ordinarily mean the insured must wait ninety days before filing a claim. The elimination period is a separate provision, and it is described below.</p>
 </div>
 
 <h2 class="ct2-h2">What &ldquo;Substantial Assistance&rdquo; Means</h2>
@@ -276,10 +299,22 @@
 
 <p>Most contracts count either hands-on or standby assistance toward an ADL deficit, while substantial supervision belongs to the cognitive standard. The definitions themselves vary by contract and are worth reading before a claim.</p>
 
-<div class="ct2-callout">
-  <h3>A Diagnosis by Itself Is Not a Trigger</h3>
-  <p>What the policy measures is function and supervision &mdash; what the insured can no longer do safely alone. A serious illness may of course lead to a qualifying condition, but it is the resulting need for hands-on assistance or substantial supervision, not the diagnosis, that opens a claim.</p>
-</div>
+<h2 class="ct2-h2">A Diagnosis by Itself Is Not a Trigger</h2>
+
+<p>What the policy measures is function and supervision &mdash; what the insured can no longer do safely alone. A serious illness may of course lead to a qualifying condition, but it is the resulting need for hands-on assistance or substantial supervision, not the diagnosis, that opens a claim.</p>
+
+<p>Long-term care insurance does not ordinarily begin paying benefits simply because someone:</p>
+
+<ul class="ct2-nots">
+  <li>Is hospitalized</li>
+  <li>Suffers a heart attack</li>
+  <li>Has surgery</li>
+  <li>Is receiving Medicare</li>
+  <li>Receives a cancer diagnosis</li>
+  <li>Is simply getting older</li>
+</ul>
+
+<p>Benefits begin when the policy&rsquo;s claim requirements are satisfied.</p>
 
 <h2 class="ct2-h2">Three Conditions That Must Also Be Met</h2>
 <p class="ct2-deck">Once a trigger is certified, these govern when and how benefits are paid.</p>
@@ -288,7 +323,7 @@
   <div class="n">03</div>
   <div class="body">
     <h3>Elimination Period</h3>
-    <p>A waiting period &mdash; typically 30 to 100 days &mdash; of qualifying care before benefits begin. It functions like a deductible and affects how quickly coverage takes effect. Some contracts waive it for home health care and adult day care while applying it to facility care; some count calendar days, others only days on which qualifying care was actually received.</p>
+    <p>A waiting period &mdash; typically thirty to one hundred days &mdash; of qualifying care before benefits begin. It functions like a deductible measured in days rather than dollars. Some contracts waive it for home health care and adult day care while applying it to facility care; some count calendar days, others only days on which qualifying care was actually received. Some require it once per lifetime; others require it again with each new claim.</p>
   </div>
 </div>
 
@@ -296,30 +331,31 @@
   <div class="n">04</div>
   <div class="body">
     <h3>Certification and Recertification</h3>
-    <p>A licensed health care practitioner must certify that the insured meets a benefit standard. For benefits to continue, that certification generally must be renewed at least once every 12 months.</p>
+    <p>A licensed health care practitioner must certify that the insured meets a benefit standard. For the ADL trigger, tax-qualified policies require certification that the inability is expected to last at least ninety days. For benefits to continue, that certification generally must be renewed at least once every twelve months.</p>
   </div>
 </div>
 
 <div class="ct2-num">
   <div class="n">05</div>
   <div class="body">
-    <h3>Plan of Care</h3>
+    <h3>Written Plan of Care</h3>
     <p>A plan of care prescribed by a licensed professional must be in place, specifying the type and frequency of care the insured needs. Qualifying services are generally provided under that plan, and carriers commonly require it to be approved before days or expenses receive credit.</p>
   </div>
 </div>
 
 <h2 class="ct2-h2">Covered Care, Eligible Providers, and Documentation</h2>
+<p class="ct2-deck">Meeting a trigger is not the same as having a bill paid.</p>
 
-<p>Meeting a trigger is not the same as having a bill paid. The services received must be covered by the policy and, where the contract requires it, provided by an eligible or properly licensed caregiver or facility. Reimbursement policies generally require bills, invoices, care notes, or proof of payment. Indemnity or cash-benefit policies may have different documentation requirements.</p>
+<p>The services received must be covered by the policy and, where the contract requires it, provided by an eligible or properly licensed caregiver or facility. Reimbursement policies generally require bills, invoices, care notes, or proof of payment. Indemnity or cash-benefit policies may have different documentation requirements.</p>
 
 <div class="ct2-ready">
   <h3>What a family should have ready</h3>
   <ul>
-    <li>The policy or certificate with any riders, endorsements, and amendments.</li>
+    <li>The policy or certificate, with any riders, endorsements, and amendments.</li>
     <li>The practitioner&rsquo;s certification and the written plan of care.</li>
     <li>Provider licensing or agency credentials, where the contract requires an eligible provider.</li>
     <li>Invoices, receipts, and care notes for each day claimed.</li>
-    <li>Records covering the elimination period itself &mdash; those days often must be documented at the time to count.</li>
+    <li>Records covering the elimination period itself &mdash; those days often must be documented at the time in order to count.</li>
   </ul>
 </div>
 
@@ -365,17 +401,31 @@
   <p>Notify the carrier as soon as a qualifying condition appears likely. The carrier may require an assessment, a certification, an approved plan of care, and particular records before any day or expense receives credit &mdash; and days that were not documented at the time are difficult to recover later.</p>
 </div>
 
+<h2 class="ct2-h2">The Sequence When a Claim Becomes Likely</h2>
+<p class="ct2-deck">The order matters, because several requirements only count from the day they are put in place.</p>
+
+<ol class="ct2-steps">
+  <li><span class="s">01</span>Notify the carrier as soon as a qualifying condition appears likely &mdash; not once the elimination period has already run.</li>
+  <li><span class="s">02</span>Request the claim packet, and with it the policy&rsquo;s own definitions of the benefit trigger, the elimination period, and an eligible provider.</li>
+  <li><span class="s">03</span>Arrange the licensed practitioner&rsquo;s certification and the written plan of care.</li>
+  <li><span class="s">04</span>Confirm in writing which providers the contract will accept before care is engaged.</li>
+  <li><span class="s">05</span>Document every day of care from the first day &mdash; dates, hours, provider, and cost.</li>
+  <li><span class="s">06</span>Keep one claim file: certification, plan of care, invoices, receipts, and all correspondence with the carrier.</li>
+</ol>
+
 <h2 class="ct2-h2">Every Policy Is Different</h2>
 
-<p>Benefit triggers, elimination periods, inflation protection, home care provisions, and indemnity versus reimbursement benefits vary by carrier and by policy generation. Two policies issued ten years apart &mdash; even by the same carrier &mdash; can pay very differently in identical circumstances. Before a claim occurs, it is wise to understand how your own policy works.</p>
+<p>Benefit triggers, elimination periods, inflation protection, home care provisions, and indemnity versus reimbursement benefits vary by carrier and by policy generation. Two policies issued ten years apart &mdash; even by the same carrier &mdash; can pay very differently in identical circumstances.</p>
+
+<p>Before a claim occurs, it is worth understanding how your own policy works.</p>
 
 <div class="ct2-facts">
   <h3>Key Facts</h3>
   <ul>
-    <li>Someone turning 65 today has approximately a 70% likelihood of needing some form of long-term care during their remaining years.</li>
+    <li>Roughly fifty-six percent of those turning sixty-five will develop a disability severe enough to meet a long-term care insurance benefit trigger. The widely quoted seventy percent figure counts any form of long-term care, including help that would not meet a policy&rsquo;s standard.</li>
     <li>Most tax-qualified policies pay on either the inability to perform two of six activities of daily living or severe cognitive impairment &mdash; either standard alone is enough.</li>
-    <li>A licensed health care practitioner provides the certification; the insurer then reviews and adjudicates the claim under the terms of the contract.</li>
-    <li>Certification generally must be renewed every 12 months for benefits to continue.</li>
+    <li>A licensed health care practitioner, not the insurance company, provides the certification; the insurer then reviews and adjudicates the claim under the terms of the contract.</li>
+    <li>Certification generally must be renewed every twelve months for benefits to continue.</li>
     <li>Understanding the policy early helps families avoid unnecessary delay when a claim finally arises.</li>
   </ul>
 </div>
@@ -397,10 +447,10 @@
 </div><!-- .ct2-wrap -->
 
 <div class="ct2-close">
-  <p><strong>Sources.</strong> The benefit-trigger, plan-of-care, and annual-certification provisions described here reflect the federal standards for tax-qualified contracts; see the IRS Instructions for Form 1099-LTC. The NAIC Long-Term Care Insurance Model Regulation cautions that triggers and requirements must be read in the context of the particular policy. The lifetime-need estimate is published by the federal Administration for Community Living.</p>
-  <p>For educational purposes only. Not financial, legal, or tax advice. Policy provisions, benefit triggers, and claim requirements vary by contract; the terms of your own policy govern. Coverage is subject to medical underwriting and policy availability. Long-term care benefits are generally income-tax-free; consult your CPA regarding your own circumstances.</p>
+  <p><strong>Sources.</strong> The benefit-trigger, plan-of-care, and annual-certification provisions described here reflect the federal standards for tax-qualified contracts; see the IRS Instructions for Form 1099-LTC. The NAIC Long-Term Care Insurance Model Regulation cautions that triggers and requirements must be read in the context of the particular policy. The lifetime-need estimates are published by the U.S. Department of Health and Human Services.</p>
+  <p>For educational purposes only. Not financial, legal, tax, or insurance advice. Policy provisions, benefit triggers, and claim requirements vary by contract; the terms of your own policy govern. Coverage is subject to medical underwriting and policy availability. Long-term care benefits are generally income-tax-free under a tax-qualified contract &mdash; consult your own CPA or tax advisor.</p>
   <p class="tag">Independent CPA-level long-term care planning and insurance reviews for professionals, business owners, executives, and affluent families.</p>
-  <p class="copy">This is a solicitation for insurance. &copy; 2026 Insurance Review Services &middot; LTCCPAs.com &middot; All rights reserved.</p>
+  <p class="copy">This is an advertisement and a solicitation for insurance. A licensed insurance agent will contact you. &copy; 2026 Insurance Review Services &middot; LTCCPAs.com &middot; All rights reserved.</p>
 </div>
 
 
