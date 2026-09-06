@@ -84,3 +84,12 @@
 # Programs, which is where it now leads.
 /newsletters/january-11-2023             /state-long-term-care-programs    301
 /newsletters/january-11-2023.html        /state-long-term-care-programs    301
+
+# Renamed. The carrier comparison was replaced by "The Four Long-Term Care
+# Insurance Structures", which compares structures rather than carriers, so the
+# file was renamed to match. The old address was in the sitemap and linked from
+# the nav and footer of every page, so it is indexed. Both forms are listed
+# because the file no longer exists at the old path -- the platform's own
+# canonical 308 (/X.html -> /X) would otherwise land on a deleted page.
+/carrier-comparison         /four-long-term-care-structures    301
+/carrier-comparison.html    /four-long-term-care-structures    301
