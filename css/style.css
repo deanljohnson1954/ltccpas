@@ -1551,3 +1551,209 @@ footer {
 .page-closing { max-width: 760px; margin: 40px auto; padding: 0 24px; text-align: center; color: var(--navy); font-size: 15px; line-height: 1.7; }
 .page-closing a { color: var(--navy); font-weight: 600; text-decoration: underline; }
 .page-closing a:hover { color: var(--gold); }
+
+
+/* ── Print ─────────────────────────────────────────────────────
+   Browsers do not print background fills unless the reader turns
+   "Background graphics" on, and it is off by default. Borders still
+   print. Every navy block on this site carries white type, so when the
+   fill drops out the type prints white on white and the words are
+   simply gone: hero titles, the eight myth bars, table header rows,
+   the statistic and question cards, the pull quotes and closing
+   panels.
+
+   Two jobs here, and the second is the one that matters.
+
+   1. Ask for our colors where the browser will honor the request.
+      This is what makes cream panels, gold rules and the logo come
+      through for a reader who has switched graphics on. Chrome treats
+      the reader's checkbox as the master control and may ignore it,
+      so it is worth including and not worth relying on.
+
+   2. Assume the fill will not print, and lose nothing when it does
+      not. The navy blocks are printed as navy type on white between
+      two gold rules: the block still reads as a heading, the
+      hierarchy survives, and no word can go missing whichever way the
+      reader's settings happen to be set. Because this runs
+      unconditionally the printed page is the same either way, which
+      is the point — a reader cannot land on the broken version.
+
+   The block list below is explicit rather than pattern-matched. The
+   site names its blocks by page prefix, and the suffixes do not sort
+   by color: .hp-quote, .fmq-quote and .tx-quote are navy while
+   .wp-quote, .ks-quote and .wa-quote are cream with dark type already,
+   so a [class*="-quote"] rule would strip the cream panels for no
+   reason. Adding a page means adding its navy blocks here.
+
+   Selectors are prefixed with `html` on purpose. Page-level <style>
+   blocks load after this file and a few of them set the navy fill with
+   !important, which would otherwise win on source order.
+   ───────────────────────────────────────────────────────────── */
+
+@media print {
+
+  /* 1. Print our colors where the browser will honor it. */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+  }
+
+  /* Site furniture that is navigation, not content. */
+  .top-bar,
+  nav,
+  #nav-toggle,
+  .header-actions,
+  .footer-btn { display: none !important; }
+
+  /* 2. Fallback: where the fill may not print, the type must not vanish.
+        Navy type on white, between two gold rules. */
+  html .ab-helpvet, html .ab-hero, html .ab-speak,
+  html .article-cta-box, html .bl-hero, html .bn-hero,
+  html .c-cta, html .cc-hero, html .cc-navybox,
+  html .contact-teaser, html .ct2-facts, html .ct2-hero,
+  html .cw-cpa, html .cw-hero, html .cw-quote,
+  html .dark-panel, html .fmq-hero, html .fmq-quote, html .fmq-three,
+  html .fw-hero, html .hm-cpa, html .hm-formula, html .hm-hero,
+  html .hp-helpvet, html .hp-hero, html .hp-quote, html .hp-trust,
+  html .illus-stat, html .ks-cpa, html .ks-hero,
+  html .lc-hero, html .lc-quote, html .pex-hero, html .pf-hero,
+  html .pl-cpa, html .pl-facts, html .pl-hero, html .pl-quote,
+  html .quote-callout, html .si-hero, html .si-quote,
+  html .slp-cpa, html .slp-hero, html .tou-contact, html .tou-hero,
+  html .tx-cpa, html .tx-hero, html .tx-quote,
+  html .uli-hero, html .uli-triggers,
+  html .ur-cpa, html .ur-hero, html .ur-quote,
+  html .wa-hero, html .wa-pullquote, html .wa-twocol,
+  html .we-hero, html .we-quote,
+  html .wf-cta, html .wf-hero, html .wf-navybox,
+  html .wp-cta, html .wp-hero, html .wp-illust,
+  html footer, html .footer-bottom,
+  html .fmq-myth .bar, html .we-scenario .bar,
+  html .bn-setting .head, html .fw-cat .head, html .lc-level .head,
+  html .pf-approach .head, html .wp-compare .head,
+  html .ct2-num .n, html .hp-teaser a.go,
+  html .hp-costs .tile, html .si-tiles .tile,
+  html thead th, html thead tr,
+  html .cc-table tbody td:first-child,
+  html .cc-table tbody tr.section-row td,
+  html .cashflow-table tr.total td {
+    background: transparent !important;
+    background-image: none !important;
+    color: #17406F !important;
+    border-top: 2px solid #A0701A;
+    border-bottom: 2px solid #A0701A;
+  }
+
+  /* The type inside those blocks, which sets its own colors. */
+  html .ab-helpvet *, html .ab-hero *, html .ab-speak *,
+  html .article-cta-box *, html .bl-hero *, html .bn-hero *,
+  html .c-cta *, html .cc-hero *, html .cc-navybox *,
+  html .contact-teaser *, html .ct2-facts *, html .ct2-hero *,
+  html .cw-cpa *, html .cw-hero *, html .cw-quote *,
+  html .dark-panel *, html .fmq-hero *, html .fmq-quote *, html .fmq-three *,
+  html .fw-hero *, html .hm-cpa *, html .hm-formula *, html .hm-hero *,
+  html .hp-helpvet *, html .hp-hero *, html .hp-quote *, html .hp-trust *,
+  html .illus-stat *, html .ks-cpa *, html .ks-hero *,
+  html .lc-hero *, html .lc-quote *, html .pex-hero *, html .pf-hero *,
+  html .pl-cpa *, html .pl-facts *, html .pl-hero *, html .pl-quote *,
+  html .quote-callout *, html .si-hero *, html .si-quote *,
+  html .slp-cpa *, html .slp-hero *, html .tou-contact *, html .tou-hero *,
+  html .tx-cpa *, html .tx-hero *, html .tx-quote *,
+  html .uli-hero *, html .uli-triggers *,
+  html .ur-cpa *, html .ur-hero *, html .ur-quote *,
+  html .wa-hero *, html .wa-pullquote *, html .wa-twocol *,
+  html .we-hero *, html .we-quote *,
+  html .wf-cta *, html .wf-hero *, html .wf-navybox *,
+  html .wp-cta *, html .wp-hero *, html .wp-illust *,
+  html footer *, html .footer-bottom *,
+  html .fmq-myth .bar *, html .we-scenario .bar *,
+  html .bn-setting .head *, html .fw-cat .head *, html .lc-level .head *,
+  html .pf-approach .head *, html .wp-compare .head *,
+  html .ct2-num .n *, html .hp-teaser a.go *,
+  html .hp-costs .tile *, html .si-tiles .tile *,
+  html thead th * {
+    color: #17406F !important;
+    background: transparent !important;
+  }
+
+  /* The gold eyebrow keeps its gold; it is the label above the title. */
+  html .ab-hero .eyebrow, html .ab-speak .eyebrow,
+  html .bl-hero .eyebrow, html .hp-hero .eyebrow,
+  html .wp-hero .eyebrow, html .wp-cta .eyebrow,
+  html .fmq-hero .eyebrow, html .cc-hero .eyebrow,
+  html .ab-hero p.helpvet, html .fmq-myth .bar .eyebrow,
+  html .eyebrow { color: #A0701A !important; }
+
+  /* Inner cells inside a block that already carries the gold rules
+     should not each draw their own. */
+  html .wp-compare .head div,
+  html thead th + th { border-top: none; border-bottom: none; }
+
+  /* The older page template names its hero .page-hero, with the
+     breadcrumb and deck inside it. */
+  html .page-hero {
+    background: transparent !important;
+    color: #17406F !important;
+    border-top: 2px solid #A0701A;
+    border-bottom: 2px solid #A0701A;
+  }
+  html .page-hero * { color: #17406F !important; background: transparent !important; }
+
+  /* Some of the earlier pages set the navy fill and the white type in a
+     style attribute rather than a class. An author !important still wins
+     over an inline declaration, so these reach them; matching on the
+     attribute keeps the rule to elements that actually declare it. */
+  html [style*="color:#fff"], html [style*="color: #fff"],
+  html [style*="color:#FFF"], html [style*="color: #FFF"],
+  html [style*="rgba(255,255,255"], html [style*="rgba(255, 255, 255"] {
+    color: #17406F !important;
+  }
+  html [style*="background:var(--navy)"], html [style*="background: var(--navy)"],
+  html [style*="background:#1a2f4e"], html [style*="background:#1E3A5F"],
+  html [style*="background:#0f1e32"] {
+    background: transparent !important;
+    border-top: 2px solid #A0701A;
+    border-bottom: 2px solid #A0701A;
+  }
+
+  /* A gold fill behind white type is the same trap as the navy blocks:
+     the button prints as an empty outline. Print them as navy type in a
+     navy rule, which reads as a button and never disappears. Matched on
+     the substring because several pages name their own button class
+     (.c-btn, .footer-btn) rather than reusing .btn-gold. */
+  html [class*="btn"] {
+    background: transparent !important;
+    color: #17406F !important;
+    border: 1px solid #17406F !important;
+  }
+  html [class*="btn"] * { color: #17406F !important; }
+
+  /* The site's gold reads thin on paper; the darker print gold holds up.
+     The inline variants matter because several of the earlier pages set
+     their gold eyebrows in a style attribute. */
+  html .brand-sub, html .article-eyebrow, html .eyebrow,
+  html .wp-kicker, html .bl-card .date,
+  html [style*="color:var(--gold"], html [style*="color: var(--gold"],
+  html [style*="color:#c8982a"], html [style*="color:#C8922A"],
+  html [style*="color:#e8b84b"], html [style*="color:#E8B84B"],
+  html [style*="color: #c8982a"], html [style*="color: #C8922A"] {
+    color: #A0701A !important;
+  }
+
+  /* 3. Housekeeping while we are in here. */
+  a[href]:after { content: ""; }
+
+  h1, h2, h3, h4 { page-break-after: avoid; break-after: avoid; }
+
+  /* Repeat the header row when a cost table runs past a page break. */
+  thead { display: table-header-group; }
+  tr, img, blockquote { page-break-inside: avoid; break-inside: avoid; }
+
+  /* Panels and cards are short enough to keep whole. */
+  .wp-card, .wp-stat, .wp-note, .wp-quote,
+  .ab-cred, .ab-quote, .ab-area, .ab-uncover, .ab-panel,
+  .bl-card, .ab-time li {
+    page-break-inside: avoid; break-inside: avoid;
+  }
+
+}
