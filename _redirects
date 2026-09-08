@@ -93,3 +93,12 @@
 # canonical 308 (/X.html -> /X) would otherwise land on a deleted page.
 /carrier-comparison         /four-long-term-care-structures    301
 /carrier-comparison.html    /four-long-term-care-structures    301
+
+# Renamed. "The Cost of Waiting on Long-Term Care Insurance" was published as a
+# newsletter and kept its dated filename long after the content stopped being a
+# newsletter. The old address was in the sitemap and linked from the nav and
+# footer of every page, so it is indexed. Both forms are listed because the file
+# no longer exists at the old path -- the platform's own canonical 308
+# (/X.html -> /X) would otherwise land on a deleted page.
+/newsletters/january-7-2024         /the-cost-of-waiting-on-long-term-care-insurance    301
+/newsletters/january-7-2024.html    /the-cost-of-waiting-on-long-term-care-insurance    301
