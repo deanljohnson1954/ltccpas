@@ -138,21 +138,16 @@
           <!-- Thank-you message (hidden until form is submitted) -->
           <div id="form-success" style="display:none;background:#f0faf0;border:1.5px solid #2d8a4e;border-radius:8px;padding:28px 24px;text-align:center;margin-bottom:24px;">
             <p style="font-size:20px;font-weight:700;color:#2d8a4e;margin-bottom:8px;">Message Sent!</p>
-            <p style="color:var(--text);font-size:15px;margin:0;">Thank you &mdash; Withbert will be in touch within one business day.</p>
+            <p style="color:var(--text);font-size:15px;margin:0;">Thank you &mdash; your request has been received. A confirmation is on its way to your email, and Withbert will be in touch within one business day.</p>
           </div>
 
           <form
             id="contact-form"
-            action="https://formsubmit.co/b5a9db1d03b471c050f4e336cb12ccce"
+            action="/api/contact"
             method="POST"
           >
-            <!-- FormSubmit.co configuration -->
-            <input type="hidden" name="_subject" value="New LTC Inquiry &mdash; LTCCPAs.com">
-            <input type="hidden" name="_next" value="https://www.ltccpas.com/contact.html?sent=1">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <!-- Honeypot spam trap &mdash; must stay hidden -->
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <!-- Spam trap: real visitors never see or fill this field -->
+            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <div class="form-row">
               <div class="form-group">
