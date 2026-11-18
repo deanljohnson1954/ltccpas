@@ -74,9 +74,13 @@ ul { list-style: none; }
 }
 .top-bar a:hover { color: var(--gold-light); }
 .top-bar .phone {
-  color: var(--gold-light);
-  font-weight: 600;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  white-space: nowrap;
 }
+.top-bar a.phone:hover { color: var(--gold-light); }
 
 /* ── Header ────────────────────────────────────────────────── */
 header {
@@ -154,6 +158,42 @@ header .inner {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+/* Bert's photo and name in the header */
+.header-person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 8px;
+  text-decoration: none;
+  color: var(--navy);
+}
+.header-person img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 2px solid var(--gold);
+  flex-shrink: 0;
+}
+.header-person-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 11.5px;
+  line-height: 1.3;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.header-person-text strong {
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
+  color: var(--navy);
+}
+.header-person:hover strong { color: var(--gold); }
+@media (max-width: 1060px) {
+  .header-person-text { display: none; }
 }
 
 /* Buttons */

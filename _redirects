@@ -102,3 +102,7 @@
 # (/X.html -> /X) would otherwise land on a deleted page.
 /newsletters/january-7-2024         /the-cost-of-waiting-on-long-term-care-insurance    301
 /newsletters/january-7-2024.html    /the-cost-of-waiting-on-long-term-care-insurance    301
+
+# "The Best Time to Plan" moved off its dated newsletter address (Nov 2026).
+/newsletters/january-1-2023         /best-time-to-plan-for-long-term-care    301
+/newsletters/january-1-2023.html    /best-time-to-plan-for-long-term-care    301
