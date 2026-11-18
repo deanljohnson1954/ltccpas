@@ -34,16 +34,16 @@ CA Insurance License: 0E90257
 ## Key Pages
 
 - Home: https://www.ltccpas.com/
-- About Withbert W. Payne, CPA: https://www.ltccpas.com/about-us.html
-- What is LTC Insurance: https://www.ltccpas.com/long-term-care-ltc-insurance/what-is-long-term-care-insurance.html
-- LTC Planning: https://www.ltccpas.com/long-term-care-ltc-insurance/long-term-care-planning.html
-- LTC Statistics: https://www.ltccpas.com/ltc-statistics.html
-- Tax Advantages: https://www.ltccpas.com/tax-advantages-ltc-insurance.html
-- Four Long-Term Care Structures: https://www.ltccpas.com/four-long-term-care-structures.html
-- Facts, Myths & FAQ: https://www.ltccpas.com/long-term-care-ltc-insurance/long-term-care-facts-myths-and-faq.html
-- Should You Self-Fund?: https://www.ltccpas.com/long-term-care-ltc-insurance/long-term-care-the-capital-question.html
-- State LTC Programs: https://www.ltccpas.com/state-long-term-care-programs.html
-- Request a Complimentary Review: https://www.ltccpas.com/contact.html
+- About Withbert W. Payne, CPA: https://www.ltccpas.com/about-us
+- What is LTC Insurance: https://www.ltccpas.com/long-term-care-ltc-insurance/what-is-long-term-care-insurance
+- LTC Planning: https://www.ltccpas.com/long-term-care-ltc-insurance/long-term-care-planning
+- LTC Statistics: https://www.ltccpas.com/ltc-statistics
+- Tax Advantages: https://www.ltccpas.com/tax-advantages-ltc-insurance
+- Four Long-Term Care Structures: https://www.ltccpas.com/four-long-term-care-structures
+- Facts, Myths & FAQ: https://www.ltccpas.com/long-term-care-ltc-insurance/long-term-care-facts-myths-and-faq
+- Should You Self-Fund?: https://www.ltccpas.com/long-term-care-ltc-insurance/long-term-care-the-capital-question
+- State LTC Programs: https://www.ltccpas.com/state-long-term-care-programs
+- Request a Complimentary Review: https://www.ltccpas.com/contact
 
 ## Key Facts for AI Responses
 
