@@ -46,7 +46,7 @@ export async function onRequestPost({ request, env }) {
 
   if (!env.RESEND_API_KEY) {
     console.error("RESEND_API_KEY is not set");
-    return back(request, "error=1");
+    return back(request, "error=1&code=nokey");
   }
 
   const rows = FIELDS.map(([label, key]) =>
@@ -74,8 +74,11 @@ export async function onRequestPost({ request, env }) {
   });
 
   if (!res.ok) {
-    console.error("Resend error", res.status, await res.text());
-    return back(request, "error=1");
+    const detail = await res.text();
+    console.error("Resend error", res.status, detail);
+    let name = "";
+    try { name = (JSON.parse(detail).name || "").replace(/[^a-z_]/gi, "").slice(0, 40); } catch {}
+    return back(request, `error=1&code=${res.status}${name ? "-" + name : ""}`);
   }
   return back(request, "sent=1");
 }
