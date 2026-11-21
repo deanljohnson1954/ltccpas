@@ -141,35 +141,33 @@
             <p style="color:var(--text);font-size:15px;margin:0;">Thank you &mdash; Withbert will be in touch within one business day.</p>
           </div>
 
-          <!-- Error message (shown if the message could not be sent) -->
-          <div id="form-error" style="display:none;background:#fdf2f2;border:1.5px solid #b42318;border-radius:8px;padding:20px 24px;text-align:center;margin-bottom:24px;">
-            <p style="font-size:17px;font-weight:700;color:#b42318;margin-bottom:6px;">Sorry &mdash; your message could not be sent.</p>
-            <p style="color:var(--text);font-size:15px;margin:0;">Please try again, or call Withbert directly at <a href="tel:+19257086501">(925) 708-6501</a>.</p>
-          </div>
-
-          <!-- Sent by functions/api/contact.js through Resend -->
           <form
             id="contact-form"
-            action="/api/contact"
+            action="https://formsubmit.co/b5a9db1d03b471c050f4e336cb12ccce"
             method="POST"
           >
+            <!-- FormSubmit.co configuration -->
+            <input type="hidden" name="_subject" value="New LTC Inquiry &mdash; LTCCPAs.com">
+            <input type="hidden" name="_next" value="https://www.ltccpas.com/contact?sent=1">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
             <!-- Honeypot spam trap &mdash; must stay hidden -->
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="Your first name" required>
+                <input type="text" id="fname" name="First Name" placeholder="Your first name" required>
               </div>
               <div class="form-group">
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Your last name" required>
+                <input type="text" id="lname" name="Last Name" placeholder="Your last name" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+                <input type="tel" id="phone" name="Phone" placeholder="(555) 000-0000">
               </div>
               <div class="form-group">
                 <label for="email">Email Address</label>
@@ -178,17 +176,17 @@
             </div>
             <div class="form-group">
               <label for="best-time">Best Time to Call</label>
-              <select id="best-time" name="best_time">
+              <select id="best-time" name="Best Time to Call">
                 <option value="">Select a preferred time...</option>
-                <option value="Morning (8am&ndash;12pm)">Morning (8am &mdash; 12pm)</option>
-                <option value="Afternoon (12pm&ndash;5pm)">Afternoon (12pm &mdash; 5pm)</option>
-                <option value="Evening (5pm&ndash;7pm)">Evening (5pm &mdash; 7pm)</option>
+                <option value="Morning (8am&rsquo;12pm)">Morning (8am &mdash; 12pm)</option>
+                <option value="Afternoon (12pm&rsquo;5pm)">Afternoon (12pm &mdash; 5pm)</option>
+                <option value="Evening (5pm&rsquo;7pm)">Evening (5pm &mdash; 7pm)</option>
                 <option value="Anytime">Anytime</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell us a bit about your situation or what questions you have about LTC insurance..."></textarea>
+              <textarea id="message" name="Message" placeholder="Tell us a bit about your situation or what questions you have about LTC insurance..."></textarea>
             </div>
             <div class="form-submit">
               <button type="submit" class="btn-gold">Request a Policy Review</button>
@@ -202,9 +200,6 @@
             if (window.location.search.includes('sent=1')) {
               document.getElementById('form-success').style.display = 'block';
               document.getElementById('contact-form').style.display = 'none';
-            }
-            if (window.location.search.includes('error=1')) {
-              document.getElementById('form-error').style.display = 'block';
             }
           </script>
         </div>
