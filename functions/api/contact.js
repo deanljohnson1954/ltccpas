@@ -76,13 +76,9 @@ export async function onRequestPost({ request, env }) {
   if (!res.ok) {
     const detail = await res.text();
     console.error("Resend error", res.status, detail);
-    let name = "", msg = "";
-    try {
-      const j = JSON.parse(detail);
-      name = (j.name || "").replace(/[^a-z_]/gi, "").slice(0, 40);
-      msg = String(j.message || "").replace(/re_[A-Za-z0-9_]+/g, "[key]").slice(0, 200);
-    } catch {}
-    return back(request, `error=1&code=${res.status}${name ? "-" + name : ""}&msg=${encodeURIComponent(msg)}`);
+    let name = "";
+    try { name = (JSON.parse(detail).name || "").replace(/[^a-z_]/gi, "").slice(0, 40); } catch {}
+    return back(request, `error=1&code=${res.status}${name ? "-" + name : ""}`);
   }
   return back(request, "sent=1");
 }
